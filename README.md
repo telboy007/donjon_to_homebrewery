@@ -10,3 +10,6 @@ To use:
 1. `pip install pipenv`
 1. `pipenv shell`
 1. `python convert_donjon_to_homebrewery.py your_filename.json`
+
+You can now copy and paste the contents of homebrewery.txt into your [homebrewery](https://homebrewery.naturalcrit.com/) document.
+
