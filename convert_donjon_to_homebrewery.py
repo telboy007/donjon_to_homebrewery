@@ -1,10 +1,12 @@
 import json
+import sys
 
 # Open file to write content to
 outfile = open("homebrewery.txt", "w")
 
 # Opening JSON file
-f = open("example.json")
+filename = sys.argv[1]
+f = open(filename)
   
 # returns JSON object as a dictionary
 data = json.load(f)

@@ -3,7 +3,8 @@
 {{margin-top:25px}}
 {{wide
 ##### The dungeon was created by dwarves as a temple. It was eventually overrun by elementals, and has lain empty for many centuries until recently.
-::##### A randomly generated donjon dungeon for APL1
+::
+##### A randomly generated donjon dungeon for APL1
 }}
 \page
 ## Description
