@@ -1,15 +1,19 @@
 import json
 import sys
 
+# Opening JSON file
+try:
+    filename = sys.argv[1]
+    f = open(filename)
+    
+    # returns JSON object as a dictionary
+    data = json.load(f)
+except:
+    print("Please supply json filename to convert.")
+    sys.exit()
+
 # Open file to write content to
 outfile = open("homebrewery.txt", "w")
-
-# Opening JSON file
-filename = sys.argv[1]
-f = open(filename)
-  
-# returns JSON object as a dictionary
-data = json.load(f)
 
 """ title page """
 if len(sys.argv) == 3:
@@ -22,7 +26,7 @@ outfile.writelines("{{margin-top:25px}}\n")
 outfile.writelines("{{wide\n")
 outfile.writelines(f"##### {data['details']['history']}\n")
 outfile.writelines("::\n")
-outfile.writelines(f"##### A randomly generated donjon dungeon for APL{data['settings']['level']}\n")
+outfile.writelines(f"##### A randomly generated D&D 5e donjon dungeon for APL{data['settings']['level']}\n")
 outfile.writelines("}}\n")
 outfile.writelines("\page\n")
 
@@ -37,7 +41,7 @@ if len(sys.argv) == 3:
 
 outfile.writelines("## Description\n")
 
-outfile.writelines("The generated dungeon has the following features, which may include skill checks to perform certain actions.\n")
+outfile.writelines("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
 outfile.writelines("{{descriptive\n")
 outfile.writelines("#### General Features\n")
 outfile.writelines("| Type | Detail |\n")
@@ -50,7 +54,7 @@ outfile.writelines("}}\n")
 
 """ corridor features """
 
-outfile.writelines("Some of the corridors marked on the map have special features that are detailed below.\n")
+outfile.writelines("Some of the corridors marked on the map have special features detailed below.\n")
 outfile.writelines("{{descriptive\n")
 outfile.writelines("#### Corridor Features\n")
 outfile.writelines("| Type | Detail |\n")
@@ -66,7 +70,7 @@ outfile.writelines("}}\n")
 
 outfile.writelines("## Random Encounters\n")
 
-outfile.writelines("As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with their current action/purpose.  This will help you place them in the dungeon or when the party encounter them.\n")
+outfile.writelines("As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with a specific goal.  This will help you place them in the dungeon or when the party encounter them.\n")
 outfile.writelines("{{classTable,frame\n")
 outfile.writelines("#### Wandering Monsters\n")
 outfile.writelines("| Roll | Detail |\n")
@@ -84,7 +88,7 @@ outfile.writelines("## Locations\n")
 
 for egress in data["egress"]:
     outfile.writelines("### Getting In\n")
-    outfile.writelines(f"The entrance into this dungeon can be found on the map at ***row: {egress['row']}*** and ***column: {egress['col']}*** on the DM version of the map, which enters the {egress['type']} from the {egress['dir']}.\n")
+    outfile.writelines(f"The entrance into this dungeon can be found on the GM version of the map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
 
 """ rooms / locations """
 
@@ -165,20 +169,22 @@ if "rooms" in data:
             for direction, door in rooms["doors"].items():
                 for d in door:
                     if d["type"] == "trapped":
+                        trap = d["trap"].replace("\n", "")
                         try:
-                            outfile.writelines("|" + str(direction) + "|" + str(d["desc"]) + " ***Trap:*** " + str(d["trap"]).replace("\n", "") + "|" + str(d["out_id"]) + "|\n")
+                            outfile.writelines(f"| {direction} | {d['desc']} ***Trap:*** {trap} | {d['out_id']} |\n")
                         except:
-                            outfile.writelines("|" + str(direction) + "|" + str(d["desc"]) + " ***Trap:*** " + str(d["trap"]).replace("\n", "") + "|n/a|\n")     
+                            outfile.writelines(f"| {direction} | {d['desc']} ***Trap:*** {trap} | n/a |\n")
                     elif d["type"] == "secret":
-                            try:
-                                outfile.writelines("|" + str(direction) + "|" + str(d["desc"]) + " ***Secret:*** " + str(d["secret"]).replace("\n", "") + "|" + str(d["out_id"]) + "|\n")
-                            except:
-                                outfile.writelines("|" + str(direction) + "|" + str(d["desc"]) + " ***Secret:*** " + str(d["secret"]).replace("\n", "") + "|n/a|\n")     
+                        secret = d["secret"].replace("\n", "")
+                        try:
+                            outfile.writelines(f"| {direction} | {d['desc']} ***Secret:*** {secret} | {d['out_id']} |\n")
+                        except:
+                            outfile.writelines(f"| {direction} | {d['desc']} ***Secret:*** {secret} | n/a |\n")
                     else:
                         try:
-                            outfile.writelines("|" + str(direction) + "|" + str(d["desc"]) + "|" + str(d["out_id"]) + "|\n")
+                            outfile.writelines(f"| {direction} | {d['desc']} | {d['out_id']} |\n")
                         except:
-                            outfile.writelines("|" + str(direction) + "|" + str(d["desc"]) + "|n/a|\n")              
+                            outfile.writelines(f"| {direction} | {d['desc']} | n/a |\n")           
 
             outfile.writelines(":\n")
 
