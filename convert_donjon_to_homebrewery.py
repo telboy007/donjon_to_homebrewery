@@ -1,11 +1,37 @@
 import json
 import sys
 
+
+# set check value
+def set_check(check):
+    """Count the number of characters in a file"""
+    infile = open("homebrewery.txt", "r")
+    data = infile.read()
+    return len(data)
+
+
+# add a page marker check
+def file_size(check):
+    """Count the number of characters in a file"""
+    infile = open("homebrewery.txt", "r")
+    data = infile.read()
+    if (len(data) - check) > 2450:
+        outfile = open("homebrewery.txt", "a")
+        outfile.write("\page\n")
+        outfile.close()
+        return len(data)
+    else:
+        return check
+
+
+# globals
+check = 0
+
 # Opening JSON file
 try:
     filename = sys.argv[1]
     f = open(filename)
-    
+
     # returns JSON object as a dictionary
     data = json.load(f)
 except:
@@ -17,78 +43,84 @@ outfile = open("homebrewery.txt", "w")
 
 """ title page """
 if len(sys.argv) == 3:
-    outfile.writelines(f"<img src=\"{sys.argv[2]}\" style=\"position:absolute;mix-blend-mode: color-burn;transform:rotate(-30deg);width:500%;top:-1000px;\" />\n")
-    outfile.writelines(":\n")
+    outfile.write(f"<img src=\"{sys.argv[2]}\" style=\"position:absolute;mix-blend-mode: color-burn;transform:rotate(-30deg);width:500%;top:-1000px;\" />\n")
+    outfile.write(":\n")
 
-outfile.writelines("{{margin-top:225px}}\n")
-outfile.writelines(f"# {data['settings']['name']}\n")
-outfile.writelines("{{margin-top:25px}}\n")
-outfile.writelines("{{wide\n")
-outfile.writelines(f"##### {data['details']['history']}\n")
-outfile.writelines("::\n")
-outfile.writelines(f"##### A randomly generated D&D 5e donjon dungeon for APL{data['settings']['level']}\n")
-outfile.writelines("}}\n")
-outfile.writelines("\page\n")
+outfile.write("{{margin-top:225px}}\n")
+outfile.write(f"# {data['settings']['name']}\n")
+outfile.write("{{margin-top:25px}}\n")
+outfile.write("{{wide\n")
+outfile.write(f"##### {data['details']['history']}\n")
+outfile.write("::\n")
+outfile.write(f"##### A randomly generated D&D 5e donjon dungeon for APL{data['settings']['level']}\n")
+outfile.write("}}\n")
+outfile.write("\page\n")
 
 """ map page """
 if len(sys.argv) == 3:
-    outfile.writelines("## Map\n")
-    outfile.writelines(f"<img src=\"{sys.argv[2]}.png\" style=\"width:680px\" />\n")
-    outfile.writelines("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
-    outfile.writelines("\page\n")
+    outfile.write("## Map\n")
+    outfile.write(f"<img src=\"{sys.argv[2]}.png\" style=\"width:680px\" />\n")
+    outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+    outfile.write("\page\n")
 
 """ general features """
 
-outfile.writelines("## Description\n")
+outfile.write("## Description\n")
 
-outfile.writelines("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
-outfile.writelines("{{descriptive\n")
-outfile.writelines("#### General Features\n")
-outfile.writelines("| Type | Detail |\n")
-outfile.writelines("|:--|:--|\n")
-outfile.writelines(f"| Floors | {data['details']['floor']} |\n")
-outfile.writelines(f"| Walls | {data['details']['walls']} |\n")
-outfile.writelines(f"| Temperature | {data['details']['temperature']} |\n")
-outfile.writelines(f"| Lighting | {data['details']['illumination']} |\n")
-outfile.writelines("}}\n")
+outfile.write("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
+outfile.write("{{descriptive\n")
+outfile.write("#### General Features\n")
+outfile.write("| Type | Detail |\n")
+outfile.write("|:--|:--|\n")
+outfile.write(f"| Floors | {data['details']['floor']} |\n")
+outfile.write(f"| Walls | {data['details']['walls']} |\n")
+outfile.write(f"| Temperature | {data['details']['temperature']} |\n")
+outfile.write(f"| Lighting | {data['details']['illumination']} |\n")
+outfile.write("}}\n")
 
 """ corridor features """
 
-outfile.writelines("Some of the corridors marked on the map have special features detailed below.\n")
-outfile.writelines("{{descriptive\n")
-outfile.writelines("#### Corridor Features\n")
-outfile.writelines("| Type | Detail |\n")
-outfile.writelines("|:--|:--|\n")
+outfile.write("Some of the corridors marked on the map have special features detailed below.\n")
+outfile.write("{{descriptive\n")
+outfile.write("#### Corridor Features\n")
+outfile.write("| Type | Detail |\n")
+outfile.write("|:--|:--|\n")
 
 for key, val in data["corridor_features"].items():
     detail = val["detail"].replace("\n", " ")
-    outfile.writelines(f"| {val['key']} | {detail} |\n")
+    outfile.write(f"| {val['key']} | {detail} |\n")
 
-outfile.writelines("}}\n")
+outfile.write("}}\n")
 
 """ wandering monsters """
 
-outfile.writelines("## Random Encounters\n")
+outfile.write("## Random Encounters\n")
 
-outfile.writelines("As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with a specific goal.  This will help you place them in the dungeon or when the party encounter them.\n")
-outfile.writelines("{{classTable,frame\n")
-outfile.writelines("#### Wandering Monsters\n")
-outfile.writelines("| Roll | Detail |\n")
-outfile.writelines("|:--|:--|\n")
+outfile.write("As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with a specific goal.  This will help you place them in the dungeon or when the party encounter them.\n")
+outfile.write("{{classTable,frame\n")
+outfile.write("#### Wandering Monsters\n")
+outfile.write("| Roll | Detail |\n")
+outfile.write("|:--|:--|\n")
 
 for key, val in data["wandering_monsters"].items():
     group = val.replace("\n", " ")
-    outfile.writelines(f"| {key} | {group} |\n")
+    outfile.write(f"| {key} | {group} |\n")
     
-outfile.writelines("}}\n")
+outfile.write("}}\n")
+outfile.write("\page\n")
+
+# set page marker check
+outfile.close()
+check = set_check(check)
+outfile = open("homebrewery.txt", "a")
 
 """ Locations """
 
-outfile.writelines("## Locations\n")
+outfile.write("## Locations\n")
 
 for egress in data["egress"]:
-    outfile.writelines("### Getting In\n")
-    outfile.writelines(f"The entrance into this dungeon can be found on the GM version of the map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
+    outfile.write("### Getting In\n")
+    outfile.write(f"The entrance into this dungeon can be found on the GM version of the map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
 
 """ rooms / locations """
 
@@ -96,47 +128,64 @@ if "rooms" in data:
     for rooms in data["rooms"]:
         if rooms is None:
             continue
-        outfile.writelines(f"### Room {rooms['id']}\n")
+        outfile.write(f"### Room {rooms['id']}\n")
+        outfile.write(":\n")
+
+        # check for page marker
+        outfile.close()
+        check = file_size(check)
+        outfile = open("homebrewery.txt", "a")
 
         if "contents" in rooms:
             if "detail" in rooms["contents"]:
 
                 """ traps """
                 if "trap" in rooms["contents"]["detail"]:
-                    outfile.writelines(":\n")
-                    outfile.writelines("{{classTable,frame\n")
-                    outfile.writelines("#### Trap!\n")
+                    outfile.write("{{classTable,frame\n")
+                    outfile.write("#### Trap!\n")
                     for item in rooms["contents"]["detail"]["trap"]:
                         desc = item.replace("\n","")
-                        outfile.writelines(f"* {desc}\n")
+                        outfile.write(f"* {desc}\n")
                     
-                    outfile.writelines("}}\n")
+                    outfile.write("}}\n")
+
+                # check for page marker
+                outfile.close()
+                check = file_size(check)
+                outfile = open("homebrewery.txt", "a")
 
                 """ hidden treasure """
                 if "hidden_treasure" in rooms["contents"]["detail"]:
-                    outfile.writelines(":\n")
-                    outfile.writelines("{{classTable,frame\n")
-                    outfile.writelines("#### Hidden Treasure!\n")
+                    outfile.write("{{classTable,frame\n")
+                    outfile.write("#### Hidden Treasure!\n")
                     for item in rooms["contents"]["detail"]["hidden_treasure"]:
                         if item == "--":
                             continue
                         else:
                             item = item.replace("\n","")
-                            outfile.writelines(f"* {item}\n")
+                            outfile.write(f"* {item}\n")
                     
-                    outfile.writelines("}}\n")
+                    outfile.write("}}\n")
+
+                # check for page marker
+                outfile.close()
+                check = file_size(check)
+                outfile = open("homebrewery.txt", "a")
 
                 """ room description """
                 if "room_features" in rooms["contents"]["detail"]:
-                    outfile.writelines(":\n")
-                    outfile.writelines("{{note\n")
-                    outfile.writelines(f"{rooms['contents']['detail']['room_features']}.\n")
-                    outfile.writelines("}}\n")
+                    outfile.write("{{note\n")
+                    outfile.write(f"{rooms['contents']['detail']['room_features']}.\n")
+                    outfile.write("}}\n")
                 else:
-                    outfile.writelines(":\n")
-                    outfile.writelines("{{note\n")
-                    outfile.writelines("Empty.\n")
-                    outfile.writelines("}}\n")
+                    outfile.write("{{note\n")
+                    outfile.write("Empty.\n")
+                    outfile.write("}}\n")
+
+                # check for page marker
+                outfile.close()
+                check = file_size(check)
+                outfile = open("homebrewery.txt", "a")
 
                 """ monsters and treasure """
                 if "monster" in rooms["contents"]["detail"]:
@@ -145,47 +194,62 @@ if "rooms" in data:
                             continue
                         elif thing.startswith("Treasure"):
                             thing.replace("\n","")
-                            outfile.writelines(":\n")
-                            outfile.writelines("{{descriptive\n")
-                            outfile.writelines("#### Treasure\n")
-                            outfile.writelines(f"{thing}\n")
-                            outfile.writelines("}}\n")
+                            outfile.write(":\n")
+                            outfile.write("{{descriptive\n")
+                            outfile.write("#### Treasure\n")
+                            outfile.write(f"{thing}\n")
+                            outfile.write("}}\n")
                         else:
-                            outfile.writelines("::\n")
-                            outfile.writelines(f"This room is occupied by **{thing}**\n")
+                            outfile.write("::\n")
+                            outfile.write(f"This room is occupied by **{thing}**\n")
+
+                # check for page marker
+                outfile.close()
+                check = file_size(check)
+                outfile = open("homebrewery.txt", "a")
+
             else:
                 # no details
-                outfile.writelines(":\n")
-                outfile.writelines("{{note\n")
-                outfile.writelines("Empty.\n")
-                outfile.writelines("}}\n")
+                outfile.write("{{note\n")
+                outfile.write("Empty.\n")
+                outfile.write("}}\n")
+
+            # check for page marker
+            outfile.close()
+            check = file_size(check)
+            outfile = open("homebrewery.txt", "a")
 
         """ exits """
         if "doors" in rooms:
-            outfile.writelines("#### Exits\n")
-            outfile.writelines("| Direction | Description | Leads to |\n")
-            outfile.writelines("|:--|:--|:--|\n")
+            outfile.write("#### Exits\n")
+            outfile.write("| Direction | Description | Leads to |\n")
+            outfile.write("|:--|:--|:--|\n")
 
             for direction, door in rooms["doors"].items():
                 for d in door:
                     if d["type"] == "trapped":
                         trap = d["trap"].replace("\n", "")
                         try:
-                            outfile.writelines(f"| {direction} | {d['desc']} ***Trap:*** {trap} | {d['out_id']} |\n")
+                            outfile.write(f"| {direction} | {d['desc']} ***Trap:*** {trap} | {d['out_id']} |\n")
                         except:
-                            outfile.writelines(f"| {direction} | {d['desc']} ***Trap:*** {trap} | n/a |\n")
+                            outfile.write(f"| {direction} | {d['desc']} ***Trap:*** {trap} | n/a |\n")
                     elif d["type"] == "secret":
                         secret = d["secret"].replace("\n", "")
                         try:
-                            outfile.writelines(f"| {direction} | {d['desc']} ***Secret:*** {secret} | {d['out_id']} |\n")
+                            outfile.write(f"| {direction} | {d['desc']} ***Secret:*** {secret} | {d['out_id']} |\n")
                         except:
-                            outfile.writelines(f"| {direction} | {d['desc']} ***Secret:*** {secret} | n/a |\n")
+                            outfile.write(f"| {direction} | {d['desc']} ***Secret:*** {secret} | n/a |\n")
                     else:
                         try:
-                            outfile.writelines(f"| {direction} | {d['desc']} | {d['out_id']} |\n")
+                            outfile.write(f"| {direction} | {d['desc']} | {d['out_id']} |\n")
                         except:
-                            outfile.writelines(f"| {direction} | {d['desc']} | n/a |\n")           
+                            outfile.write(f"| {direction} | {d['desc']} | n/a |\n")           
 
-            outfile.writelines(":\n")
+            outfile.write(":\n")
+        
+        # check for page marker
+        outfile.close()
+        check = file_size(check)
+        outfile = open("homebrewery.txt", "a")
 
 outfile.close()

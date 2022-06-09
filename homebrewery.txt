@@ -46,6 +46,7 @@ As well as the monsters occupying certain rooms in the dungeon, there are roamin
 | 5 | 3 x Goblin (cr 1/4, mm 166); easy, 150 xp, trying to lure the party into an ambush |
 | 6 | Vampiric Mist (cr 3, mtf 246) and 1 x Shadow (cr 1/2, mm 269); medium, 800 xp, actively patrolling their territory |
 }}
+\page
 ## Locations
 ### Getting In
 The entrance into this dungeon can be found on the GM version of the map at ***row: 1*** and ***column: 13***, which enters the corridor from the north.
@@ -104,6 +105,7 @@ Treasure: 1700 cp, 900 sp, 50 gp, chalcedony (50 gp), 2 x jasper (50 gp), moonst
 | east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;    +8 to hit against one target, 2d10 slashing damage | n/a |
 | south | Unlocked Stone Door (60 hp) | 9 |
 :
+\page
 ### Room 4
 :
 {{note
@@ -179,7 +181,6 @@ Treasure: 16 sp; 13 gp; 10 ep; 16 cp; 9 gp; 10 sp; 19 cp
 * Hidden (DC 15 to find) Unlocked Iron Chest (60 hp)
 * 2900 cp, 1500 sp, 90 gp, a bone chalice set with citrine (25 gp), a brass bracer set with a rosette of jasper (25 gp), a copper flower brooch etched with thorned vines (25 gp), a set of ivory dice with copper pips (25 gp), a steel amulet etched with draconic runes (25 gp), Staff of the Woodlands (rare, dmg 204)
 }}
-:
 {{note
 Empty.
 }}
@@ -190,6 +191,7 @@ This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 x
 #### Treasure
 Treasure: 15 sp; 20 cp; 10 ep; 10 sp
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -266,6 +268,7 @@ A circle of tall stones stands in the south-west corner of the room, and a pile 
 | south | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp) ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 18 |
 | south | Secret (DC 20 to find) Locked Iron Door (DC 25 to open) ***Secret:*** The door is concealed by an illusion | 17 |
 :
+\page
 ### Room 13
 :
 {{note
@@ -361,6 +364,7 @@ Treasure: 17 cp; 12 gp
 | north | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp) ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 12 |
 | west | Unlocked Stone Door (60 hp) | 17 |
 :
+\page
 ### Room 19
 :
 {{note
@@ -427,7 +431,6 @@ Empty.
 #### Trap!
 * Earthmaw Trap: DC 10 to find, DC 15 to disable;    +7 to hit against one target, 2d10 piercing damage
 }}
-:
 {{note
 Empty.
 }}
@@ -444,6 +447,7 @@ Treasure: 10 gp
 | east | Stuck Iron Door (DC 25 to break; 60 hp) | n/a |
 | south | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 26 |
 :
+\page
 ### Room 24
 :
 {{note
@@ -523,6 +527,7 @@ Treasure: 11 gp; 12 gp; 18 sp
 | south | Unlocked Iron Door (60 hp) | n/a |
 | west | Locked Iron Door (DC 15 to open) | 27 |
 :
+\page
 ### Room 29
 :
 {{note
@@ -609,7 +614,7 @@ Treasure: 21 cp; 20 sp; 21 cp
 * Arrow Trap: DC 10 to find, DC 10 to disable;    +10 to hit against one target, 4d10 piercing damage
 * 2100 cp, 500 sp, 100 gp, diamond (50 gp), bloodstone (50 gp), carnelian (50 gp), chrysoprase (50 gp), jasper (50 gp), Scroll of Protection (fey) (rare, dmg 199)
 }}
-:
+\page
 {{note
 A narrow shaft descends from the room into the next dungeon level down, and spirals of red stones cover the floor.
 }}
@@ -672,6 +677,7 @@ Empty.
 {{note
 A tapestry of a legendary battle hangs from the south wall, and someone has scrawled "Look to the ceiling" on the west wall.
 }}
+\page
 ::
 This room is occupied by **4 x Svirfneblin (cr 1/2, mm 164); deadly, 400 xp**
 :
@@ -734,6 +740,7 @@ Empty.
 | north | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp) ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;    affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 31 |
 | south | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 47 |
 :
+\page
 ### Room 42
 :
 {{note
@@ -771,7 +778,6 @@ A simple fireplace sits against the north wall, and someone has scrawled "white,
 #### Trap!
 * Net Trap: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 11 save or become restrained
 }}
-:
 {{note
 Empty.
 }}
@@ -820,13 +826,13 @@ Treasure: 10 sp; 15 sp
 | east | Locked Iron Door (DC 20 to open) | 52 |
 | east | Locked Stone Door (DC 15 to open) | 47 |
 :
+\page
 ### Room 47
 :
 {{classTable,frame
 #### Trap!
 * Net Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 10 save or become restrained
 }}
-:
 {{note
 Empty.
 }}
@@ -863,7 +869,6 @@ Empty.
 #### Trap!
 * Magic Missle Trap: DC 15 to find, DC 15 to disable;    one target, 1d10 force damage
 }}
-:
 {{note
 Numerous pillars line the north and west walls, and a swarm of crawling insects covers the floor.
 }}
@@ -898,6 +903,7 @@ Empty.
 | south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed behind a statue of an ancient lich, and opened by pressing runes on his staff | n/a |
 | south | Archway | 59 |
 :
+\page
 ### Room 52
 :
 {{note
@@ -989,6 +995,7 @@ Treasure: 17 sp
 :
 ### Room 58
 :
+\page
 {{note
 A group of monstrous faces have been carved into the west wall, and an altar of evil sits in the east side of the room.
 }}
@@ -1005,13 +1012,11 @@ A group of monstrous faces have been carved into the west wall, and an altar of 
 #### Trap!
 * Electrified Floortile: DC 10 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 17 save or take 4d10 lightning damage
 }}
-:
 {{classTable,frame
 #### Hidden Treasure!
 * Hidden (DC 20 to find) Locked Iron Chest (DC 20 to unlock, DC 30 to break; 60 hp)
 * 1700 cp, 1300 sp, 90 gp, banded agate (10 gp), tiger eye (10 gp), turquoise (10 gp)
 }}
-:
 {{note
 Empty.
 }}
@@ -1079,6 +1084,7 @@ Treasure: 10 sp
 | south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;    +9 to hit against one target, 4d10 piercing damage | 71 |
 | west | Unlocked Stone Door (60 hp) | 61 |
 :
+\page
 ### Room 63
 :
 {{note
@@ -1150,6 +1156,7 @@ A tile labyrinth covers the floor, and someone has scrawled "The last wards have
 | south | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 71 |
 | west | Locked Iron Door (DC 15 to open) (slides down) | 62 |
 :
+\page
 ### Room 67
 :
 {{note
@@ -1174,13 +1181,11 @@ Treasure: 17 cp; 19 sp
 #### Trap!
 * Ice Dart Trap: DC 15 to find, DC 15 to disable;    +9 to hit against one target, 4d10 cold damage
 }}
-:
 {{classTable,frame
 #### Hidden Treasure!
 * Hidden (DC 15 to find) Locked Iron Chest (DC 25 to unlock, DC 30 to break; 60 hp)
 * 2200 cp, 500 sp, 70 gp, a brocade choker threaded with silver (25 gp), a pewter ring brooch inlaid with a meandros of electrum (25 gp), a set of crystal dice (25 gp), an obsidian orb engraved with a labyrinth (25 gp), Spell Scroll (Vicious Mockery) (common, dmg 200), Spell Scroll (Arms of Hadar) (common, dmg 200), Spell Scroll (False Life) (common, dmg 200), Spell Scroll (Spiritual Weapon) (uncommon, dmg 200), Potion of Healing (common, dmg 187)
 }}
-:
 {{note
 Empty.
 }}
@@ -1210,7 +1215,6 @@ Spirals of gray stones cover the floor, and a pile of rotting wood lies in the s
 #### Trap!
 * Concealed Pit: DC 15 to find, DC 15 to disable;    affects all targets entering a 10 ft. square area, DC 20 save or take 4d10 damage
 }}
-:
 {{note
 Empty.
 }}
@@ -1221,6 +1225,7 @@ Empty.
 | south | Unlocked Stone Door (60 hp) | n/a |
 | south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Rune of Hypnosis: DC 20 to find, DC 15 to disable;    affects all targets within 10 ft., DC 18 save or become incapacitated for 1d4 rounds | n/a |
 :
+\page
 ### Room 71
 :
 {{note
@@ -1284,6 +1289,7 @@ This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); e
 #### Treasure
 Treasure: 13 sp; 15 cp; 16 cp; 15 sp; 15 sp; 8 gp; 14 sp; 11 gp; 6 sp
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
