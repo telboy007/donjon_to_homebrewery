@@ -43,7 +43,7 @@ outfile = open("homebrewery.txt", "w")
 
 """ title page """
 if len(sys.argv) == 3:
-    outfile.write(f"<img src=\"{sys.argv[2]}\" style=\"position:absolute;mix-blend-mode: color-burn;transform:rotate(-30deg);width:500%;top:-1000px;\" />\n")
+    outfile.write(f"![map]({sys.argv[2]}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
     outfile.write(":\n")
 
 outfile.write("{{margin-top:225px}}\n")
@@ -53,17 +53,32 @@ outfile.write("{{wide\n")
 outfile.write(f"##### {data['details']['history']}\n")
 outfile.write("::\n")
 outfile.write(f"##### A randomly generated D&D 5e donjon dungeon for APL{data['settings']['level']}\n")
+outfile.write("::::\n")
+outfile.write(f"##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
 outfile.write("}}\n")
 outfile.write("\page\n")
 
 """ map page """
 if len(sys.argv) == 3:
     outfile.write("## Map\n")
-    outfile.write(f"<img src=\"{sys.argv[2]}.png\" style=\"width:680px\" />\n")
+    outfile.write(f"![map]({sys.argv[2]}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
     outfile.write("\page\n")
 
 """ general features """
+
+# picture, watercolour stain & credits
+outfile.write("![dungeon entrance](https://imgur.com/IWsK6KL.png){position:absolute;mix-blend-mode:multiply;left:-200px;top:-50px}\n")
+outfile.write("{{artist,top:-5px,right:10px,color:white\n")
+outfile.write("##### Dungeon's Entrance\n")
+outfile.write("[by Gaetano Caltabiano](https://www.artstation.com/ghendral)\n")
+outfile.write("}}\n")
+outfile.write("<!-- Full page stain -->\n")
+outfile.write("![stain](https://i.imgur.com/H0ZaKgc.png){position:absolute;top:0px;left:0px;width:816px;-webkit-transform:scaleX(-1);transform:scaleX(-1);}\n")
+outfile.write("{{artist,top:-5px,left:10px\n")
+outfile.write("##### Full Page Watercolor Stains\n")
+outfile.write("[by u/flameableconcrete](https://homebrewery.naturalcrit.com/share/SkKsdJmKf)\n")
+outfile.write("}}\n")
 
 outfile.write("## Description\n")
 

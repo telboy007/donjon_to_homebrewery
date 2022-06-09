@@ -1,4 +1,4 @@
-<img src="https://imgur.com/cpy3lBq.png" style="position:absolute;mix-blend-mode: color-burn;transform:rotate(-30deg);width:500%;top:-1000px;" />
+![map](https://imgur.com/cpy3lBq.png){position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}
 :
 {{margin-top:225px}}
 # The Catacombs of Dark Wyrms
@@ -7,12 +7,25 @@
 ##### The dungeon was created by dwarves as a temple. It was eventually overrun by elementals, and has lain empty for many centuries until recently.
 ::
 ##### A randomly generated D&D 5e donjon dungeon for APL1
+::::
+##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
 \page
 ## Map
-<img src="https://imgur.com/cpy3lBq.png.png" style="width:680px" />
+![map](https://imgur.com/cpy3lBq.png){width:680px;}
 Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
+![dungeon entrance](https://imgur.com/IWsK6KL.png){position:absolute;mix-blend-mode:multiply;left:-200px;top:-50px}
+{{artist,top:-5px,right:10px,color:white
+##### Dungeon's Entrance
+[by Gaetano Caltabiano](https://www.artstation.com/ghendral)
+}}
+<!-- Full page stain -->
+![stain](https://i.imgur.com/H0ZaKgc.png){position:absolute;top:0px;left:0px;width:816px;-webkit-transform:scaleX(-1);transform:scaleX(-1);}
+{{artist,top:-5px,left:10px
+##### Full Page Watercolor Stains
+[by u/flameableconcrete](https://homebrewery.naturalcrit.com/share/SkKsdJmKf)
+}}
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
