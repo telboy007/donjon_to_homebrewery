@@ -1,3 +1,5 @@
+<img src="https://imgur.com/cpy3lBq.png" style="position:absolute;mix-blend-mode: color-burn;transform:rotate(-30deg);width:500%;top:-1000px;" />
+:
 {{margin-top:225px}}
 # The Catacombs of Dark Wyrms
 {{margin-top:25px}}
@@ -7,38 +9,46 @@
 ##### A randomly generated donjon dungeon for APL1
 }}
 \page
+## Map
+<img src="https://imgur.com/cpy3lBq.png.png" style="width:680px" />
+Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
+\page
 ## Description
+The generated dungeon has the following features, which may include skill checks to perform certain actions.
 {{descriptive
-### General Features
+#### General Features
 | Type | Detail |
 |:--|:--|
-| Floors |Smooth Stone|
-| Walls |Superior Masonry (DC 20 to climb)|
-| Temperature |Warm|
-| Lighting |Shadowy (phosphorescent fungus every 20 ft.)|
-### Corridor Features
+| Floors | Smooth Stone |
+| Walls | Superior Masonry (DC 20 to climb) |
+| Temperature | Warm |
+| Lighting | Shadowy (phosphorescent fungus every 20 ft.) |
+}}
+Some of the corridors marked on the map have special features that are detailed below.
+{{descriptive
+#### Corridor Features
 | Type | Detail |
 |:--|:--|
-|a|A tile labyrinth covers the floor|
-|c|Thunderstone Mine: DC 15 to find, DC 15 to disable;     affects all targets within 20 ft., DC 13 save or take 2d10 thunder damage     and become deafened for 1d4 rounds|
-|e|Poison Gas Trap: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 17 save or take 4d10 poison damage|
+| a | A tile labyrinth covers the floor |
+| c | Thunderstone Mine: DC 15 to find, DC 15 to disable;     affects all targets within 20 ft., DC 13 save or take 2d10 thunder damage     and become deafened for 1d4 rounds |
+| e | Poison Gas Trap: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 17 save or take 4d10 poison damage |
 }}
 ## Random Encounters
+As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with their current action/purpose.  This will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
-### Wandering Monsters
+#### Wandering Monsters
 | Roll | Detail |
 |:--|:--|
-|1|7 x Derro (cr 1/4, mtf 158); deadly, 350 xp, investigating a strange noise|
-|2|Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pureblood (cr 1, mm 310); deadly, 650 xp, wandering senselessly|
-|3|Gelatinous Cube (cr 2, mm 242); easy, 450 xp, scavenging for food and treasure|
-|4|2 x Firenewt Warrior (cr 1/2, vgm 142); easy, 200 xp, wielding bizarre eldritch powers|
-|5|3 x Goblin (cr 1/4, mm 166); easy, 150 xp, trying to lure the party into an ambush|
-|6|Vampiric Mist (cr 3, mtf 246) and 1 x Shadow (cr 1/2, mm 269); medium, 800 xp, actively patrolling their territory|
+| 1 | 7 x Derro (cr 1/4, mtf 158); deadly, 350 xp, investigating a strange noise |
+| 2 | Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pureblood (cr 1, mm 310); deadly, 650 xp, wandering senselessly |
+| 3 | Gelatinous Cube (cr 2, mm 242); easy, 450 xp, scavenging for food and treasure |
+| 4 | 2 x Firenewt Warrior (cr 1/2, vgm 142); easy, 200 xp, wielding bizarre eldritch powers |
+| 5 | 3 x Goblin (cr 1/4, mm 166); easy, 150 xp, trying to lure the party into an ambush |
+| 6 | Vampiric Mist (cr 3, mtf 246) and 1 x Shadow (cr 1/2, mm 269); medium, 800 xp, actively patrolling their territory |
 }}
-### Exits and Entrances
-| Row | Column | Direction | Type | Level |
-|:--|:--|:--|:--|:--|
-|1|13|north|corridor|0|
+## Locations
+### Getting In
+The entrance into this dungeon can be found on the map at ***row: 1*** and ***column: 13*** on the DM version of the map, which enters the corridor from the north.
 ### Room 1
 :
 {{note

@@ -11,5 +11,9 @@ To use:
 1. `pipenv shell`
 1. `python convert_donjon_to_homebrewery.py your_filename.json`
 
+Optional:
+1. You can provide a url as a second command line argument for an image of the map
+1. `python convert_donjon_to_homebrewery.py your_filename.json https://imgur.something.png`
+
 You can now copy and paste the contents of homebrewery.txt into your [homebrewery](https://homebrewery.naturalcrit.com/) document.
 
