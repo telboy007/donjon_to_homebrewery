@@ -12,7 +12,7 @@ f = open(filename)
 data = json.load(f)
 
 """ title page """
-if sys.argv[2]:
+if len(sys.argv) == 3:
     outfile.writelines(f"<img src=\"{sys.argv[2]}\" style=\"position:absolute;mix-blend-mode: color-burn;transform:rotate(-30deg);width:500%;top:-1000px;\" />\n")
     outfile.writelines(":\n")
 
@@ -27,7 +27,7 @@ outfile.writelines("}}\n")
 outfile.writelines("\page\n")
 
 """ map page """
-if sys.argv[2]:
+if len(sys.argv) == 3:
     outfile.writelines("## Map\n")
     outfile.writelines(f"<img src=\"{sys.argv[2]}.png\" style=\"width:680px\" />\n")
     outfile.writelines("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
