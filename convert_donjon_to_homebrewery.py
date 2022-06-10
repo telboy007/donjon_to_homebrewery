@@ -50,9 +50,25 @@ outfile.write("{{margin-top:225px}}\n")
 outfile.write(f"# {data['settings']['name']}\n")
 outfile.write("{{margin-top:25px}}\n")
 outfile.write("{{wide\n")
-outfile.write(f"##### {data['details']['history']}\n")
-outfile.write("::\n")
-outfile.write(f"##### A randomly generated D&D 5e donjon dungeon for APL{data['settings']['level']}\n")
+
+# certain dungeon generators don't create a blurb
+try:
+    outfile.write(f"##### {data['details']['history']}\n")
+    outfile.write("::\n")
+except:
+    outfile.write("::\n")
+
+# work out ruleset for title page
+if data['settings']['infest'] == "dnd_5e":
+    infest = "D&D 5e"
+elif data['settings']['infest'] == "dnd_4e":
+    infest = "D&D 4e"
+elif data['settings']['infest'] == "adnd":
+    infest = "AD&D"  
+else:
+    infest = "fantasy"
+
+outfile.write(f"##### A randomly generated {infest} donjon dungeon for APL{data['settings']['level']}\n")
 outfile.write("::::\n")
 outfile.write(f"##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
 outfile.write("}}\n")
@@ -67,18 +83,27 @@ if len(sys.argv) == 3:
 
 """ general features """
 
-# picture, watercolour stain & credits
-outfile.write("![dungeon entrance](https://imgur.com/IWsK6KL.png){position:absolute;mix-blend-mode:multiply;left:-200px;top:-50px}\n")
-outfile.write("{{artist,top:-5px,right:10px,color:white\n")
-outfile.write("##### Dungeon's Entrance\n")
-outfile.write("[by Gaetano Caltabiano](https://www.artstation.com/ghendral)\n")
-outfile.write("}}\n")
-outfile.write("<!-- Full page stain -->\n")
-outfile.write("![stain](https://i.imgur.com/H0ZaKgc.png){position:absolute;top:0px;left:0px;width:816px;-webkit-transform:scaleX(-1);transform:scaleX(-1);}\n")
-outfile.write("{{artist,top:-5px,left:10px\n")
-outfile.write("##### Full Page Watercolor Stains\n")
-outfile.write("[by u/flameableconcrete](https://homebrewery.naturalcrit.com/share/SkKsdJmKf)\n")
-outfile.write("}}\n")
+# picture, watercolour stain & credits if there is room
+limit = (
+        len(str(data['details']['floor'])) + 
+        len(str(data['details']['walls'])) + 
+        len(str(data['details']['temperature'])) + 
+        len(str(data['details']['illumination'])) + 
+        len(str(data["corridor_features"])) + 
+        len(str(data['wandering_monsters']))
+        )
+if limit < 1934:
+    outfile.write("![dungeon entrance](https://imgur.com/IWsK6KL.png){position:absolute;mix-blend-mode:multiply;left:-200px;top:-50px}\n")
+    outfile.write("{{artist,top:-5px,right:10px,color:white\n")
+    outfile.write("##### Dungeon's Entrance\n")
+    outfile.write("[by Gaetano Caltabiano](https://www.artstation.com/ghendral)\n")
+    outfile.write("}}\n")
+    outfile.write("<!-- Full page stain -->\n")
+    outfile.write("![stain](https://i.imgur.com/H0ZaKgc.png){position:absolute;top:0px;left:0px;width:816px;-webkit-transform:scaleX(-1);transform:scaleX(-1);}\n")
+    outfile.write("{{artist,top:-5px,left:10px\n")
+    outfile.write("##### Full Page Watercolor Stains\n")
+    outfile.write("[by u/flameableconcrete](https://homebrewery.naturalcrit.com/share/SkKsdJmKf)\n")
+    outfile.write("}}\n")
 
 outfile.write("## Description\n")
 
@@ -111,7 +136,7 @@ outfile.write("}}\n")
 
 outfile.write("## Random Encounters\n")
 
-outfile.write("As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with a specific goal.  This will help you place them in the dungeon or when the party encounter them.\n")
+outfile.write("There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n")
 outfile.write("{{classTable,frame\n")
 outfile.write("#### Wandering Monsters\n")
 outfile.write("| Roll | Detail |\n")
@@ -133,9 +158,11 @@ outfile = open("homebrewery.txt", "a")
 
 outfile.write("## Locations\n")
 
-for egress in data["egress"]:
-    outfile.write("### Getting In\n")
-    outfile.write(f"The entrance into this dungeon can be found on the GM version of the map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
+# certain dungeon generators don't provide entrance information
+if "egress" in data:
+    for egress in data["egress"]:
+        outfile.write("### Getting In\n")
+        outfile.write(f"The entrance into this dungeon can be found on the GM version of the map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
 
 """ rooms / locations """
 

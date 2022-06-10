@@ -47,7 +47,7 @@ Some of the corridors marked on the map have special features detailed below.
 | e | Poison Gas Trap: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 17 save or take 4d10 poison damage |
 }}
 ## Random Encounters
-As well as the monsters occupying certain rooms in the dungeon, there are roaming groups with a specific goal.  This will help you place them in the dungeon or when the party encounter them.
+There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
 #### Wandering Monsters
 | Roll | Detail |
