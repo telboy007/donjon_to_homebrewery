@@ -100,6 +100,7 @@ outfile.write("}}\n")
 
 """ corridor features """
 
+# caves don't have corridor features
 if "corridor_features" in data:
     outfile.write("Some of the corridors marked on the map have special features detailed below.\n")
     outfile.write("{{descriptive\n")
@@ -116,7 +117,6 @@ if "corridor_features" in data:
 """ wandering monsters """
 
 # certain dungeon outfit types do not have a wandering creature table
-
 if "wandering_monsters" in data:
     outfile.write("## Random Encounters\n")
 
@@ -145,6 +145,7 @@ outfile.write("\page\n")
 outfile.write("## Locations\n")
 
 # certain dungeon generators don't provide entrance information
+# or there are multiple entrances
 if "egress" in data:
     outfile.write("### Getting In\n")
     if len(data["egress"]) == 1:
@@ -152,6 +153,7 @@ if "egress" in data:
     else:
         outfile.write("There are multiple entrances into the dungeon:\n")
     for egress in data["egress"]:
+        # caves don't have a type the entrance leads into
         if "type" in egress:
             outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
         else:
