@@ -1,5 +1,10 @@
 # donjon_to_homebrewery
-Converts 5e donjon random dungeons into nice homebrewery v3 formatted text to copy and paste.
+Converts certain [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v3 formatted text to copy and paste.
+
+Tested with (but YMMV):
+1. AD&D
+1. D&D 4e
+1. D&D 5e
 
 NOTE: don't forget to grab the map from donjon as well as the json! :)
 
@@ -16,4 +21,3 @@ Optional:
 1. `python convert_donjon_to_homebrewery.py your_filename.json https://imgur.something.png`
 
 You can now copy and paste the contents of homebrewery.txt into your [homebrewery](https://homebrewery.naturalcrit.com/) document.
-
