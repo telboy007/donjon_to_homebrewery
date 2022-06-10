@@ -270,7 +270,10 @@ if "rooms" in data:
             for direction, door in rooms["doors"].items():
                 for d in door:
                     if d["type"] == "trapped":
-                        trap = d["trap"].replace("\n", "")
+                        try:
+                            trap = d["trap"].replace("\n", "")
+                        except:
+                            trap = "Already disarmed."
                         try:
                             outfile.write(f"| {direction} | {d['desc']} ***Trap:*** {trap} | {d['out_id']} |\n")
                         except:
