@@ -7,6 +7,7 @@ def set_check(check):
     """Count the number of characters in a file"""
     infile = open("homebrewery.txt", "r")
     data = infile.read()
+    infile.close()
     return len(data)
 
 
@@ -15,6 +16,7 @@ def file_size(check):
     """Count the number of characters in a file"""
     infile = open("homebrewery.txt", "r")
     data = infile.read()
+    infile.close()
     if (len(data) - check) > 2450:
         outfile = open("homebrewery.txt", "a")
         outfile.write("\page\n")
@@ -83,28 +85,6 @@ if len(sys.argv) == 3:
 
 """ general features """
 
-# picture, watercolour stain & credits if there is room
-limit = (
-        len(str(data['details']['floor'])) + 
-        len(str(data['details']['walls'])) + 
-        len(str(data['details']['temperature'])) + 
-        len(str(data['details']['illumination'])) + 
-        len(str(data["corridor_features"])) + 
-        len(str(data['wandering_monsters']))
-        )
-if limit < 1934:
-    outfile.write("![dungeon entrance](https://imgur.com/IWsK6KL.png){position:absolute;mix-blend-mode:multiply;left:-200px;top:-50px}\n")
-    outfile.write("{{artist,top:-5px,right:10px,color:white\n")
-    outfile.write("##### Dungeon's Entrance\n")
-    outfile.write("[by Gaetano Caltabiano](https://www.artstation.com/ghendral)\n")
-    outfile.write("}}\n")
-    outfile.write("<!-- Full page stain -->\n")
-    outfile.write("![stain](https://i.imgur.com/H0ZaKgc.png){position:absolute;top:0px;left:0px;width:816px;-webkit-transform:scaleX(-1);transform:scaleX(-1);}\n")
-    outfile.write("{{artist,top:-5px,left:10px\n")
-    outfile.write("##### Full Page Watercolor Stains\n")
-    outfile.write("[by u/flameableconcrete](https://homebrewery.naturalcrit.com/share/SkKsdJmKf)\n")
-    outfile.write("}}\n")
-
 outfile.write("## Description\n")
 
 outfile.write("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
@@ -120,39 +100,45 @@ outfile.write("}}\n")
 
 """ corridor features """
 
-outfile.write("Some of the corridors marked on the map have special features detailed below.\n")
-outfile.write("{{descriptive\n")
-outfile.write("#### Corridor Features\n")
-outfile.write("| Type | Detail |\n")
-outfile.write("|:--|:--|\n")
+if "corridor_features" in data:
+    outfile.write("Some of the corridors marked on the map have special features detailed below.\n")
+    outfile.write("{{descriptive\n")
+    outfile.write("#### Corridor Features\n")
+    outfile.write("| Type | Detail |\n")
+    outfile.write("|:--|:--|\n")
 
-for key, val in data["corridor_features"].items():
-    detail = val["detail"].replace("\n", " ")
-    outfile.write(f"| {val['key']} | {detail} |\n")
+    for key, val in data["corridor_features"].items():
+        detail = val["detail"].replace("\n", " ")
+        outfile.write(f"| {val['key']} | {detail} |\n")
 
-outfile.write("}}\n")
+    outfile.write("}}\n")
 
 """ wandering monsters """
 
-outfile.write("## Random Encounters\n")
+# certain dungeon outfit types do not have a wandering creature table
 
-outfile.write("There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n")
-outfile.write("{{classTable,frame\n")
-outfile.write("#### Wandering Monsters\n")
-outfile.write("| Roll | Detail |\n")
-outfile.write("|:--|:--|\n")
+if "wandering_monsters" in data:
+    outfile.write("## Random Encounters\n")
 
-for key, val in data["wandering_monsters"].items():
-    group = val.replace("\n", " ")
-    outfile.write(f"| {key} | {group} |\n")
-    
-outfile.write("}}\n")
-outfile.write("\page\n")
+    outfile.write("There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n")
+    outfile.write("{{classTable,frame\n")
+    outfile.write("#### Wandering Monsters\n")
+    outfile.write("| Roll | Detail |\n")
+    outfile.write("|:--|:--|\n")
+
+    for key, val in data["wandering_monsters"].items():
+        group = val.replace("\n", " ")
+        outfile.write(f"| {key} | {group} |\n")
+        
+    outfile.write("}}\n")
 
 # set page marker check
 outfile.close()
 check = set_check(check)
 outfile = open("homebrewery.txt", "a")
+
+# end description page    
+outfile.write("\page\n")
 
 """ Locations """
 
@@ -160,9 +146,17 @@ outfile.write("## Locations\n")
 
 # certain dungeon generators don't provide entrance information
 if "egress" in data:
+    outfile.write("### Getting In\n")
+    if len(data["egress"]) == 1:
+        outfile.write("There is only one entrance into the dungeon:\n")
+    else:
+        outfile.write("There are multiple entrances into the dungeon:\n")
     for egress in data["egress"]:
-        outfile.write("### Getting In\n")
-        outfile.write(f"The entrance into this dungeon can be found on the GM version of the map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
+        if "type" in egress:
+            outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
+        else:
+            outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters from the {egress['dir']}.\n")
+    outfile.write(":\n")
 
 """ rooms / locations """
 

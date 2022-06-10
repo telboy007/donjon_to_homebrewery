@@ -15,17 +15,6 @@
 ![map](https://imgur.com/cpy3lBq.png){width:680px;}
 Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
-![dungeon entrance](https://imgur.com/IWsK6KL.png){position:absolute;mix-blend-mode:multiply;left:-200px;top:-50px}
-{{artist,top:-5px,right:10px,color:white
-##### Dungeon's Entrance
-[by Gaetano Caltabiano](https://www.artstation.com/ghendral)
-}}
-<!-- Full page stain -->
-![stain](https://i.imgur.com/H0ZaKgc.png){position:absolute;top:0px;left:0px;width:816px;-webkit-transform:scaleX(-1);transform:scaleX(-1);}
-{{artist,top:-5px,left:10px
-##### Full Page Watercolor Stains
-[by u/flameableconcrete](https://homebrewery.naturalcrit.com/share/SkKsdJmKf)
-}}
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
@@ -62,7 +51,9 @@ There are also roaming groups with specific goals, this will help you place them
 \page
 ## Locations
 ### Getting In
-The entrance into this dungeon can be found on the GM version of the map at ***row: 1*** and ***column: 13***, which enters the corridor from the north.
+There is only one entrance into the dungeon:
+* On the GM map at ***row: 1*** and ***column: 13***, which enters the corridor from the north.
+:
 ### Room 1
 :
 {{note
