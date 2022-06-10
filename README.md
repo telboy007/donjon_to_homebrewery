@@ -1,6 +1,8 @@
 # donjon_to_homebrewery
 Converts certain [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v3 formatted text to copy and paste.
 
+NOTE: It will add page markers to break up room locations, but some minor edits may still be required.
+
 Tested with (but YMMV):
 1. AD&D
 1. D&D 4e
