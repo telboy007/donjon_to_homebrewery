@@ -1,3 +1,5 @@
+![map](https://imgur.com/cpy3lBq.png){position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}
+:
 {{margin-top:225px}}
 # The Catacombs of Dark Wyrms
 {{margin-top:25px}}
@@ -9,6 +11,10 @@
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
 \page
+## Map
+![map](https://imgur.com/cpy3lBq.png){width:680px;}
+Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
+\page
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
@@ -19,6 +25,7 @@ The dungeon has the following features, these may include skill checks to perfor
 | Walls | Superior Masonry (DC 20 to climb) |
 | Temperature | Warm |
 | Lighting | Shadowy (phosphorescent fungus every 20 ft.) |
+| Special | None |
 }}
 Some of the corridors marked on the map have special features detailed below.
 {{descriptive
