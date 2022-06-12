@@ -105,7 +105,7 @@ outfile.write(f"| Walls | {data['details']['walls']} |\n")
 outfile.write(f"| Temperature | {data['details']['temperature'].replace(newline, ' ')} |\n")
 outfile.write(f"| Lighting | {data['details']['illumination']} |\n")
 if "special" in data['details']:
-    outfile.write(f"| Special | {data['details']['special']} |\n")
+    outfile.write(f"| Special | {data['details']['special'].replace(newline, ' ')} |\n")
 outfile.write("}}\n")
 
 # corridor features - caves don't have corridor features
