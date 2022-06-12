@@ -1,19 +1,13 @@
-![map](https://imgur.com/cpy3lBq.png){position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}
-:
 {{margin-top:225px}}
 # The Catacombs of Dark Wyrms
 {{margin-top:25px}}
 {{wide
 ##### The dungeon was created by dwarves as a temple. It was eventually overrun by elementals, and has lain empty for many centuries until recently.
 ::
-##### A randomly generated D&D 5e donjon dungeon for APL1
+##### A randomly generated D&D 5e donjon dungeon for a party size of 6 and APL1
 ::::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
-\page
-## Map
-![map](https://imgur.com/cpy3lBq.png){width:680px;}
-Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
@@ -69,7 +63,7 @@ Treasure: 14 sp; 5 gp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Unlocked Stone Door (60 hp) | 7 |
+| south | Unlocked Stone Door (60 hp)  | 7 |
 :
 ### Room 2
 :
@@ -86,9 +80,9 @@ Treasure: 2200 cp, 1300 sp, 120 gp, a bloodstone cup inlaid with electrum (25 gp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | n/a |
-| east | Unlocked Stone Door (60 hp) (slides down) | n/a |
-| south | Unlocked Stone Door (60 hp) | 7 |
+| east | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | n/a |
+| east | Unlocked Stone Door (60 hp) (slides down)  | n/a |
+| south | Unlocked Stone Door (60 hp)  | 7 |
 :
 ### Room 3
 :
@@ -105,9 +99,9 @@ Treasure: 1700 cp, 900 sp, 50 gp, chalcedony (50 gp), 2 x jasper (50 gp), moonst
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Unlocked Iron Door (60 hp) (slides up) ***Trap:*** Rune of Fear: DC 15 to find, DC 15 to disable;    affects all targets within 10 ft., DC 16 save or become frightened for 1d4 rounds | n/a |
-| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;    +8 to hit against one target, 2d10 slashing damage | n/a |
-| south | Unlocked Stone Door (60 hp) | 9 |
+| east | Trapped and Unlocked Iron Door (60 hp) (slides up)  ***Trap:*** Rune of Fear: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 16 save or become frightened for 1d4 rounds | n/a |
+| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +8 to hit against one target, 2d10 slashing damage | n/a |
+| south | Unlocked Stone Door (60 hp)  | 9 |
 :
 \page
 ### Room 4
@@ -125,9 +119,9 @@ Treasure: 2 pp; 15 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 6 |
-| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** Falling Block: DC 10 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 15 save or take 2d10 damage | n/a |
-| south | Archway | 10 |
+| east | Archway  | 6 |
+| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 15 save or take 2d10 damage | n/a |
+| south | Archway  | 10 |
 :
 ### Room 5
 :
@@ -144,9 +138,9 @@ Treasure: 19 cp; 19 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | n/a |
-| south | Stuck Iron Door (DC 25 to break; 60 hp) | 11 |
-| west | Archway | 6 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
+| south | Stuck Iron Door (DC 25 to break; 60 hp)  | 11 |
+| west | Archway  | 6 |
 :
 ### Room 6
 :
@@ -156,9 +150,9 @@ A mural of legendary monsters covers the ceiling, and skeletons hang from chains
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 5 |
+| east | Archway  | 5 |
 | south | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by twisting an iron ring | n/a |
-| west | Archway | 4 |
+| west | Archway  | 4 |
 :
 ### Room 7
 :
@@ -175,8 +169,8 @@ Treasure: 16 sp; 13 gp; 10 ep; 16 cp; 9 gp; 10 sp; 19 cp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Unlocked Stone Door (60 hp) | 1 |
-| north | Unlocked Stone Door (60 hp) | 2 |
+| north | Unlocked Stone Door (60 hp)  | 1 |
+| north | Unlocked Stone Door (60 hp)  | 2 |
 :
 ### Room 8
 :
@@ -199,9 +193,9 @@ Treasure: 15 sp; 20 cp; 10 ep; 10 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | 9 |
-| north | Locked Iron Door (DC 20 to open) | n/a |
-| south | Stuck Iron Door (DC 25 to break; 60 hp) (slides to one side) | n/a |
+| east | Unlocked Stone Door (60 hp)  | 9 |
+| north | Locked Iron Door (DC 20 to open)  | n/a |
+| south | Stuck Iron Door (DC 25 to break; 60 hp) (slides to one side)  | n/a |
 :
 ### Room 9
 :
@@ -218,9 +212,9 @@ Treasure: 3100 cp, 900 sp, 70 gp, 2 x diamond (50 gp), 2 x carnelian (50 gp), ch
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Unlocked Stone Door (60 hp) | 3 |
-| south | Archway | n/a |
-| west | Unlocked Stone Door (60 hp) | 8 |
+| north | Unlocked Stone Door (60 hp)  | 3 |
+| south | Archway  | n/a |
+| west | Unlocked Stone Door (60 hp)  | 8 |
 :
 ### Room 10
 :
@@ -237,9 +231,9 @@ Treasure: 16 sp; 9 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Archway | 4 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | 15 |
-| south | Unlocked Stone Door (60 hp) | 16 |
+| north | Archway  | 4 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 15 |
+| south | Unlocked Stone Door (60 hp)  | 16 |
 :
 ### Room 11
 :
@@ -256,9 +250,9 @@ Treasure: 27 cp; 18 cp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Stuck Iron Door (DC 25 to break; 60 hp) | 5 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | 20 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | n/a |
+| north | Stuck Iron Door (DC 25 to break; 60 hp)  | 5 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 20 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
 :
 ### Room 12
 :
@@ -268,8 +262,8 @@ A circle of tall stones stands in the south-west corner of the room, and a pile 
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 13 |
-| south | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp) ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 18 |
+| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 13 |
+| south | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 18 |
 | south | Secret (DC 20 to find) Locked Iron Door (DC 25 to open) ***Secret:*** The door is concealed by an illusion | 17 |
 :
 \page
@@ -281,8 +275,8 @@ A toppled statue lies in the south side of the room, and someone has scrawled an
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 20 to open) | 14 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 12 |
+| east | Locked Iron Door (DC 20 to open)  | 14 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 12 |
 :
 ### Room 14
 :
@@ -292,8 +286,8 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Locked Iron Door (DC 10 to open) | 25 |
-| west | Locked Iron Door (DC 20 to open) | 13 |
+| south | Locked Iron Door (DC 10 to open)  | 25 |
+| west | Locked Iron Door (DC 20 to open)  | 13 |
 :
 ### Room 15
 :
@@ -310,10 +304,10 @@ Treasure: 14 cp; 7 gp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 16 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | 10 |
-| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down) ***Trap:*** Earthmaw Trap: DC 15 to find, DC 15 to disable;    +3 to hit against one target, 1d10 piercing damage | n/a |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | n/a |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 16 |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 10 |
+| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 15 to disable;     +3 to hit against one target, 1d10 piercing damage | n/a |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
 :
 ### Room 16
 :
@@ -330,11 +324,11 @@ Treasure: 9 sp; 16 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Secret (DC 25 to find) Trapped and Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp) ***Secret:*** The door is located above a small stone dais and designed to make noise when opened | 20 |
-| north | Unlocked Stone Door (60 hp) | 10 |
-| south | Locked Stone Door (DC 25 to open) | 28 |
-| west | Locked Stone Door (DC 20 to open) | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 15 |
+| east | Secret (DC 25 to find) Trapped and Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +7 to hit against one target, 2d10 piercing damage | 20 |
+| north | Unlocked Stone Door (60 hp)  | 10 |
+| south | Locked Stone Door (DC 25 to open)  | 28 |
+| west | Locked Stone Door (DC 20 to open)  | n/a |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 15 |
 :
 ### Room 17
 :
@@ -344,9 +338,9 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | 18 |
+| east | Unlocked Stone Door (60 hp)  | 18 |
 | north | Secret (DC 20 to find) Locked Iron Door (DC 25 to open) ***Secret:*** The door is concealed by an illusion | 12 |
-| south | Unlocked Iron Door (60 hp) | 29 |
+| south | Unlocked Iron Door (60 hp)  | 29 |
 :
 ### Room 18
 :
@@ -360,15 +354,15 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 #### Treasure
 Treasure: 17 cp; 12 gp
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 15 to open) (slides to one side) | 25 |
-| east | Stuck Iron Door (DC 25 to break; 60 hp) | 19 |
-| north | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp) ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 12 |
-| west | Unlocked Stone Door (60 hp) | 17 |
+| east | Locked Iron Door (DC 15 to open) (slides to one side)  | 25 |
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 19 |
+| north | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 12 |
+| west | Unlocked Stone Door (60 hp)  | 17 |
 :
-\page
 ### Room 19
 :
 {{note
@@ -377,8 +371,8 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | 25 |
-| west | Stuck Iron Door (DC 25 to break; 60 hp) | 18 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 25 |
+| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 18 |
 :
 ### Room 20
 :
@@ -395,9 +389,9 @@ Treasure: 13 sp; 6 ep
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Iron Door (DC 25 to break; 60 hp) | n/a |
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | 11 |
-| west | Secret (DC 25 to find) Trapped and Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp) ***Secret:*** The door is located above a small stone dais and designed to make noise when opened | 16 |
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 11 |
+| west | Secret (DC 25 to find) Trapped and Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +7 to hit against one target, 2d10 piercing damage | 16 |
 :
 ### Room 21
 :
@@ -414,8 +408,8 @@ Treasure: 14 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Guillotine Blade: DC 15 to find, DC 10 to disable;    +3 to hit against one target, 1d10 slashing damage | n/a |
-| west | Locked Iron Door (DC 20 to open) | n/a |
+| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 15 to find, DC 10 to disable;     +3 to hit against one target, 1d10 slashing damage | n/a |
+| west | Locked Iron Door (DC 20 to open)  | n/a |
 :
 ### Room 22
 :
@@ -426,9 +420,10 @@ Empty.
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | east | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | n/a |
-| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 30 |
-| west | Archway | n/a |
+| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 30 |
+| west | Archway  | n/a |
 :
+\page
 ### Room 23
 :
 {{classTable,frame
@@ -448,10 +443,9 @@ Treasure: 10 gp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Iron Door (DC 25 to break; 60 hp) | n/a |
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
 | south | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 26 |
 :
-\page
 ### Room 24
 :
 {{note
@@ -467,7 +461,7 @@ Treasure: 13 gp; 17 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| west | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Symbol of Panic: DC 15 to find, DC 15 to disable;    affects all targets within 10 ft., DC 10 save or become frightened for 1d4 rounds | n/a |
+| west | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Symbol of Panic: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 10 save or become frightened for 1d4 rounds | n/a |
 :
 ### Room 25
 :
@@ -477,11 +471,11 @@ A chute falls into the room from above, and a simple fireplace sits against the 
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Locked Iron Door (DC 10 to open) | 14 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | 19 |
-| south | Trapped and Unlocked Iron Door (60 hp) ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | 32 |
-| west | Locked Iron Door (DC 15 to open) (slides to one side) | 18 |
-| west | Unlocked Stone Door (60 hp) | n/a |
+| north | Locked Iron Door (DC 10 to open)  | 14 |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 19 |
+| south | Trapped and Unlocked Iron Door (60 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | 32 |
+| west | Locked Iron Door (DC 15 to open) (slides to one side)  | 18 |
+| west | Unlocked Stone Door (60 hp)  | n/a |
 :
 ### Room 26
 :
@@ -498,7 +492,7 @@ Treasure: 8 gp; 13 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 33 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 33 |
 | north | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 23 |
 :
 ### Room 27
@@ -509,9 +503,10 @@ A stone dais and throne sits in the center of the room, and the scent of smoke f
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 15 to open) | 28 |
+| east | Locked Iron Door (DC 15 to open)  | 28 |
 | south | Secret (DC 20 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 33 |
 :
+\page
 ### Room 28
 :
 {{note
@@ -527,11 +522,10 @@ Treasure: 11 gp; 12 gp; 18 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Locked Stone Door (DC 25 to open) | 16 |
-| south | Unlocked Iron Door (60 hp) | n/a |
-| west | Locked Iron Door (DC 15 to open) | 27 |
+| north | Locked Stone Door (DC 25 to open)  | 16 |
+| south | Unlocked Iron Door (60 hp)  | n/a |
+| west | Locked Iron Door (DC 15 to open)  | 27 |
 :
-\page
 ### Room 29
 :
 {{note
@@ -547,12 +541,12 @@ Treasure: 11 ep
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 31 |
-| east | Unlocked Iron Door (60 hp) | n/a |
-| north | Unlocked Iron Door (60 hp) | 17 |
+| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 31 |
+| east | Unlocked Iron Door (60 hp)  | n/a |
+| north | Unlocked Iron Door (60 hp)  | 17 |
 | south | Secret (DC 15 to find) Locked Stone Door (DC 20 to open) ***Secret:*** The door is opened by twisting an iron sconce | n/a |
 | south | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is located several feet above the floor and opened by tracing a holy symbol | n/a |
-| west | Locked Stone Door (DC 10 to open) | 34 |
+| west | Locked Stone Door (DC 10 to open)  | 34 |
 :
 ### Room 30
 :
@@ -569,9 +563,9 @@ Treasure: 10 sp; 17 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | n/a |
-| north | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 22 |
-| south | Unlocked Iron Door (60 hp) | 39 |
+| east | Archway  | n/a |
+| north | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 22 |
+| south | Unlocked Iron Door (60 hp)  | 39 |
 :
 ### Room 31
 :
@@ -588,10 +582,11 @@ Treasure: 9 ep
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 11 save or take 1d10 damage | 36 |
-| south | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp) ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;    affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 41 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 29 |
+| east | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 11 save or take 1d10 damage | 36 |
+| south | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 41 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 29 |
 :
+\page
 ### Room 32
 :
 {{note
@@ -607,18 +602,17 @@ Treasure: 21 cp; 20 sp; 21 cp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 35 |
-| north | Trapped and Unlocked Iron Door (60 hp) ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | 25 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 35 |
+| north | Trapped and Unlocked Iron Door (60 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | 25 |
 :
 ### Room 33
 :
 {{classTable,frame
 #### Hidden Treasure!
 * Trapped and Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
-* Arrow Trap: DC 10 to find, DC 10 to disable;    +10 to hit against one target, 4d10 piercing damage
+* Arrow Trap: DC 10 to find, DC 10 to disable;     +10 to hit against one target, 4d10 piercing damage
 * 2100 cp, 500 sp, 100 gp, diamond (50 gp), bloodstone (50 gp), carnelian (50 gp), chrysoprase (50 gp), jasper (50 gp), Scroll of Protection (fey) (rare, dmg 199)
 }}
-\page
 {{note
 A narrow shaft descends from the room into the next dungeon level down, and spirals of red stones cover the floor.
 }}
@@ -626,10 +620,10 @@ A narrow shaft descends from the room into the next dungeon level down, and spir
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | north | Secret (DC 20 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 27 |
-| south | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;    +6 to hit against one target, 2d10 slashing damage | 38 |
-| south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Acid Spray: DC 10 to find, DC 15 to disable;    affects all targets within a 20 ft. cone, DC 13 save or take 1d10 acid damage    for 1d4 rounds | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 26 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 35 |
+| south | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +6 to hit against one target, 2d10 slashing damage | 38 |
+| south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Acid Spray: DC 10 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 13 save or take 1d10 acid damage     for 1d4 rounds | n/a |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 26 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 35 |
 :
 ### Room 34
 :
@@ -646,8 +640,8 @@ Treasure: 15 cp; 15 sp; 14 gp; 19 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Stone Door (DC 10 to open) | 29 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | n/a |
+| east | Locked Stone Door (DC 10 to open)  | 29 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
 :
 ### Room 35
 :
@@ -657,12 +651,13 @@ A stream of acid flows along a channel in the floor, and a toppled statue lies i
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 33 |
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 38 |
-| south | Unlocked Iron Door (60 hp) | 44 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 32 |
-| west | Unlocked Iron Door (60 hp) (slides to one side) | 36 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 33 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 38 |
+| south | Unlocked Iron Door (60 hp)  | 44 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 32 |
+| west | Unlocked Iron Door (60 hp) (slides to one side)  | 36 |
 :
+\page
 ### Room 36
 :
 {{note
@@ -671,17 +666,16 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Iron Door (60 hp) (slides to one side) | 35 |
-| south | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Magic Missle Trap: DC 10 to find, DC 15 to disable;    one target, 1d10 force damage | 43 |
-| west | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 11 save or take 1d10 damage | 31 |
-| west | Archway | 41 |
+| east | Unlocked Iron Door (60 hp) (slides to one side)  | 35 |
+| south | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 15 to disable;     one target, 1d10 force damage | 43 |
+| west | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 11 save or take 1d10 damage | 31 |
+| west | Archway  | 41 |
 :
 ### Room 37
 :
 {{note
 A tapestry of a legendary battle hangs from the south wall, and someone has scrawled "Look to the ceiling" on the west wall.
 }}
-\page
 ::
 This room is occupied by **4 x Svirfneblin (cr 1/2, mm 164); deadly, 400 xp**
 :
@@ -693,7 +687,7 @@ Treasure: 2500 cp, 700 sp, 100 gp, a copper bowl inlaid with a filigree of silve
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | north | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is located above a small stone dais and only two feet high | n/a |
-| south | Trapped and Locked Iron Door (DC 15 to open, DC 30 to break; 60 hp) ***Trap:*** Earthmaw Trap: DC 20 to find, DC 15 to disable;    +6 to hit against one target, 2d10 piercing damage | n/a |
+| south | Trapped and Locked Iron Door (DC 15 to open, DC 30 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 20 to find, DC 15 to disable;     +6 to hit against one target, 2d10 piercing damage | n/a |
 :
 ### Room 38
 :
@@ -703,10 +697,10 @@ Someone has scrawled "The Circle of the Shield shall fall when the stars fall fr
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 42 |
-| north | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;    +6 to hit against one target, 2d10 slashing damage | 33 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | 44 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 35 |
+| east | Archway  | 42 |
+| north | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +6 to hit against one target, 2d10 slashing damage | 33 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 44 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 35 |
 :
 ### Room 39
 :
@@ -716,10 +710,11 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | n/a |
-| east | Unlocked Stone Door (60 hp) | 45 |
-| north | Unlocked Iron Door (60 hp) | 30 |
+| east | Unlocked Stone Door (60 hp)  | n/a |
+| east | Unlocked Stone Door (60 hp)  | 45 |
+| north | Unlocked Iron Door (60 hp)  | 30 |
 :
+\page
 ### Room 40
 :
 {{note
@@ -729,7 +724,7 @@ A fountain of water sits against the north wall, and a warped holy symbol lies i
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | north | Secret (DC 25 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed behind a statue of a fearsome dragon, and opened by reaching into its mouth | n/a |
-| west | Archway | n/a |
+| west | Archway  | n/a |
 :
 ### Room 41
 :
@@ -739,12 +734,11 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 36 |
-| east | Locked Stone Door (DC 10 to open) | 43 |
-| north | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp) ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;    affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 31 |
+| east | Archway  | 36 |
+| east | Locked Stone Door (DC 10 to open)  | 43 |
+| north | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 31 |
 | south | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 47 |
 :
-\page
 ### Room 42
 :
 {{note
@@ -760,8 +754,8 @@ Treasure: 2100 cp, 1100 sp, 70 gp, azurite (10 gp), banded agate (10 gp), 2 x ey
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | n/a |
-| west | Archway | 38 |
+| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
+| west | Archway  | 38 |
 :
 ### Room 43
 :
@@ -771,9 +765,9 @@ A simple fireplace sits against the north wall, and someone has scrawled "white,
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 25 to open) | 44 |
-| north | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** Magic Missle Trap: DC 10 to find, DC 15 to disable;    one target, 1d10 force damage | 36 |
-| west | Locked Stone Door (DC 10 to open) | 41 |
+| east | Locked Iron Door (DC 25 to open)  | 44 |
+| north | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 15 to disable;     one target, 1d10 force damage | 36 |
+| west | Locked Stone Door (DC 10 to open)  | 41 |
 | west | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 47 |
 :
 ### Room 44
@@ -788,11 +782,12 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | 48 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | 38 |
-| north | Unlocked Iron Door (60 hp) | 35 |
-| west | Locked Iron Door (DC 25 to open) | 43 |
+| east | Unlocked Stone Door (60 hp)  | 48 |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 38 |
+| north | Unlocked Iron Door (60 hp)  | 35 |
+| west | Locked Iron Door (DC 25 to open)  | 43 |
 :
+\page
 ### Room 45
 :
 {{note
@@ -808,9 +803,9 @@ Treasure: 1800 cp, 1300 sp, 60 gp, diamond (50 gp), bloodstone (50 gp), jasper (
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Locked Stone Door (DC 20 to open) | n/a |
-| west | Unlocked Stone Door (60 hp) | 39 |
-| west | Unlocked Stone Door (60 hp) | 49 |
+| north | Locked Stone Door (DC 20 to open)  | n/a |
+| west | Unlocked Stone Door (60 hp)  | 39 |
+| west | Unlocked Stone Door (60 hp)  | 49 |
 :
 ### Room 46
 :
@@ -827,10 +822,9 @@ Treasure: 10 sp; 15 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 20 to open) | 52 |
-| east | Locked Stone Door (DC 15 to open) | 47 |
+| east | Locked Iron Door (DC 20 to open)  | 52 |
+| east | Locked Stone Door (DC 15 to open)  | 47 |
 :
-\page
 ### Room 47
 :
 {{classTable,frame
@@ -852,8 +846,8 @@ Treasure: 19 cp; 15 sp; 16 sp; 15 sp
 |:--|:--|:--|
 | east | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 43 |
 | north | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 41 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | n/a |
-| west | Locked Stone Door (DC 15 to open) | 46 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
+| west | Locked Stone Door (DC 15 to open)  | 46 |
 :
 ### Room 48
 :
@@ -863,9 +857,9 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | 54 |
-| south | Unlocked Stone Door (60 hp) | 53 |
-| west | Unlocked Stone Door (60 hp) | 44 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 54 |
+| south | Unlocked Stone Door (60 hp)  | 53 |
+| west | Unlocked Stone Door (60 hp)  | 44 |
 :
 ### Room 49
 :
@@ -879,10 +873,11 @@ Numerous pillars line the north and west walls, and a swarm of crawling insects 
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | 45 |
-| east | Archway | 60 |
-| west | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down) ***Secret:*** The door is located above a small stone dais and designed to make noise when opened | 51 |
+| east | Unlocked Stone Door (60 hp)  | 45 |
+| east | Archway  | 60 |
+| west | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +6 to hit against one target, 2d10 piercing damage | 51 |
 :
+\page
 ### Room 50
 :
 {{note
@@ -891,8 +886,8 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Trapped and Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp) ***Trap:*** Ice Dart Trap: DC 20 to find, DC 15 to disable;    +5 to hit against one target, 1d10 cold damage | 58 |
-| west | Archway | n/a |
+| south | Trapped and Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 20 to find, DC 15 to disable;     +5 to hit against one target, 1d10 cold damage | 58 |
+| west | Archway  | n/a |
 :
 ### Room 51
 :
@@ -902,12 +897,11 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down) ***Secret:*** The door is located above a small stone dais and designed to make noise when opened | 49 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) (slides down) | n/a |
+| east | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +6 to hit against one target, 2d10 piercing damage | 49 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  | n/a |
 | south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed behind a statue of an ancient lich, and opened by pressing runes on his staff | n/a |
-| south | Archway | 59 |
+| south | Archway  | 59 |
 :
-\page
 ### Room 52
 :
 {{note
@@ -916,8 +910,8 @@ Several square holes are cut into the north and west walls, and a broken wooden 
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| west | Locked Iron Door (DC 20 to open) | 46 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 60 |
+| west | Locked Iron Door (DC 20 to open)  | 46 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 60 |
 :
 ### Room 53
 :
@@ -934,8 +928,8 @@ Treasure: 14 cp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Unlocked Stone Door (60 hp) | 48 |
-| south | Locked Stone Door (DC 15 to open) | 61 |
+| north | Unlocked Stone Door (60 hp)  | 48 |
+| south | Locked Stone Door (DC 15 to open)  | 61 |
 :
 ### Room 54
 :
@@ -945,8 +939,8 @@ A narrow ledge runs along the walls, and someone has scrawled "Abandon all hope"
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;    affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 55 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | 48 |
+| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 55 |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 48 |
 :
 ### Room 55
 :
@@ -956,11 +950,12 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 63 |
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 56 |
-| south | Locked Stone Door (DC 25 to open) | 66 |
-| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;    affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 54 |
+| east | Archway  | 63 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 56 |
+| south | Locked Stone Door (DC 25 to open)  | 66 |
+| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 54 |
 :
+\page
 ### Room 56
 :
 {{note
@@ -977,7 +972,7 @@ Treasure: 13 ep
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed by an illusion | 63 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 55 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 55 |
 :
 ### Room 57
 :
@@ -994,21 +989,20 @@ Treasure: 17 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 58 |
-| south | Locked Stone Door (DC 15 to open) | n/a |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 58 |
+| south | Locked Stone Door (DC 15 to open)  | n/a |
 :
 ### Room 58
 :
-\page
 {{note
 A group of monstrous faces have been carved into the west wall, and an altar of evil sits in the east side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Trapped and Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp) ***Trap:*** Ice Dart Trap: DC 20 to find, DC 15 to disable;    +5 to hit against one target, 1d10 cold damage | 50 |
-| south | Unlocked Stone Door (60 hp) | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 57 |
+| north | Trapped and Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 20 to find, DC 15 to disable;     +5 to hit against one target, 1d10 cold damage | 50 |
+| south | Unlocked Stone Door (60 hp)  | n/a |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 57 |
 :
 ### Room 59
 :
@@ -1034,8 +1028,8 @@ Treasure: 6 ep; 13 ep; 14 sp; 17 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 64 |
-| north | Archway | 51 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 64 |
+| north | Archway  | 51 |
 :
 ### Room 60
 :
@@ -1052,11 +1046,12 @@ Treasure: 17 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | 52 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | n/a |
-| west | Archway | 49 |
-| west | Archway | 65 |
+| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 52 |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
+| west | Archway  | 49 |
+| west | Archway  | 65 |
 :
+\page
 ### Room 61
 :
 {{note
@@ -1065,9 +1060,9 @@ A narrow ledge runs along the north and west walls, and a tapestry of a sea god 
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | 62 |
-| north | Locked Stone Door (DC 15 to open) | 53 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) | n/a |
+| east | Unlocked Stone Door (60 hp)  | 62 |
+| north | Locked Stone Door (DC 15 to open)  | 53 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
 :
 ### Room 62
 :
@@ -1084,11 +1079,10 @@ Treasure: 10 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 15 to open) (slides down) | 66 |
-| south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;    +9 to hit against one target, 4d10 piercing damage | 71 |
-| west | Unlocked Stone Door (60 hp) | 61 |
+| east | Locked Iron Door (DC 15 to open) (slides down)  | 66 |
+| south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +9 to hit against one target, 4d10 piercing damage | 71 |
+| west | Unlocked Stone Door (60 hp)  | 61 |
 :
-\page
 ### Room 63
 :
 {{note
@@ -1105,9 +1099,9 @@ Treasure: 2600 cp, 1200 sp, 70 gp, diamond (50 gp), bloodstone (50 gp), jasper (
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | north | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed by an illusion | 56 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) | 68 |
-| south | Unlocked Stone Door (60 hp) | n/a |
-| west | Archway | 55 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 68 |
+| south | Unlocked Stone Door (60 hp)  | n/a |
+| west | Archway  | 55 |
 :
 ### Room 64
 :
@@ -1124,9 +1118,9 @@ Treasure: 18 sp; 16 cp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | 65 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 59 |
-| west | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp) ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;    +3 to hit against one target, 1d10 piercing damage | 67 |
+| east | Unlocked Stone Door (60 hp)  | 65 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 59 |
+| west | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +3 to hit against one target, 1d10 piercing damage | 67 |
 :
 ### Room 65
 :
@@ -1140,12 +1134,13 @@ This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, m
 #### Treasure
 Treasure: 1700 cp, 1000 sp, 40 gp, diamond (50 gp), citrine (50 gp), jasper (50 gp), sardonyx (50 gp), +1 Weapon (heavy crossbow) (uncommon, dmg 213)
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 60 |
-| south | Secret (DC 20 to find) Trapped and Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of a legendary battle | 69 |
-| west | Unlocked Stone Door (60 hp) | 64 |
+| east | Archway  | 60 |
+| south | Secret (DC 20 to find) Trapped and Unlocked Iron Door (60 hp)  ***Secret:*** The door is concealed within a mosaic of a legendary battle ***Trap:*** Falling Block: DC 15 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | 69 |
+| west | Unlocked Stone Door (60 hp)  | 64 |
 :
 ### Room 66
 :
@@ -1155,12 +1150,11 @@ A tile labyrinth covers the floor, and someone has scrawled "The last wards have
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | 68 |
-| north | Locked Stone Door (DC 25 to open) | 55 |
+| east | Archway  | 68 |
+| north | Locked Stone Door (DC 25 to open)  | 55 |
 | south | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 71 |
-| west | Locked Iron Door (DC 15 to open) (slides down) | 62 |
+| west | Locked Iron Door (DC 15 to open) (slides down)  | 62 |
 :
-\page
 ### Room 67
 :
 {{note
@@ -1176,8 +1170,8 @@ Treasure: 17 cp; 19 sp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp) ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;    +3 to hit against one target, 1d10 piercing damage | 64 |
-| south | Locked Stone Door (DC 10 to open) | 72 |
+| east | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +3 to hit against one target, 1d10 piercing damage | 64 |
+| south | Locked Stone Door (DC 10 to open)  | 72 |
 :
 ### Room 68
 :
@@ -1196,11 +1190,12 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Stuck Stone Door (DC 20 to break; 60 hp) | 63 |
-| south | Locked Stone Door (DC 15 to open) | 73 |
-| south | Archway | 74 |
-| west | Archway | 66 |
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 63 |
+| south | Locked Stone Door (DC 15 to open)  | 73 |
+| south | Archway  | 74 |
+| west | Archway  | 66 |
 :
+\page
 ### Room 69
 :
 {{note
@@ -1209,9 +1204,9 @@ Spirals of gray stones cover the floor, and a pile of rotting wood lies in the s
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp) | 77 |
-| east | Trapped and Unlocked Stone Door (60 hp) ***Trap:*** One-way Door: DC 15 to find, DC 10 to disable | n/a |
-| north | Secret (DC 20 to find) Trapped and Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of a legendary battle | 65 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 77 |
+| east | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 10 to disable | n/a |
+| north | Secret (DC 20 to find) Trapped and Unlocked Iron Door (60 hp)  ***Secret:*** The door is concealed within a mosaic of a legendary battle ***Trap:*** Falling Block: DC 15 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | 65 |
 :
 ### Room 70
 :
@@ -1225,11 +1220,10 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Iron Door (DC 25 to break; 60 hp) | 75 |
-| south | Unlocked Stone Door (60 hp) | n/a |
-| south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Rune of Hypnosis: DC 20 to find, DC 15 to disable;    affects all targets within 10 ft., DC 18 save or become incapacitated for 1d4 rounds | n/a |
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 75 |
+| south | Unlocked Stone Door (60 hp)  | n/a |
+| south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Rune of Hypnosis: DC 20 to find, DC 15 to disable;     affects all targets within 10 ft., DC 18 save or become incapacitated for 1d4 rounds | n/a |
 :
-\page
 ### Room 71
 :
 {{note
@@ -1238,8 +1232,8 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;    +6 to hit against one target, 2d10 cold damage | 73 |
-| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;    +9 to hit against one target, 4d10 piercing damage | 62 |
+| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;     +6 to hit against one target, 2d10 cold damage | 73 |
+| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +9 to hit against one target, 4d10 piercing damage | 62 |
 | north | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 66 |
 :
 ### Room 72
@@ -1257,15 +1251,16 @@ Treasure: 11 gp; 12 cp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway | n/a |
-| north | Locked Stone Door (DC 10 to open) | 67 |
-| south | Archway | 76 |
+| east | Archway  | n/a |
+| north | Locked Stone Door (DC 10 to open)  | 67 |
+| south | Archway  | 76 |
 :
 ### Room 73
 :
 {{note
 A narrow pit covered by iron bars lies in the center of the room, and a pile of rotten apples lies in the north side of the room.
 }}
+\page
 ::
 This room is occupied by **7 x Drow (cr 1/4, mm 128); deadly, 350 xp**
 :
@@ -1276,10 +1271,10 @@ Treasure: 2100 cp, 1100 sp, 110 gp, a brass censer etched with draconic runes (2
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp) ***Trap:*** Falling Block: DC 10 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 18 save or take 4d10 damage | n/a |
-| north | Locked Stone Door (DC 15 to open) | 68 |
-| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;    +6 to hit against one target, 2d10 cold damage | 71 |
-| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp) ***Trap:*** Electrified Lock: DC 15 to find, DC 15 to disable;    affects each creature which touches the lock, DC 10 save or take 1d10 lightning damage | n/a |
+| east | Trapped and Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 18 save or take 4d10 damage | n/a |
+| north | Locked Stone Door (DC 15 to open)  | 68 |
+| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;     +6 to hit against one target, 2d10 cold damage | 71 |
+| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Electrified Lock: DC 15 to find, DC 15 to disable;     affects each creature which touches the lock, DC 10 save or take 1d10 lightning damage | n/a |
 :
 ### Room 74
 :
@@ -1293,12 +1288,11 @@ This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); e
 #### Treasure
 Treasure: 13 sp; 15 cp; 16 cp; 15 sp; 15 sp; 8 gp; 14 sp; 11 gp; 6 sp
 }}
-\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Archway | 68 |
-| south | Unlocked Iron Door (60 hp) (slides down) | n/a |
+| north | Archway  | 68 |
+| south | Unlocked Iron Door (60 hp) (slides down)  | n/a |
 :
 ### Room 75
 :
@@ -1315,8 +1309,8 @@ Treasure: 9 ep
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Archway | n/a |
-| west | Stuck Iron Door (DC 25 to break; 60 hp) | 70 |
+| south | Archway  | n/a |
+| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 70 |
 :
 ### Room 76
 :
@@ -1333,19 +1327,20 @@ Treasure: 4 gp; 11 gp
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp) | n/a |
-| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) ***Trap:*** One-way Door: DC 10 to find, DC 15 to disable | n/a |
-| north | Archway | 72 |
+| east | Unlocked Stone Door (60 hp)  | n/a |
+| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** One-way Door: DC 10 to find, DC 15 to disable | n/a |
+| north | Archway  | 72 |
 :
 ### Room 77
 :
 {{note
 A stair ascends to a catwalk hanging between the east and west walls, and the sound of rushing water fills the room.
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Archway | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp) | 69 |
-| west | Archway | n/a |
+| north | Archway  | n/a |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 69 |
+| west | Archway  | n/a |
 :
