@@ -34,6 +34,19 @@ def file_size(check):
     return check
 
 
+# can we add up all the random little amounts of money? yes we can!
+def sum_up_treasure(string):
+    currency = {}
+    list = string.split(";")
+    for amount in list:
+        amount = amount.split(" ")
+        currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
+    result = ""
+    for chunk, values in currency.items():
+        result += (f"{sum(values)} {str(chunk)}; ")
+    return f"{result[:-2]}\n"
+
+
 # globals
 check = 0
 newline = '\n'
@@ -237,7 +250,11 @@ if "rooms" in data:
                             outfile.write(":\n")
                             outfile.write("{{descriptive\n")
                             outfile.write("#### Treasure\n")
-                            outfile.write(f"{thing.replace(newline, ' ')}\n")
+                            if thing.count(";") > 2:
+                                thing = sum_up_treasure(thing)
+                                outfile.write(f"{thing.replace(newline, ' ').replace(',;', ';')}\n")
+                            else:
+                                outfile.write(f"{thing.replace(newline, ' ').replace('Treasure: ','')}\n")
                             outfile.write("}}\n")
                         else:
                             outfile.write("::\n")

@@ -1,19 +1,13 @@
-![map](https://imgur.com/cpy3lBq.png){position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}
-:
 {{margin-top:225px}}
-# The Catacombs of Dark Wyrms
+# The Dark Prison of the Gargoyle Countess
 {{margin-top:25px}}
 {{wide
-##### The dungeon was created by dwarves as a temple. It was eventually overrun by elementals, and has lain empty for many centuries until recently.
+##### The dungeon was created by dwarves as a stronghold. It was eventually conquered by invaders, and has been attacked and abandoned many times since then.
 ::
-##### A randomly generated D&D 5e donjon dungeon for a party size of 6 and APL1
+##### A randomly generated D&D 5e donjon dungeon for a party size of 6 and APL8
 ::::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
-\page
-## Map
-![map](https://imgur.com/cpy3lBq.png){width:680px;}
-Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
@@ -21,10 +15,10 @@ The dungeon has the following features, these may include skill checks to perfor
 #### General Features
 | Type | Detail |
 |:--|:--|
-| Floors | Smooth Stone |
+| Floors | Flagstone |
 | Walls | Superior Masonry (DC 20 to climb) |
 | Temperature | Warm |
-| Lighting | Shadowy (phosphorescent fungus every 20 ft.) |
+| Lighting | Shadowy (phosphorescent fungus or candles every 20 ft.) |
 | Special | None |
 }}
 Some of the corridors marked on the map have special features detailed below.
@@ -32,9 +26,14 @@ Some of the corridors marked on the map have special features detailed below.
 #### Corridor Features
 | Type | Detail |
 |:--|:--|
-| a | A tile labyrinth covers the floor |
-| c | Thunderstone Mine: DC 15 to find, DC 15 to disable;     affects all targets within 20 ft., DC 13 save or take 2d10 thunder damage     and become deafened for 1d4 rounds |
-| e | Poison Gas Trap: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 17 save or take 4d10 poison damage |
+| a | Poisoned Net Trap: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 4d10 poison damage     and become restrained, half damage on a successful save |
+| c | Ice Spear Trap: DC 15 to find, DC 15 to disable;     +6 to hit against one target, 4d10 cold damage |
+| e | Rune of Paralyzation: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 10 save or become paralyzed for 1d4 rounds |
+| i | A group of demonic faces have been carved into the walls |
+| m | An acrid odor fills the corridor |
+| n | Patches of mushrooms grow here |
+| r | Rusting iron spikes line the walls |
+| s | A foul odor fills the corridor |
 }}
 ## Random Encounters
 There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
@@ -42,300 +41,257 @@ There are also roaming groups with specific goals, this will help you place them
 #### Wandering Monsters
 | Roll | Detail |
 |:--|:--|
-| 1 | 7 x Derro (cr 1/4, mtf 158); deadly, 350 xp, investigating a strange noise |
-| 2 | Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pureblood (cr 1, mm 310); deadly, 650 xp, wandering senselessly |
-| 3 | Gelatinous Cube (cr 2, mm 242); easy, 450 xp, scavenging for food and treasure |
-| 4 | 2 x Firenewt Warrior (cr 1/2, vgm 142); easy, 200 xp, wielding bizarre eldritch powers |
-| 5 | 3 x Goblin (cr 1/4, mm 166); easy, 150 xp, trying to lure the party into an ambush |
-| 6 | Vampiric Mist (cr 3, mtf 246) and 1 x Shadow (cr 1/2, mm 269); medium, 800 xp, actively patrolling their territory |
+| 1 | Ettercap (cr 2, mm 131) and 9 x Giant Spider (cr 1, mm 328); easy, 2250 xp, searching for an object stolen from their lair |
+| 2 | Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp, gathered around an evil shrine |
+| 3 | Ettercap (cr 2, mm 131) and 14 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1150 xp, scouting from another part of the dungeon |
+| 4 | 15 x Goblin (cr 1/4, mm 166) and 27 x Giant Rat (cr 1/8, mm 327); easy, 1425 xp, tracking the party |
+| 5 | Drider (cr 6, mm 120) and 3 x Giant Spider (cr 1, mm 328); easy, 2900 xp, returning to their lair with plunder |
+| 6 | Ettercap (cr 2, mm 131) and 15 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1200 xp, gathered around an evil shrine |
 }}
 \page
 ## Locations
 ### Getting In
 There is only one entrance into the dungeon:
-* On the GM map at ***row: 1*** and ***column: 13***, which enters the corridor from the north.
+* On the GM map at ***row: 61*** and ***column: 1***, which enters the room from the west.
 :
 ### Room 1
 :
 {{note
-Several square holes are cut into the south and east walls, and someone has scrawled an incomplete drawing of a dragon on the south wall.
-}}
-::
-This room is occupied by **Orc Eye of Gruumsh (cr 2, mm 247) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 14 sp; 5 gp
+A narrow shaft falls into the room from above, and someone has scrawled "The Crimson Daggers looted this place" on the west wall.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Unlocked Stone Door (60 hp)  | 7 |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 11 |
 :
 ### Room 2
 :
 {{note
-A narrow ledge runs along the north and east walls, and the south and west walls are covered with mould.
-}}
-::
-This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 2200 cp, 1300 sp, 120 gp, a bloodstone cup inlaid with electrum (25 gp), a bone comb engraved with spirals (25 gp), a leather belt with a fine steel buckle (25 gp), a leather scabbard tooled with floral vines (25 gp), a marble plate engraved with dwarven axeheads (25 gp), a stoneware jar painted with pastoral imagery (25 gp), an agate chalice engraved with dwarven axeheads (25 gp), Dust of Sneezing and Choking (uncommon, dmg 166), Potion of Fire Breath (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188)
+Someone has scrawled "Gimli stands here, slain by a basilisk" in dwarvish runes on the west wall, and a pile of rotting wood lies in the west side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | n/a |
-| east | Unlocked Stone Door (60 hp) (slides down)  | n/a |
-| south | Unlocked Stone Door (60 hp)  | 7 |
+| east | Secret (DC 15 to find) Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | 8 |
+| west | Unlocked Good Wooden Door (15 hp)  | n/a |
 :
 ### Room 3
 :
 {{note
-A faded and torn tapestry hangs from the east wall, and someone has scrawled "It's a trap" on the west wall.
-}}
-::
-This room is occupied by **Duergar Stone Guard (cr 2, mtf 191) and 1 x Duergar (cr 1, mm 122); deadly, 650 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 1700 cp, 900 sp, 50 gp, chalcedony (50 gp), 2 x jasper (50 gp), moonstone (50 gp), 2 x onyx (50 gp), quartz (50 gp), Keoghtom's Ointment (uncommon, dmg 179), Philter of Love (uncommon, dmg 184), Potion of Fire Breath (uncommon, dmg 187)
+A magical mosaic on the north wall can be used as a portal to any known location within the dungeon, and several alcoves are cut into the east and west walls.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Unlocked Iron Door (60 hp) (slides up)  ***Trap:*** Rune of Fear: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 16 save or become frightened for 1d4 rounds | n/a |
-| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +8 to hit against one target, 2d10 slashing damage | n/a |
-| south | Unlocked Stone Door (60 hp)  | 9 |
+| east | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | 9 |
+| west | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 8 |
 :
-\page
 ### Room 4
 :
 {{note
-A tapestry of a legendary battle hangs from the north wall, and someone has scrawled "Kater's Guild killed fifteen orcs here" on the south wall.
-}}
-::
-This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar Soulblade (cr 1, mtf 190); deadly, 650 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 2 pp; 15 sp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Archway  | 6 |
-| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 15 save or take 2d10 damage | n/a |
-| south | Archway  | 10 |
-:
-### Room 5
-:
-{{note
 Empty.
-}}
-::
-This room is occupied by **Orc Nurtured One of Yurtrus (cr 1/2, vgm 184) and 1 x Orc (cr 1/2, mm 246); easy, 200 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 19 cp; 19 sp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
-| south | Stuck Iron Door (DC 25 to break; 60 hp)  | 11 |
-| west | Archway  | 6 |
-:
-### Room 6
-:
-{{note
-A mural of legendary monsters covers the ceiling, and skeletons hang from chains and manacles against the north wall.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | east | Archway  | 5 |
-| south | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by twisting an iron ring | n/a |
-| west | Archway  | 4 |
+| south | Archway  | n/a |
 :
-### Room 7
+### Room 5
 :
 {{note
-Someone has scrawled "Don't lose your head" on the east wall, and a charred wooden shield lies in the east side of the room.
+A rope ascends to a wooden platform in the west side of the room, and a pile of shattered weapons lies in the south-west corner of the room.
 }}
 ::
-This room is occupied by **7 x Xvart (cr 1/8, vgm 200); medium, 175 xp**
+This room is occupied by **13 x Goblin (cr 1/4, mm 166) and 13 x Wolf (cr 1/4, mm 341); easy, 1300 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 16 sp; 13 gp; 10 ep; 16 cp; 9 gp; 10 sp; 19 cp
+176 sp; 99 cp; 69 gp; 4 pp; 8 ep 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Unlocked Stone Door (60 hp)  | 1 |
-| north | Unlocked Stone Door (60 hp)  | 2 |
+| east | Secret (DC 20 to find) Locked Strong Wooden Door (DC 25 to open, DC 20 to break; 20 hp) ***Secret:*** The door is concealed behind a statue of a noble king, and opened by stabbing a sword into his back | n/a |
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| south | Stuck Iron Door (DC 25 to break; 60 hp)  | 14 |
+| west | Archway  | 4 |
+:
+### Room 6
+:
+{{note
+A carved stone statue stands in the north-east corner of the room, and someone has scrawled "The curse can't be broken" in orcish runes on the west wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 20 to disable;     one target, 4d10 force damage | 7 |
+:
+\page
+### Room 7
+:
+{{note
+A stream of blood flows along a channel in the floor, and someone has scrawled "black, black, crimson, golden, jade" on the south wall.
+}}
+::
+This room is occupied by **Ettercap (cr 2, mm 131) and 8 x Giant Spider (cr 1, mm 328); easy, 2050 xp**
+:
+{{descriptive
+#### Treasure
+20 gp; 114 cp; 19 sp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 20 to disable;     one target, 4d10 force damage | 6 |
 :
 ### Room 8
 :
-{{classTable,frame
-#### Hidden Treasure!
-* Hidden (DC 15 to find) Unlocked Iron Chest (60 hp)
-* 2900 cp, 1500 sp, 90 gp, a bone chalice set with citrine (25 gp), a brass bracer set with a rosette of jasper (25 gp), a copper flower brooch etched with thorned vines (25 gp), a set of ivory dice with copper pips (25 gp), a steel amulet etched with draconic runes (25 gp), Staff of the Woodlands (rare, dmg 204)
-}}
 {{note
 Empty.
 }}
 ::
-This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 xp**
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 3 x Grick (cr 2, mm 173); medium, 4250 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 15 sp; 20 cp; 10 ep; 10 sp
+140 sp; 37 cp; 10 gp 
 }}
-\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | 9 |
-| north | Locked Iron Door (DC 20 to open)  | n/a |
-| south | Stuck Iron Door (DC 25 to break; 60 hp) (slides to one side)  | n/a |
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 3 |
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| north | Archway  | n/a |
+| west | Secret (DC 15 to find) Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | 2 |
+| west | Unlocked Good Wooden Door (15 hp) (slides up)  | n/a |
 :
 ### Room 9
 :
 {{note
-Someone has scrawled "The Darkwood Staff is broken" in draconic script on the west wall, and a shattered sword lies in the south-west corner of the room.
-}}
-::
-This room is occupied by **Kobold Scale Sorcerer (cr 1, vgm 167) and 3 x Kobold (cr 1/8, mm 195); medium, 275 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 3100 cp, 900 sp, 70 gp, 2 x diamond (50 gp), 2 x carnelian (50 gp), chalcedony (50 gp), jasper (50 gp), quartz (50 gp), sardonyx (50 gp), Deck of Illusions (29 cards) (uncommon, dmg 161), Pipes of Haunting (uncommon, dmg 185)
+Empty.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Unlocked Stone Door (60 hp)  | 3 |
-| south | Archway  | n/a |
-| west | Unlocked Stone Door (60 hp)  | 8 |
+| east | Secret (DC 25 to find) Stuck Good Wooden Door (DC 15 to break; 15 hp) ***Secret:*** The door is concealed behind a tapestry of geometric patterns | 13 |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides to one side)  | n/a |
+| south | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 22 |
+| west | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | 3 |
 :
 ### Room 10
 :
 {{note
-A narrow pit covered by iron bars lies in the center of the room, and someone has scrawled "Abandon all hope" in draconic script on the east wall.
+A tapestry of arcane patterns hangs from the east wall, and iron chains hang from the ceiling in the east side of the room.
 }}
 ::
-This room is occupied by **Choldrith (cr 3, vgm 132) and 1 x Chitine (cr 1/2, vgm 131); medium, 800 xp**
+This room is occupied by **8 x Wererat (cr 2, mm 209); medium, 3600 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 16 sp; 9 sp
+41 cp; 28 gp; 22 ep; 17 sp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Archway  | 4 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 15 |
-| south | Unlocked Stone Door (60 hp)  | 16 |
+| east | Archway  | n/a |
+| west | Archway  | 15 |
 :
 ### Room 11
 :
 {{note
-A faded and torn tapestry hangs from the south wall, and someone has scrawled "Cece's Legion killed a red dragon here" on the south wall.
-}}
-::
-This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 27 cp; 18 cp
+A faded and torn tapestry hangs from the north wall, and an iron chandelier hangs from the ceiling in the east side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Stuck Iron Door (DC 25 to break; 60 hp)  | 5 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 20 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
+| east | Unlocked Good Wooden Door (15 hp)  | 12 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 1 |
+| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 18 |
 :
+\page
 ### Room 12
 :
 {{note
-A circle of tall stones stands in the south-west corner of the room, and a pile of rotten bread lies in the west side of the room.
+Empty.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 13 |
-| south | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 18 |
-| south | Secret (DC 20 to find) Locked Iron Door (DC 25 to open) ***Secret:*** The door is concealed by an illusion | 17 |
+| east | Unlocked Strong Wooden Door (20 hp)  | n/a |
+| north | Unlocked Iron Door (60 hp)  | n/a |
+| west | Unlocked Good Wooden Door (15 hp)  | 11 |
 :
-\page
 ### Room 13
 :
 {{note
-A toppled statue lies in the south side of the room, and someone has scrawled an arrow pointing left on the west wall.
+Spirals of white stones cover the floor, and a rusted iron box lies in the east side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 20 to open)  | 14 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 12 |
+| east | Unlocked Iron Door (60 hp)  | 14 |
+| south | Secret (DC 15 to find) Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Secret:*** The door is concealed behind a pile of broken stone ***Trap:*** Thunderstone Mine: DC 20 to find, DC 15 to disable;     affects all targets within 20 ft., DC 14 save or take 4d10 thunder damage     and become deafened for 1d4 rounds | 23 |
+| west | Secret (DC 25 to find) Stuck Good Wooden Door (DC 15 to break; 15 hp) ***Secret:*** The door is concealed behind a tapestry of geometric patterns | 9 |
 :
 ### Room 14
 :
 {{note
-Empty.
+A faded and torn tapestry hangs from the south wall, and someone has scrawled "It's a trap" on the north wall.
+}}
+::
+This room is occupied by **Ettercap (cr 2, mm 131) and 13 x Giant Spider (cr 1, mm 328); medium, 3050 xp**
+:
+{{descriptive
+#### Treasure
+26 gp; 80 sp; 109 cp; 15 ep 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Locked Iron Door (DC 10 to open)  | 25 |
-| west | Locked Iron Door (DC 20 to open)  | 13 |
+| east | Unlocked Strong Wooden Door (20 hp)  | 15 |
+| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 10 to disable;     one target, 4d10 force damage | 24 |
+| north | Stuck Iron Door (DC 25 to break; 60 hp)  | 5 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (magically reinforced, disadvantage to break)  | 26 |
+| west | Unlocked Iron Door (60 hp)  | 13 |
+| west | Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp) (magically reinforced, disadvantage to break)  | n/a |
 :
 ### Room 15
 :
 {{note
-Empty.
-}}
-::
-This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, mm 213); medium, 800 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 14 cp; 7 gp
+Someone has scrawled "The Arrows of Wyebrook looted this place" on the east wall, and the sound of rushing water fills the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 16 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 10 |
-| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 15 to disable;     +3 to hit against one target, 1d10 piercing damage | n/a |
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
+| east | Archway  | 10 |
+| east | Secret (DC 20 to find) Unlocked Simple Wooden Door (10 hp) ***Secret:*** The door is concealed within an upright sarcophagus | 16 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| west | Unlocked Strong Wooden Door (20 hp)  | 14 |
 :
+\page
 ### Room 16
 :
 {{note
-Empty.
+A tapestry of geometric patterns hangs from the east wall, and the floor is covered with shards of bone.
 }}
 ::
-This room is occupied by **Myconid Sovereign (cr 2, mm 232) and 1 x Myconid Adult (cr 1/2, mm 232); easy, 550 xp**
+This room is occupied by **Ettercap (cr 2, mm 131) and 15 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1200 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 9 sp; 16 sp
+59 cp; 124 sp; 15 gp; 20 ep 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Secret (DC 25 to find) Trapped and Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +7 to hit against one target, 2d10 piercing damage | 20 |
-| north | Unlocked Stone Door (60 hp)  | 10 |
-| south | Locked Stone Door (DC 25 to open)  | 28 |
-| west | Locked Stone Door (DC 20 to open)  | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 15 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 33 |
+| south | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | 32 |
+| west | Secret (DC 20 to find) Unlocked Simple Wooden Door (10 hp) ***Secret:*** The door is concealed within an upright sarcophagus | 15 |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| west | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 28 |
 :
 ### Room 17
 :
@@ -345,9 +301,8 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | 18 |
-| north | Secret (DC 20 to find) Locked Iron Door (DC 25 to open) ***Secret:*** The door is concealed by an illusion | 12 |
-| south | Unlocked Iron Door (60 hp)  | 29 |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 18 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
 :
 ### Room 18
 :
@@ -355,314 +310,280 @@ Empty.
 Empty.
 }}
 ::
-This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 17 cp; 12 gp
+69 sp; 61 gp; 54 cp; 5 pp; 25 ep 
 }}
-\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 15 to open) (slides to one side)  | 25 |
-| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 19 |
-| north | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 12 |
-| west | Unlocked Stone Door (60 hp)  | 17 |
+| east | Trapped and Locked Strong Wooden Door (DC 25 to open, DC 20 to break; 20 hp)  ***Trap:*** Magic Missle Trap: DC 20 to find, DC 15 to disable;     one target, 2d10 force damage | n/a |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 29 |
+| north | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 11 |
+| south | Unlocked Strong Wooden Door (20 hp)  | 34 |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 17 |
 :
 ### Room 19
 :
 {{note
-Empty.
+Someone has scrawled "eight, nine" on the west wall, and a bloody journal lies in the south side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 25 |
-| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 18 |
+| east | Unlocked Iron Door (60 hp)  | 20 |
 :
 ### Room 20
 :
 {{note
-An iron chandelier hangs from the ceiling in the west side of the room, and a pile of rotten bread lies in the north-east corner of the room.
+A set of demonic war masks hangs on the west wall, and someone has scrawled "Death comes on silent wings" in draconic script on the east wall.
 }}
 ::
-This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, mm 213); medium, 800 xp**
+This room is occupied by **6 x Wererat (cr 2, mm 209); easy, 2700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 13 sp; 6 ep
+20 gp; 37 cp; 15 sp; 18 ep 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 11 |
-| west | Secret (DC 25 to find) Trapped and Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +7 to hit against one target, 2d10 piercing damage | 16 |
+| east | Unlocked Simple Wooden Door (10 hp)  | 21 |
+| south | Unlocked Strong Wooden Door (20 hp)  | 25 |
+| west | Unlocked Iron Door (60 hp)  | 19 |
 :
+\page
 ### Room 21
 :
 {{note
-A large demonic idol with ruby eyes sits in the south-west corner of the room, and someone has scrawled "Warder was here" on the west wall.
-}}
-::
-This room is occupied by **Gelatinous Cube (cr 2, mm 242); easy, 450 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 14 sp
+Empty.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 15 to find, DC 10 to disable;     +3 to hit against one target, 1d10 slashing damage | n/a |
-| west | Locked Iron Door (DC 20 to open)  | n/a |
+| north | Locked Iron Door (DC 25 to open, DC 30 to break; 60 hp)  | n/a |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 25 |
+| west | Unlocked Simple Wooden Door (10 hp)  | 20 |
 :
 ### Room 22
 :
 {{note
-Empty.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | n/a |
-| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 30 |
-| west | Archway  | n/a |
-:
-\page
-### Room 23
-:
-{{classTable,frame
-#### Trap!
-* Earthmaw Trap: DC 10 to find, DC 15 to disable;    +7 to hit against one target, 2d10 piercing damage
-}}
-{{note
-Empty.
+Someone has scrawled a diagram of a mechanical trap on the north wall, and a pile of bent copper coins lies in the south-west corner of the room.
 }}
 ::
-This room is occupied by **Vampiric Mist (cr 3, mtf 246); medium, 700 xp**
+This room is occupied by **9 x Goblin (cr 1/4, mm 166) and 9 x Wolf (cr 1/4, mm 341); easy, 900 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 10 gp
+68 sp; 107 cp; 71 gp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
-| south | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 26 |
+| north | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 9 |
+:
+### Room 23
+:
+{{note
+A chute descends from the room into a magical cyst below, and an iron chandelier hangs from the ceiling in the center of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret (DC 15 to find) Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Secret:*** The door is concealed behind a pile of broken stone ***Trap:*** Thunderstone Mine: DC 20 to find, DC 15 to disable;     affects all targets within 20 ft., DC 14 save or take 4d10 thunder damage     and become deafened for 1d4 rounds | 13 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 36 |
 :
 ### Room 24
 :
 {{note
-A group of demonic faces have been carved into the west wall, and a pierced breastplate lies in the west side of the room.
-}}
-::
-This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar (cr 1, mm 122); deadly, 650 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 13 gp; 17 sp
+A group of monstrous faces have been carved into the west wall, and skeletons hang from chains and manacles against the north and east walls.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| west | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Symbol of Panic: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 10 save or become frightened for 1d4 rounds | n/a |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 28 |
+| west | Unlocked Good Wooden Door (15 hp) (slides up)  | 27 |
+| west | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 10 to disable;     one target, 4d10 force damage | 14 |
 :
 ### Room 25
-:
-{{note
-A chute falls into the room from above, and a simple fireplace sits against the south wall.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| north | Locked Iron Door (DC 10 to open)  | 14 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 19 |
-| south | Trapped and Unlocked Iron Door (60 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | 32 |
-| west | Locked Iron Door (DC 15 to open) (slides to one side)  | 18 |
-| west | Unlocked Stone Door (60 hp)  | n/a |
-:
-### Room 26
 :
 {{note
 Empty.
 }}
 ::
-This room is occupied by **2 x Meazel (cr 1, mtf 214); medium, 400 xp**
+This room is occupied by **Drider (cr 6, mm 120) and 3 x Giant Spider (cr 1, mm 328); easy, 2900 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 8 gp; 13 sp
+1300 cp; 6 pp; 9 cp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 33 |
-| north | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 23 |
+| north | Unlocked Strong Wooden Door (20 hp)  | 20 |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 21 |
+| south | Unlocked Strong Wooden Door (20 hp)  | 35 |
+| west | Archway  | 30 |
+:
+### Room 26
+:
+{{classTable,frame
+#### Trap!
+* Earthmaw Trap: DC 15 to find, DC 10 to disable;    +8 to hit against one target, 4d10 piercing damage
+}}
+\page
+{{note
+Empty.
+}}
+::
+This room is occupied by **10 x Wererat (cr 2, mm 209); hard, 4500 xp**
+:
+{{descriptive
+#### Treasure
+30 gp; 37 sp; 77 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 27 |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (magically reinforced, disadvantage to break)  | 14 |
+| south | Unlocked Stone Door (60 hp)  | 37 |
 :
 ### Room 27
 :
 {{note
-A stone dais and throne sits in the center of the room, and the scent of smoke fills the north-east corner of the room.
+Someone has scrawled "The axe is cursed" in dwarvish runes on the north wall, and a rattling noise fills the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 15 to open)  | 28 |
-| south | Secret (DC 20 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 33 |
+| east | Unlocked Good Wooden Door (15 hp) (slides up)  | 24 |
+| south | Secret (DC 25 to find) Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp) ***Secret:*** The door is concealed behind a statue of a fearsome dragon, and opened by reaching into its mouth | 40 |
+| west | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 26 |
+| west | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 37 |
 :
-\page
 ### Room 28
 :
 {{note
-A magical altar of a goddess of light in the south-east corner of the room grants the ability to detect invisible creatures (for one hour) to whomever offers a prayer, and part of the ceiling has collapsed into the room.
-}}
-::
-This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 2 x Giant Rat (cr 1/8, mm 327); medium, 250 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 11 gp; 12 gp; 18 sp
+Empty.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Locked Stone Door (DC 25 to open)  | 16 |
-| south | Unlocked Iron Door (60 hp)  | n/a |
-| west | Locked Iron Door (DC 15 to open)  | 27 |
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 16 |
+| south | Archway  | n/a |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 24 |
 :
 ### Room 29
 :
 {{note
 Empty.
 }}
-::
-This room is occupied by **Orog (cr 2, mm 247); easy, 450 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 11 ep
-}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 31 |
-| east | Unlocked Iron Door (60 hp)  | n/a |
-| north | Unlocked Iron Door (60 hp)  | 17 |
-| south | Secret (DC 15 to find) Locked Stone Door (DC 20 to open) ***Secret:*** The door is opened by twisting an iron sconce | n/a |
-| south | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is located several feet above the floor and opened by tracing a holy symbol | n/a |
-| west | Locked Stone Door (DC 10 to open)  | 34 |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 30 |
+| north | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** Earthmaw Trap: DC 20 to find, DC 15 to disable;     +8 to hit against one target, 4d10 piercing damage | n/a |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 18 |
+| west | Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Trap:*** Rune of Dread: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 12 save or become frightened for 1d4 rounds | n/a |
 :
 ### Room 30
 :
 {{note
-Empty.
+A narrow pit covered by iron bars lies in the north side of the room, and someone has scrawled "The Heroes of Thuriskali looted this place" on the south wall.
 }}
 ::
-This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 2 x Grick (cr 2, mm 173); medium, 3800 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 10 sp; 17 sp
+1700 cp, 30 ep; 5 gp; 7 sp
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway  | n/a |
-| north | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 22 |
-| south | Unlocked Iron Door (60 hp)  | 39 |
+| east | Archway  | 25 |
+| east | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 35 |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 29 |
 :
+\page
 ### Room 31
 :
 {{note
 Empty.
 }}
 ::
-This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
+This room is occupied by **Ettercap (cr 2, mm 131) and 7 x Giant Spider (cr 1, mm 328); easy, 1850 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 9 ep
+55 sp; 31 cp; 6 gp; 10 ep 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 11 save or take 1d10 damage | 36 |
-| south | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 41 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 29 |
+| east | Locked Good Wooden Door (DC 10 to open, DC 15 to break; 15 hp)  | 36 |
+| north | Archway  | n/a |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 39 |
+| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 35 |
 :
-\page
 ### Room 32
 :
 {{note
-A ladder ascends to a balcony hanging from the west wall, and a bent dagger lies in the east side of the room.
-}}
-::
-This room is occupied by **2 x Derro (cr 1/4, mtf 158) and 1 x Oblex Spawn (cr 1/4, mtf 217); easy, 150 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 21 cp; 20 sp; 21 cp
+Empty.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 35 |
-| north | Trapped and Unlocked Iron Door (60 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | 25 |
+| north | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | 16 |
+| south | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** Earthmaw Trap: DC 20 to find, DC 10 to disable;     +8 to hit against one target, 4d10 piercing damage | n/a |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 43 |
 :
 ### Room 33
 :
-{{classTable,frame
-#### Hidden Treasure!
-* Trapped and Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
-* Arrow Trap: DC 10 to find, DC 10 to disable;     +10 to hit against one target, 4d10 piercing damage
-* 2100 cp, 500 sp, 100 gp, diamond (50 gp), bloodstone (50 gp), carnelian (50 gp), chrysoprase (50 gp), jasper (50 gp), Scroll of Protection (fey) (rare, dmg 199)
-}}
 {{note
-A narrow shaft descends from the room into the next dungeon level down, and spirals of red stones cover the floor.
+Burning torches in iron sconces line the south and east walls, and several pieces of rotten fruit are scattered throughout the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Secret (DC 20 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 27 |
-| south | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +6 to hit against one target, 2d10 slashing damage | 38 |
-| south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Acid Spray: DC 10 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 13 save or take 1d10 acid damage     for 1d4 rounds | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 26 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 35 |
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 16 |
+| south | Archway  | 42 |
 :
 ### Room 34
 :
 {{note
-The south and east walls have been engraved with glowing symbols, and skeletons hang from chains and manacles against the south and east walls.
+Someone has scrawled "Run away!" on the north wall, and laughter can be heard in the east side of the room.
 }}
 ::
-This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 xp**
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 15 cp; 15 sp; 14 gp; 19 sp
+39 sp; 62 gp; 19 ep; 54 cp; 4 pp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Stone Door (DC 10 to open)  | 29 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
+| east | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Trap:*** Acid Spray: DC 15 to find, DC 10 to disable;     affects all targets within a 20 ft. cone, DC 11 save or take 2d10 acid damage     for 1d4 rounds | 38 |
+| north | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | n/a |
+| north | Unlocked Strong Wooden Door (20 hp)  | 18 |
+| south | Unlocked Simple Wooden Door (10 hp)  | 48 |
 :
 ### Room 35
 :
 {{note
-A stream of acid flows along a channel in the floor, and a toppled statue lies in the center of the room.
+A rope ascends to a catwalk hanging between the north and south walls, and a pile of rotten rope lies in the north side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 33 |
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 38 |
-| south | Unlocked Iron Door (60 hp)  | 44 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 32 |
-| west | Unlocked Iron Door (60 hp) (slides to one side)  | 36 |
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 31 |
+| east | Archway  | 39 |
+| north | Unlocked Strong Wooden Door (20 hp)  | 25 |
+| west | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 30 |
 :
 \page
 ### Room 36
@@ -673,41 +594,44 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Iron Door (60 hp) (slides to one side)  | 35 |
-| south | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 15 to disable;     one target, 1d10 force damage | 43 |
-| west | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 11 save or take 1d10 damage | 31 |
-| west | Archway  | 41 |
+| east | Secret (DC 15 to find) Unlocked Stone Door (60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 37 |
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 23 |
+| west | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 39 |
+| west | Locked Good Wooden Door (DC 10 to open, DC 15 to break; 15 hp)  | 31 |
 :
 ### Room 37
 :
 {{note
-A tapestry of a legendary battle hangs from the south wall, and someone has scrawled "Look to the ceiling" on the west wall.
+A stone ramp ascends towards the east wall, and a faded and torn tapestry hangs from the west wall.
 }}
 ::
-This room is occupied by **4 x Svirfneblin (cr 1/2, mm 164); deadly, 400 xp**
+This room is occupied by **9 x Goblin (cr 1/4, mm 166) and 9 x Wolf (cr 1/4, mm 341); easy, 900 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 2500 cp, 700 sp, 100 gp, a copper bowl inlaid with a filigree of silver (25 gp), a marble puzzle box set with a rosette of chrysoberyl (25 gp), a pewter bracer set with a single chrysoberyl (25 gp), a small woolen tapestry (25 gp), an agateware cup painted with woodland imagery (25 gp), an ivory comb set with jade (25 gp), an obsidian miniature (of a tree) adorned with silver (25 gp), +1 Wand of the War Mage (uncommon, dmg 212), +1 Weapon (maul) (uncommon, dmg 213)
+184 cp; 6 gp; 88 sp; 6 pp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Secret (DC 20 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is located above a small stone dais and only two feet high | n/a |
-| south | Trapped and Locked Iron Door (DC 15 to open, DC 30 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 20 to find, DC 15 to disable;     +6 to hit against one target, 2d10 piercing damage | n/a |
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 27 |
+| north | Unlocked Stone Door (60 hp)  | 26 |
+| south | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | n/a |
+| south | Stuck Good Wooden Door (DC 15 to break; 15 hp) (slides up)  | n/a |
+| west | Secret (DC 15 to find) Unlocked Stone Door (60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 36 |
 :
 ### Room 38
 :
 {{note
-Someone has scrawled "The Circle of the Shield shall fall when the stars fall from the sky and east becomes west" on the south wall, and a pile of bent copper coins lies in the north-east corner of the room.
+A well lies in the north side of the room, and a corroded chain lies in the north-east corner of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway  | 42 |
-| north | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +6 to hit against one target, 2d10 slashing damage | 33 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 44 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 35 |
+| east | Secret (DC 20 to find) Unlocked Stone Door (60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 44 |
+| south | Stuck Stone Door (DC 20 to break; 60 hp) (slides to one side)  | n/a |
+| south | Archway  | 49 |
+| west | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Trap:*** Acid Spray: DC 15 to find, DC 10 to disable;     affects all targets within a 20 ft. cone, DC 11 save or take 2d10 acid damage     for 1d4 rounds | 34 |
 :
 ### Room 39
 :
@@ -717,34 +641,52 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | n/a |
-| east | Unlocked Stone Door (60 hp)  | 45 |
-| north | Unlocked Iron Door (60 hp)  | 30 |
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 36 |
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 31 |
+| west | Archway  | 35 |
+| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 45 |
 :
-\page
 ### Room 40
 :
-{{note
-A fountain of water sits against the north wall, and a warped holy symbol lies in the south-west corner of the room.
+{{classTable,frame
+#### Hidden Treasure!
+* Locked Iron Chest (DC 20 to unlock, DC 30 to break; 60 hp)
+* 400 cp, 8000 sp, 1700 gp, 90 pp, carnelian (50 gp), citrine (50 gp), onyx (50 gp), quartz (50 gp), star rose quartz (50 gp), +1 Rod of the Pact Keeper (uncommon, dmg 197), Hat of Disguise (uncommon, dmg 173), Sentinel Shield (uncommon, dmg 199)
 }}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| north | Secret (DC 25 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed behind a statue of a fearsome dragon, and opened by reaching into its mouth | n/a |
-| west | Archway  | n/a |
-:
-### Room 41
-:
+\page
 {{note
 Empty.
 }}
+::
+This room is occupied by **Roper (cr 5, mm 261) and 5 x Piercer (cr 1/2, mm 252); easy, 2300 xp**
+:
+{{descriptive
+#### Treasure
+230 sp; 27 cp; 7 gp; 2 pp; 37 sp 
+}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway  | 36 |
-| east | Locked Stone Door (DC 10 to open)  | 43 |
-| north | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 31 |
-| south | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 47 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 41 |
+| north | Secret (DC 25 to find) Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp) ***Secret:*** The door is concealed behind a statue of a fearsome dragon, and opened by reaching into its mouth | 27 |
+:
+### Room 41
+:
+{{classTable,frame
+#### Hidden Treasure!
+* Locked Strong Wooden Chest (DC 20 to unlock, DC 25 to break; 20 hp)
+* 700 cp, 5000 sp, 2200 gp, 120 pp, a bloodstone salt cellar inlaid with a meandros of electrum (25 gp), a leather armor tooled with draconic scales (25 gp), a leather armor trimmed with fur (25 gp), a small woolen carpet (25 gp), an ivory medallion set with pearl (25 gp), 2 x Potion of Growth (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188), Ring of Swimming (uncommon, dmg 193)
+}}
+{{note
+A cube of solid stone stands in the center of the room, and a corpse lies in front of an open chest in the east side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Good Wooden Door (15 hp) (slides to one side)  | n/a |
+| east | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 43 |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides down)  | 47 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 40 |
 :
 ### Room 42
 :
@@ -752,149 +694,151 @@ Empty.
 Empty.
 }}
 ::
-This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 6 x Giant Rat (cr 1/8, mm 327); deadly, 350 xp**
+This room is occupied by **Roper (cr 5, mm 261) and 4 x Piercer (cr 1/2, mm 252); easy, 2200 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 2100 cp, 1100 sp, 70 gp, azurite (10 gp), banded agate (10 gp), 2 x eye agate (10 gp), hematite (10 gp), rhodochrosite (10 gp), tiger eye (10 gp), turquoise (10 gp)
+130 ep; 13 ep; 47 cp; 16 gp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
-| west | Archway  | 38 |
+| north | Archway  | 33 |
+| south | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides to one side)  ***Trap:*** Acid Spray: DC 10 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 17 save or take 4d10 acid damage     for 1d4 rounds | 51 |
+| west | Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  | n/a |
 :
 ### Room 43
 :
 {{note
-A simple fireplace sits against the north wall, and someone has scrawled "white, iron, emerald, white" on the west wall.
+A group of monstrous faces have been carved into the east wall, and a pierced breastplate lies in the south-west corner of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 25 to open)  | 44 |
-| north | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 15 to disable;     one target, 1d10 force damage | 36 |
-| west | Locked Stone Door (DC 10 to open)  | 41 |
-| west | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 47 |
-:
-### Room 44
-:
-{{classTable,frame
-#### Trap!
-* Net Trap: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 11 save or become restrained
-}}
-{{note
-Empty.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | 48 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 38 |
-| north | Unlocked Iron Door (60 hp)  | 35 |
-| west | Locked Iron Door (DC 25 to open)  | 43 |
+| east | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| east | Unlocked Good Wooden Door (15 hp)  | 51 |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 32 |
+| west | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 41 |
 :
 \page
+### Room 44
+:
+{{note
+A magical statue in the south-east corner of the room speaks riddles and cryptic prophecies, and the floor is covered with teeth.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 52 |
+| west | Secret (DC 20 to find) Unlocked Stone Door (60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 38 |
+:
 ### Room 45
 :
 {{note
-Empty.
+Someone has scrawled "Lenia stands here, slain by a basilisk" on the south wall, and the sound of rushing water can be faintly heard near the north wall.
 }}
 ::
-This room is occupied by **Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pureblood (cr 1, mm 310); deadly, 650 xp**
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 3 x Grick (cr 2, mm 173); medium, 4250 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 1800 cp, 1300 sp, 60 gp, diamond (50 gp), bloodstone (50 gp), jasper (50 gp), 2 x quartz (50 gp)
+2000 cp; 32 cp; 18 sp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Locked Stone Door (DC 20 to open)  | n/a |
-| west | Unlocked Stone Door (60 hp)  | 39 |
-| west | Unlocked Stone Door (60 hp)  | 49 |
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 39 |
+| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
+| south | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 52 |
 :
 ### Room 46
 :
 {{note
 Empty.
 }}
-::
-This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 10 sp; 15 sp
-}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Locked Iron Door (DC 20 to open)  | 52 |
-| east | Locked Stone Door (DC 15 to open)  | 47 |
+| east | Archway  | 50 |
+| east | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| west | Archway  | 53 |
 :
 ### Room 47
 :
-{{classTable,frame
-#### Trap!
-* Net Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 10 save or become restrained
-}}
 {{note
-Empty.
+A faded and torn tapestry hangs from the north wall, and a bloody tome lies in the south-west corner of the room.
 }}
 ::
-This room is occupied by **Kobold Dragonshield (cr 1, vgm 165) and 3 x Kobold (cr 1/8, mm 195); medium, 275 xp**
+This room is occupied by **Choldrith (cr 3, vgm 132) and 7 x Cave Fisher (cr 3, vgm 130); hard, 5600 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 19 cp; 15 sp; 16 sp; 15 sp
+50 cp; 28 sp; 17 gp; 2 pp; 9 ep 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 43 |
-| north | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 41 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
-| west | Locked Stone Door (DC 15 to open)  | 46 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides down)  | 41 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (stuck, disadvantage to open)  | 55 |
 :
 ### Room 48
 :
 {{note
-Empty.
+The south and west walls have been engraved with endless spirals, and someone has scrawled "Ralphye's Wyverns looted this place" in dwarvish runes on the west wall.
+}}
+::
+This room is occupied by **3 x Roper (cr 5, mm 261); medium, 5400 xp**
+:
+{{descriptive
+#### Treasure
+200 cp, 8000 sp, 1800 gp, 80 pp
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 54 |
-| south | Unlocked Stone Door (60 hp)  | 53 |
-| west | Unlocked Stone Door (60 hp)  | 44 |
+| north | Unlocked Simple Wooden Door (10 hp)  | 34 |
+| south | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
 :
 ### Room 49
 :
-{{classTable,frame
-#### Trap!
-* Magic Missle Trap: DC 15 to find, DC 15 to disable;    one target, 1d10 force damage
-}}
 {{note
-Numerous pillars line the north and west walls, and a swarm of crawling insects covers the floor.
+A magical pool in the south side of the room grants beauty to whomever drinks from it (but only once), and several sundered shields are scattered throughout the room.
+}}
+\page
+::
+This room is occupied by **15 x Xvart (cr 1/8, vgm 200) and 25 x Giant Rat (cr 1/8, mm 327); easy, 1000 xp**
+:
+{{descriptive
+#### Treasure
+194 sp; 212 cp; 85 gp; 57 ep; 10 pp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | 45 |
-| east | Archway  | 60 |
-| west | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +6 to hit against one target, 2d10 piercing damage | 51 |
+| north | Archway  | 38 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 60 |
 :
-\page
 ### Room 50
 :
 {{note
 Empty.
 }}
+::
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 5 x Grick (cr 2, mm 173); medium, 5150 xp**
+:
+{{descriptive
+#### Treasure
+1500 cp; 19 gp; 18 sp; 27 cp 
+}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Trapped and Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 20 to find, DC 15 to disable;     +5 to hit against one target, 1d10 cold damage | 58 |
-| west | Archway  | n/a |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 54 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| west | Archway  | 46 |
+| west | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 57 |
 :
 ### Room 51
 :
@@ -904,50 +848,67 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +6 to hit against one target, 2d10 piercing damage | 49 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  | n/a |
-| south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed behind a statue of an ancient lich, and opened by pressing runes on his staff | n/a |
-| south | Archway  | 59 |
+| north | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides to one side)  ***Trap:*** Acid Spray: DC 10 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 17 save or take 4d10 acid damage     for 1d4 rounds | 42 |
+| south | Unlocked Stone Door (60 hp)  | 59 |
+| west | Unlocked Good Wooden Door (15 hp)  | 43 |
 :
 ### Room 52
 :
 {{note
-Several square holes are cut into the north and west walls, and a broken wooden chest lies in the center of the room.
+Empty.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| west | Locked Iron Door (DC 20 to open)  | 46 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 60 |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 45 |
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 44 |
+| south | Archway  | 61 |
 :
 ### Room 53
 :
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 15 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
+* 600 cp, 2000 sp, 2900 gp, 70 pp, a brass warhammer etched with dwarven axeheads (25 gp), a silver chime set with amethyst and pearl (25 gp), a steel salt cellar engraved with draconic scales (25 gp), an earthenware vase embossed with floral vines (25 gp), Wand of Web (uncommon, dmg 212)
+}}
 {{note
-Someone has scrawled "Death comes on silent wings" in draconic script on the south wall, and several pieces of blood-soaked clothing are scattered throughout the room.
+Empty.
 }}
 ::
-This room is occupied by **Gelatinous Cube (cr 2, mm 242); easy, 450 xp**
+This room is occupied by **6 x Wererat (cr 2, mm 209) and 10 x Giant Rat (cr 1/8, mm 327); easy, 2950 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 14 cp
+51 cp; 50 gp; 7 ep; 70 sp; 5 pp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Unlocked Stone Door (60 hp)  | 48 |
-| south | Locked Stone Door (DC 15 to open)  | 61 |
+| east | Archway  | 46 |
+| east | Archway  | 56 |
+| south | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 63 |
+| west | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Trap:*** Teleporter Crystal: DC 15 to find, DC 10 to disable;     affects each creature which touches the crystal, DC 12 save or be teleported to another location | n/a |
 :
+\page
 ### Room 54
 :
 {{note
-A narrow ledge runs along the walls, and someone has scrawled "Abandon all hope" in draconic script on the north wall.
+The floor is covered in perfect hexagonal tiles, and a fountain of water sits against the east wall.
+}}
+::
+This room is occupied by **Ettercap (cr 2, mm 131) and 15 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1200 xp**
+:
+{{descriptive
+#### Treasure
+156 cp; 35 gp; 38 ep; 32 sp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 55 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 48 |
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
+| south | Archway  | 65 |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 50 |
 :
 ### Room 55
 :
@@ -957,397 +918,1271 @@ Empty.
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Archway  | 63 |
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 56 |
-| south | Locked Stone Door (DC 25 to open)  | 66 |
-| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 54 |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| east | Archway  | 58 |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (stuck, disadvantage to open)  | 47 |
 :
-\page
 ### Room 56
 :
 {{note
 Empty.
 }}
-::
-This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 13 ep
-}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed by an illusion | 63 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 55 |
+| south | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 15 to disable;     affects each creature which touches the trigger, DC 11 save or take 2d10 damage | 63 |
+| west | Archway  | 53 |
 :
 ### Room 57
 :
 {{note
 Empty.
 }}
-::
-This room is occupied by **Mimic (cr 2, mm 220); easy, 450 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 17 sp
-}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 58 |
-| south | Locked Stone Door (DC 15 to open)  | n/a |
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 50 |
+| east | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** Teleporter Crystal: DC 15 to find, DC 10 to disable;     affects each creature which touches the crystal, DC 18 save or be teleported to another location | 64 |
+| south | Archway  | 72 |
+| west | Trapped and Unlocked Good Wooden Door (15 hp) (slides down)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 14 save or take 4d10 damage | 63 |
 :
 ### Room 58
 :
 {{note
-A group of monstrous faces have been carved into the west wall, and an altar of evil sits in the east side of the room.
+Someone has scrawled a draconic face on the south wall, and several pieces of rotten bread are scattered throughout the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Trapped and Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 20 to find, DC 15 to disable;     +5 to hit against one target, 1d10 cold damage | 50 |
-| south | Unlocked Stone Door (60 hp)  | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 57 |
+| south | Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 10 to disable;     +4 to hit against one target, 2d10 piercing damage | 67 |
+| west | Archway  | 55 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp) (stuck, disadvantage to open)  | n/a |
 :
 ### Room 59
 :
-{{classTable,frame
-#### Trap!
-* Electrified Floortile: DC 10 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 17 save or take 4d10 lightning damage
-}}
-{{classTable,frame
-#### Hidden Treasure!
-* Hidden (DC 20 to find) Locked Iron Chest (DC 20 to unlock, DC 30 to break; 60 hp)
-* 1700 cp, 1300 sp, 90 gp, banded agate (10 gp), tiger eye (10 gp), turquoise (10 gp)
-}}
 {{note
 Empty.
-}}
-::
-This room is occupied by **4 x Myconid Adult (cr 1/2, mm 232); deadly, 400 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 6 ep; 13 ep; 14 sp; 17 sp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 64 |
-| north | Archway  | 51 |
-:
-### Room 60
-:
-{{note
-A tile mosaic of ancient mythology covers the floor, and someone has scrawled "It's a trap" on the east wall.
-}}
-::
-This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 17 sp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 52 |
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
-| west | Archway  | 49 |
-| west | Archway  | 65 |
-:
-\page
-### Room 61
-:
-{{note
-A narrow ledge runs along the north and west walls, and a tapestry of a sea god hangs from the east wall.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | 62 |
-| north | Locked Stone Door (DC 15 to open)  | 53 |
-| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
-:
-### Room 62
-:
-{{note
-Empty.
-}}
-::
-This room is occupied by **Spectator (cr 3, mm 30); medium, 700 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 10 sp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Locked Iron Door (DC 15 to open) (slides down)  | 66 |
-| south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +9 to hit against one target, 4d10 piercing damage | 71 |
-| west | Unlocked Stone Door (60 hp)  | 61 |
-:
-### Room 63
-:
-{{note
-Empty.
-}}
-::
-This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 2600 cp, 1200 sp, 70 gp, diamond (50 gp), bloodstone (50 gp), jasper (50 gp), 2 x sardonyx (50 gp), star rose quartz (50 gp), 2 x zircon (50 gp)
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| north | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed by an illusion | 56 |
-| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 68 |
-| south | Unlocked Stone Door (60 hp)  | n/a |
-| west | Archway  | 55 |
-:
-### Room 64
-:
-{{note
-A magical mirror on the north wall answers simple questions about the dungeon (yes/no), and a fountain decorated with screaming faces sits in the east side of the room.
-}}
-::
-This room is occupied by **Bugbear (cr 1, mm 33) and 1 x Half-ogre (cr 1, mm 238); medium, 400 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 18 sp; 16 cp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | 65 |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 59 |
-| west | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +3 to hit against one target, 1d10 piercing damage | 67 |
-:
-### Room 65
-:
-{{note
-A wooden platform hangs over a deep pit in the west side of the room, and the scent of smoke fills the room.
-}}
-::
-This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, mtf 158); medium, 750 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 1700 cp, 1000 sp, 40 gp, diamond (50 gp), citrine (50 gp), jasper (50 gp), sardonyx (50 gp), +1 Weapon (heavy crossbow) (uncommon, dmg 213)
-}}
-\page
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Archway  | 60 |
-| south | Secret (DC 20 to find) Trapped and Unlocked Iron Door (60 hp)  ***Secret:*** The door is concealed within a mosaic of a legendary battle ***Trap:*** Falling Block: DC 15 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | 69 |
-| west | Unlocked Stone Door (60 hp)  | 64 |
-:
-### Room 66
-:
-{{note
-A tile labyrinth covers the floor, and someone has scrawled "The last wards have fallen" on the east wall.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Archway  | 68 |
-| north | Locked Stone Door (DC 25 to open)  | 55 |
-| south | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 71 |
-| west | Locked Iron Door (DC 15 to open) (slides down)  | 62 |
-:
-### Room 67
-:
-{{note
-A well lies in the west side of the room, and a tapestry of arcane patterns hangs from the north wall.
-}}
-::
-This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, mtf 158); medium, 750 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 17 cp; 19 sp
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +3 to hit against one target, 1d10 piercing damage | 64 |
-| south | Locked Stone Door (DC 10 to open)  | 72 |
-:
-### Room 68
-:
-{{classTable,frame
-#### Trap!
-* Ice Dart Trap: DC 15 to find, DC 15 to disable;    +9 to hit against one target, 4d10 cold damage
-}}
-{{classTable,frame
-#### Hidden Treasure!
-* Hidden (DC 15 to find) Locked Iron Chest (DC 25 to unlock, DC 30 to break; 60 hp)
-* 2200 cp, 500 sp, 70 gp, a brocade choker threaded with silver (25 gp), a pewter ring brooch inlaid with a meandros of electrum (25 gp), a set of crystal dice (25 gp), an obsidian orb engraved with a labyrinth (25 gp), Spell Scroll (Vicious Mockery) (common, dmg 200), Spell Scroll (Arms of Hadar) (common, dmg 200), Spell Scroll (False Life) (common, dmg 200), Spell Scroll (Spiritual Weapon) (uncommon, dmg 200), Potion of Healing (common, dmg 187)
-}}
-{{note
-Empty.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 63 |
-| south | Locked Stone Door (DC 15 to open)  | 73 |
-| south | Archway  | 74 |
-| west | Archway  | 66 |
-:
-\page
-### Room 69
-:
-{{note
-Spirals of gray stones cover the floor, and a pile of rotting wood lies in the south-west corner of the room.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 77 |
-| east | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 10 to disable | n/a |
-| north | Secret (DC 20 to find) Trapped and Unlocked Iron Door (60 hp)  ***Secret:*** The door is concealed within a mosaic of a legendary battle ***Trap:*** Falling Block: DC 15 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 20 save or take 4d10 damage | 65 |
-:
-### Room 70
-:
-{{classTable,frame
-#### Trap!
-* Concealed Pit: DC 15 to find, DC 15 to disable;    affects all targets entering a 10 ft. square area, DC 20 save or take 4d10 damage
-}}
-{{note
-Empty.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 75 |
-| south | Unlocked Stone Door (60 hp)  | n/a |
-| south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Rune of Hypnosis: DC 20 to find, DC 15 to disable;     affects all targets within 10 ft., DC 18 save or become incapacitated for 1d4 rounds | n/a |
-:
-### Room 71
-:
-{{note
-Empty.
-}}
-#### Exits
-| Direction | Description | Leads to |
-|:--|:--|:--|
-| east | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;     +6 to hit against one target, 2d10 cold damage | 73 |
-| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +9 to hit against one target, 4d10 piercing damage | 62 |
-| north | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 66 |
-:
-### Room 72
-:
-{{note
-Someone has scrawled "The Sunless Castle shall be lost when sea becomes sky and the Blade of Evil is drawn" on the south wall, and a metallic odor fills the room.
-}}
-::
-This room is occupied by **2 x Myconid Adult (cr 1/2, mm 232); easy, 200 xp**
-:
-{{descriptive
-#### Treasure
-Treasure: 11 gp; 12 cp
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
 | east | Archway  | n/a |
-| north | Locked Stone Door (DC 10 to open)  | 67 |
-| south | Archway  | 76 |
+| north | Unlocked Stone Door (60 hp)  | 51 |
+| south | Archway  | 67 |
+| south | Secret (DC 20 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed behind a statue of a demonic sorceress, and opened by moving her hand | 68 |
 :
-### Room 73
+\page
+### Room 60
 :
 {{note
-A narrow pit covered by iron bars lies in the center of the room, and a pile of rotten apples lies in the north side of the room.
+Empty.
 }}
-\page
 ::
-This room is occupied by **7 x Drow (cr 1/4, mm 128); deadly, 350 xp**
+This room is occupied by **Roper (cr 5, mm 261) and 14 x Piercer (cr 1/2, mm 252); hard, 3200 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 2100 cp, 1100 sp, 110 gp, a brass censer etched with draconic runes (25 gp), a fine leather merchant's cap sewn with silver (25 gp), a steel ring engraved with arcane runes (25 gp), a wooden orb set with chrysoprase (25 gp), an earthenware ewer painted with pastoral imagery (25 gp)
+130 ep; 32 sp; 114 cp; 35 ep; 11 gp; 4 pp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Trapped and Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 18 save or take 4d10 damage | n/a |
-| north | Locked Stone Door (DC 15 to open)  | 68 |
-| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;     +6 to hit against one target, 2d10 cold damage | 71 |
-| west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Electrified Lock: DC 15 to find, DC 15 to disable;     affects each creature which touches the lock, DC 10 save or take 1d10 lightning damage | n/a |
+| east | Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  | 61 |
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 49 |
+| north | Unlocked Strong Wooden Door (20 hp)  | n/a |
+| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 69 |
+| west | Unlocked Simple Wooden Door (10 hp)  | n/a |
+:
+### Room 61
+:
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 15 to find) Locked Simple Wooden Chest (DC 15 to unlock, DC 15 to break; 10 hp)
+* 600 cp, 9000 sp, 2200 gp, 110 pp, 2 x diamond (100 gp), pearl (100 gp), amber (100 gp), chrysoberyl (100 gp), 2 x garnet (100 gp), 2 x jet (100 gp), Potion of Resistance (fire) (uncommon, dmg 188), Potion of Fire Breath (uncommon, dmg 187)
+}}
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Archway  | 52 |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 70 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 71 |
+| west | Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  | 60 |
+:
+### Room 62
+:
+{{note
+Ghostly music fills the room, and a charred wooden chest lies in the south-west corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret (DC 20 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed behind a statue of a demonic sorceress, and opened by moving her hand | n/a |
+| south | Secret (DC 15 to find) Locked Simple Wooden Door (DC 15 to open, DC 15 to break; 10 hp) ***Secret:*** The door is concealed within a mosaic of legendary monsters | n/a |
+:
+### Room 63
+:
+{{classTable,frame
+#### Trap!
+* Rune of Fear: DC 15 to find, DC 15 to disable;    affects all targets within 10 ft., DC 11 save or become frightened for 1d4 rounds
+}}
+{{note
+Part of the ceiling has collapsed into the room, and a shallow pool of quicksilver lies in the north side of the room.
+}}
+::
+This room is occupied by **11 x Wererat (cr 2, mm 209); hard, 4950 xp**
+:
+{{descriptive
+#### Treasure
+40 cp; 65 gp; 17 sp; 2 pp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Good Wooden Door (15 hp) (slides down)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 14 save or take 4d10 damage | 57 |
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 72 |
+| north | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 15 to disable;     affects each creature which touches the trigger, DC 11 save or take 2d10 damage | 56 |
+| north | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 53 |
+| south | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | 73 |
+| south | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | n/a |
+:
+\page
+### Room 64
+:
+{{note
+The room has a high domed ceiling, and a dagger hilt lies in the center of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 65 |
+| south | Unlocked Good Wooden Door (15 hp)  | 76 |
+| west | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** Teleporter Crystal: DC 15 to find, DC 10 to disable;     affects each creature which touches the crystal, DC 18 save or be teleported to another location | 57 |
+:
+### Room 65
+:
+{{note
+A mural of ghoulish carnage covers the ceiling, and the floor is covered with teeth.
+}}
+::
+This room is occupied by **Choldrith (cr 3, vgm 132) and 3 x Cave Fisher (cr 3, vgm 130); easy, 2800 xp**
+:
+{{descriptive
+#### Treasure
+8 ep; 34 sp; 13 gp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  ***Trap:*** Acid Spray: DC 15 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 14 save or take 2d10 acid damage     for 1d4 rounds | 66 |
+| north | Archway  | 54 |
+| west | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 64 |
+:
+### Room 66
+:
+{{classTable,frame
+#### Trap!
+* Poison Gas Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 14 save or take 4d10 poison damage
+}}
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 20 to find) Unlocked Iron Chest (60 hp)
+* 1000 cp, 6000 sp, 1700 gp, 100 pp, a bone coffer set with a rosette of topaz (250 gp), a fine leather mantle trimmed with sable (250 gp), a jet cup set with a single black sapphire (250 gp), a moonstone salt cellar set with black sapphire (250 gp), a portrait (of a female dwarf explorer) in a bone frame engraved with a labyrinth (250 gp), an ivory chalice engraved with a legendary coat of arms (250 gp), an ivory shield brooch set with black sapphire and ruby (250 gp), Potion of Diminution (rare, dmg 187), Potion of Heroism (rare, dmg 188)
+}}
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 67 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| south | Locked Strong Wooden Door (DC 15 to open, DC 20 to break; 20 hp)  | 79 |
+| west | Trapped and Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  ***Trap:*** Acid Spray: DC 15 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 14 save or take 2d10 acid damage     for 1d4 rounds | 65 |
+| west | Unlocked Strong Wooden Door (20 hp)  | 76 |
+:
+\page
+### Room 67
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **Ettercap (cr 2, mm 131) and 15 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1200 xp**
+:
+{{descriptive
+#### Treasure
+59 sp; 6 pp; 85 cp; 37 ep; 24 gp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 68 |
+| north | Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 10 to disable;     +4 to hit against one target, 2d10 piercing damage | 58 |
+| north | Archway  | 59 |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 80 |
+| west | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 66 |
+:
+### Room 68
+:
+{{note
+A tapestry of vile acts hangs from the north wall, and a ruined siege weapon sits in the south-east corner of the room.
+}}
+::
+This room is occupied by **8 x Wererat (cr 2, mm 209); medium, 3600 xp**
+:
+{{descriptive
+#### Treasure
+63 sp; 20 gp; 25 cp; 9 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | n/a |
+| north | Secret (DC 20 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed behind a statue of a demonic sorceress, and opened by moving her hand | 59 |
+| south | Archway  | 81 |
+| west | Archway  | 67 |
+:
+### Room 69
+:
+{{note
+A sloped pit lined with iron spikes lies in the west side of the room, and the scent of ozone fills the room.
+}}
+::
+This room is occupied by **12 x Wererat (cr 2, mm 209); deadly, 5400 xp**
+:
+{{descriptive
+#### Treasure
+1200 cp, 10000 sp, 1900 gp, 70 pp, a fine leather merchant's cap sewn with platinum (250 gp), a lacquered wooden puzzle box engraved with arcane runes (250 gp), a lacquered wooden rod engraved with arcane runes (250 gp), a velvet merchant's cap threaded with platinum (250 gp), an electrum bowl engraved with draconic scales (250 gp), +2 Ammunition (20 sling bullets) (rare, dmg 150), Potion of Frost Giant Strength (rare, dmg 187), Potion of Superior Healing (rare, dmg 187)
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** One-way Door: DC 10 to find, DC 10 to disable | 70 |
+| north | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 60 |
+:
+### Room 70
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **15 x Goblin (cr 1/4, mm 166) and 15 x Wolf (cr 1/4, mm 341); easy, 1500 xp**
+:
+{{descriptive
+#### Treasure
+177 sp; 97 gp; 152 cp; 10 ep; 5 pp 
+}}
+\page
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 71 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 61 |
+| west | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** One-way Door: DC 10 to find, DC 10 to disable | 69 |
+:
+### Room 71
+:
+{{note
+A wooden platform hangs over a deep pit in the center of the room, and several barrel staves are scattered throughout the room.
+}}
+::
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
+:
+{{descriptive
+#### Treasure
+11 pp; 61 cp; 57 gp; 55 sp; 11 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Simple Wooden Door (10 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +10 to hit against one target, 10d10 slashing damage | n/a |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 61 |
+| south | Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp)  | 74 |
+| west | Archway  | 70 |
+:
+### Room 72
+:
+{{note
+A tapestry of geometric patterns hangs from the west wall, and someone has scrawled "They ate Findiser" on the north wall.
+}}
+::
+This room is occupied by **Roper (cr 5, mm 261) and 4 x Piercer (cr 1/2, mm 252); easy, 2200 xp**
+:
+{{descriptive
+#### Treasure
+230 sp; 16 cp; 35 sp; 11 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Archway  | 57 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 63 |
+| west | Secret (DC 15 to find) Trapped and Unlocked Strong Wooden Door (20 hp)  ***Secret:*** The door is concealed behind a statue of a noble king, and opened by stabbing a sword into his back ***Trap:*** Arrow Trap: DC 10 to find, DC 10 to disable;     +4 to hit against one target, 2d10 piercing damage | 75 |
+:
+### Room 73
+:
+{{note
+Spirals of green stones cover the floor, and the walls are covered with veins of metal.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | 63 |
+| south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 15 to disable;     +8 to hit against one target, 4d10 piercing damage | 82 |
+| west | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 74 |
 :
 ### Room 74
 :
 {{note
 Empty.
 }}
-::
-This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); easy, 105 xp**
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 73 |
+| north | Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp)  | 71 |
 :
-{{descriptive
-#### Treasure
-Treasure: 13 sp; 15 cp; 16 cp; 15 sp; 15 sp; 8 gp; 14 sp; 11 gp; 6 sp
+\page
+### Room 75
+:
+{{note
+Burning torches in iron sconces line the south and west walls, and a warped holy symbol lies in the north side of the room.
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| north | Archway  | 68 |
-| south | Unlocked Iron Door (60 hp) (slides down)  | n/a |
+| east | Secret (DC 15 to find) Trapped and Unlocked Strong Wooden Door (20 hp)  ***Secret:*** The door is concealed behind a statue of a noble king, and opened by stabbing a sword into his back ***Trap:*** Arrow Trap: DC 10 to find, DC 10 to disable;     +4 to hit against one target, 2d10 piercing damage | 72 |
+| east | Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp) (slides to one side)  | 84 |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
 :
-### Room 75
+### Room 76
+:
+{{classTable,frame
+#### Trap!
+* Thunder Blaster: DC 15 to find, DC 10 to disable;    affects all targets within a 20 ft. cone, DC 19 save or take 10d10 thunder damage    and become deafened for 1d4 rounds
+}}
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Strong Wooden Door (20 hp)  | 66 |
+| east | Trapped and Locked Iron Door (DC 25 to open, DC 30 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +3 to hit against one target, 2d10 slashing damage | 79 |
+| north | Unlocked Good Wooden Door (15 hp)  | 64 |
+| south | Secret (DC 20 to find) Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp) ***Secret:*** The door is opened by pulling an iron sconce | 85 |
+:
+### Room 77
+:
+{{note
+Someone has scrawled "Gerdga Lavedotr died here, her sword sundered" in blood on the south wall, and a ruined iron box lies in the south-west corner of the room.
+}}
+::
+This room is occupied by **6 x Wererat (cr 2, mm 209) and 10 x Giant Rat (cr 1/8, mm 327); easy, 2950 xp**
+:
+{{descriptive
+#### Treasure
+32 gp; 82 sp; 127 cp; 8 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Simple Wooden Door (10 hp) (magically reinforced, disadvantage to break)  | 78 |
+| north | Secret (DC 20 to find) Unlocked Strong Wooden Door (20 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | n/a |
+:
+### Room 78
+:
+{{note
+The walls have been engraved with strange symbols, and an iron chandelier hangs from the ceiling in the north-east corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Trapped and Locked Strong Wooden Door (DC 15 to open, DC 20 to break; 20 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 10 to disable;     +7 to hit against one target, 4d10 piercing damage | n/a |
+| west | Unlocked Simple Wooden Door (10 hp) (magically reinforced, disadvantage to break)  | 77 |
+:
+\page
+### Room 79
+:
+{{note
+A stone dais sits in the east side of the room, and ghostly music can be heard in the north-west corner of the room.
+}}
+::
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 3 x Grick (cr 2, mm 173); medium, 4250 xp**
+:
+{{descriptive
+#### Treasure
+130 ep; 11 gp; 12 sp; 7 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 80 |
+| north | Locked Strong Wooden Door (DC 15 to open, DC 20 to break; 20 hp)  | 66 |
+| west | Trapped and Locked Iron Door (DC 25 to open, DC 30 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +3 to hit against one target, 2d10 slashing damage | 76 |
+:
+### Room 80
 :
 {{note
 Empty.
 }}
 ::
-This room is occupied by **Neogi (cr 3, vgm 180); medium, 700 xp**
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 7 x Grick (cr 2, mm 173); hard, 6050 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 9 ep
+800 cp, 10000 sp, 2600 gp, 110 pp, 3 x diamond (50 gp), carnelian (50 gp), chrysoprase (50 gp), 3 x citrine (50 gp), moonstone (50 gp), onyx (50 gp), 2 x quartz (50 gp), star rose quartz (50 gp), zircon (50 gp), Potion of Stone Giant Strength (rare, dmg 187), Potion of Superior Healing (rare, dmg 187)
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| south | Archway  | n/a |
-| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 70 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 67 |
+| west | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 79 |
 :
-### Room 76
+### Room 81
 :
 {{note
-A faded and torn tapestry hangs from the north wall, and a swarm of crawling insects covers the floor.
+An altar of evil sits in the north-west corner of the room, and a putrid odor fills the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Archway  | 68 |
+| south | Secret (DC 15 to find) Unlocked Simple Wooden Door (10 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | 88 |
+:
+### Room 82
+:
+{{note
+A sloped pit lined with iron spikes lies in the south-east corner of the room, and someone has scrawled "The Tome of Mirrors shall be lost until the sun is eclipsed in the Tower and the light comes to lifeless eyes" on the north wall.
 }}
 ::
-This room is occupied by **Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firenewt Warrior (cr 1/2, vgm 142); medium, 300 xp**
+This room is occupied by **12 x Chitine (cr 1/2, vgm 131); easy, 1200 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 4 gp; 11 gp
+48 gp; 76 sp; 12 ep; 16 cp 
 }}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
-| east | Unlocked Stone Door (60 hp)  | n/a |
-| east | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** One-way Door: DC 10 to find, DC 15 to disable | n/a |
-| north | Archway  | 72 |
+| east | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 87 |
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| north | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 15 to disable;     +8 to hit against one target, 4d10 piercing damage | 73 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 91 |
 :
-### Room 77
+\page
+### Room 83
 :
 {{note
-A stair ascends to a catwalk hanging between the east and west walls, and the sound of rushing water fills the room.
+Empty.
+}}
+::
+This room is occupied by **Drider (cr 6, mm 120) and 3 x Giant Spider (cr 1, mm 328); easy, 2900 xp**
+:
+{{descriptive
+#### Treasure
+80 ep; 15 sp; 20 cp; 11 gp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Archway  | 87 |
+| west | Locked Good Wooden Door (DC 20 to open, DC 15 to break; 15 hp)  | n/a |
+:
+### Room 84
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Simple Wooden Door (DC 25 to open, DC 15 to break; 10 hp)  | 85 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| south | Secret (DC 20 to find) Unlocked Good Wooden Door (15 hp) ***Secret:*** The door is located near the ceiling and concealed within a mosaic of legendary monsters | 92 |
+| south | Archway  | 93 |
+| west | Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp) (slides to one side)  | 75 |
+| west | Archway  | n/a |
+:
+### Room 85
+:
+{{note
+Various torture devices are scattered throughout the room, and the ceiling is covered with scorch marks.
+}}
+::
+This room is occupied by **6 x Choldrith (cr 3, vgm 132); medium, 4200 xp**
+:
+{{descriptive
+#### Treasure
+10 cp; 43 sp; 20 gp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret (DC 20 to find) Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp) ***Secret:*** The door is opened by pulling an iron sconce | 76 |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 94 |
+| south | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 93 |
+| west | Locked Simple Wooden Door (DC 25 to open, DC 15 to break; 10 hp)  | 84 |
+:
+### Room 86
+:
+{{note
+A wooden platform hangs over a deep pit in the center of the room, and someone has scrawled "Atham's Company looted this place" on the east wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (magically reinforced, disadvantage to break)  | 90 |
+:
+### Room 87
+:
+{{note
+A faded and torn tapestry hangs from the north wall, and burning torches in iron sconces line the south and east walls.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 92 |
+| north | Archway  | 83 |
+| west | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 82 |
+:
+### Room 88
+:
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 25 to find) Locked Iron Chest (DC 20 to unlock, DC 30 to break; 60 hp)
+* 700 cp, 3000 sp, 1900 gp, 110 pp
+}}
+\page
+{{note
+A tile mosaic of geometric patterns covers the floor, and someone has scrawled "Upon the Night of Shadow and Flame, in the Jungle of Omens, the Ruby Bridge shall be destroyed" on the north wall.
+}}
+::
+This room is occupied by **6 x Wererat (cr 2, mm 209) and 10 x Giant Rat (cr 1/8, mm 327); easy, 2950 xp**
+:
+{{descriptive
+#### Treasure
+51 gp; 94 sp; 22 ep; 50 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret (DC 15 to find) Unlocked Simple Wooden Door (10 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | 81 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 96 |
+| west | Trapped and Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 14 save or take 4d10 damage | n/a |
+:
+### Room 89
+:
+{{note
+A workbench and several crates sit in the north-west corner of the room, and a pile of rotten apples lies in the south-east corner of the room.
+}}
+::
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
+:
+{{descriptive
+#### Treasure
+26 sp; 39 gp; 119 cp; 7 pp; 8 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Secret (DC 15 to find) Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Secret:*** A bookcase and concealed door pivots smoothly ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +8 to hit against one target, 4d10 slashing damage | 90 |
+| east | Unlocked Good Wooden Door (15 hp)  | 97 |
+| south | Archway  | 104 |
+:
+### Room 90
+:
+{{note
+The room has a high domed ceiling, and a briny odor fills the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (magically reinforced, disadvantage to break)  | 86 |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 97 |
+| west | Secret (DC 15 to find) Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Secret:*** A bookcase and concealed door pivots smoothly ***Trap:*** Guillotine Blade: DC 10 to find, DC 10 to disable;     +8 to hit against one target, 4d10 slashing damage | 89 |
+:
+### Room 91
+:
+{{note
+A chute descends from the room into a midden chamber below, and a stream of water flows through the room.
+}}
+::
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 5 x Grick (cr 2, mm 173); medium, 5150 xp**
+:
+{{descriptive
+#### Treasure
+119 gp; 40 sp; 14 cp 
 }}
 \page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 82 |
+| west | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | 97 |
+:
+### Room 92
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 93 |
+| north | Secret (DC 20 to find) Unlocked Good Wooden Door (15 hp) ***Secret:*** The door is located near the ceiling and concealed within a mosaic of legendary monsters | 84 |
+| north | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 15 to disable;     +9 to hit against one target, 10d10 piercing damage | n/a |
+| south | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | 101 |
+| south | Archway  | 102 |
+| west | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 87 |
+:
+### Room 93
+:
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 15 to find) Locked Strong Wooden Chest (DC 15 to unlock, DC 25 to break; 20 hp)
+* 1100 cp, 9000 sp, 2100 gp, 110 pp, 3 x diamond (50 gp), 3 x bloodstone (50 gp), carnelian (50 gp), chalcedony (50 gp), 2 x citrine (50 gp), jasper (50 gp), 2 x quartz (50 gp), 2 x sardonyx (50 gp), Spell Scroll (Warding Bond) (uncommon, dmg 200), Driftglobe (uncommon, dmg 166), 2 x Potion of Healing (common, dmg 187)
+}}
+{{note
+A magical idol in the south-west corner of the room grants greater dexterity (for one hour) to whomever offers a prayer, and a pile of trash lies in the center of the room.
+}}
+::
+This room is occupied by **Roper (cr 5, mm 261) and 12 x Piercer (cr 1/2, mm 252); medium, 3000 xp**
+:
+{{descriptive
+#### Treasure
+143 gp; 101 cp; 38 sp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 85 |
+| north | Archway  | 84 |
+| south | Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  | n/a |
+| west | Archway  | 92 |
+:
+### Room 94
+:
+{{note
+A stack of crates filled with rocks stands against the west wall, and a creaking sound fills the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Strong Wooden Door (20 hp)  | 95 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 85 |
+:
+### Room 95
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
+| south | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 100 |
+| west | Unlocked Strong Wooden Door (20 hp)  | 94 |
+:
+\page
+### Room 96
+:
+{{note
+A sloped pit lined with iron spikes lies in the north side of the room, and a pile of corroded iron spikes lies in the north-west corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 88 |
+| south | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 103 |
+:
+### Room 97
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | 91 |
+| east | Archway  | n/a |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 90 |
+| south | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is located several feet above the floor and opened by tracing an arcane rune | 106 |
+| south | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | 107 |
+| west | Unlocked Good Wooden Door (15 hp)  | 89 |
+:
+### Room 98
+:
+{{note
+A wooden ladder rests against the west wall, and the floor is covered with dust.
+}}
+::
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 3 x Grick (cr 2, mm 173); medium, 4250 xp**
+:
+{{descriptive
+#### Treasure
+81 gp; 15 sp; 23 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Archway  | 108 |
+| west | Trapped and Unlocked Simple Wooden Door (10 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 17 save or take 10d10 damage | n/a |
+:
+### Room 99
+:
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 15 to find) Locked Iron Chest (DC 20 to unlock, DC 30 to break; 60 hp)
+* 700 cp, 3000 sp, 2400 gp, 170 pp, 3 x diamond (50 gp), carnelian (50 gp), 3 x jasper (50 gp), moonstone (50 gp), onyx (50 gp), 2 x quartz (50 gp), +1 Wand of the War Mage (uncommon, dmg 212), Boots of Elvenkind (uncommon, dmg 155), Periapt of Wound Closure (uncommon, dmg 184)
+}}
+{{note
+A stone dais and throne sits in the south-west corner of the room, and someone has scrawled "five, five, four, nine, six" on the east wall.
+}}
+::
+This room is occupied by **11 x Chitine (cr 1/2, vgm 131); easy, 1100 xp**
+:
+{{descriptive
+#### Treasure
+115 cp; 46 sp; 11 gp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Unlocked Iron Door (60 hp)  | 110 |
+| west | Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp)  | n/a |
+| west | Locked Simple Wooden Door (DC 25 to open, DC 15 to break; 10 hp)  | n/a |
+:
+\page
+### Room 100
+:
+{{classTable,frame
+#### Trap!
+* Falling Cage Trap: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 10 save or become confined
+}}
+{{note
+A narrow shaft descends from the room into a natural cavern below, and a charred blanket lies in the north-west corner of the room.
+}}
+::
+This room is occupied by **2 x Roper (cr 5, mm 261); easy, 3600 xp**
+:
+{{descriptive
+#### Treasure
+160 sp, 60 gp; 90 gp, 4 pp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 103 |
+| north | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 95 |
+| south | Locked Good Wooden Door (DC 20 to open, DC 15 to break; 15 hp)  | n/a |
+:
+### Room 101
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | 92 |
+| west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
+:
+### Room 102
+:
+{{note
+The ceiling is covered with cracks, and several shattered weapons are scattered throughout the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp) (slides to one side)  | n/a |
+| north | Archway  | 92 |
+| south | Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp)  | 109 |
+:
+### Room 103
+:
+{{classTable,frame
+#### Trap!
+* Falling Block: DC 10 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 4d10 damage
+}}
+{{note
+Several alcoves are cut into the west wall, and a faded and torn tapestry hangs from the south wall.
+}}
+::
+This room is occupied by **12 x Xvart (cr 1/8, vgm 200) and 24 x Giant Rat (cr 1/8, mm 327); easy, 900 xp**
+:
+{{descriptive
+#### Treasure
+48 ep; 72 gp; 143 sp; 232 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | n/a |
+| north | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 96 |
+| south | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Secret:*** The door is located near the ceiling and opened by tracing an arcane rune ***Trap:*** Magic Missle Trap: DC 15 to find, DC 15 to disable;     one target, 4d10 force damage | 113 |
+| west | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 100 |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+:
+### Room 104
+:
+\page
+{{classTable,frame
+#### Trap!
+* Poisoned Net Trap: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 17 save or take 10d10 poison damage    and become restrained, half damage on a successful save
+}}
+{{classTable,frame
+#### Hidden Treasure!
+* Trapped and Locked Good Wooden Chest (DC 25 to unlock, DC 20 to break; 15 hp)
+* Poisoned Arrow Trap: DC 15 to find, DC 15 to disable;     +7 to hit against one target, 4d10 piercing/poison damage
+* 1000 cp, 9000 sp, 2400 gp, 70 pp, 2 x black onyx (150 gp), 3 x pearl (100 gp), amber (100 gp), coral (100 gp), jade (100 gp), jet (100 gp), 2 x Potion of Healing (common, dmg 187)
+}}
+{{note
+A large demonic idol with ruby eyes sits in the east side of the room, and mournful weeping can be heard in the north side of the room.
+}}
+::
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
+:
+{{descriptive
+#### Treasure
+33 ep; 25 gp; 35 sp; 125 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Good Wooden Door (15 hp)  | n/a |
+| east | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 105 |
+| north | Archway  | 89 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
+| south | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| west | Unlocked Stone Door (60 hp)  | n/a |
+:
+### Room 105
+:
+{{note
+A mural of vile acts covers the ceiling, and clouds of flying insects fill the north-east corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Trap:*** Electrified Lock: DC 15 to find, DC 15 to disable;     affects each creature which touches the lock, DC 13 save or take 4d10 lightning damage | n/a |
+| west | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 104 |
+:
+### Room 106
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
+:
+{{descriptive
+#### Treasure
+5 pp; 50 gp; 27 ep; 108 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp)  | 111 |
+| north | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is located several feet above the floor and opened by tracing an arcane rune | 97 |
+| west | Trapped and Unlocked Strong Wooden Door (20 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 15 to disable;     +7 to hit against one target, 4d10 slashing damage | n/a |
+:
+\page
+### Room 107
+:
+{{note
+A sulphurous odor fills the room, and a pair of dice lies in the north side of the room.
+}}
+::
+This room is occupied by **Ettercap (cr 2, mm 131) and 14 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1150 xp**
+:
+{{descriptive
+#### Treasure
+57 gp; 84 cp; 10 ep; 50 sp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 108 |
+| north | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | 97 |
+| south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 111 |
+:
+### Room 108
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **Grick Alpha (cr 7, mm 173) and 7 x Grick (cr 2, mm 173); hard, 6050 xp**
+:
+{{descriptive
+#### Treasure
+120 gp; 61 cp; 53 sp; 8 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Archway  | 98 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 107 |
+:
+### Room 109
+:
+{{classTable,frame
+#### Trap!
+* Falling Cage Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 11 save or become confined
+}}
+{{note
+A fountain engraved with geometric patterns sits in the north side of the room, and someone has scrawled "The House of Shields shall be sundered when iron is made flesh" on the north wall.
+}}
+::
+This room is occupied by **Ettercap (cr 2, mm 131) and 15 x Giant Wolf Spider (cr 1/4, mm 330); easy, 1200 xp**
+:
+{{descriptive
+#### Treasure
+98 sp; 56 gp; 77 cp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Stone Door (DC 20 to open, DC 25 to break; 60 hp)  | 102 |
+| south | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 119 |
+| west | Secret (DC 20 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is located near the ceiling and concealed behind an area of mould | n/a |
+:
+### Room 110
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Secret (DC 20 to find) Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Secret:*** A bookcase and concealed door pivots smoothly ***Trap:*** Rune of Dread: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 15 save or become frightened for 1d4 rounds | 113 |
+| north | Unlocked Iron Door (60 hp)  | 99 |
+| south | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 117 |
+:
+\page
+### Room 111
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)  | 116 |
+| north | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 107 |
+| south | Unlocked Good Wooden Door (15 hp)  | 123 |
+| south | Stuck Iron Door (DC 25 to break; 60 hp)  | 124 |
+| west | Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp)  | 106 |
+:
+### Room 112
+:
+{{classTable,frame
+#### Trap!
+* Poisoned Arrow Trap: DC 10 to find, DC 10 to disable;    +7 to hit against one target, 4d10 piercing/poison damage
+}}
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 25 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
+* 700 cp, 5000 sp, 2700 gp, 130 pp, a cloth coat trimmed with fur (25 gp), a lacquered wooden comb inlaid with ornate electrum scrollwork (25 gp), a steel shield brooch engraved with dwarven axeheads (25 gp), Elemental Gem (earth) (uncommon, dmg 167), Potion of Animal Friendship (uncommon, dmg 187), Wand of Magic Detection (uncommon, dmg 211)
+}}
+{{note
+Someone has scrawled "We've run out of swords" on the west wall, and sporadic knocking can be heard in the south side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 118 |
 | north | Archway  | n/a |
-| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 69 |
+| west | Stuck Stone Door (DC 20 to break; 60 hp)  | 116 |
+:
+### Room 113
+:
+{{note
+An iron sarcophagus sits in the north-west corner of the room, and a pile of barrel staves lies in the west side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Secret:*** The door is located near the ceiling and opened by tracing an arcane rune ***Trap:*** Magic Missle Trap: DC 15 to find, DC 15 to disable;     one target, 4d10 force damage | 103 |
+| south | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 120 |
+| west | Secret (DC 20 to find) Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Secret:*** A bookcase and concealed door pivots smoothly ***Trap:*** Rune of Dread: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 15 save or become frightened for 1d4 rounds | 110 |
+:
+### Room 114
+:
+{{classTable,frame
+#### Trap!
+* Arrow Blaster: DC 15 to find, DC 10 to disable;    +4 to hit against up to three targets within 10 ft., 2d10 piercing damage
+}}
+\page
+{{note
+Someone has scrawled "Finore was here" on the south wall, and several pieces of torn paper are scattered throughout the room.
+}}
+::
+This room is occupied by **Goblin Boss (cr 1, mm 166) and 15 x Goblin (cr 1/4, mm 166); easy, 950 xp**
+:
+{{descriptive
+#### Treasure
+40 cp; 4 pp; 39 sp; 53 gp; 40 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | 121 |
+:
+### Room 115
+:
+{{note
+The south and west walls have been engraved with incoherent labyrinths, and someone has scrawled "Upon the seventh day of the Year of Grace, in the Mountains of Dweomers, the Court of Bells shall be restored" on the east wall.
+}}
+::
+This room is occupied by **Drider (cr 6, mm 120) and 2 x Giant Spider (cr 1, mm 328); easy, 2700 xp**
+:
+{{descriptive
+#### Treasure
+150 sp, 20 gp; 12 cp; 12 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  | 123 |
+| west | Trapped and Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)  ***Trap:*** Magic Missle Trap: DC 10 to find, DC 10 to disable;     one target, 4d10 force damage | n/a |
+:
+### Room 116
+:
+{{note
+Burning torches in iron sconces line the north and south walls, and someone has scrawled a drawing of a dragon on the east wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Stone Door (DC 20 to break; 60 hp)  | 112 |
+| south | Secret (DC 20 to find) Stuck Good Wooden Door (DC 15 to break; 15 hp) ***Secret:*** The door is located several feet above the floor and concealed behind a pile of skulls | 125 |
+| west | Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)  | 111 |
+:
+### Room 117
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **Choldrith (cr 3, vgm 132) and 11 x Chitine (cr 1/2, vgm 131); easy, 1800 xp**
+:
+{{descriptive
+#### Treasure
+65 cp; 22 ep; 25 sp; 1 pp; 30 gp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides down)  | 120 |
+| north | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 110 |
+| south | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 126 |
+:
+### Room 118
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **Roper (cr 5, mm 261) and 9 x Piercer (cr 1/2, mm 252); medium, 2700 xp**
+:
+{{descriptive
+#### Treasure
+1200 cp; 4 pp; 9 ep; 37 sp; 50 cp; 16 gp 
+}}
+\page
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  | 119 |
+| north | Stuck Good Wooden Door (DC 15 to break; 15 hp) (slides to one side)  | n/a |
+| south | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | n/a |
+| south | Trapped and Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 15 to disable;     +6 to hit against one target, 4d10 slashing damage | n/a |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 112 |
+:
+### Room 119
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 126 |
+| east | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| north | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | 109 |
+| west | Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  | 118 |
+:
+### Room 120
+:
+{{classTable,frame
+#### Trap!
+* Barbed Net Trap: DC 10 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 10 save or take 2d10 damage    and become restrained
+}}
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden (DC 25 to find) Locked Strong Wooden Chest (DC 15 to unlock, DC 25 to break; 20 hp)
+* 600 cp, 10000 sp, 2200 gp, 80 pp, 2 x black onyx (150 gp), 3 x pearl (100 gp), amber (100 gp), amethyst (100 gp), garnet (100 gp), +1 Ammunition (20 sling bullets) (uncommon, dmg 150), Spell Scroll (Aid) (uncommon, dmg 200), Potion of Greater Healing (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188)
+}}
+{{note
+Someone has scrawled "Geoffrey fell here" in blood on the west wall, and the ceiling is covered with cracks.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 121 |
+| north | Trapped Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 113 |
+| south | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | n/a |
+| south | Archway  | 127 |
+| west | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides down)  | 117 |
+:
+### Room 121
+:
+{{note
+Several alcoves are cut into the walls, and someone has scrawled "Vultama was here" on the west wall.
+}}
+::
+This room is occupied by **14 x Goblin (cr 1/4, mm 166) and 31 x Giant Rat (cr 1/8, mm 327); easy, 1475 xp**
+:
+{{descriptive
+#### Treasure
+148 gp; 169 sp; 190 cp; 46 ep; 6 pp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Stone Door (DC 20 to break; 60 hp)  | 114 |
+| south | Unlocked Simple Wooden Door (10 hp) (slides down)  | 130 |
+| west | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 120 |
+:
+\page
+### Room 122
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **12 x Xvart (cr 1/8, vgm 200) and 24 x Giant Rat (cr 1/8, mm 327); easy, 900 xp**
+:
+{{descriptive
+#### Treasure
+127 gp; 248 cp; 70 sp; 33 ep; 3 pp 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Simple Wooden Door (DC 15 to open, DC 15 to break; 10 hp) (slides to one side)  | 123 |
+:
+### Room 123
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Iron Door (DC 25 to break; 60 hp)  | 124 |
+| north | Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  | 115 |
+| north | Unlocked Good Wooden Door (15 hp)  | 111 |
+| west | Locked Simple Wooden Door (DC 15 to open, DC 15 to break; 10 hp) (slides to one side)  | 122 |
+:
+### Room 124
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| north | Stuck Iron Door (DC 25 to break; 60 hp)  | 111 |
+| west | Stuck Iron Door (DC 25 to break; 60 hp)  | 123 |
+:
+### Room 125
+:
+{{note
+Spirals of black stones cover the floor, and a sulphurous odor fills the north-west corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)  | n/a |
+| north | Secret (DC 20 to find) Stuck Good Wooden Door (DC 15 to break; 15 hp) ***Secret:*** The door is located several feet above the floor and concealed behind a pile of skulls | 116 |
+:
+### Room 126
+:
+{{note
+Someone has scrawled "If being drunk all the time were easy, everyone would do it" in dwarvish runes on the north wall, and blood drips from the ceiling in the south-east corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 117 |
+| north | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| south | Stuck Stone Door (DC 20 to break; 60 hp)  | n/a |
+| west | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 119 |
+:
+### Room 127
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 129 |
+| north | Archway  | 120 |
+| south | Unlocked Good Wooden Door (15 hp)  | n/a |
+| west | Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Trap:*** Symbol of Hypnosis: DC 15 to find, DC 20 to disable;     affects all targets within 10 ft., DC 10 save or become incapacitated for 1d4 rounds | n/a |
+:
+\page
+### Room 128
+:
+{{note
+Someone has scrawled "This paladin is dead" in draconic script on the east wall, and a grinding noise can be faintly heard near the north wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret (DC 25 to find) Unlocked Good Wooden Door (15 hp) ***Secret:*** The door is concealed behind a tapestry of a goddess of chaos | n/a |
+| north | Archway  | n/a |
 | west | Archway  | n/a |
+:
+### Room 129
+:
+{{note
+A faded and torn tapestry hangs from the east wall, and someone has scrawled "Allauc fell here" on the north wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 130 |
+| west | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 127 |
+:
+### Room 130
+:
+{{note
+Empty.
+}}
+::
+This room is occupied by **4 x Wererat (cr 2, mm 209); easy, 1800 xp**
+:
+{{descriptive
+#### Treasure
+35 sp; 13 ep 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Unlocked Simple Wooden Door (10 hp) (slides down)  | 121 |
+| west | Archway  | 129 |
 :
