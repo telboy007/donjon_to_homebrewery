@@ -40,11 +40,13 @@ def sum_up_treasure(string):
     list = string.split(";")
     for amount in list:
         amount = amount.split(" ")
+        # build list of amounts of specific types of coin
         currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
     result = ""
     for chunk, values in currency.items():
-        result += (f"{sum(values)} {str(chunk)}; ")
-    return f"{result[:-2]}\n"
+        # build list of totals and coin type (string)
+        result += (f"{sum(values)} {str(chunk)}, ")
+    return f"{str(result[:-2]).replace(',;', ',')}\n"
 
 
 # globals
@@ -100,7 +102,7 @@ outfile.write("\\page\n")
 
 # map page
 if len(sys.argv) == 3:
-    outfile.write("## Map\n")
+    outfile.write("## GM Map\n")
     outfile.write(f"![map]({sys.argv[2]}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
     outfile.write("\\page\n")
@@ -250,9 +252,9 @@ if "rooms" in data:
                             outfile.write(":\n")
                             outfile.write("{{descriptive\n")
                             outfile.write("#### Treasure\n")
-                            if thing.count(";") > 2:
-                                thing = sum_up_treasure(thing)
-                                outfile.write(f"{thing.replace(newline, ' ').replace(',;', ';')}\n")
+                            if thing.count("(") == 0:
+                                thing = sum_up_treasure(thing.replace(",",";"))
+                                outfile.write(f"{thing}\n")
                             else:
                                 outfile.write(f"{thing.replace(newline, ' ').replace('Treasure: ','')}\n")
                             outfile.write("}}\n")
