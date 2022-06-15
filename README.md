@@ -1,3 +1,5 @@
+[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
+
 # donjon_to_homebrewery
 Converts certain [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v3 formatted text to copy and paste.
 
