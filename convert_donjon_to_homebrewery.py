@@ -43,9 +43,9 @@ def sum_up_treasure(string):
         # build list of amounts of specific types of coin
         currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
     result = ""
-    for chunk, values in currency.items():
+    for coinType, values in currency.items():
         # build list of totals and coin type (string)
-        result += (f"{sum(values)} {str(chunk)}, ")
+        result += (f"{sum(values)} {str(coinType)}, ")
     return f"{str(result[:-2]).replace(',;', ',')}\n"
 
 
