@@ -11,7 +11,7 @@
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
 \page
-## Map
+## GM Map
 ![map](https://imgur.com/cpy3lBq.png){width:680px;}
 Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
@@ -65,7 +65,8 @@ This room is occupied by **Orc Eye of Gruumsh (cr 2, mm 247) and 1 x Orc (cr 1/2
 :
 {{descriptive
 #### Treasure
-Treasure: 14 sp; 5 gp
+14 sp, 5 gp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -82,7 +83,7 @@ This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 x
 :
 {{descriptive
 #### Treasure
-Treasure: 2200 cp, 1300 sp, 120 gp, a bloodstone cup inlaid with electrum (25 gp), a bone comb engraved with spirals (25 gp), a leather belt with a fine steel buckle (25 gp), a leather scabbard tooled with floral vines (25 gp), a marble plate engraved with dwarven axeheads (25 gp), a stoneware jar painted with pastoral imagery (25 gp), an agate chalice engraved with dwarven axeheads (25 gp), Dust of Sneezing and Choking (uncommon, dmg 166), Potion of Fire Breath (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188)
+2200 cp, 1300 sp, 120 gp, a bloodstone cup inlaid with electrum (25 gp), a bone comb engraved with spirals (25 gp), a leather belt with a fine steel buckle (25 gp), a leather scabbard tooled with floral vines (25 gp), a marble plate engraved with dwarven axeheads (25 gp), a stoneware jar painted with pastoral imagery (25 gp), an agate chalice engraved with dwarven axeheads (25 gp), Dust of Sneezing and Choking (uncommon, dmg 166), Potion of Fire Breath (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -101,7 +102,7 @@ This room is occupied by **Duergar Stone Guard (cr 2, mtf 191) and 1 x Duergar (
 :
 {{descriptive
 #### Treasure
-Treasure: 1700 cp, 900 sp, 50 gp, chalcedony (50 gp), 2 x jasper (50 gp), moonstone (50 gp), 2 x onyx (50 gp), quartz (50 gp), Keoghtom's Ointment (uncommon, dmg 179), Philter of Love (uncommon, dmg 184), Potion of Fire Breath (uncommon, dmg 187)
+1700 cp, 900 sp, 50 gp, chalcedony (50 gp), 2 x jasper (50 gp), moonstone (50 gp), 2 x onyx (50 gp), quartz (50 gp), Keoghtom's Ointment (uncommon, dmg 179), Philter of Love (uncommon, dmg 184), Potion of Fire Breath (uncommon, dmg 187)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -121,7 +122,8 @@ This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar S
 :
 {{descriptive
 #### Treasure
-Treasure: 2 pp; 15 sp
+2 pp, 15 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -140,7 +142,8 @@ This room is occupied by **Orc Nurtured One of Yurtrus (cr 1/2, vgm 184) and 1 x
 :
 {{descriptive
 #### Treasure
-Treasure: 19 cp; 19 sp
+19 cp, 19 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -171,7 +174,8 @@ This room is occupied by **7 x Xvart (cr 1/8, vgm 200); medium, 175 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 16 sp; 13 gp; 10 ep; 16 cp; 9 gp; 10 sp; 19 cp
+26 sp, 22 gp, 10 ep, 35 cp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -194,7 +198,8 @@ This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 x
 :
 {{descriptive
 #### Treasure
-Treasure: 15 sp; 20 cp; 10 ep; 10 sp
+25 sp, 20 cp, 10 ep
+
 }}
 \page
 #### Exits
@@ -214,7 +219,7 @@ This room is occupied by **Kobold Scale Sorcerer (cr 1, vgm 167) and 3 x Kobold 
 :
 {{descriptive
 #### Treasure
-Treasure: 3100 cp, 900 sp, 70 gp, 2 x diamond (50 gp), 2 x carnelian (50 gp), chalcedony (50 gp), jasper (50 gp), quartz (50 gp), sardonyx (50 gp), Deck of Illusions (29 cards) (uncommon, dmg 161), Pipes of Haunting (uncommon, dmg 185)
+3100 cp, 900 sp, 70 gp, 2 x diamond (50 gp), 2 x carnelian (50 gp), chalcedony (50 gp), jasper (50 gp), quartz (50 gp), sardonyx (50 gp), Deck of Illusions (29 cards) (uncommon, dmg 161), Pipes of Haunting (uncommon, dmg 185)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -233,7 +238,8 @@ This room is occupied by **Choldrith (cr 3, vgm 132) and 1 x Chitine (cr 1/2, vg
 :
 {{descriptive
 #### Treasure
-Treasure: 16 sp; 9 sp
+25 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -252,7 +258,8 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 :
 {{descriptive
 #### Treasure
-Treasure: 27 cp; 18 cp
+45 cp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -306,7 +313,8 @@ This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, m
 :
 {{descriptive
 #### Treasure
-Treasure: 14 cp; 7 gp
+14 cp, 7 gp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -326,7 +334,8 @@ This room is occupied by **Myconid Sovereign (cr 2, mm 232) and 1 x Myconid Adul
 :
 {{descriptive
 #### Treasure
-Treasure: 9 sp; 16 sp
+25 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -359,9 +368,9 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 :
 {{descriptive
 #### Treasure
-Treasure: 17 cp; 12 gp
+17 cp, 12 gp
+
 }}
-\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -370,6 +379,7 @@ Treasure: 17 cp; 12 gp
 | north | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 12 |
 | west | Unlocked Stone Door (60 hp)  | 17 |
 :
+\page
 ### Room 19
 :
 {{note
@@ -391,7 +401,8 @@ This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, m
 :
 {{descriptive
 #### Treasure
-Treasure: 13 sp; 6 ep
+13 sp, 6 ep
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -410,7 +421,8 @@ This room is occupied by **Gelatinous Cube (cr 2, mm 242); easy, 450 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 14 sp
+14 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -430,7 +442,6 @@ Empty.
 | south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 30 |
 | west | Archway  | n/a |
 :
-\page
 ### Room 23
 :
 {{classTable,frame
@@ -445,7 +456,8 @@ This room is occupied by **Vampiric Mist (cr 3, mtf 246); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 10 gp
+10 gp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -453,6 +465,7 @@ Treasure: 10 gp
 | east | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
 | south | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 26 |
 :
+\page
 ### Room 24
 :
 {{note
@@ -463,7 +476,8 @@ This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar (
 :
 {{descriptive
 #### Treasure
-Treasure: 13 gp; 17 sp
+13 gp, 17 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -494,7 +508,8 @@ This room is occupied by **2 x Meazel (cr 1, mtf 214); medium, 400 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 8 gp; 13 sp
+8 gp, 13 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -513,7 +528,6 @@ A stone dais and throne sits in the center of the room, and the scent of smoke f
 | east | Locked Iron Door (DC 15 to open)  | 28 |
 | south | Secret (DC 20 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 33 |
 :
-\page
 ### Room 28
 :
 {{note
@@ -524,7 +538,8 @@ This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 2 x Gia
 :
 {{descriptive
 #### Treasure
-Treasure: 11 gp; 12 gp; 18 sp
+23 gp, 18 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -533,6 +548,7 @@ Treasure: 11 gp; 12 gp; 18 sp
 | south | Unlocked Iron Door (60 hp)  | n/a |
 | west | Locked Iron Door (DC 15 to open)  | 27 |
 :
+\page
 ### Room 29
 :
 {{note
@@ -543,7 +559,8 @@ This room is occupied by **Orog (cr 2, mm 247); easy, 450 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 11 ep
+11 ep
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -565,7 +582,8 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 :
 {{descriptive
 #### Treasure
-Treasure: 10 sp; 17 sp
+27 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -584,7 +602,8 @@ This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 9 ep
+9 ep
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -593,7 +612,6 @@ Treasure: 9 ep
 | south | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 41 |
 | west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 29 |
 :
-\page
 ### Room 32
 :
 {{note
@@ -604,7 +622,8 @@ This room is occupied by **2 x Derro (cr 1/4, mtf 158) and 1 x Oblex Spawn (cr 1
 :
 {{descriptive
 #### Treasure
-Treasure: 21 cp; 20 sp; 21 cp
+42 cp, 20 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -620,6 +639,7 @@ Treasure: 21 cp; 20 sp; 21 cp
 * Arrow Trap: DC 10 to find, DC 10 to disable;     +10 to hit against one target, 4d10 piercing damage
 * 2100 cp, 500 sp, 100 gp, diamond (50 gp), bloodstone (50 gp), carnelian (50 gp), chrysoprase (50 gp), jasper (50 gp), Scroll of Protection (fey) (rare, dmg 199)
 }}
+\page
 {{note
 A narrow shaft descends from the room into the next dungeon level down, and spirals of red stones cover the floor.
 }}
@@ -642,7 +662,8 @@ This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 x
 :
 {{descriptive
 #### Treasure
-Treasure: 15 cp; 15 sp; 14 gp; 19 sp
+15 cp, 34 sp, 14 gp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -664,7 +685,6 @@ A stream of acid flows along a channel in the floor, and a toppled statue lies i
 | west | Stuck Stone Door (DC 20 to break; 60 hp)  | 32 |
 | west | Unlocked Iron Door (60 hp) (slides to one side)  | 36 |
 :
-\page
 ### Room 36
 :
 {{note
@@ -683,12 +703,13 @@ Empty.
 {{note
 A tapestry of a legendary battle hangs from the south wall, and someone has scrawled "Look to the ceiling" on the west wall.
 }}
+\page
 ::
 This room is occupied by **4 x Svirfneblin (cr 1/2, mm 164); deadly, 400 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 2500 cp, 700 sp, 100 gp, a copper bowl inlaid with a filigree of silver (25 gp), a marble puzzle box set with a rosette of chrysoberyl (25 gp), a pewter bracer set with a single chrysoberyl (25 gp), a small woolen tapestry (25 gp), an agateware cup painted with woodland imagery (25 gp), an ivory comb set with jade (25 gp), an obsidian miniature (of a tree) adorned with silver (25 gp), +1 Wand of the War Mage (uncommon, dmg 212), +1 Weapon (maul) (uncommon, dmg 213)
+2500 cp, 700 sp, 100 gp, a copper bowl inlaid with a filigree of silver (25 gp), a marble puzzle box set with a rosette of chrysoberyl (25 gp), a pewter bracer set with a single chrysoberyl (25 gp), a small woolen tapestry (25 gp), an agateware cup painted with woodland imagery (25 gp), an ivory comb set with jade (25 gp), an obsidian miniature (of a tree) adorned with silver (25 gp), +1 Wand of the War Mage (uncommon, dmg 212), +1 Weapon (maul) (uncommon, dmg 213)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -721,7 +742,6 @@ Empty.
 | east | Unlocked Stone Door (60 hp)  | 45 |
 | north | Unlocked Iron Door (60 hp)  | 30 |
 :
-\page
 ### Room 40
 :
 {{note
@@ -746,6 +766,7 @@ Empty.
 | north | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 31 |
 | south | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 47 |
 :
+\page
 ### Room 42
 :
 {{note
@@ -756,7 +777,7 @@ This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 6 x Gia
 :
 {{descriptive
 #### Treasure
-Treasure: 2100 cp, 1100 sp, 70 gp, azurite (10 gp), banded agate (10 gp), 2 x eye agate (10 gp), hematite (10 gp), rhodochrosite (10 gp), tiger eye (10 gp), turquoise (10 gp)
+2100 cp, 1100 sp, 70 gp, azurite (10 gp), banded agate (10 gp), 2 x eye agate (10 gp), hematite (10 gp), rhodochrosite (10 gp), tiger eye (10 gp), turquoise (10 gp)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -794,7 +815,6 @@ Empty.
 | north | Unlocked Iron Door (60 hp)  | 35 |
 | west | Locked Iron Door (DC 25 to open)  | 43 |
 :
-\page
 ### Room 45
 :
 {{note
@@ -805,7 +825,7 @@ This room is occupied by **Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pu
 :
 {{descriptive
 #### Treasure
-Treasure: 1800 cp, 1300 sp, 60 gp, diamond (50 gp), bloodstone (50 gp), jasper (50 gp), 2 x quartz (50 gp)
+1800 cp, 1300 sp, 60 gp, diamond (50 gp), bloodstone (50 gp), jasper (50 gp), 2 x quartz (50 gp)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -824,7 +844,8 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 :
 {{descriptive
 #### Treasure
-Treasure: 10 sp; 15 sp
+25 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -832,6 +853,7 @@ Treasure: 10 sp; 15 sp
 | east | Locked Iron Door (DC 20 to open)  | 52 |
 | east | Locked Stone Door (DC 15 to open)  | 47 |
 :
+\page
 ### Room 47
 :
 {{classTable,frame
@@ -846,7 +868,8 @@ This room is occupied by **Kobold Dragonshield (cr 1, vgm 165) and 3 x Kobold (c
 :
 {{descriptive
 #### Treasure
-Treasure: 19 cp; 15 sp; 16 sp; 15 sp
+19 cp, 46 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -884,7 +907,6 @@ Numerous pillars line the north and west walls, and a swarm of crawling insects 
 | east | Archway  | 60 |
 | west | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +6 to hit against one target, 2d10 piercing damage | 51 |
 :
-\page
 ### Room 50
 :
 {{note
@@ -909,6 +931,7 @@ Empty.
 | south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed behind a statue of an ancient lich, and opened by pressing runes on his staff | n/a |
 | south | Archway  | 59 |
 :
+\page
 ### Room 52
 :
 {{note
@@ -930,7 +953,8 @@ This room is occupied by **Gelatinous Cube (cr 2, mm 242); easy, 450 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 14 cp
+14 cp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -962,7 +986,6 @@ Empty.
 | south | Locked Stone Door (DC 25 to open)  | 66 |
 | west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 54 |
 :
-\page
 ### Room 56
 :
 {{note
@@ -973,7 +996,8 @@ This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 13 ep
+13 ep
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -991,7 +1015,8 @@ This room is occupied by **Mimic (cr 2, mm 220); easy, 450 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 17 sp
+17 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1001,6 +1026,7 @@ Treasure: 17 sp
 :
 ### Room 58
 :
+\page
 {{note
 A group of monstrous faces have been carved into the west wall, and an altar of evil sits in the east side of the room.
 }}
@@ -1030,7 +1056,8 @@ This room is occupied by **4 x Myconid Adult (cr 1/2, mm 232); deadly, 400 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 6 ep; 13 ep; 14 sp; 17 sp
+19 ep, 31 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1048,7 +1075,8 @@ This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 17 sp
+17 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1058,7 +1086,6 @@ Treasure: 17 sp
 | west | Archway  | 49 |
 | west | Archway  | 65 |
 :
-\page
 ### Room 61
 :
 {{note
@@ -1081,7 +1108,8 @@ This room is occupied by **Spectator (cr 3, mm 30); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 10 sp
+10 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1090,6 +1118,7 @@ Treasure: 10 sp
 | south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +9 to hit against one target, 4d10 piercing damage | 71 |
 | west | Unlocked Stone Door (60 hp)  | 61 |
 :
+\page
 ### Room 63
 :
 {{note
@@ -1100,7 +1129,7 @@ This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 2600 cp, 1200 sp, 70 gp, diamond (50 gp), bloodstone (50 gp), jasper (50 gp), 2 x sardonyx (50 gp), star rose quartz (50 gp), 2 x zircon (50 gp)
+2600 cp, 1200 sp, 70 gp, diamond (50 gp), bloodstone (50 gp), jasper (50 gp), 2 x sardonyx (50 gp), star rose quartz (50 gp), 2 x zircon (50 gp)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1120,7 +1149,8 @@ This room is occupied by **Bugbear (cr 1, mm 33) and 1 x Half-ogre (cr 1, mm 238
 :
 {{descriptive
 #### Treasure
-Treasure: 18 sp; 16 cp
+18 sp, 16 cp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1139,9 +1169,8 @@ This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, m
 :
 {{descriptive
 #### Treasure
-Treasure: 1700 cp, 1000 sp, 40 gp, diamond (50 gp), citrine (50 gp), jasper (50 gp), sardonyx (50 gp), +1 Weapon (heavy crossbow) (uncommon, dmg 213)
+1700 cp, 1000 sp, 40 gp, diamond (50 gp), citrine (50 gp), jasper (50 gp), sardonyx (50 gp), +1 Weapon (heavy crossbow) (uncommon, dmg 213)
 }}
-\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1162,6 +1191,7 @@ A tile labyrinth covers the floor, and someone has scrawled "The last wards have
 | south | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 71 |
 | west | Locked Iron Door (DC 15 to open) (slides down)  | 62 |
 :
+\page
 ### Room 67
 :
 {{note
@@ -1172,7 +1202,8 @@ This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, m
 :
 {{descriptive
 #### Treasure
-Treasure: 17 cp; 19 sp
+17 cp, 19 sp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1202,7 +1233,6 @@ Empty.
 | south | Archway  | 74 |
 | west | Archway  | 66 |
 :
-\page
 ### Room 69
 :
 {{note
@@ -1231,6 +1261,7 @@ Empty.
 | south | Unlocked Stone Door (60 hp)  | n/a |
 | south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Rune of Hypnosis: DC 20 to find, DC 15 to disable;     affects all targets within 10 ft., DC 18 save or become incapacitated for 1d4 rounds | n/a |
 :
+\page
 ### Room 71
 :
 {{note
@@ -1253,7 +1284,8 @@ This room is occupied by **2 x Myconid Adult (cr 1/2, mm 232); easy, 200 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 11 gp; 12 cp
+11 gp, 12 cp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1267,13 +1299,12 @@ Treasure: 11 gp; 12 cp
 {{note
 A narrow pit covered by iron bars lies in the center of the room, and a pile of rotten apples lies in the north side of the room.
 }}
-\page
 ::
 This room is occupied by **7 x Drow (cr 1/4, mm 128); deadly, 350 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 2100 cp, 1100 sp, 110 gp, a brass censer etched with draconic runes (25 gp), a fine leather merchant's cap sewn with silver (25 gp), a steel ring engraved with arcane runes (25 gp), a wooden orb set with chrysoprase (25 gp), an earthenware ewer painted with pastoral imagery (25 gp)
+2100 cp, 1100 sp, 110 gp, a brass censer etched with draconic runes (25 gp), a fine leather merchant's cap sewn with silver (25 gp), a steel ring engraved with arcane runes (25 gp), a wooden orb set with chrysoprase (25 gp), an earthenware ewer painted with pastoral imagery (25 gp)
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1293,8 +1324,10 @@ This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); e
 :
 {{descriptive
 #### Treasure
-Treasure: 13 sp; 15 cp; 16 cp; 15 sp; 15 sp; 8 gp; 14 sp; 11 gp; 6 sp
+63 sp, 31 cp, 19 gp
+
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1311,7 +1344,8 @@ This room is occupied by **Neogi (cr 3, vgm 180); medium, 700 xp**
 :
 {{descriptive
 #### Treasure
-Treasure: 9 ep
+9 ep
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1329,7 +1363,8 @@ This room is occupied by **Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Fire
 :
 {{descriptive
 #### Treasure
-Treasure: 4 gp; 11 gp
+15 gp
+
 }}
 #### Exits
 | Direction | Description | Leads to |
@@ -1343,7 +1378,6 @@ Treasure: 4 gp; 11 gp
 {{note
 A stair ascends to a catwalk hanging between the east and west walls, and the sound of rushing water fills the room.
 }}
-\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|

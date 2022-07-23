@@ -34,6 +34,21 @@ def file_size(check):
     return check
 
 
+# can we add up all the random little amounts of money? yes we can!
+def sum_up_treasure(string):
+    currency = {}
+    list = string.split(";")
+    for amount in list:
+        amount = amount.split(" ")
+        # build list of amounts of specific types of coin
+        currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
+    result = ""
+    for coinType, values in currency.items():
+        # build list of totals and coin type (string)
+        result += (f"{sum(values)} {str(coinType)}, ")
+    return f"{str(result[:-2]).replace(',;', ',')}\n"
+
+
 # globals
 check = 0
 newline = '\n'
@@ -87,7 +102,7 @@ outfile.write("\\page\n")
 
 # map page
 if len(sys.argv) == 3:
-    outfile.write("## Map\n")
+    outfile.write("## GM Map\n")
     outfile.write(f"![map]({sys.argv[2]}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
     outfile.write("\\page\n")
@@ -237,7 +252,11 @@ if "rooms" in data:
                             outfile.write(":\n")
                             outfile.write("{{descriptive\n")
                             outfile.write("#### Treasure\n")
-                            outfile.write(f"{thing.replace(newline, ' ')}\n")
+                            if thing.count("(") == 0:
+                                thing = sum_up_treasure(thing.replace(",",";"))
+                                outfile.write(f"{thing}\n")
+                            else:
+                                outfile.write(f"{thing.replace(newline, ' ').replace('Treasure: ','')}\n")
                             outfile.write("}}\n")
                         else:
                             outfile.write("::\n")
