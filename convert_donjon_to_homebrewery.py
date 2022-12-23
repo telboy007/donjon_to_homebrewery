@@ -49,8 +49,30 @@ def sum_up_treasure(string):
     return f"{str(result[:-2]).replace(',;', ',')}\n"
 
 
+# add monsters to monster list
+def add_monsters_to_monster_list(thing):
+    monsters = thing.split(';')
+    monster = monsters[0].split(' and ')
+    for mon in monster:
+        try:
+            m = mon.split(' x ')[1]
+            monster_list.append(m.strip())
+        except:
+            monster_list.append(mon.strip())
+
+
+# split our monster name and source book
+def split_monster_details(monster_details):
+    split = monster_details.split('(')
+    monster = split[0].strip()
+    details = split[1].split(',')
+    book = details[1].strip().replace(')','').replace(' ', ' p.')
+    return monster, book 
+
+
 # globals
 check = 0
+monster_list = []
 newline = '\n'
 
 # opening JSON file
@@ -123,7 +145,7 @@ if "special" in data['details']:
     if data['details']['special'] != None:
         outfile.write(f"| Special | {data['details']['special'].replace(newline, ' ')} |\n")
     else:
-        outfile.write(f"| Special | {data['details']['special']} |\n") 
+        outfile.write(f"| Special | {data['details']['special']} |\n")
 outfile.write("}}\n")
 
 # corridor features - caves don't have corridor features
@@ -151,6 +173,8 @@ if "wandering_monsters" in data:
 
     for key, val in data["wandering_monsters"].items():
         outfile.write(f"| {key} | {val.replace(newline, ' ')} |\n")
+        # add to the monster list for the summary page
+        add_monsters_to_monster_list(val.replace(newline, ' '))
 
     outfile.write("}}\n")
 
@@ -261,6 +285,8 @@ if "rooms" in data:
                         else:
                             outfile.write("::\n")
                             outfile.write(f"This room is occupied by **{thing}**\n")
+                            # add to the monster list for the summary page
+                            add_monsters_to_monster_list(thing)
 
                 # check for page marker
                 outfile.close()
@@ -310,4 +336,29 @@ if "rooms" in data:
         check = file_size(check)
         outfile = open("homebrewery.txt", "a")
 
+# end locations section and prepare for summary
+outfile.write("\\page\n")
+
+# summary
+outfile.write("## Summary\n")
+outfile.write("You will find here useful reference tables for things encountered in the dungeon.\n")
+
+# list out monsters in a handy reference table
+outfile.write("{{descriptive\n")
+outfile.write("#### Monster List (alphabetical)\n")
+outfile.write("| Detail | Book |\n")
+outfile.write("|:--|:--|\n")
+
+# but first dedupe and order monster list
+monster_list = list(dict.fromkeys(monster_list))
+monster_list.sort()
+
+for monster in monster_list:
+    # split out monster and source book details
+    monster, book = split_monster_details(monster)
+    outfile.write(f"| {monster} | {book} |\n")
+
+outfile.write("}}\n")
+
+# done
 outfile.close()
