@@ -63,7 +63,7 @@ def add_monsters_to_monster_list(thing):
 
 
 # split our monster name and source book
-def split_monster_details(monster_details):
+def extract_book_details(monster_details):
     split = monster_details.split('(')
     monster = split[0].strip()
     details = split[1].split(',')
@@ -210,7 +210,7 @@ if "egress" in data:
             outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
         else:
             outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters from the {egress['dir']}.\n")
-    outfile.write(":\n")
+    outfile.write("\n")
 
 # rooms
 if "rooms" in data:
@@ -353,7 +353,7 @@ outfile.write("Here you will find useful reference tables for things encountered
 # list out monsters in a handy reference table
 outfile.write("{{descriptive\n")
 outfile.write("#### Monster List (alphabetical)\n")
-outfile.write("| Detail | Book |\n")
+outfile.write("| Monster | Book |\n")
 outfile.write("|:--|:--|\n")
 
 # but first dedupe and order monster list
@@ -362,8 +362,8 @@ monster_list.sort()
 
 for monster in monster_list:
     # split out monster and source book details
-    monster, book = split_monster_details(monster)
-    outfile.write(f"| {monster} | {book} |\n")
+    detail, book = extract_book_details(monster)
+    outfile.write(f"| {detail} | {book} |\n")
 
 outfile.write("}}\n")
 
