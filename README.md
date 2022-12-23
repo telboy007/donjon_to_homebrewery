@@ -11,7 +11,7 @@ Tested with (but YMMV):
 1. D&D 4e
 1. D&D 5e
 
-NOTE: don't forget to grab the map from donjon as well as the json! :)
+NOTE: don't forget to grab both maps (gm and player) from donjon as well as the json! :)
 
 To use:
 1. Clone repo
@@ -22,7 +22,7 @@ To use:
 1. `python convert_donjon_to_homebrewery.py your_filename.json`
 
 Optional:
-1. You can provide a url as a second command line argument for an image of the map
-1. `python convert_donjon_to_homebrewery.py your_filename.json https://imgur.something.png`
+1. You can provide a url as a second and third command line argument for the gm and player maps (in that order)
+1. `python convert_donjon_to_homebrewery.py your_filename.json https://imgur.something.png https://imgur.something.png`
 
 You can now copy and paste the contents of homebrewery.txt into your [homebrewery](https://homebrewery.naturalcrit.com/) document.

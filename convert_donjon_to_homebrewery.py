@@ -3,8 +3,9 @@
 """
     Donjon to homebrewery convertor
     line arguments:
-        json file
-        image url (imgur, etc)
+        json file [mandatory]
+        gm map (url) [optional]
+        player map (url) [optional]
 """
 
 import json
@@ -90,7 +91,7 @@ except:
 outfile = open("homebrewery.txt", "w")
 
 # title page
-if len(sys.argv) == 3:
+if len(sys.argv) > 2:
     outfile.write(f"![map]({sys.argv[2]}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
     outfile.write(":\n")
 
@@ -122,10 +123,16 @@ outfile.write("##### Created using [Homebrewery](https://homebrewery.naturalcrit
 outfile.write("}}\n")
 outfile.write("\\page\n")
 
-# map page
-if len(sys.argv) == 3:
+# map pages
+if len(sys.argv) > 2:
     outfile.write("## GM Map\n")
     outfile.write(f"![map]({sys.argv[2]}){{width:680px;}}\n")
+    outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+    outfile.write("\\page\n")
+
+if len(sys.argv) > 3:
+    outfile.write("## Player Map\n")
+    outfile.write(f"![map]({sys.argv[3]}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
     outfile.write("\\page\n")
 
@@ -283,7 +290,7 @@ if "rooms" in data:
                                 outfile.write(f"{thing.replace(newline, ' ').replace('Treasure: ','')}\n")
                             outfile.write("}}\n")
                         else:
-                            outfile.write("::\n")
+                            outfile.write("\n")
                             outfile.write(f"This room is occupied by **{thing}**\n")
                             # add to the monster list for the summary page
                             add_monsters_to_monster_list(thing)
@@ -341,7 +348,7 @@ outfile.write("\\page\n")
 
 # summary
 outfile.write("## Summary\n")
-outfile.write("You will find here useful reference tables for things encountered in the dungeon.\n")
+outfile.write("Here you will find useful reference tables for things encountered in the dungeon.\n")
 
 # list out monsters in a handy reference table
 outfile.write("{{descriptive\n")

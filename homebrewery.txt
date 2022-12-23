@@ -54,7 +54,7 @@ There is only one entrance into the dungeon:
 {{note
 Several square holes are cut into the south and east walls, and someone has scrawled an incomplete drawing of a dragon on the south wall.
 }}
-::
+
 This room is occupied by **Orc Eye of Gruumsh (cr 2, mm 247) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
 :
 {{descriptive
@@ -72,7 +72,7 @@ This room is occupied by **Orc Eye of Gruumsh (cr 2, mm 247) and 1 x Orc (cr 1/2
 {{note
 A narrow ledge runs along the north and east walls, and the south and west walls are covered with mould.
 }}
-::
+
 This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 xp**
 :
 {{descriptive
@@ -91,7 +91,7 @@ This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 x
 {{note
 A faded and torn tapestry hangs from the east wall, and someone has scrawled "It's a trap" on the west wall.
 }}
-::
+
 This room is occupied by **Duergar Stone Guard (cr 2, mtf 191) and 1 x Duergar (cr 1, mm 122); deadly, 650 xp**
 :
 {{descriptive
@@ -111,7 +111,7 @@ This room is occupied by **Duergar Stone Guard (cr 2, mtf 191) and 1 x Duergar (
 {{note
 A tapestry of a legendary battle hangs from the north wall, and someone has scrawled "Kater's Guild killed fifteen orcs here" on the south wall.
 }}
-::
+
 This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar Soulblade (cr 1, mtf 190); deadly, 650 xp**
 :
 {{descriptive
@@ -131,7 +131,7 @@ This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar S
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Orc Nurtured One of Yurtrus (cr 1/2, vgm 184) and 1 x Orc (cr 1/2, mm 246); easy, 200 xp**
 :
 {{descriptive
@@ -163,7 +163,7 @@ A mural of legendary monsters covers the ceiling, and skeletons hang from chains
 {{note
 Someone has scrawled "Don't lose your head" on the east wall, and a charred wooden shield lies in the east side of the room.
 }}
-::
+
 This room is occupied by **7 x Xvart (cr 1/8, vgm 200); medium, 175 xp**
 :
 {{descriptive
@@ -187,7 +187,7 @@ This room is occupied by **7 x Xvart (cr 1/8, vgm 200); medium, 175 xp**
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 xp**
 :
 {{descriptive
@@ -208,7 +208,7 @@ This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 x
 {{note
 Someone has scrawled "The Darkwood Staff is broken" in draconic script on the west wall, and a shattered sword lies in the south-west corner of the room.
 }}
-::
+
 This room is occupied by **Kobold Scale Sorcerer (cr 1, vgm 167) and 3 x Kobold (cr 1/8, mm 195); medium, 275 xp**
 :
 {{descriptive
@@ -227,7 +227,7 @@ This room is occupied by **Kobold Scale Sorcerer (cr 1, vgm 167) and 3 x Kobold 
 {{note
 A narrow pit covered by iron bars lies in the center of the room, and someone has scrawled "Abandon all hope" in draconic script on the east wall.
 }}
-::
+
 This room is occupied by **Choldrith (cr 3, vgm 132) and 1 x Chitine (cr 1/2, vgm 131); medium, 800 xp**
 :
 {{descriptive
@@ -247,7 +247,7 @@ This room is occupied by **Choldrith (cr 3, vgm 132) and 1 x Chitine (cr 1/2, vg
 {{note
 A faded and torn tapestry hangs from the south wall, and someone has scrawled "Cece's Legion killed a red dragon here" on the south wall.
 }}
-::
+
 This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
 :
 {{descriptive
@@ -302,7 +302,7 @@ Empty.
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, mm 213); medium, 800 xp**
 :
 {{descriptive
@@ -323,7 +323,7 @@ This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, m
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Myconid Sovereign (cr 2, mm 232) and 1 x Myconid Adult (cr 1/2, mm 232); easy, 550 xp**
 :
 {{descriptive
@@ -357,7 +357,7 @@ Empty.
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
 :
 {{descriptive
@@ -390,7 +390,7 @@ Empty.
 {{note
 An iron chandelier hangs from the ceiling in the west side of the room, and a pile of rotten bread lies in the north-east corner of the room.
 }}
-::
+
 This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, mm 213); medium, 800 xp**
 :
 {{descriptive
@@ -410,7 +410,7 @@ This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Manticore (cr 3, m
 {{note
 A large demonic idol with ruby eyes sits in the south-west corner of the room, and someone has scrawled "Warder was here" on the west wall.
 }}
-::
+
 This room is occupied by **Gelatinous Cube (cr 2, mm 242); easy, 450 xp**
 :
 {{descriptive
@@ -445,7 +445,7 @@ Empty.
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Vampiric Mist (cr 3, mtf 246); medium, 700 xp**
 :
 {{descriptive
@@ -465,7 +465,7 @@ This room is occupied by **Vampiric Mist (cr 3, mtf 246); medium, 700 xp**
 {{note
 A group of demonic faces have been carved into the west wall, and a pierced breastplate lies in the west side of the room.
 }}
-::
+
 This room is occupied by **Duergar Mind Master (cr 2, mtf 189) and 1 x Duergar (cr 1, mm 122); deadly, 650 xp**
 :
 {{descriptive
@@ -497,7 +497,7 @@ A chute falls into the room from above, and a simple fireplace sits against the 
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **2 x Meazel (cr 1, mtf 214); medium, 400 xp**
 :
 {{descriptive
@@ -527,7 +527,7 @@ A stone dais and throne sits in the center of the room, and the scent of smoke f
 {{note
 A magical altar of a goddess of light in the south-east corner of the room grants the ability to detect invisible creatures (for one hour) to whomever offers a prayer, and part of the ceiling has collapsed into the room.
 }}
-::
+
 This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 2 x Giant Rat (cr 1/8, mm 327); medium, 250 xp**
 :
 {{descriptive
@@ -548,7 +548,7 @@ This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 2 x Gia
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Orog (cr 2, mm 247); easy, 450 xp**
 :
 {{descriptive
@@ -571,7 +571,7 @@ This room is occupied by **Orog (cr 2, mm 247); easy, 450 xp**
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
 :
 {{descriptive
@@ -591,7 +591,7 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 :
 {{descriptive
@@ -611,7 +611,7 @@ This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 {{note
 A ladder ascends to a balcony hanging from the west wall, and a bent dagger lies in the east side of the room.
 }}
-::
+
 This room is occupied by **2 x Derro (cr 1/4, mtf 158) and 1 x Oblex Spawn (cr 1/4, mtf 217); easy, 150 xp**
 :
 {{descriptive
@@ -651,7 +651,7 @@ A narrow shaft descends from the room into the next dungeon level down, and spir
 {{note
 The south and east walls have been engraved with glowing symbols, and skeletons hang from chains and manacles against the south and east walls.
 }}
-::
+
 This room is occupied by **4 x Firenewt Warrior (cr 1/2, vgm 142); deadly, 400 xp**
 :
 {{descriptive
@@ -698,7 +698,7 @@ Empty.
 A tapestry of a legendary battle hangs from the south wall, and someone has scrawled "Look to the ceiling" on the west wall.
 }}
 \page
-::
+
 This room is occupied by **4 x Svirfneblin (cr 1/2, mm 164); deadly, 400 xp**
 :
 {{descriptive
@@ -766,7 +766,7 @@ Empty.
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 6 x Giant Rat (cr 1/8, mm 327); deadly, 350 xp**
 :
 {{descriptive
@@ -814,7 +814,7 @@ Empty.
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pureblood (cr 1, mm 310); deadly, 650 xp**
 :
 {{descriptive
@@ -833,7 +833,7 @@ This room is occupied by **Yuan-ti Broodguard (cr 2, vgm 203) and 1 x Yuan-ti Pu
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/2, mm 246); easy, 550 xp**
 :
 {{descriptive
@@ -847,9 +847,9 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 | east | Locked Iron Door (DC 20 to open)  | 52 |
 | east | Locked Stone Door (DC 15 to open)  | 47 |
 :
-\page
 ### Room 47
 :
+\page
 {{classTable,frame
 #### Trap!
 * Net Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 10 save or become restrained
@@ -857,7 +857,7 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Kobold Dragonshield (cr 1, vgm 165) and 3 x Kobold (cr 1/8, mm 195); medium, 275 xp**
 :
 {{descriptive
@@ -942,7 +942,7 @@ Several square holes are cut into the north and west walls, and a broken wooden 
 {{note
 Someone has scrawled "Death comes on silent wings" in draconic script on the south wall, and several pieces of blood-soaked clothing are scattered throughout the room.
 }}
-::
+
 This room is occupied by **Gelatinous Cube (cr 2, mm 242); easy, 450 xp**
 :
 {{descriptive
@@ -985,7 +985,7 @@ Empty.
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
 :
 {{descriptive
@@ -1004,7 +1004,7 @@ This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Mimic (cr 2, mm 220); easy, 450 xp**
 :
 {{descriptive
@@ -1020,10 +1020,10 @@ This room is occupied by **Mimic (cr 2, mm 220); easy, 450 xp**
 :
 ### Room 58
 :
-\page
 {{note
 A group of monstrous faces have been carved into the west wall, and an altar of evil sits in the east side of the room.
 }}
+\page
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1045,7 +1045,7 @@ A group of monstrous faces have been carved into the west wall, and an altar of 
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **4 x Myconid Adult (cr 1/2, mm 232); deadly, 400 xp**
 :
 {{descriptive
@@ -1064,7 +1064,7 @@ This room is occupied by **4 x Myconid Adult (cr 1/2, mm 232); deadly, 400 xp**
 {{note
 A tile mosaic of ancient mythology covers the floor, and someone has scrawled "It's a trap" on the east wall.
 }}
-::
+
 This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
 :
 {{descriptive
@@ -1097,7 +1097,7 @@ A narrow ledge runs along the north and west walls, and a tapestry of a sea god 
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Spectator (cr 3, mm 30); medium, 700 xp**
 :
 {{descriptive
@@ -1112,13 +1112,13 @@ This room is occupied by **Spectator (cr 3, mm 30); medium, 700 xp**
 | south | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Earthmaw Trap: DC 15 to find, DC 10 to disable;     +9 to hit against one target, 4d10 piercing damage | 71 |
 | west | Unlocked Stone Door (60 hp)  | 61 |
 :
-\page
 ### Room 63
 :
+\page
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 :
 {{descriptive
@@ -1138,7 +1138,7 @@ This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 {{note
 A magical mirror on the north wall answers simple questions about the dungeon (yes/no), and a fountain decorated with screaming faces sits in the east side of the room.
 }}
-::
+
 This room is occupied by **Bugbear (cr 1, mm 33) and 1 x Half-ogre (cr 1, mm 238); medium, 400 xp**
 :
 {{descriptive
@@ -1158,7 +1158,7 @@ This room is occupied by **Bugbear (cr 1, mm 33) and 1 x Half-ogre (cr 1, mm 238
 {{note
 A wooden platform hangs over a deep pit in the west side of the room, and the scent of smoke fills the room.
 }}
-::
+
 This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, mtf 158); medium, 750 xp**
 :
 {{descriptive
@@ -1191,7 +1191,7 @@ A tile labyrinth covers the floor, and someone has scrawled "The last wards have
 {{note
 A well lies in the west side of the room, and a tapestry of arcane patterns hangs from the north wall.
 }}
-::
+
 This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, mtf 158); medium, 750 xp**
 :
 {{descriptive
@@ -1273,7 +1273,7 @@ Empty.
 {{note
 Someone has scrawled "The Sunless Castle shall be lost when sea becomes sky and the Blade of Evil is drawn" on the south wall, and a metallic odor fills the room.
 }}
-::
+
 This room is occupied by **2 x Myconid Adult (cr 1/2, mm 232); easy, 200 xp**
 :
 {{descriptive
@@ -1293,7 +1293,7 @@ This room is occupied by **2 x Myconid Adult (cr 1/2, mm 232); easy, 200 xp**
 {{note
 A narrow pit covered by iron bars lies in the center of the room, and a pile of rotten apples lies in the north side of the room.
 }}
-::
+
 This room is occupied by **7 x Drow (cr 1/4, mm 128); deadly, 350 xp**
 :
 {{descriptive
@@ -1313,7 +1313,7 @@ This room is occupied by **7 x Drow (cr 1/4, mm 128); deadly, 350 xp**
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); easy, 105 xp**
 :
 {{descriptive
@@ -1333,7 +1333,7 @@ This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); e
 {{note
 Empty.
 }}
-::
+
 This room is occupied by **Neogi (cr 3, vgm 180); medium, 700 xp**
 :
 {{descriptive
@@ -1352,7 +1352,7 @@ This room is occupied by **Neogi (cr 3, vgm 180); medium, 700 xp**
 {{note
 A faded and torn tapestry hangs from the north wall, and a swarm of crawling insects covers the floor.
 }}
-::
+
 This room is occupied by **Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firenewt Warrior (cr 1/2, vgm 142); medium, 300 xp**
 :
 {{descriptive
@@ -1381,7 +1381,7 @@ A stair ascends to a catwalk hanging between the east and west walls, and the so
 :
 \page
 ## Summary
-You will find here useful reference tables for things encountered in the dungeon.
+Here you will find useful reference tables for things encountered in the dungeon.
 {{descriptive
 #### Monster List (alphabetical)
 | Detail | Book |
