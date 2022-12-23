@@ -310,4 +310,24 @@ if "rooms" in data:
         check = file_size(check)
         outfile = open("homebrewery.txt", "a")
 
+# end locations section and prepare for summary
+outfile.write("\\page\n")
+
+# general features
+outfile.write("## Summary\n")
+
+# list out monsters in table form
+outfile.write("Please note, this table doesn't include the monsters from the wandering encounters table.\n")
+
+outfile.write("{{classTable,frame\n")
+outfile.write("#### Monster List\n")
+outfile.write("| Detail |\n")
+outfile.write("|:--|\n")
+if "monster" in rooms["contents"]["detail"]:
+    for thing in rooms["contents"]["detail"]["monster"]:
+        if thing == "--":
+            continue
+        else:
+            outfile.write(f"|{thing}|\n")
+
 outfile.close()
