@@ -48,7 +48,7 @@ There are also roaming groups with specific goals, this will help you place them
 ### Getting In
 There is only one entrance into the dungeon:
 * On the GM map at ***row: 1*** and ***column: 13***, which enters the corridor from the north.
-:
+
 ### Room 1
 :
 {{note
@@ -1384,7 +1384,7 @@ A stair ascends to a catwalk hanging between the east and west walls, and the so
 Here you will find useful reference tables for things encountered in the dungeon.
 {{descriptive
 #### Monster List (alphabetical)
-| Detail | Book |
+| Monster | Book |
 |:--|:--|
 | Bugbear | mm p.33 |
 | Chitine | vgm p.131 |
