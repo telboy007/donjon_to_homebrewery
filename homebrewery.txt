@@ -1,5 +1,3 @@
-![map](https://imgur.com/cpy3lBq.png){position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}
-:
 {{margin-top:225px}}
 # The Catacombs of Dark Wyrms
 {{margin-top:25px}}
@@ -10,10 +8,6 @@
 ::::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
-\page
-## GM Map
-![map](https://imgur.com/cpy3lBq.png){width:680px;}
-Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
@@ -1385,3 +1379,53 @@ A stair ascends to a catwalk hanging between the east and west walls, and the so
 | west | Stuck Stone Door (DC 20 to break; 60 hp)  | 69 |
 | west | Archway  | n/a |
 :
+\page
+## Summary
+You will find here useful reference tables for things encountered in the dungeon.
+{{descriptive
+#### Monster List (alphabetical)
+| Detail | Book |
+|:--|:--|
+| Bugbear | mm p.33 |
+| Chitine | vgm p.131 |
+| Choldrith | vgm p.132 |
+| Derro | mtf p.158 |
+| Derro Savant | mtf p.159 |
+| Drow | mm p.128 |
+| Duergar | mm p.122 |
+| Duergar Mind Master | mtf p.189 |
+| Duergar Soulblade | mtf p.190 |
+| Duergar Stone Guard | mtf p.191 |
+| Firenewt Warlock of Imix | vgm p.143 |
+| Firenewt Warrior | vgm p.142 |
+| Gelatinous Cube | mm p.242 |
+| Giant Rat | mm p.327 |
+| Goblin | mm p.166 |
+| Half-ogre | mm p.238 |
+| Hobgoblin | mm p.186 |
+| Kobold | mm p.195 |
+| Kobold Dragonshield | vgm p.165 |
+| Kobold Scale Sorcerer | vgm p.167 |
+| Manticore | mm p.213 |
+| Meazel | mtf p.214 |
+| Mimic | mm p.220 |
+| Myconid Adult | mm p.232 |
+| Myconid Sovereign | mm p.232 |
+| Neogi | vgm p.180 |
+| Oblex Spawn | mtf p.217 |
+| Orc | mm p.246 |
+| Orc Claw of Luthic | vgm p.183 |
+| Orc Eye of Gruumsh | mm p.247 |
+| Orc Nurtured One of Yurtrus | vgm p.184 |
+| Orog | mm p.247 |
+| Rat | mm p.335 |
+| Shadow | mm p.269 |
+| Spectator | mm p.30 |
+| Svirfneblin | mm p.164 |
+| Trapper | vgm p.194 |
+| Vampiric Mist | mtf p.246 |
+| Xvart | vgm p.200 |
+| Xvart Warlock of Raxivort | vgm p.200 |
+| Yuan-ti Broodguard | vgm p.203 |
+| Yuan-ti Pureblood | mm p.310 |
+}}
