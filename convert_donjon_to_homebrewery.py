@@ -10,6 +10,7 @@
 
 import json
 import sys
+from collections import OrderedDict
 
 
 # set check value
@@ -50,6 +51,14 @@ def sum_up_treasure(string):
     return f"{str(result[:-2]).replace(',;', ',')}\n"
 
 
+# add magical items to list
+def add_magical_items_to_list(thing):
+    list = thing.split(',')
+    for index, item in enumerate(list):
+        if 'dmg' in item:
+            magic_items[list[index - 1].strip()] = item.strip().replace(')', '').replace(' ', ' p.')
+
+
 # add monsters to monster list
 def add_monsters_to_monster_list(thing):
     monsters = thing.split(';')
@@ -62,18 +71,19 @@ def add_monsters_to_monster_list(thing):
             monster_list.append(mon.strip())
 
 
-# split our monster name and source book
-def extract_book_details(monster_details):
-    split = monster_details.split('(')
-    monster = split[0].strip()
+# split out name and source book (used on monsters and magical items)
+def extract_book_details(details):
+    split = details.split('(')
+    name = split[0].strip()
     details = split[1].split(',')
     book = details[1].strip().replace(')','').replace(' ', ' p.')
-    return monster, book 
+    return name, book 
 
 
 # globals
 check = 0
 monster_list = []
+magic_items = {}
 newline = '\n'
 
 # opening JSON file
@@ -251,6 +261,8 @@ if "rooms" in data:
                         if item == "--":
                             continue
                         outfile.write(f"* {item.replace(newline,' ')}\n")
+                        # add to magic items list for the summary page
+                        add_magical_items_to_list(item.replace(newline,' '))
 
                     outfile.write("}}\n")
 
@@ -288,6 +300,8 @@ if "rooms" in data:
                                 outfile.write(f"{thing}\n")
                             else:
                                 outfile.write(f"{thing.replace(newline, ' ').replace('Treasure: ','')}\n")
+                                # add to magic items list for the summary page
+                                add_magical_items_to_list(thing.replace(newline, ' ').replace('Treasure: ',''))
                             outfile.write("}}\n")
                         else:
                             outfile.write("\n")
@@ -362,8 +376,24 @@ monster_list.sort()
 
 for monster in monster_list:
     # split out monster and source book details
-    detail, book = extract_book_details(monster)
-    outfile.write(f"| {detail} | {book} |\n")
+    name, book = extract_book_details(monster)
+    outfile.write(f"| {name} | {book} |\n")
+
+outfile.write("}}\n")
+outfile.write(":\n")
+
+# list out magic items in a handy reference table
+outfile.write("{{descriptive\n")
+outfile.write("#### Magic Items (alphabetical)\n")
+outfile.write("| Item | Book |\n")
+outfile.write("|:--|:--|\n")
+
+# put magic item list in order
+ordered_magic_items = OrderedDict(sorted(magic_items.items()))
+
+for name, book in ordered_magic_items.items():
+    # split out item and source book details
+    outfile.write(f"| {name}) | {book} |\n")
 
 outfile.write("}}\n")
 
