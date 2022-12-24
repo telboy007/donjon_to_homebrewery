@@ -1,3 +1,5 @@
+![map](https://imgur.com/cpy3lBq.png){position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}
+:
 {{margin-top:225px}}
 # The Catacombs of Dark Wyrms
 {{margin-top:25px}}
@@ -8,6 +10,10 @@
 ::::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
+\page
+## GM Map
+![map](https://imgur.com/cpy3lBq.png){width:680px;}
+Courtesy of <a href="https://donjon.bin.sh">donjon.bin.sh</a>
 \page
 ## Description
 The dungeon has the following features, these may include skill checks to perform certain actions.
@@ -1428,4 +1434,27 @@ Here you will find useful reference tables for things encountered in the dungeon
 | Xvart Warlock of Raxivort | vgm p.200 |
 | Yuan-ti Broodguard | vgm p.203 |
 | Yuan-ti Pureblood | mm p.310 |
+}}
+:
+{{descriptive
+#### Magic Items (alphabetical)
+| Item | Book |
+|:--|:--|
+| +1 Wand of the War Mage (uncommon) | dmg p.212 |
+| +1 Weapon (heavy crossbow) (uncommon) | dmg p.213 |
+| +1 Weapon (maul) (uncommon) | dmg p.213 |
+| Deck of Illusions (29 cards) (uncommon) | dmg p.161 |
+| Dust of Sneezing and Choking (uncommon) | dmg p.166 |
+| Keoghtom's Ointment (uncommon) | dmg p.179 |
+| Philter of Love (uncommon) | dmg p.184 |
+| Pipes of Haunting (uncommon) | dmg p.185 |
+| Potion of Fire Breath (uncommon) | dmg p.187 |
+| Potion of Healing (common) | dmg p.187 |
+| Potion of Water Breathing (uncommon) | dmg p.188 |
+| Scroll of Protection (fey) (rare) | dmg p.199 |
+| Spell Scroll (Arms of Hadar) (common) | dmg p.200 |
+| Spell Scroll (False Life) (common) | dmg p.200 |
+| Spell Scroll (Spiritual Weapon) (uncommon) | dmg p.200 |
+| Spell Scroll (Vicious Mockery) (common) | dmg p.200 |
+| Staff of the Woodlands (rare) | dmg p.204 |
 }}
