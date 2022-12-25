@@ -28,9 +28,11 @@ def file_size(check):
     infile = open("homebrewery.txt", "r")
     data = infile.read()
     infile.close()
-    if (len(data) - check) > 2450:
+    if (len(data) - check) > 2500:
         outfile = open("homebrewery.txt", "a")
+        outfile.write("{{footnote LOCATIONS}}\n")
         outfile.write("\\page\n")
+        outfile.write("{{pageNumber,auto}}\n")
         outfile.close()
         return len(data)
     return check
@@ -71,7 +73,7 @@ def add_monsters_to_monster_list(thing):
             monster_list.append(mon.strip())
 
 
-# split out name and source book (used on monsters and magical items)
+# split out name and source book (used on monster list)
 def extract_book_details(details):
     split = details.split('(')
     name = split[0].strip()
@@ -132,19 +134,24 @@ outfile.write("::::\n")
 outfile.write("##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
 outfile.write("}}\n")
 outfile.write("\\page\n")
+outfile.write("{{pageNumber,auto}}\n")
 
 # map pages
 if len(sys.argv) > 2:
     outfile.write("## GM Map\n")
     outfile.write(f"![map]({sys.argv[2]}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+    outfile.write("{{footnote MAPS}}\n")
     outfile.write("\\page\n")
+    outfile.write("{{pageNumber,auto}}\n")
 
 if len(sys.argv) > 3:
     outfile.write("## Player Map\n")
     outfile.write(f"![map]({sys.argv[3]}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+    outfile.write("{{footnote MAPS}}\n")
     outfile.write("\\page\n")
+    outfile.write("{{pageNumber,auto}}\n")
 
 # general features
 outfile.write("## Description\n")
@@ -195,13 +202,15 @@ if "wandering_monsters" in data:
 
     outfile.write("}}\n")
 
+# end description page
+outfile.write("{{footnote OVERVIEW}}\n")
+outfile.write("\\page\n")
+outfile.write("{{pageNumber,auto}}\n")
+
 # set page marker check
 outfile.close()
 check = set_check(check)
 outfile = open("homebrewery.txt", "a")
-
-# end description page
-outfile.write("\\page\n")
 
 # locations
 outfile.write("## Locations\n")
@@ -358,7 +367,10 @@ if "rooms" in data:
         outfile = open("homebrewery.txt", "a")
 
 # end locations section and prepare for summary
+# end description page
+outfile.write("{{footnote LOCATIONS}}\n")
 outfile.write("\\page\n")
+outfile.write("{{pageNumber,auto}}\n")
 
 # summary
 outfile.write("## Summary\n")
@@ -396,6 +408,8 @@ for name, book in ordered_magic_items.items():
     outfile.write(f"| {name}) | {book} |\n")
 
 outfile.write("}}\n")
+
+outfile.write("{{footnote SUMMARY}}\n")
 
 # done
 outfile.close()
