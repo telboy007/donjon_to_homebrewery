@@ -19,9 +19,20 @@ To install:
 1. `pipenv shell` (NOTE: you may need to install pyenv to install python 3.8)
 
 To run:
-1. Run the command `python convert_donjon_to_homebrewery.py your_filename.json`
+1. Supplied help text explains arguments needed to run the command
+```
+positional arguments:
+  filename
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -gm GM_MAP, --gm_map GM_MAP
+                        URL for the GM Map image
+  -p PLAYER_MAP, --player_map PLAYER_MAP
+                        URL for the Player map image
+```
 1. If you have the GM and Player maps, host them on an image hosting site and add the urls as arguments
-  1. `python convert_donjon_to_homebrewery.py your_filename.json https://imgur.something.png https://imgur.something.png`
+1. `python convert_donjon_to_homebrewery.py your_filename.json -gm https://imgur.something.png -p https://imgur.something.png`
 
 You can now copy and paste the contents of homebrewery.txt into your [homebrewery](https://homebrewery.naturalcrit.com/) document.
 

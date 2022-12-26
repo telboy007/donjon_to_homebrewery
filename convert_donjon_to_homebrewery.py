@@ -8,6 +8,7 @@
         player map (url) [optional]
 """
 
+import argparse
 import json
 import sys
 from collections import OrderedDict
@@ -120,27 +121,34 @@ xp_list = []
 monster_list = []
 combat_list = []
 magic_items = {}
-all_4e_items = []
 newline = '\n'
 
 
-# opening JSON file
-try:
-    filename = sys.argv[1]
-    f = open(filename)
+# set up command line parser
+parser = argparse.ArgumentParser(
+                    prog = 'Donjon to Homebrewery',
+                    description = 'Converts donjon random dungeons into v3 homebrewery text to copy and paste.',
+                    epilog = 'See README for more details.')
 
-    # returns JSON object as a dictionary
-    data = json.load(f)
-except:
-    print("Please supply json filename to convert.")
-    sys.exit()
+parser.add_argument('filename')           # positional argument
+parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image')    # optional gm map image
+parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional player map image
+
+args = parser.parse_args()
+
+# opening JSON file
+filename = args.filename
+f = open(filename)
+
+# returns JSON object as a dictionary
+data = json.load(f)
 
 # Open file to write content to
 outfile = open("homebrewery.txt", "w")
 
 # title page
-if len(sys.argv) > 2:
-    outfile.write(f"![map]({sys.argv[2]}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
+if args.gm_map:
+    outfile.write(f"![map]({args.gm_map}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
     outfile.write(":\n")
 
 outfile.write("{{margin-top:225px}}\n")
@@ -177,17 +185,17 @@ outfile.write("\\page\n")
 outfile.write("{{pageNumber,auto}}\n")
 
 # map pages
-if len(sys.argv) > 2:
+if args.gm_map:
     outfile.write("## GM Map\n")
-    outfile.write(f"![map]({sys.argv[2]}){{width:680px;}}\n")
+    outfile.write(f"![map]({args.gm_map}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
     outfile.write("{{footnote MAPS}}\n")
     outfile.write("\\page\n")
     outfile.write("{{pageNumber,auto}}\n")
 
-if len(sys.argv) > 3:
+if args.player_map:
     outfile.write("## Player Map\n")
-    outfile.write(f"![map]({sys.argv[3]}){{width:680px;}}\n")
+    outfile.write(f"![map]({args.player_map}){{width:680px;}}\n")
     outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
     outfile.write("{{footnote MAPS}}\n")
     outfile.write("\\page\n")
