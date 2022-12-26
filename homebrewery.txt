@@ -382,6 +382,9 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 17 cp, 12 gp
 
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -390,9 +393,6 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 | north | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | 12 |
 | west | Unlocked Stone Door (60 hp)  | 17 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 19
 :
 {{note
@@ -455,6 +455,9 @@ Empty.
 | south | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 30 |
 | west | Archway  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 23
 :
 {{classTable,frame
@@ -478,9 +481,6 @@ This room is occupied by **Vampiric Mist (cr 3, mtf 246); medium, 700 xp**
 | east | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
 | south | Secret (DC 25 to find) Locked Stone Door (DC 20 to open) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 26 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 24
 :
 {{note
@@ -543,6 +543,9 @@ A stone dais and throne sits in the center of the room, and the scent of smoke f
 | east | Locked Iron Door (DC 15 to open)  | 28 |
 | south | Secret (DC 20 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 33 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 28
 :
 {{note
@@ -563,9 +566,6 @@ This room is occupied by **Xvart Warlock of Raxivort (cr 1, vgm 200) and 2 x Gia
 | south | Unlocked Iron Door (60 hp)  | n/a |
 | west | Locked Iron Door (DC 15 to open)  | 27 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 29
 :
 {{note
@@ -629,6 +629,9 @@ This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 | south | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 41 |
 | west | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | 29 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 32
 :
 {{note
@@ -656,9 +659,6 @@ This room is occupied by **2 x Derro (cr 1/4, mtf 158) and 1 x Oblex Spawn (cr 1
 * Arrow Trap: DC 10 to find, DC 10 to disable;     +10 to hit against one target, 4d10 piercing damage
 * 2100 cp, 500 sp, 100 gp, diamond (50 gp), bloodstone (50 gp), carnelian (50 gp), chrysoprase (50 gp), jasper (50 gp), Scroll of Protection (fey) (rare, dmg 199)
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 {{note
 A narrow shaft descends from the room into the next dungeon level down, and spirals of red stones cover the floor.
 }}
@@ -704,6 +704,9 @@ A stream of acid flows along a channel in the floor, and a toppled statue lies i
 | west | Stuck Stone Door (DC 20 to break; 60 hp)  | 32 |
 | west | Unlocked Iron Door (60 hp) (slides to one side)  | 36 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 36
 :
 {{note
@@ -722,9 +725,6 @@ Empty.
 {{note
 A tapestry of a legendary battle hangs from the south wall, and someone has scrawled "Look to the ceiling" on the west wall.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 
 This room is occupied by **4 x Svirfneblin (cr 1/2, mm 164); deadly, 400 xp**
 :
@@ -763,6 +763,9 @@ Empty.
 | east | Unlocked Stone Door (60 hp)  | 45 |
 | north | Unlocked Iron Door (60 hp)  | 30 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 40
 :
 {{note
@@ -787,9 +790,6 @@ Empty.
 | north | Trapped and Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  ***Trap:*** Rune of Confusion: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | 31 |
 | south | Secret (DC 15 to find) Stuck Stone Door (DC 20 to break; 60 hp) ***Secret:*** The door is opened by standing on a small floor tile | 47 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 42
 :
 {{note
@@ -838,6 +838,9 @@ Empty.
 | north | Unlocked Iron Door (60 hp)  | 35 |
 | west | Locked Iron Door (DC 25 to open)  | 43 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 45
 :
 {{note
@@ -878,9 +881,6 @@ This room is occupied by **Orc Claw of Luthic (cr 2, vgm 183) and 1 x Orc (cr 1/
 :
 ### Room 47
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 {{classTable,frame
 #### Trap!
 * Net Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 10 save or become restrained
@@ -932,6 +932,9 @@ Numerous pillars line the north and west walls, and a swarm of crawling insects 
 | east | Archway  | 60 |
 | west | Secret (DC 15 to find) Trapped and Stuck Stone Door (DC 20 to break; 60 hp) (slides down)  ***Secret:*** The door is located above a small stone dais and designed to make noise when opened ***Trap:*** Arrow Trap: DC 15 to find, DC 10 to disable;     +6 to hit against one target, 2d10 piercing damage | 51 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 50
 :
 {{note
@@ -956,9 +959,6 @@ Empty.
 | south | Secret (DC 25 to find) Unlocked Iron Door (60 hp) ***Secret:*** The door is concealed behind a statue of an ancient lich, and opened by pressing runes on his staff | n/a |
 | south | Archway  | 59 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 52
 :
 {{note
@@ -1013,6 +1013,9 @@ Empty.
 | south | Locked Stone Door (DC 25 to open)  | 66 |
 | west | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Contact Poison: DC 10 to find, DC 10 to disable;     affects each creature which touches the trigger, DC 15 save or take 2d10 damage | 54 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 56
 :
 {{note
@@ -1056,9 +1059,6 @@ This room is occupied by **Mimic (cr 2, mm 220); easy, 450 xp**
 {{note
 A group of monstrous faces have been carved into the west wall, and an altar of evil sits in the east side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1115,6 +1115,9 @@ This room is occupied by **Trapper (cr 3, vgm 194); medium, 700 xp**
 | west | Archway  | 49 |
 | west | Archway  | 65 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 61
 :
 {{note
@@ -1152,9 +1155,6 @@ This room is occupied by **Spectator (cr 3, mm 30); medium, 700 xp**
 {{note
 Empty.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 
 This room is occupied by **Choldrith (cr 3, vgm 132); medium, 700 xp**
 :
@@ -1202,6 +1202,9 @@ This room is occupied by **Derro Savant (cr 3, mtf 159) and 1 x Derro (cr 1/4, m
 #### Treasure
 1700 cp, 1000 sp, 40 gp, diamond (50 gp), citrine (50 gp), jasper (50 gp), sardonyx (50 gp), +1 Weapon (heavy crossbow) (uncommon, dmg 213)
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1222,9 +1225,6 @@ A tile labyrinth covers the floor, and someone has scrawled "The last wards have
 | south | Secret (DC 25 to find) Stuck Stone Door (DC 20 to break; 60 hp) (slides up) ***Secret:*** The door is opened by speaking a command word | 71 |
 | west | Locked Iron Door (DC 15 to open) (slides down)  | 62 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 67
 :
 {{note
@@ -1266,6 +1266,9 @@ Empty.
 | south | Archway  | 74 |
 | west | Archway  | 66 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 69
 :
 {{note
@@ -1294,9 +1297,6 @@ Empty.
 | south | Unlocked Stone Door (60 hp)  | n/a |
 | south | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Rune of Hypnosis: DC 20 to find, DC 15 to disable;     affects all targets within 10 ft., DC 18 save or become incapacitated for 1d4 rounds | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 71
 :
 {{note
@@ -1334,6 +1334,9 @@ This room is occupied by **2 x Myconid Adult (cr 1/2, mm 232); easy, 200 xp**
 {{note
 A narrow pit covered by iron bars lies in the center of the room, and a pile of rotten apples lies in the north side of the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 
 This room is occupied by **7 x Drow (cr 1/4, mm 128); deadly, 350 xp**
 :
@@ -1362,9 +1365,6 @@ This room is occupied by **Xvart (cr 1/8, vgm 200) and 8 x Rat (cr 0, mm 335); e
 63 sp, 31 cp, 19 gp
 
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1415,6 +1415,9 @@ This room is occupied by **Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Fire
 {{note
 A stair ascends to a catwalk hanging between the east and west walls, and the sound of rushing water fills the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | Leads to |
 |:--|:--|:--|
@@ -1427,6 +1430,17 @@ A stair ascends to a catwalk hanging between the east and west walls, and the so
 {{pageNumber,auto}}
 ## Summary
 Here you will find useful reference tables for things encountered in the dungeon.
+{{descriptive
+#### Combat details
+**Total XP: 24530** which is 4088 xp per party member.
+| Type | Amount |
+|:--|:--|
+| Easy | 17 |
+| Medium | 20 |
+| Hard | 0 |
+| Deadly | 13 |
+}}
+:
 {{descriptive
 #### Monster List (alphabetical)
 | Monster | Book |

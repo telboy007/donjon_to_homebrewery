@@ -28,7 +28,7 @@ def file_size(check):
     infile = open("homebrewery.txt", "r")
     data = infile.read()
     infile.close()
-    if (len(data) - check) > 2500:
+    if (len(data) - check) > 2450:
         outfile = open("homebrewery.txt", "a")
         outfile.write("{{footnote LOCATIONS}}\n")
         outfile.write("\\page\n")
@@ -38,55 +38,91 @@ def file_size(check):
     return check
 
 
-# can we add up all the random little amounts of money? yes we can!
+# can we add up all the random little amounts of money in 5e dungeons? yes we can!
 def sum_up_treasure(string):
-    currency = {}
-    list = string.split(";")
-    for amount in list:
-        amount = amount.split(" ")
-        # build list of amounts of specific types of coin
-        currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
-    result = ""
-    for coinType, values in currency.items():
-        # build list of totals and coin type (string)
-        result += (f"{sum(values)} {str(coinType)}, ")
-    return f"{str(result[:-2]).replace(',;', ',')}\n"
+    # logic for D&D 5e
+    if data['settings']['infest'] == "dnd_5e":
+        currency = {}
+        list = string.split(";")
+        for amount in list:
+            amount = amount.split(" ")
+            # build list of amounts of specific types of coin
+            currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
+        result = ""
+        for coinType, values in currency.items():
+            # build list of totals and coin type (string)
+            result += (f"{sum(values)} {str(coinType)}, ")
+        return f"{str(result[:-2]).replace(',;', ',')}\n"
 
 
 # add magical items to list
 def add_magical_items_to_list(thing):
-    list = thing.split(',')
-    for index, item in enumerate(list):
-        if 'dmg' in item:
-            magic_items[list[index - 1].strip()] = item.strip().replace(')', '').replace(' ', ' p.')
+    # logic for D&D 5e
+    if data['settings']['infest'] == "dnd_5e":
+        list = thing.split(',')
+        for index, item in enumerate(list):
+            if 'dmg' in item:
+                magic_items[list[index - 1].strip()] = item.strip().replace(')', '').replace(' ', ' p.')
 
 
-# add monsters to monster list
+# add monsters to monster list and combat type to combat list and xp total
 def add_monsters_to_monster_list(thing):
-    monsters = thing.split(';')
-    monster = monsters[0].split(' and ')
-    for mon in monster:
-        try:
-            m = mon.split(' x ')[1]
-            monster_list.append(m.strip())
-        except:
-            monster_list.append(mon.strip())
+    # logic for D&D 5e
+    if data['settings']['infest'] == "dnd_5e":
+        #get monster name and book details and add to list
+        monsters = thing.split(';')
+        monster = monsters[0].split(' and ')
+        for mon in monster:
+            try:
+                m = mon.split(' x ')[1]
+                monster_list.append(m.strip())
+            except:
+                monster_list.append(mon.strip())
+        # get combat type and add to list
+        combat = monsters[1].split(',')
+        combat_list.append(combat[0].strip())
+        # get xp amount and add to list
+        xp_amount = combat[1].strip().split(' ')
+        xp_list.append(xp_amount[0].strip())
+    # logic for D&D 4e
+    if data['settings']['infest'] == "dnd_4e":
+        #get monster name and book details and add to list
+        monsters = thing.split(') and ')
+        for monster in monsters:
+            try:
+                mon = monster.split(' x ')[1]
+                m = mon.split(',')
+                monster_list.append(m[0])
+            except:
+                mon = monster.strip().split(',')
+                monster_list.append(mon[0])
 
 
 # split out name and source book (used on monster list)
 def extract_book_details(details):
-    split = details.split('(')
-    name = split[0].strip()
-    details = split[1].split(',')
-    book = details[1].strip().replace(')','').replace(' ', ' p.')
-    return name, book 
+    # logic for D&D 5e
+    if data['settings']['infest'] == "dnd_5e":
+        split = details.split('(')
+        name = split[0].strip()
+        details = split[1].split(',')
+        book = details[1].strip().replace(')','').replace(' ', ' p.')
+        return name, book 
+    # logic for D&D 4e
+    if data['settings']['infest'] == "dnd_4e":
+        split = details.split('(')
+        book = split[1].strip().replace(' ', ' p.')
+        return split[0].strip(), book 
 
 
 # globals
 check = 0
+xp_list = []
 monster_list = []
+combat_list = []
 magic_items = {}
+all_4e_items = []
 newline = '\n'
+
 
 # opening JSON file
 try:
@@ -122,12 +158,16 @@ except:
 # work out ruleset for title page
 if data['settings']['infest'] == "dnd_5e":
     infest = "D&D 5e"
+    summary_page = True
 elif data['settings']['infest'] == "dnd_4e":
     infest = "D&D 4e"
+    summary_page = True
 elif data['settings']['infest'] == "adnd":
     infest = "AD&D"
+    summary_page = False
 else:
     infest = "fantasy"
+    summary_page = False
 
 outfile.write(f"##### A randomly generated {infest} donjon dungeon for a party size of {data['settings']['n_pc']} and APL{data['settings']['level']}\n")
 outfile.write("::::\n")
@@ -369,47 +409,69 @@ if "rooms" in data:
 # end locations section and prepare for summary
 # end description page
 outfile.write("{{footnote LOCATIONS}}\n")
-outfile.write("\\page\n")
-outfile.write("{{pageNumber,auto}}\n")
 
-# summary
-outfile.write("## Summary\n")
-outfile.write("Here you will find useful reference tables for things encountered in the dungeon.\n")
+# if 4th or 5th edition then create a summary page
+if summary_page:
+    outfile.write("\\page\n")
+    outfile.write("{{pageNumber,auto}}\n")
 
-# list out monsters in a handy reference table
-outfile.write("{{descriptive\n")
-outfile.write("#### Monster List (alphabetical)\n")
-outfile.write("| Monster | Book |\n")
-outfile.write("|:--|:--|\n")
+    # summary
+    outfile.write("## Summary\n")
+    outfile.write("Here you will find useful reference tables for things encountered in the dungeon.\n")
 
-# but first dedupe and order monster list
-monster_list = list(dict.fromkeys(monster_list))
-monster_list.sort()
+    # list out xp and combat type details if 5e dungeon
+    if data['settings']['infest'] == "dnd_5e":
+        outfile.write("{{descriptive\n")
+        outfile.write("#### Combat details\n")
 
-for monster in monster_list:
-    # split out monster and source book details
-    name, book = extract_book_details(monster)
-    outfile.write(f"| {name} | {book} |\n")
+        # work out some xp totals
+        total_xp = sum(int(i) for i in xp_list)
+        shared_xp = round(sum(int(i) for i in xp_list)/int(data['settings']['n_pc']))
 
-outfile.write("}}\n")
-outfile.write(":\n")
+        outfile.write(f"**Total XP: {total_xp}** which is {shared_xp} xp per party member.\n")
+        outfile.write("| Type | Amount |\n")
+        outfile.write("|:--|:--|\n")
+        outfile.write(f"| Easy | {combat_list.count('easy')} |\n")
+        outfile.write(f"| Medium | {combat_list.count('medium')} |\n")
+        outfile.write(f"| Hard | {combat_list.count('hard')} |\n")
+        outfile.write(f"| Deadly | {combat_list.count('deadly')} |\n")
+        outfile.write("}}\n")
+        outfile.write(":\n")
 
-# list out magic items in a handy reference table
-outfile.write("{{descriptive\n")
-outfile.write("#### Magic Items (alphabetical)\n")
-outfile.write("| Item | Book |\n")
-outfile.write("|:--|:--|\n")
+    # list out monsters in a handy reference table
+    outfile.write("{{descriptive\n")
+    outfile.write("#### Monster List (alphabetical)\n")
+    outfile.write("| Monster | Book |\n")
+    outfile.write("|:--|:--|\n")
 
-# put magic item list in order
-ordered_magic_items = OrderedDict(sorted(magic_items.items()))
+    # but first dedupe and order monster list
+    monster_list = list(dict.fromkeys(monster_list))
+    monster_list.sort()
 
-for name, book in ordered_magic_items.items():
-    # split out item and source book details
-    outfile.write(f"| {name}) | {book} |\n")
+    for monster in monster_list:
+        # split out monster and source book details
+        name, book = extract_book_details(monster)
+        outfile.write(f"| {name} | {book} |\n")
 
-outfile.write("}}\n")
+    outfile.write("}}\n")
+    outfile.write(":\n")
 
-outfile.write("{{footnote SUMMARY}}\n")
+    # list out magic items for 5th edition
+    if data['settings']['infest'] == "dnd_5e":
+        outfile.write("{{descriptive\n")
+        outfile.write("#### Magic Items (alphabetical)\n")
+        outfile.write("| Item | Book |\n")
+        outfile.write("|:--|:--|\n")
+        ordered_magic_items = OrderedDict(sorted(magic_items.items()))
+
+        for name, book in ordered_magic_items.items():
+            # split out item and source book details
+            outfile.write(f"| {name}) | {book} |\n")
+
+        outfile.write("}}\n")
+
+    # final footnote
+    outfile.write("{{footnote SUMMARY}}\n")
 
 # done
 outfile.close()
