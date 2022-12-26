@@ -20,11 +20,6 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.8"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pipenv
-        pipenv shell
     - name: Run example file
       run: |
         python convert_donjon_to_homebrewery.py example.json -gm https://imgur.com/cpy3lBq.png
