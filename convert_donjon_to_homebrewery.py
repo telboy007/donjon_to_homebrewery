@@ -63,7 +63,11 @@ def add_magical_items_to_list(thing):
         list = thing.split(',')
         for index, item in enumerate(list):
             if 'dmg' in item:
-                magic_items[list[index - 1].strip()] = item.strip().replace(')', '').replace(' ', ' p.')
+                if ' x ' in list[index - 1]:
+                    singular_item = list[index - 1].split(' x ')
+                    magic_items[singular_item[1].strip()] = item.strip().replace(')', '').replace(' ', ' p.')
+                else:
+                    magic_items[list[index - 1].strip()] = item.strip().replace(')', '').replace(' ', ' p.')
 
 
 # add monsters to monster list and combat type to combat list and xp total
