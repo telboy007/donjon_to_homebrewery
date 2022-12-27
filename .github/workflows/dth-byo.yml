@@ -10,7 +10,7 @@ on:
     inputs: 
       filename:
         type: string
-        description: Link to donjon JSON file (publically accessible on google drive)
+        description: Link to donjon JSON file (see README)
         required: true
       gm_map:
         type: string

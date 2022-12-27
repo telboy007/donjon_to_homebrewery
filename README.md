@@ -11,19 +11,27 @@ This tool has been tested with:
 
 NOTE: don't forget to grab both maps (gm and player) from donjon as well as the json! :)
 
-**Using GitHub Actions** [Not working - needs to be on main branch so I can experiment, please ignore for now]
+**Using GitHub Actions**
 
 NOTE: filename, gm map and player map are all required fields when using the github action.
 
 1. Via the Actions tab click on `Build Your Own`
 1. Click `Run Workflow`
-1. Enter hosted URL where json file can be found (required)*
-1. Provide GM and Player map URLs if available (required)**
+1. Enter google drive download link for donjon json file (required)*
+1. Provide GM and Player map hosted URLs (required)**
 1. When the job has finished click on Summary
 1. Scroll to the bottom to find the Hombrewery.txt file under `Aftifacts`
 
-*e.g. google drive shared link
+*e.g. google drive shared link (see important note below)
 **e.g. imgur.com
+
+IMPORTANT: Creating download link for google drive
+
+1. Make the json shareable with anyone with the link with viewer rights (make sure viewers can download files via settings)
+1. Copy link which will look like: https://drive.google.com/file/d/111111AAAAAAAABBBBBBBBBBB/view?usp=sharing
+1. 111111AAAAAAAABBBBBBBBBBB is the file ID (your file ID will be different)
+1. Create this link: https://docs.google.com/uc?export=download&id=111111AAAAAAAABBBBBBBBBBB
+1. Enter this URL in the github action workflow filename field
 
 **Using locally**
 
