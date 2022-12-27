@@ -1,0 +1,49 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Build Your Own
+
+run-name: ${{ github.event.inputs.filename }}
+
+on: 
+  workflow_dispatch
+    inputs: 
+      filename:
+        type: string
+        description: URL where json file is hosted
+        required: true
+      gm_map:
+        type: string
+        description: URL where gm map is hosted
+        required: true
+      player_map:
+        type: string
+        description: URL where player map is hosted
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.8"
+
+    - name: Generate homebrewery file
+      run: python convert_donjon_to_homebrewery.py ${{ github.event.inputs.filename }} -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        name: homebrewery.txt
+        path: ./homebrewery.txt
+    
+
