@@ -22,7 +22,7 @@ NOTE: filename, gm map and player map are all required fields when using the git
 1. When the job has finished click on Summary
 1. Scroll to the bottom to find the Hombrewery.txt file under `Aftifacts`
 
-*e.g. imgur.com - when copying link you will need to put `.png` on the end of the url!
+*if using imgur.com, you will probably need to put `.png` on the end of the url!
 
 **IMPORTANT: Creating download link for google drive
 
