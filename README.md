@@ -11,7 +11,7 @@ This tool has been tested with:
 
 NOTE: don't forget to grab both maps (gm and player) from donjon as well as the json! :)
 
-**Using GitHub Actions**
+**Using GitHub Actions** [Not working - needs to be on main branch so I can experiment, please ignore for now]
 
 NOTE: filename, gm map and player map are all required fields when using the github action.
 
