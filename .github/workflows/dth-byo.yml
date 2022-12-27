@@ -10,7 +10,7 @@ on:
     inputs: 
       filename:
         type: string
-        description: Donjon JSON file
+        description: Link to donjon JSON file (publically accessible on google drive)
         required: true
       gm_map:
         type: string
@@ -39,7 +39,7 @@ jobs:
 
     - name: Generate homebrewery file
       run: |
-        echo ${{ github.event.inputs.json }} >> donjon.json
+        curl -L "${{ github.event.inputs.filename }}" -o donjon.json
         python convert_donjon_to_homebrewery.py donjon.json -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
 
     - name: Upload a Build Artifact
