@@ -8,9 +8,9 @@ run-name: ${{ github.event.inputs.filename }}
 on: 
   workflow_dispatch:
     inputs: 
-      json:
+      filename:
         type: string
-        description: Contents of JSON file (copy & paste here)
+        description: Donjon JSON file
         required: true
       gm_map:
         type: string
