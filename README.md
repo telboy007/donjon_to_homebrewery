@@ -19,7 +19,7 @@ NOTE: filename, gm map and player map are all required fields when using the git
 1. Click `Run Workflow`
 1. Enter google drive download link for donjon json file (required)**
 1. Provide GM and Player map hosted URLs (required)*
-1. When the job has finished click on Summary
+1. Click on your completed job
 1. Scroll to the bottom to find the Hombrewery.txt file under `Aftifacts`
 
 *if using imgur.com, you will probably need to put `.png` on the end of the url!
