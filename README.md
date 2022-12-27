@@ -11,7 +11,7 @@ This tool has been tested with:
 
 NOTE: don't forget to grab both maps (gm and player) from donjon as well as the json! :)
 
-**Using GitHub Actions**
+## Using GitHub Actions
 
 NOTE: filename, gm map and player map are all required fields when using the github action.
 
@@ -33,7 +33,7 @@ IMPORTANT: Creating download link for google drive
 1. Create this link: https://docs.google.com/uc?export=download&id=111111AAAAAAAABBBBBBBBBBB
 1. Enter this URL in the github action workflow filename field
 
-**Using locally**
+## Using locally
 
 To install:
 1. Clone repo
