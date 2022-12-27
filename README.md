@@ -22,10 +22,9 @@ NOTE: filename, gm map and player map are all required fields when using the git
 1. When the job has finished click on Summary
 1. Scroll to the bottom to find the Hombrewery.txt file under `Aftifacts`
 
-*e.g. google drive shared link (see important note below)
-**e.g. imgur.com
+**e.g. imgur.com - when copying link you will need to put `.png` on the end of the url!
 
-IMPORTANT: Creating download link for google drive
+*IMPORTANT: Creating download link for google drive
 
 1. Make the json shareable with anyone with the link with viewer rights (make sure viewers can download files via settings)
 1. Copy link which will look like: https://drive.google.com/file/d/111111AAAAAAAABBBBBBBBBBB/view?usp=sharing
