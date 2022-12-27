@@ -6,7 +6,7 @@ name: Build Your Own
 run-name: ${{ github.event.inputs.filename }}
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
     inputs: 
       filename:
         type: string
