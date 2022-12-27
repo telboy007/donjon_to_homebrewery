@@ -153,19 +153,18 @@ outfile = open("homebrewery.txt", "w")
 # title page
 if args.gm_map:
     outfile.write(f"![map]({args.gm_map}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
-    outfile.write(":\n")
 
 outfile.write("{{margin-top:225px}}\n")
+outfile.write("{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px\n")
 outfile.write(f"# {data['settings']['name']}\n")
-outfile.write("{{margin-top:25px}}\n")
-outfile.write("{{wide\n")
 
 # certain dungeon generators don't create a blurb
 try:
+    outfile.write(":\n")
     outfile.write(f"##### {data['details']['history']}\n")
-    outfile.write("::\n")
+    outfile.write(":::\n")
 except:
-    outfile.write("::\n")
+    outfile.write(":::\n")
 
 # work out ruleset for title page
 if data['settings']['infest'] == "dnd_5e":
@@ -182,7 +181,7 @@ else:
     summary_page = False
 
 outfile.write(f"##### A randomly generated {infest} donjon dungeon for a party size of {data['settings']['n_pc']} and APL{data['settings']['level']}\n")
-outfile.write("::::\n")
+outfile.write(":::\n")
 outfile.write("##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
 outfile.write("}}\n")
 outfile.write("\\page\n")
@@ -207,7 +206,6 @@ if args.player_map:
 
 # general features
 outfile.write("## Description\n")
-
 outfile.write("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
 outfile.write("{{descriptive\n")
 outfile.write("#### General Features\n")
@@ -484,6 +482,49 @@ if summary_page:
 
     # final footnote
     outfile.write("{{footnote SUMMARY}}\n")
+
+# donjon settings
+outfile.write("\\page\n")
+outfile.write("{{pageNumber,auto}}\n")
+
+outfile.write("{{wide\n")
+outfile.write("## Settings\n")
+outfile.write("Settings used to create this dungeon:\n")
+outfile.write(":\n")
+outfile.write(f"{infest} Random Dungeon Generator\n")
+outfile.write("|||\n")
+outfile.write("|:--|:--|\n")
+outfile.write(f"|Dungeon Name|{data['settings']['name']}|\n")
+outfile.write(f"|Dungeon Level|{data['settings']['level']}|\n")
+outfile.write(f"|Party Size|{data['settings']['n_pc']}|\n")
+outfile.write(f"|Motif|{data['settings']['motif']}|\n")
+outfile.write("}}\n")
+outfile.write(":\n")
+outfile.write("|||\n")
+outfile.write("|:--|:--|\n")
+outfile.write(f"|Random Seed:|{data['settings']['seed']}|\n")
+outfile.write(f"|Dungeon Size:|{data['settings']['dungeon_size']}|\n")
+outfile.write(f"|Dungeon Layout:|{data['settings']['dungeon_layout']}|\n")
+outfile.write(f"|Peripheral Egress?|{data['settings']['peripheral_egress']}|\n")
+outfile.write(f"|Room Layout:|{data['settings']['room_layout']}|\n")
+outfile.write(f"|Room Size:|{data['settings']['room_size']}|\n")
+outfile.write(f"|Polymorph Rooms?|{data['settings']['room_polymorph']}|\n")
+outfile.write(f"|Doors:|{data['settings']['door_set']}|\n")
+outfile.write(f"|Corridors:|{data['settings']['corridor_layout']}|\n")
+outfile.write(f"|Remove Deadends?|{data['settings']['remove_deadends']}|\n")
+outfile.write(f"|Stairs?|{data['settings']['add_stairs']}|\n")
+outfile.write(f"|Map Style:|{data['settings']['map_style']}|\n")
+outfile.write(f"|Grid|{data['settings']['grid']}|\n")
+
+outfile.write(f"\column\n")
+
+if args.gm_map:
+    outfile.write(":\n")
+    outfile.write(f"![map]({args.gm_map}){{width:50%;}}\n")
+    outfile.write(":\n")
+    outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+
+outfile.write("{{footnote SETTINGS}}\n")
 
 # done
 outfile.close()
