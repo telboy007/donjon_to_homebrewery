@@ -15,7 +15,7 @@ NOTE: don't forget to grab both maps (gm and player) from donjon as well as the 
 
 NOTE: filename, gm map and player map are all required fields when using the github action.
 
-1. Via the Actions tab click on `Build Your Own`
+1. Via the Actions tab click on `Generate Homebrewery Text`
 1. Click `Run Workflow`
 1. Enter google drive download link for donjon json file (required)**
 1. Provide GM and Player map hosted URLs (required)*
