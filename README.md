@@ -18,7 +18,7 @@ NOTE: filename, gm map and player map are all required fields when using the git
 1. Via the Actions tab click on `Build Your Own`
 1. Click `Run Workflow`
 1. Enter hosted URL where json file can be found (required)*
-1. Provide GM and Player map URLs if available (optional)**
+1. Provide GM and Player map URLs if available (required)**
 1. When the job has finished click on Summary
 1. Scroll to the bottom to find the Hombrewery.txt file under `Aftifacts`
 
