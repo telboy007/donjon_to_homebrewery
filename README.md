@@ -1,5 +1,6 @@
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Homebrewery v3](https://img.shields.io/badge/homebrewery-v3-blue.svg)](https://homebrewery.naturalcrit.com/)
+[![Generate Homebrewery Text](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/generate.yml/badge.svg)](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/generate.yml)
 
 # donjon_to_homebrewery
 Converts [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v3 formatted text to copy and paste.  It will add page markers to break up room locations, but some minor edits may still be required to the final document.
