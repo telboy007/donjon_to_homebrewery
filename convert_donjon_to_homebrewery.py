@@ -20,7 +20,7 @@ def set_check():
 
 
 def file_size(current_check):
-    """Count the currenct number of characters in a file"""
+    """Count the current number of characters in a file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > 2450:
@@ -118,7 +118,7 @@ xp_list = []
 monster_list = []
 combat_list = []
 magic_items = {}
-newline = '\n'
+NEWLINE = '\n'
 
 
 # set up command line parser
@@ -134,12 +134,10 @@ parser.add_argument('-o', '--output_filename', help='Override for text filename'
 
 args = parser.parse_args()
 
-# opening JSON file
+# grab json filename and convert json to dictionary
 filename = args.filename
-f = open(filename, encoding="utf-8")
-
-# returns JSON object as a dictionary
-data = json.load(f)
+with open(filename, encoding="utf-8") as inputfile:
+    data = json.load(inputfile)
 
 # Open file to write content to
 with open(args.output_filename, "w", encoding="utf-8") as outfile:
@@ -162,19 +160,19 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
     # work out ruleset for title page and if we can generate summary page
     if data['settings']['infest'] == "dnd_5e":
-        infest = "D&D 5e"
-        summary_page = True
+        INFEST = "D&D 5e"
+        SUMMARY_PAGE = True
     elif data['settings']['infest'] == "dnd_4e":
-        infest = "D&D 4e"
-        summary_page = True
+        INFEST = "D&D 4e"
+        SUMMARY_PAGE = True
     elif data['settings']['infest'] == "adnd":
-        infest = "AD&D"
-        summary_page = False
+        INFEST = "AD&D"
+        SUMMARY_PAGE = False
     else:
-        infest = "fantasy"
-        summary_page = False
+        INFEST = "fantasy"
+        SUMMARY_PAGE = False
 
-    outfile.write(f"##### A randomly generated {infest} donjon dungeon for a party size of {data['settings']['n_pc']} and APL{data['settings']['level']}\n")
+    outfile.write(f"##### A randomly generated {INFEST.upper()} donjon dungeon for a party size of {data['settings']['n_pc']} and APL{data['settings']['level']}\n")
     outfile.write(":::\n")
     outfile.write("##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
     outfile.write("}}\n")
@@ -207,11 +205,11 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("|:--|:--|\n")
     outfile.write(f"| Floors | {data['details']['floor']} |\n")
     outfile.write(f"| Walls | {data['details']['walls']} |\n")
-    outfile.write(f"| Temperature | {data['details']['temperature'].replace(newline, ' ')} |\n")
+    outfile.write(f"| Temperature | {data['details']['temperature'].replace(NEWLINE, ' ')} |\n")
     outfile.write(f"| Lighting | {data['details']['illumination']} |\n")
     if "special" in data['details']:
         if data['details']['special'] is not None:
-            outfile.write(f"| Special | {data['details']['special'].replace(newline, ' ')} |\n")
+            outfile.write(f"| Special | {data['details']['special'].replace(NEWLINE, ' ')} |\n")
         else:
             outfile.write(f"| Special | {data['details']['special']} |\n")
     outfile.write("}}\n")
@@ -225,7 +223,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("|:--|:--|\n")
 
         for key, val in data["corridor_features"].items():
-            outfile.write(f"| {val['key']} | {val['detail'].replace(newline, ' ')} |\n")
+            outfile.write(f"| {val['key']} | {val['detail'].replace(NEWLINE, ' ')} |\n")
 
         outfile.write("}}\n")
 
@@ -240,9 +238,9 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("|:--|:--|\n")
 
         for key, val in data["wandering_monsters"].items():
-            outfile.write(f"| {key} | {val.replace(newline, ' ')} |\n")
+            outfile.write(f"| {key} | {val.replace(NEWLINE, ' ')} |\n")
             # add to the monster list for the summary page
-            add_monsters_to_monster_list(val.replace(newline, ' '))
+            add_monsters_to_monster_list(val.replace(NEWLINE, ' '))
 
         outfile.write("}}\n")
 
@@ -313,9 +311,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                         for item in rooms["contents"]["detail"]["hidden_treasure"]:
                             if item == "--":
                                 continue
-                            outfile.write(f"* {item.replace(newline,' ')}\n")
+                            outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
                             # add to magic items list for the summary page
-                            add_magical_items_to_list(item.replace(newline,' '))
+                            add_magical_items_to_list(item.replace(NEWLINE,' '))
 
                         outfile.write("}}\n")
 
@@ -352,9 +350,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                     thing = sum_up_treasure(thing.replace(",",";"))
                                     outfile.write(f"{thing}\n")
                                 else:
-                                    outfile.write(f"{thing.replace(newline, ' ').replace('Treasure: ','')}\n")
+                                    outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
                                     # add to magic items list for the summary page
-                                    add_magical_items_to_list(thing.replace(newline, ' ').replace('Treasure: ',''))
+                                    add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''))
                                 outfile.write("}}\n")
                             else:
                                 outfile.write("\n")
@@ -389,12 +387,12 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                         DESC = ""
                         if d["type"] == "secret":
                             if "trap" in d:
-                                DESC += f" ***Secret:*** {d['secret'].replace(newline, ' ')} ***Trap:*** {d['trap'].replace(newline, ' ')}"
+                                DESC += f" ***Secret:*** {d['secret'].replace(NEWLINE, ' ')} ***Trap:*** {d['trap'].replace(NEWLINE, ' ')}"
                             else:
-                                DESC += f"***Secret:*** {d['secret'].replace(newline, ' ')}"
+                                DESC += f"***Secret:*** {d['secret'].replace(NEWLINE, ' ')}"
                         if d["type"] == "trapped":
                             if "trap" in d:
-                                DESC += f" ***Trap:*** {d['trap'].replace(newline, ' ')}"
+                                DESC += f" ***Trap:*** {d['trap'].replace(NEWLINE, ' ')}"
                             else:
                                 DESC += " ***Trap***: Already disarmed."
                         if "out_id" in d:
@@ -411,11 +409,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
     # end locations section and prepare for summary
-    # end description page
     outfile.write("{{footnote LOCATIONS}}\n")
 
     # if 4th or 5th edition then create a summary page
-    if summary_page:
+    if SUMMARY_PAGE:
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
@@ -452,10 +449,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         monster_list = list(dict.fromkeys(monster_list))
         monster_list.sort()
 
-        for monster in monster_list:
+        for item in monster_list:
             # split out monster and source book details
-            monster, sourcebook = extract_book_details(monster)
-            outfile.write(f"| {monster} | {sourcebook} |\n")
+            monster_name, sourcebook = extract_book_details(item)
+            outfile.write(f"| {monster_name} | {sourcebook} |\n")
 
         outfile.write("}}\n")
         outfile.write(":\n")
@@ -485,7 +482,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     outfile.write("## Settings\n")
     outfile.write("Settings used to create this dungeon:\n")
     outfile.write(":\n")
-    outfile.write(f"{infest} Random Dungeon Generator\n")
+    outfile.write(f"{INFEST.upper()} Random Dungeon Generator\n")
     outfile.write("|||\n")
     outfile.write("|:--|:--|\n")
     outfile.write(f"|Dungeon Name|{data['settings']['name']}|\n")
@@ -519,5 +516,3 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
 
     outfile.write("{{footnote SETTINGS}}\n")
-
-    outfile.close()
