@@ -1,0 +1,35 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Build
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.8"
+
+    - name: Generate test files
+      run: |
+        python convert_donjon_to_homebrewery.py ./tests/fantasy_test_file.json -o ./tests/fantasy.txt
+        python convert_donjon_to_homebrewery.py ./tests/adnd_test_file.json -o ./tests/adnd.txt
+        python convert_donjon_to_homebrewery.py ./tests/4e_test_file.json -o ./tests/4e.txt
+        python convert_donjon_to_homebrewery.py ./tests/5e_test_file.json -o ./tests/5e.txt
+
+    - name: Run tests
+      run: |
+        python ./tests/tests.py

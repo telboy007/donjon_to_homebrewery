@@ -15,16 +15,16 @@ from collections import OrderedDict
 
 def set_check():
     """Set the initial number of characters in the file"""
-    with open("homebrewery.txt", "r", encoding="utf-8") as readonly_file:
+    with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         return len(readonly_file.read())
 
 
 def file_size(current_check):
     """Count the currenct number of characters in a file"""
-    with open("homebrewery.txt", "r", encoding="utf-8") as readonly_file:
+    with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > 2450:
-        with open("homebrewery.txt", "a", encoding="utf-8") as append_file:
+        with open(args.output_filename, "a", encoding="utf-8") as append_file:
             append_file.write("{{footnote LOCATIONS}}\n")
             append_file.write("\\page\n")
             append_file.write("{{pageNumber,auto}}\n")
@@ -84,11 +84,11 @@ def add_monsters_to_monster_list(string):
         xp_list.append(xp_amount[0].strip())
     if data['settings']['infest'] == "dnd_4e":
         #get monster name and book details and add to list
-        monsters = thing.split(') and ')
+        monsters = string.split(') and ')
         for monster in monsters:
             if ' x ' in monster:
                 monster = monster.split(' x ')[1]
-                monster = monster.split(',')
+                monster = monster.strip().split(',')
                 monster_list.append(monster[0])
             else:
                 monster = monster.strip().split(',')
@@ -109,8 +109,6 @@ def extract_book_details(details):
         split = details.split('(')
         name = split[0].strip()
         book = split[1].strip().replace(' ', ' p.')
-        if len(details) > 2:
-            book = f"{book} / {details[2].strip().replace(')','').replace(' ', ' p.')}"
         return name, book
     return None
 
@@ -129,9 +127,10 @@ parser = argparse.ArgumentParser(
                     description = 'Converts donjon random dungeons into v3 homebrewery text to copy and paste.',
                     epilog = 'See README for more details.')
 
-parser.add_argument('filename')           # positional argument
-parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image')    # optional gm map image
-parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional player map image
+parser.add_argument('filename') # required
+parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image') # optional
+parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional
+parser.add_argument('-o', '--output_filename', help='Override for text filename', default="homebrewery.txt") # optional
 
 args = parser.parse_args()
 
@@ -143,7 +142,7 @@ f = open(filename, encoding="utf-8")
 data = json.load(f)
 
 # Open file to write content to
-with open("homebrewery.txt", "w", encoding="utf-8") as outfile:
+with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
     # title page
     if args.gm_map:
@@ -255,7 +254,7 @@ with open("homebrewery.txt", "w", encoding="utf-8") as outfile:
 # set page marker check
 check = set_check()
 
-with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
+with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
     # locations
     outfile.write("## Locations\n")
@@ -287,7 +286,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
             # check for page marker
             outfile.close()
             check = file_size(check)
-            outfile = open("homebrewery.txt", "a", encoding="utf-8")
+            outfile = open(args.output_filename, "a", encoding="utf-8")
 
             if "contents" in rooms:
                 if "detail" in rooms["contents"]:
@@ -305,7 +304,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
                     # check for page marker
                     outfile.close()
                     check = file_size(check)
-                    outfile = open("homebrewery.txt", "a", encoding="utf-8")
+                    outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # hidden treasure
                     if "hidden_treasure" in rooms["contents"]["detail"]:
@@ -323,7 +322,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
                     # check for page marker
                     outfile.close()
                     check = file_size(check)
-                    outfile = open("homebrewery.txt", "a", encoding="utf-8")
+                    outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # room description
                     if "room_features" in rooms["contents"]["detail"]:
@@ -338,7 +337,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
                     # check for page marker
                     outfile.close()
                     check = file_size(check)
-                    outfile = open("homebrewery.txt", "a", encoding="utf-8")
+                    outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # monsters and treasure
                     if "monster" in rooms["contents"]["detail"]:
@@ -366,7 +365,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
                     # check for page marker
                     outfile.close()
                     check = file_size(check)
-                    outfile = open("homebrewery.txt", "a", encoding="utf-8")
+                    outfile = open(args.output_filename, "a", encoding="utf-8")
 
                 else:
                     # no details
@@ -377,7 +376,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
                 # check for page marker
                 outfile.close()
                 check = file_size(check)
-                outfile = open("homebrewery.txt", "a", encoding="utf-8")
+                outfile = open(args.output_filename, "a", encoding="utf-8")
 
             # exits
             if "doors" in rooms:
@@ -409,7 +408,7 @@ with open("homebrewery.txt", "a", encoding="utf-8") as outfile:
             # check for page marker
             outfile.close()
             check = file_size(check)
-            outfile = open("homebrewery.txt", "a", encoding="utf-8")
+            outfile = open(args.output_filename, "a", encoding="utf-8")
 
     # end locations section and prepare for summary
     # end description page

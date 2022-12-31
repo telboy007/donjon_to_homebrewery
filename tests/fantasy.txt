@@ -1,0 +1,1094 @@
+{{margin-top:225px}}
+{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px
+# The Prison of the Gargoyle Princess
+:::
+##### A randomly generated fantasy donjon dungeon for a party size of 4 and APL1
+:::
+##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
+}}
+\page
+{{pageNumber,auto}}
+## Description
+The dungeon has the following features, these may include skill checks to perform certain actions.
+{{descriptive
+#### General Features
+| Type | Detail |
+|:--|:--|
+| Floors | Uneven Flagstone (difficult to run) (dense rubble (move at half speed)) |
+| Walls | Superior Masonry |
+| Temperature | Cool |
+| Lighting | Shadowy (phosphorescent fungus or candles every 20 ft.) |
+| Special | None |
+}}
+Some of the corridors marked on the map have special features detailed below.
+{{descriptive
+#### Corridor Features
+| Type | Detail |
+|:--|:--|
+| a | An iron chandelier hangs from the ceiling here |
+| c | Ceiling Pendulum |
+| e | Deeper Pit Trap |
+| i | Spiked Pit Trap |
+| m | A group of demonic faces have been carved into the walls |
+| n | Large Net Trap |
+| r | A toppled statue lies across the corridor |
+| s | Part of the ceiling has collapsed into the corridor |
+| u | An iron chandelier hangs from the ceiling here |
+}}
+## Random Encounters
+There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
+{{classTable,frame
+#### Wandering Monsters
+| Roll | Detail |
+|:--|:--|
+| 1 | 1 x 1st Level Warrior Drow Elf, consumed by disease and madness |
+| 2 | 2 x Dire Rat, returning to their lair with plunder |
+| 3 | 1 x 1st Level Warrior Drow Elf, investigating a strange noise |
+| 4 | 1 x Medium Monstrous Spider, lost and desperate |
+| 5 | 1 x 1st Level Warrior Svirfneblin, searching for an object stolen from their lair |
+| 6 | 1 x Bugbear Zombie, returning to their lair with plunder |
+}}
+{{footnote OVERVIEW}}
+\page
+{{pageNumber,auto}}
+## Locations
+### Room 1
+:
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden Locked Good Wooden Chest (good lock)
+* 500 sp; Full Plate (1500 gp); hoard total 1550 gp
+}}
+{{note
+A magical pool in the north-west corner of the room summons a water elemental to serve whomever drinks from it (but only once), and a tile mosaic of geometric patterns covers the floor.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Trapped and Stuck Strong Wooden Door  ***Trap:*** Spiked Pit Trap | n/a |
+| north | Stuck Simple Wooden Door (magically reinforced)  | n/a |
+| south | Stuck Stone Door  | n/a |
+:
+### Room 2
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 3 |
+| north | Stuck Simple Wooden Door  | n/a |
+| north | Stuck Stone Door  | n/a |
+| north | Stuck Strong Wooden Door  | n/a |
+| south | Locked Iron Door (good lock)  | 4 |
+:
+### Room 3
+:
+{{note
+A sloped pit lined with iron spikes lies in the south-east corner of the room, and the north and west walls are covered with slime.
+}}
+
+This room is occupied by **1 x Ghoul**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Strong Wooden Door  | 46 |
+| south | Trapped and Locked Iron Door (good lock)  ***Trap:*** Wall Blade Trap | n/a |
+| west | Archway  | 2 |
+:
+### Room 4
+:
+{{note
+Burning torches in iron sconces line the north and east walls, and someone has scrawled "Sharpen thy blade and ready thy shield" in blood on the west wall.
+}}
+
+This room is occupied by **1 x Medium Monstrous Spider**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Iron Door (good lock)  | 2 |
+| south | Unlocked Simple Wooden Door  | 6 |
+| west | Archway  | n/a |
+:
+### Room 5
+:
+{{note
+A stone stair ascends towards the south wall, and a warped door lies in the south-east corner of the room.
+}}
+
+This room is occupied by **4 x 1st Level Warrior Goblin**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Good Wooden Door  | n/a |
+:
+### Room 6
+:
+{{classTable,frame
+#### Trap!
+* Ceiling Pendulum
+}}
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden Trapped and Locked Simple Wooden Chest (superior lock)
+* Poison Needle Trap
+* 2000 cp; hoard total 20 gp
+}}
+{{note
+A well lies in the north-west corner of the room, and a corroded iron key hangs from a hook on the south and west walls.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Unlocked Simple Wooden Door  | 4 |
+| south | Stuck Simple Wooden Door  | n/a |
+:
+### Room 7
+:
+{{note
+A well lies in the north-west corner of the room, and a wooden ladder rests against the west wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed behind a tapestry of a goddess of wealth | 8 |
+| north | Stuck Simple Wooden Door  | 59 |
+| south | Trapped and Stuck Good Wooden Door  ***Trap:*** Wall Blade Trap | 19 |
+:
+### Room 8
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Ghoul**
+:
+{{descriptive
+#### Treasure
+1000 cp; Jet (110 gp); hoard total 120 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Strong Wooden Door  | n/a |
+| north | Archway  | n/a |
+| south | Stuck Good Wooden Door  | 25 |
+| west | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed behind a tapestry of a goddess of wealth | 7 |
+:
+### Room 9
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis (magically reinforced)  | n/a |
+| west | Secret Trapped and Unlocked Stone Door  ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall ***Trap:*** Burning Hands Trap | n/a |
+:
+### Room 10
+:
+{{note
+A stone ramp ascends towards the north wall, and a fountain decorated with six gargoyles sits in the south-west corner of the room.
+}}
+
+This room is occupied by **1 x Shrieker**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Strong Wooden Door  ***Trap:*** Camouflaged Pit Trap | 23 |
+:
+### Room 11
+:
+{{note
+Several iron cages are scattered throughout the room, and an unidentifiable odor fills the room.
+}}
+
+This room is occupied by **1 x Troglodyte**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped Wooden Portcullis  | 33 |
+| south | Unlocked Stone Door  | n/a |
+:
+### Room 12
+:
+{{note
+Spirals of red stones cover the floor, and someone has scrawled an incomplete drawing of a dragon on the south wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped Wooden Portcullis (stuck)  | 36 |
+| north | Stuck Strong Wooden Door  | 15 |
+| south | Secret Unlocked Strong Wooden Door ***Secret:*** The door is concealed within the mouth of a gargantuan skull carved from stone | n/a |
+| west | Trapped and Stuck Good Wooden Door  ***Trap:*** Acid Arrow Trap | 33 |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 13
+:
+{{note
+Spirals of white stones cover the floor, and someone has scrawled "The Company of the Crimson Bear looted this place" on the west wall.
+}}
+
+This room is occupied by **14 x Tiny Monstrous Centipede**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Iron Door  ***Trap:*** Tripping Chain | 52 |
+| west | Archway  | n/a |
+:
+### Room 14
+:
+{{classTable,frame
+#### Trap!
+* Scything Blade Trap
+}}
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Strong Wooden Door (common lock)  | 38 |
+| north | Stuck Iron Door  | 41 |
+| south | Archway  | n/a |
+:
+### Room 15
+:
+{{note
+A magical altar of a goddess of death in the south-east corner of the room causes all attacks within 30 feet to deal double damage, and a forge and anvil sit in the center of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Strong Wooden Door  | 12 |
+| west | Locked Simple Wooden Door (good lock)  | n/a |
+:
+### Room 16
+:
+{{note
+Skeletons hang from chains and manacles against the east and west walls, and a briny odor fills the west side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Simple Wooden Door  | n/a |
+| west | Stuck Good Wooden Door  | n/a |
+:
+### Room 17
+:
+{{note
+A stair ascends to a wooden platform in the south side of the room, and several pieces of rotten leather are scattered throughout the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Stone Door  | 20 |
+:
+### Room 18
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Medium Monstrous Spider**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Good Wooden Door  | n/a |
+| south | Stuck Good Wooden Door  | n/a |
+:
+### Room 19
+:
+{{note
+A wooden platform hangs over a deep pit in the south side of the room, and a tile mosaic of arcane patterns covers the floor.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | n/a |
+| north | Trapped and Stuck Good Wooden Door  ***Trap:*** Wall Blade Trap | 7 |
+| south | Locked Simple Wooden Door (good lock)  | n/a |
+:
+### Room 20
+:
+{{note
+Someone has scrawled "Mind the gap" on the south wall, and numerous monstrous skulls lie within niches in the south and east walls.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Simple Wooden Door  | n/a |
+| west | Unlocked Stone Door  | 17 |
+:
+### Room 21
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Large Monstrous Spider**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Stone Door  | n/a |
+:
+### Room 22
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Strong Wooden Door  | 48 |
+| west | Archway  | n/a |
+:
+### Room 23
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret Stuck Strong Wooden Door (slides up) ***Secret:*** The door is concealed behind a statue of Death, and opened by placing a coin in his open hand | 31 |
+| south | Trapped and Locked Good Wooden Door (magic lock) (slides to one side)  ***Trap:*** Poison Dart Trap | n/a |
+| west | Trapped and Unlocked Strong Wooden Door  ***Trap:*** Camouflaged Pit Trap | 10 |
+:
+### Room 24
+:
+{{classTable,frame
+#### Trap!
+* Bricks from Ceiling
+}}
+{{note
+A magical statue in the north-west corner of the room speaks riddles and cryptic prophecies, and a mural of a goddess of plants covers the ceiling.
+}}
+
+This room is occupied by **1 x Spider Swarm**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Unlocked Good Wooden Door  | 29 |
+| south | Locked Good Wooden Door (common lock)  | n/a |
+| west | Archway  | n/a |
+:
+### Room 25
+:
+{{classTable,frame
+#### Trap!
+* Bricks from Ceiling
+}}
+{{note
+An acrid odor fills the north-east corner of the room, and a bent dagger lies in the south-west corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Good Wooden Door  | 8 |
+| south | Unlocked Simple Wooden Door  | n/a |
+| south | Stuck Simple Wooden Door  | n/a |
+:
+### Room 26
+:
+{{note
+The floor is covered in perfect hexagonal tiles, and a spinning wheel and several crates sit in the east side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Iron Door (superior lock)  | n/a |
+| east | Unlocked Good Wooden Door  | n/a |
+| north | Secret Stuck Strong Wooden Door ***Secret:*** The door is concealed behind a statue of a troll archer, and opened by pulling an arrow in its quiver | n/a |
+| west | Iron Portcullis  | 53 |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 27
+:
+{{note
+A forge and anvil sit in the west side of the room, and a torn backpack lies in the west side of the room.
+}}
+
+This room is occupied by **2 x Dire Rat**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Locked Stone Door (common lock)  ***Trap:*** Burning Hands Trap | n/a |
+| north | Wooden Portcullis  | 49 |
+| south | Stuck Good Wooden Door  | n/a |
+:
+### Room 28
+:
+{{note
+A balcony hangs from the south wall, and a tapestry of vile acts hangs from the west wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Strong Wooden Door  | n/a |
+| west | Wooden Portcullis  | n/a |
+:
+### Room 29
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Large Monstrous Centipede**
+:
+{{descriptive
+#### Treasure
+100 gp; Jade (80 gp); Buckler (15 gp); hoard total 195 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Unlocked Good Wooden Door  | 24 |
+| south | Unlocked Simple Wooden Door  | n/a |
+:
+### Room 30
+:
+{{note
+A shallow pit lies in the east side of the room, and clouds of flying insects fill the east side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Simple Wooden Door  | 39 |
+| west | Stuck Simple Wooden Door  | n/a |
+:
+### Room 31
+:
+{{note
+Skeletons hang from chains and manacles against the north and east walls, and a warped holy symbol lies in the south side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Stone Door (good lock)  | n/a |
+| south | Secret Stuck Strong Wooden Door (slides up) ***Secret:*** The door is concealed behind a statue of Death, and opened by placing a coin in his open hand | 23 |
+:
+### Room 32
+:
+{{note
+A well lies in the east side of the room, and several pieces of rotten leather are scattered throughout the room.
+}}
+
+This room is occupied by **4 x Rat**
+:
+{{descriptive
+#### Treasure
+3000 cp; Greataxe (20 gp); hoard total 50 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Strong Wooden Door  | n/a |
+| east | Stuck Simple Wooden Door (slides down)  | n/a |
+| north | Archway  | 57 |
+| west | Trapped and Stuck Simple Wooden Door  ***Trap:*** Poisoned Arrow Trap | n/a |
+:
+### Room 33
+:
+{{note
+A magical statue in the north-west corner of the room speaks riddles and cryptic prophecies, and a stone ramp ascends towards the south wall.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Stuck Good Wooden Door  ***Trap:*** Acid Arrow Trap | 12 |
+| west | Trapped Wooden Portcullis  | 11 |
+:
+### Room 34
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Simple Wooden Door (magic lock)  | 53 |
+| south | Stuck Simple Wooden Door (slides to one side)  | n/a |
+:
+### Room 35
+:
+{{note
+A stone stair ascends towards the west wall, and spirals of white stones cover the floor.
+}}
+
+This room is occupied by **1 x Medium Monstrous Spider**
+:
+{{descriptive
+#### Treasure
+500 sp; Aquamarine (500 gp); Chain Shirt (100 gp); hoard total 650 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Good Wooden Door (common lock)  | n/a |
+| north | Unlocked Strong Wooden Door  | n/a |
+| west | Trapped and Unlocked Strong Wooden Door  ***Trap:*** Javelin Trap | 55 |
+:
+### Room 36
+:
+{{note
+A mural of ghoulish carnage covers the ceiling, and a simple fireplace sits against the east wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Iron Door  ***Trap:*** Poisoned Arrow Trap | 44 |
+| south | Locked Stone Door (superior lock)  | 41 |
+| west | Trapped Wooden Portcullis (stuck)  | 12 |
+:
+### Room 37
+:
+{{note
+A toppled statue lies in the south side of the room, and several monstrous corpses are scattered throughout the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 42 |
+| north | Trapped and Locked Stone Door (superior lock) (slides up)  ***Trap:*** Stone Blocks from Ceiling | n/a |
+:
+### Room 38
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed within a horrific torture device | 47 |
+| south | Wooden Portcullis  | 46 |
+| west | Locked Strong Wooden Door (common lock)  | 14 |
+:
+### Room 39
+:
+{{note
+The south and west walls have been engraved with geometric patterns, and someone has scrawled "Watch out for elves" in goblin runes on the west wall.
+}}
+
+This room is occupied by **1 x Homunculus**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Good Wooden Door  | 48 |
+| south | Stuck Simple Wooden Door  | 30 |
+:
+### Room 40
+:
+{{note
+A group of monstrous faces have been carved into the north wall, and a large demonic idol with ruby eyes sits in the north side of the room.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Trapped Wooden Portcullis  | 64 |
+| south | Stuck Good Wooden Door  | n/a |
+| west | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed within an upright sarcophagus | n/a |
+:
+### Room 41
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **9 x Rat**
+:
+{{descriptive
+#### Treasure
+Quarterstaff (0 gp); hoard total 
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Locked Simple Wooden Door (good lock)  | 47 |
+| north | Locked Stone Door (superior lock)  | 36 |
+| south | Stuck Iron Door  | 14 |
+| west | Stuck Good Wooden Door (slides up)  | n/a |
+:
+### Room 42
+:
+{{note
+A narrow shaft falls into the room from above, and several headless statues are scattered throughout the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Wooden Portcullis  | 57 |
+| west | Archway  | 37 |
+:
+### Room 43
+:
+{{note
+A narrow pit covered by iron bars lies in the west side of the room, and the scent of urine fills the north-east corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis (magically reinforced)  | 61 |
+:
+### Room 44
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Secret Unlocked Simple Wooden Door ***Secret:*** The door is located above a small stone dais and concealed behind an area of mould | 47 |
+| west | Trapped and Unlocked Iron Door  ***Trap:*** Poisoned Arrow Trap | 36 |
+:
+### Room 45
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Troglodyte**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| west | Unlocked Good Wooden Door  | n/a |
+| west | Wooden Portcullis  | 51 |
+:
+### Room 46
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **8 x Rat**
+:
+{{descriptive
+#### Treasure
+130 gp; Composite Longbow (100 gp); hoard total 230 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Strong Wooden Door  | 49 |
+| north | Wooden Portcullis  | 38 |
+| south | Stuck Strong Wooden Door  | 3 |
+:
+### Room 47
+:
+{{note
+A shallow pit lies in the west side of the room, and a charred club lies in the north-west corner of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Secret Unlocked Simple Wooden Door ***Secret:*** The door is located above a small stone dais and concealed behind an area of mould | 44 |
+| north | Trapped and Stuck Iron Door  ***Trap:*** Burning Hands Trap | n/a |
+| south | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed within a horrific torture device | 38 |
+| west | Locked Simple Wooden Door (good lock)  | 41 |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 48
+:
+{{note
+The south and west walls have been engraved with geometric patterns, and the floor is covered with rotting straw.
+}}
+
+This room is occupied by **1 x Ghoul**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis  | n/a |
+| north | Stuck Strong Wooden Door  | 22 |
+| south | Stuck Good Wooden Door  | 39 |
+| west | Archway  | n/a |
+:
+### Room 49
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Good Wooden Door  | n/a |
+| south | Wooden Portcullis  | 27 |
+| south | Unlocked Simple Wooden Door  | n/a |
+| west | Unlocked Strong Wooden Door  | 46 |
+:
+### Room 50
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis  | n/a |
+| west | Wooden Portcullis  | n/a |
+:
+### Room 51
+:
+{{note
+An iron sarcophagus sits in the south-east corner of the room, and the floor is covered with shards of bone.
+}}
+
+This room is occupied by **1 x 1st Level Warrior Drow Elf**
+:
+{{descriptive
+#### Treasure
+20 pp; Hourglass (25 gp); hoard total 225 gp
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Wooden Portcullis  | 45 |
+| east | Archway  | n/a |
+| north | Wooden Portcullis  | 52 |
+| west | Unlocked Strong Wooden Door  | n/a |
+:
+### Room 52
+:
+{{note
+A sloped pit lined with iron spikes lies in the south side of the room, and a toppled statue lies in the south side of the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Strong Wooden Door (slides up)  | n/a |
+| north | Trapped and Locked Simple Wooden Door (superior lock)  ***Trap:*** Burning Hands Trap | n/a |
+| south | Wooden Portcullis  | 51 |
+| west | Trapped and Unlocked Iron Door  ***Trap:*** Tripping Chain | 13 |
+:
+### Room 53
+:
+{{note
+A set of demonic war masks hangs on the east wall, and several pieces of rotten leather are scattered throughout the room.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Stuck Simple Wooden Door  | n/a |
+| east | Iron Portcullis  | 26 |
+| north | Stuck Simple Wooden Door  | n/a |
+| west | Locked Simple Wooden Door (magic lock)  | 34 |
+:
+### Room 54
+:
+{{classTable,frame
+#### Trap!
+* Javelin Trap
+}}
+{{classTable,frame
+#### Hidden Treasure!
+* Hidden Trapped and Locked Simple Wooden Chest (common lock)
+* Fusillade of Darts
+* 120 gp; hoard total 120 gp
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| west | Locked Good Wooden Door (good lock)  | n/a |
+:
+### Room 55
+:
+{{note
+A wooden platform hangs over a deep pit in the south-west corner of the room, and a faded and torn tapestry hangs from the north wall.
+}}
+
+This room is occupied by **1 x 1st Level Warrior Svirfneblin**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Strong Wooden Door  ***Trap:*** Javelin Trap | 35 |
+| north | Stuck Simple Wooden Door  | 62 |
+| south | Trapped and Locked Iron Door (good lock)  ***Trap:*** Well-Camouflaged Pit Trap | n/a |
+:
+### Room 56
+:
+{{note
+The floor is covered in perfect hexagonal tiles, and someone has scrawled "Lightning comes before thunder" on the south wall.
+}}
+
+This room is occupied by **12 x Rat**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | n/a |
+| west | Locked Simple Wooden Door (good lock)  | n/a |
+:
+### Room 57
+:
+{{note
+An iron chandelier hangs from the ceiling in the center of the room, and someone has scrawled "Abandon all hope" on the south wall.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Wooden Portcullis  | 42 |
+| south | Iron Portcullis  | n/a |
+| south | Archway  | 32 |
+:
+### Room 58
+:
+{{note
+A circle of tall stones stands in the north-west corner of the room, and a pile of barrel staves lies in the west side of the room.
+}}
+
+This room is occupied by **1 x Spider Swarm**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Strong Wooden Door  | n/a |
+| east | Stuck Strong Wooden Door  | n/a |
+| west | Archway  | 64 |
+:
+### Room 59
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Medium Monstrous Spider**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Unlocked Simple Wooden Door  | n/a |
+| east | Locked Good Wooden Door (good lock)  | n/a |
+| east | Stuck Simple Wooden Door  | n/a |
+| south | Stuck Simple Wooden Door  | 7 |
+:
+### Room 60
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Strong Wooden Door (common lock)  | n/a |
+| north | Unlocked Strong Wooden Door  | n/a |
+:
+### Room 61
+:
+{{note
+A narrow pit covered by iron bars lies in the north side of the room, and a set of demonic war masks hangs on the south wall.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Stuck Good Wooden Door  | n/a |
+| south | Stuck Good Wooden Door  | n/a |
+| west | Wooden Portcullis (magically reinforced)  | 43 |
+:
+### Room 62
+:
+{{note
+The south and west walls are covered with bloodstains, and several pieces of trash are scattered throughout the room.
+}}
+
+This room is occupied by **1 x 1st Level Warrior Drow Elf**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| south | Stuck Simple Wooden Door  | 55 |
+:
+### Room 63
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x Spider Swarm**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Trapped and Unlocked Iron Door  ***Trap:*** Spiked Pit Trap | n/a |
+| north | Stuck Simple Wooden Door  | n/a |
+:
+### Room 64
+:
+{{note
+Empty.
+}}
+
+This room is occupied by **1 x 1st Level Warrior Drow Elf**
+:
+{{descriptive
+#### Treasure
+None
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| east | Archway  | 58 |
+| south | Trapped Wooden Portcullis  | 40 |
+:
+### Room 65
+:
+{{note
+Empty.
+}}
+#### Exits
+| Direction | Description | Leads to |
+|:--|:--|:--|
+| north | Locked Simple Wooden Door (common lock)  | n/a |
+| south | Wooden Portcullis  | n/a |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+{{wide
+## Settings
+Settings used to create this dungeon:
+:
+fantasy Random Dungeon Generator
+|||
+|:--|:--|
+|Dungeon Name|The Prison of the Gargoyle Princess|
+|Dungeon Level|1|
+|Party Size|4|
+|Motif||
+}}
+:
+|||
+|:--|:--|
+|Random Seed:|280083457|
+|Dungeon Size:|Medium|
+|Dungeon Layout:|Rectangle|
+|Peripheral Egress?||
+|Room Layout:|Scattered|
+|Room Size:|Medium|
+|Polymorph Rooms?|Yes|
+|Doors:|Standard|
+|Corridors:|Errant|
+|Remove Deadends?|Some|
+|Stairs?|Yes|
+|Map Style:|Standard|
+|Grid|Square|
+\column
+{{footnote SETTINGS}}
