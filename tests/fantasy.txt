@@ -153,7 +153,7 @@ None
 {{note
 A well lies in the north-west corner of the room, and a corroded iron key hangs from a hook on the south and west walls.
 }}
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 #### Exits
@@ -253,7 +253,7 @@ Spirals of red stones cover the floor, and someone has scrawled an incomplete dr
 | south | Secret Unlocked Strong Wooden Door ***Secret:*** The door is concealed within the mouth of a gargantuan skull carved from stone | n/a |
 | west | Trapped and Stuck Good Wooden Door  ***Trap:*** Acid Arrow Trap | 33 |
 :
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 ### Room 13
@@ -357,7 +357,7 @@ A wooden platform hangs over a deep pit in the south side of the room, and a til
 {{note
 Someone has scrawled "Mind the gap" on the south wall, and numerous monstrous skulls lie within niches in the south and east walls.
 }}
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 #### Exits
@@ -458,7 +458,7 @@ The floor is covered in perfect hexagonal tiles, and a spinning wheel and severa
 | north | Secret Stuck Strong Wooden Door ***Secret:*** The door is concealed behind a statue of a troll archer, and opened by pulling an arrow in its quiver | n/a |
 | west | Iron Portcullis  | 53 |
 :
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 ### Room 27
@@ -556,7 +556,7 @@ This room is occupied by **4 x Rat**
 {{note
 A magical statue in the north-west corner of the room speaks riddles and cryptic prophecies, and a stone ramp ascends towards the south wall.
 }}
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 #### Exits
@@ -653,7 +653,7 @@ None
 {{note
 A group of monstrous faces have been carved into the north wall, and a large demonic idol with ruby eyes sits in the north side of the room.
 }}
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 #### Exits
@@ -765,7 +765,7 @@ A shallow pit lies in the west side of the room, and a charred club lies in the 
 | south | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed within a horrific torture device | 38 |
 | west | Locked Simple Wooden Door (good lock)  | 41 |
 :
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 ### Room 48
@@ -870,7 +870,7 @@ A set of demonic war masks hangs on the east wall, and several pieces of rotten 
 * Fusillade of Darts
 * 120 gp; hoard total 120 gp
 }}
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 {{note
@@ -985,7 +985,7 @@ Empty.
 {{note
 A narrow pit covered by iron bars lies in the north side of the room, and a set of demonic war masks hangs on the south wall.
 }}
-{{footnote {footnote}}}
+{{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 #### Exits
