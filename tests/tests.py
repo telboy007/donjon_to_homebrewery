@@ -7,19 +7,19 @@ def test_fantasy():
 def test_adnd():
     with open("./tests/adnd.txt", "r", encoding="utf-8") as adnd:
         check_value = len(adnd.read())
-        assert len(adnd.read()) == 83305, f"Should be 83305 but is {check_value}"
+        assert check_value == 83305, f"Should be 83305 but is {check_value}"
 
 
 def test_4e():
     with open("./tests/4e.txt", "r", encoding="utf-8") as fourth:
         check_value = len(fourth.read())
-        assert len(fourth.read()) == 91205, f"Should be 91205 but is {check_value}"
+        assert check_value == 91205, f"Should be 91205 but is {check_value}"
 
 
 def test_5e():
     with open("./tests/5e.txt", "r", encoding="utf-8") as fifth:
         check_value = len(fifth.read())
-        assert len(fifth.read()) == 33574, f"Should be 33574 but is {check_value}"
+        assert check_value == 33574, f"Should be 33574 but is {check_value}"
 
 
 if __name__ == "__main__":
