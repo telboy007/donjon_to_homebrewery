@@ -4,7 +4,7 @@
 :
 ##### The dungeon was created by dwarves as a planar gate. It was eventually abandoned due to plague, and has been attacked and abandoned many times since then.
 :::
-##### A randomly generated D&D 5e donjon dungeon for a party size of 4 and APL1
+##### A randomly generated D&D 5E donjon dungeon for a party size of 4 and APL1
 :::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
@@ -973,19 +973,20 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Magic Items (alphabetical)
-| Item | Book |
-|:--|:--|
-| Heward's Handy Haversack (rare) | dmg p.174 |
-| Potion of Animal Friendship (uncommon) | dmg p.187 |
-| Potion of Clairvoyance (rare) | dmg p.187 |
-| Potion of Climbing (common) | dmg p.187 |
-| Potion of Frost Giant Strength (rare) | dmg p.187 |
-| Potion of Greater Healing (uncommon) | dmg p.187 |
-| Potion of Healing (common) | dmg p.187 |
-| Potion of Superior Healing (rare) | dmg p.187 |
-| Potion of Water Breathing (uncommon) | dmg p.188 |
-| Spell Scroll (Fog Cloud) (common) | dmg p.200 |
-| Spell Scroll (Nondetection) (uncommon) | dmg p.200 |
+| Item | Book | Loc. |
+|:--|:--|--:|
+| Heward's Handy Haversack (rare) | dmg p.174 | 36 |
+| Potion of Animal Friendship (uncommon (2)) | dmg p.187 | 51 |
+| Potion of Clairvoyance (rare) | dmg p.187 | 36 |
+| Potion of Climbing (common) | dmg p.187 | 36 |
+| Potion of Frost Giant Strength (rare) | dmg p.187 | 51 |
+| Potion of Greater Healing (uncommon (2)) | dmg p.187 | 13 |
+| Potion of Healing (common) | dmg p.187 | 36 |
+| Potion of Healing (common (2)) | dmg p.187 | 4 |
+| Potion of Superior Healing (rare) | dmg p.187 | 30 |
+| Potion of Water Breathing (uncommon) | dmg p.188 | 13 |
+| Spell Scroll (Fog Cloud) (common) | dmg p.200 | 4 |
+| Spell Scroll (Nondetection) (uncommon) | dmg p.200 | 13 |
 }}
 {{footnote SUMMARY}}
 \page
@@ -994,7 +995,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 ## Settings
 Settings used to create this dungeon:
 :
-D&D 5e Random Dungeon Generator
+D&D 5E Random Dungeon Generator
 |||
 |:--|:--|
 |Dungeon Name|The Forsaken Warrens of Illfang the Kobold Lord|
