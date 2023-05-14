@@ -23,6 +23,9 @@ jobs:
       with:
         python-version: "3.8"
 
+    - name: Set up environment
+      run: pipenv install
+
     - name: Generate test files
       run: |
         python convert_donjon_to_homebrewery.py ./tests/fantasy_test_file.json -o ./tests/fantasy.txt
