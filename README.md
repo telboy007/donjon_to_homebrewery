@@ -12,6 +12,14 @@ This tool has been tested with:
 
 NOTE: don't forget to grab both maps (gm and player) from donjon as well as the json! :)
 
+## Features
+* Uses AI to enhance the dungeon flavour text and suggest a boss and lair details
+* Adds any monster stat blocks that exist in the SRD to the document and lists the ones it had to skip
+* Collects all the monsters and magical items into easy to use reference tables with sourcebook page number
+* Provides total XP and a breakdown of combat encounter difficulty types
+* Tries to add page breaks to reduce amount of manual editing needed
+* Captures all the settings used to generate this dungeon on donjon.bin.sh for prosperity
+
 ## Using GitHub Actions
 
 NOTE: filename, gm map and player map are all required fields when using the github action.
