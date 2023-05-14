@@ -24,9 +24,7 @@ jobs:
         python-version: "3.8"
 
     - name: Set up environment
-      run: |
-        pip install pipenv
-        pipenv install
+      run: pip install requests
 
     - name: Generate test files
       run: |
