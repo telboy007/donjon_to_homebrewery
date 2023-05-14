@@ -275,11 +275,12 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("{{pageNumber,auto}}\n")
 
     # use AI to expand on the dungeon description and provide other details if not running under testmode
-    if not args.testmode or not INFEST == "fantasy":
-        dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
-        blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
-        outfile.write("## Description\n")
-        outfile.write(f"{blurb}\n")
+    if not args.testmode:
+        if "history" in data['details']:
+            dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
+            blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
+            outfile.write("## Description\n")
+            outfile.write(f"{blurb}\n")
 
     # general features
     outfile.write("## Features\n")
@@ -330,10 +331,11 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("}}\n")
 
     # use AI to suggest a BBEG and lair detail if not running under testmode
-    if not args.testmode or not INFEST == "fantasy":
-        bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
-        outfile.write("## Dungeon Boss\n")
-        outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
+    if not args.testmode:
+        if "history" in data['details']:
+            bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
+            outfile.write("## Dungeon Boss\n")
+            outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
 
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
