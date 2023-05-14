@@ -51,7 +51,7 @@ def sum_up_treasure(string):
 
 
 # add magical items to list
-def add_magical_items_to_list(string):
+def add_magical_items_to_list(string, room_loc):
     """ compiles ref table for magic items - 5e only """
     if data['settings']['infest'] == "dnd_5e":
         raw_magic_items = string.split(',')
@@ -59,15 +59,16 @@ def add_magical_items_to_list(string):
             if 'dmg' in raw_magic_item:
                 if ' x ' in raw_magic_items[index - 1]:
                     singular_item = raw_magic_items[index - 1].split(' x ')
-                    magic_items[singular_item[1].strip()] = raw_magic_item.strip().replace(')', '').replace(' ', ' p.')
+                    # put quantity of item in brackets after name
+                    magic_items[f"{singular_item[1].strip()} ({singular_item[0].strip()})"] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
                 else:
-                    magic_items[raw_magic_items[index - 1].strip()] = raw_magic_item.strip().replace(')', '').replace(' ', ' p.')
+                    magic_items[raw_magic_items[index - 1].strip()] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
 
 
 def add_monsters_to_monster_list(string):
     """ compiles ref table for monsters - 4e and 5e only """
     if data['settings']['infest'] == "dnd_5e":
-        #get monster name and book details and add to list
+        # get monster name and book details and add to list
         monsters_and_combat = string.split(';')
         monsters = monsters_and_combat[0].split(' and ')
         for monster in monsters:
@@ -83,7 +84,7 @@ def add_monsters_to_monster_list(string):
         xp_amount = combat[1].strip().split(' ')
         xp_list.append(xp_amount[0].strip())
     if data['settings']['infest'] == "dnd_4e":
-        #get monster name and book details and add to list
+        # get monster name and book details and add to list
         monsters = string.split(') and ')
         for monster in monsters:
             if ' x ' in monster:
@@ -95,18 +96,18 @@ def add_monsters_to_monster_list(string):
                 monster_list.append(monster[0])
 
 
-def extract_book_details(details):
+def extract_book_details(book_details):
     """ split out name and source book(s) (used on monster list) - 5e and 4e only"""
     if data['settings']['infest'] == "dnd_5e":
-        split = details.split('(')
+        split = book_details.split('(')
         name = split[0].strip()
-        details = split[1].split(',')
-        book = details[1].strip().replace(')','').replace(' ', ' p.')
-        if len(details) > 2:
-            book = f"{book} / {details[2].strip().replace(')','').replace(' ', ' p.')}"
+        book_details = split[1].split(',')
+        book = book_details[1].strip().replace(')','').replace(' ', ' p.')
+        if len(book_details) > 2:
+            book = f"{book} / {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
         return name, book
     if data['settings']['infest'] == "dnd_4e":
-        split = details.split('(')
+        split = book_details.split('(')
         name = split[0].strip()
         book = split[1].strip().replace(' ', ' p.')
         return name, book
@@ -313,7 +314,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 continue
                             outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
                             # add to magic items list for the summary page
-                            add_magical_items_to_list(item.replace(NEWLINE,' '))
+                            add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'])
 
                         outfile.write("}}\n")
 
@@ -352,7 +353,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 else:
                                     outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
                                     # add to magic items list for the summary page
-                                    add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''))
+                                    add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'])
                                 outfile.write("}}\n")
                             else:
                                 outfile.write("\n")
@@ -461,13 +462,14 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         if data['settings']['infest'] == "dnd_5e":
             outfile.write("{{descriptive\n")
             outfile.write("#### Magic Items (alphabetical)\n")
-            outfile.write("| Item | Book |\n")
-            outfile.write("|:--|:--|\n")
+            outfile.write("| Item | Book | Loc. |\n")
+            outfile.write("|:--|:--|--:|\n")
             ordered_magic_items = OrderedDict(sorted(magic_items.items()))
 
-            for magic_item, sourcebook in ordered_magic_items.items():
-                # split out item and source book details
-                outfile.write(f"| {magic_item}) | {sourcebook} |\n")
+            for magic_item, details in ordered_magic_items.items():
+                # split out location and source book details
+                sourcebook, location = details.split('/')
+                outfile.write(f"| {magic_item}) | {sourcebook} | {location} |\n")
 
             outfile.write("}}\n")
 
