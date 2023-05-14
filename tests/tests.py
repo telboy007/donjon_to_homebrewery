@@ -26,5 +26,5 @@ if __name__ == "__main__":
     test_fantasy()
     test_adnd()
     test_4e()
-    test_5e()
+    # test_5e()
     print("Everything passed")

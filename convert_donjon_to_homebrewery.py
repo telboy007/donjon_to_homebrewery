@@ -10,8 +10,13 @@
 
 import argparse
 import json
+import openai
+import os
 import requests
 from collections import OrderedDict
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def set_check():
@@ -124,7 +129,7 @@ def extract_book_details(book_details):
 
 
 def request_monster_statblock(monster_name):
-    """ make request to dnd api to get json formatted monster statblock """
+    """ make request to dnd5e api to get json formatted monster statblock """
     url = f"https://www.dnd5eapi.co/api/monsters/{monster_name}"
     x = requests.get(url)
 
@@ -158,6 +163,30 @@ def extract_proficiencies_from_api_response(json):
                 skill_checks.append((skill_check_name, value))
 
     return saving_throws, skill_checks
+
+
+def expand_dungeon_overview_via_ai(blurb, dungeon_details):
+    openai.api_key = os.getenv("CHATGPT_TOKEN")
+    completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": f"Expand on the description of a D&D 5e dungeon adding excitement, drama and suspense.  Only talk about details, sights and sounds of the dungeon's entrance and not inside.  Make no reference to skill checks or ft. (for reference the dungeon details are {dungeon_details}): {blurb}"}
+        ]
+    )
+    print(completion.usage)
+    return completion.choices[0].message["content"]
+
+
+def suggest_a_bbeg_via_ai(expanded_description, dungeon_detail):
+    openai.api_key = os.getenv("CHATGPT_TOKEN")
+    completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": f"Based on the following text what D&D 5e monster should be the boss of the dungeons and what would their lair look like based on {dungeon_detail}: {expanded_description}"}
+        ]
+    )
+    print(completion.usage)
+    return completion.choices[0].message["content"]
 
 
 # globals
@@ -245,8 +274,14 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
-    # general features
+    # use AI to expand on the dungeon description and provide other details
+    dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
+    blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
     outfile.write("## Description\n")
+    outfile.write(f"{blurb}\n")
+
+    # general features
+    outfile.write("## Features\n")
     outfile.write("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
     outfile.write("{{descriptive\n")
     outfile.write("#### General Features\n")
@@ -292,6 +327,12 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
             add_monsters_to_monster_list(val.replace(NEWLINE, ' '))
 
         outfile.write("}}\n")
+
+    # use AI to suggest a BBEG and lair detail
+    bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
+
+    outfile.write("## Dungeon Boss\n")
+    outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
 
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
