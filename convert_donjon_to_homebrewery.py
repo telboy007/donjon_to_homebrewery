@@ -25,13 +25,13 @@ def set_check():
         return len(readonly_file.read())
 
 
-def file_size(current_check):
+def file_size(current_check, footnote):
     """Count the current number of characters in a file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > 2450:
         with open(args.output_filename, "a", encoding="utf-8") as append_file:
-            append_file.write("{{footnote LOCATIONS}}\n")
+            append_file.write("{{footnote {footnote}}}\n")
             append_file.write("\\page\n")
             append_file.write("{{pageNumber,auto}}\n")
         # set new current check
@@ -377,7 +377,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check)
+            check = file_size(check, "LOCATIONS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
             if "contents" in rooms:
@@ -395,7 +395,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # hidden treasure
@@ -413,7 +413,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # room description
@@ -428,7 +428,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # monsters and treasure
@@ -456,7 +456,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                 else:
@@ -467,7 +467,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                 # check for page marker
                 outfile.close()
-                check = file_size(check)
+                check = file_size(check, "LOCATIONS")
                 outfile = open(args.output_filename, "a", encoding="utf-8")
 
             # exits
@@ -499,7 +499,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check)
+            check = file_size(check, "LOCATIONS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
     # end locations section and prepare for summary
@@ -704,7 +704,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check)
+            check = file_size(check, "STAT BLOCKS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
         # write out list of skipped monsters deduped and ordered
@@ -712,6 +712,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         skipped_monsters.sort()
         outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")       
         outfile.write("\n")
+        outfile.write("{{footnote STAT BLOCKS}}\n")
 
     """ DONJON.BIN.SH SETTINGS PAGE """
 
