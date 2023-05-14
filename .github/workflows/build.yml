@@ -31,10 +31,10 @@ jobs:
 
     - name: Generate test files
       run: |
-        python convert_donjon_to_homebrewery.py ./tests/fantasy_test_file.json -o ./tests/fantasy.txt
-        python convert_donjon_to_homebrewery.py ./tests/adnd_test_file.json -o ./tests/adnd.txt
-        python convert_donjon_to_homebrewery.py ./tests/4e_test_file.json -o ./tests/4e.txt
-        python convert_donjon_to_homebrewery.py ./tests/5e_test_file.json -o ./tests/5e.txt
+        python convert_donjon_to_homebrewery.py ./tests/fantasy_test_file.json -o ./tests/fantasy.txt --testmode
+        python convert_donjon_to_homebrewery.py ./tests/adnd_test_file.json -o ./tests/adnd.txt --testmode
+        python convert_donjon_to_homebrewery.py ./tests/4e_test_file.json -o ./tests/4e.txt --testmode
+        python convert_donjon_to_homebrewery.py ./tests/5e_test_file.json -o ./tests/5e.txt --testmode
 
     - name: Run tests
       run: |

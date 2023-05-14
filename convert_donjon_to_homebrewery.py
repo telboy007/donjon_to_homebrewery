@@ -56,7 +56,6 @@ def sum_up_treasure(string):
     return None
 
 
-# add magical items to list
 def add_magical_items_to_list(string, room_loc):
     """ 
         compiles ref table for magic items - 5e only 
@@ -209,6 +208,7 @@ parser.add_argument('filename') # required
 parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image') # optional
 parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional
 parser.add_argument('-o', '--output_filename', help='Override for text filename', default="homebrewery.txt") # optional
+parser.add_argument('-t', '--testmode', help='Stops AI enhancing dungeon details')
 
 args = parser.parse_args()
 
@@ -274,11 +274,12 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
-    # use AI to expand on the dungeon description and provide other details
-    dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
-    blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
-    outfile.write("## Description\n")
-    outfile.write(f"{blurb}\n")
+    # use AI to expand on the dungeon description and provide other details if not running under testmode
+    if not args.testmode or not INFEST == "fantasy":
+        dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
+        blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
+        outfile.write("## Description\n")
+        outfile.write(f"{blurb}\n")
 
     # general features
     outfile.write("## Features\n")
@@ -328,11 +329,11 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
-    # use AI to suggest a BBEG and lair detail
-    bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
-
-    outfile.write("## Dungeon Boss\n")
-    outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
+    # use AI to suggest a BBEG and lair detail if not running under testmode
+    if not args.testmode or not INFEST == "fantasy":
+        bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
+        outfile.write("## Dungeon Boss\n")
+        outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
 
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
