@@ -36,6 +36,8 @@ NOTE: filename, gm map and player map are all required fields when using the git
 
 ## Using locally
 
+NOTE: You will need to provide your own ChatGPT API token for the AI enhancement to work, if you don't want to then use the `--testmode` CLI flag to disable it.  Add a `.env` file in your local copy of this repo and add your API token like this `CHATGPT_TOKEN="your-token-here"`.
+
 To install:
 1. Clone repo
 1. cd into repo
@@ -55,6 +57,7 @@ optional arguments:
                         URL for the GM map image
   -p PLAYER_MAP, --player_map PLAYER_MAP
                         URL for the Player map image
+  -t, --testmode        Disable AI enhancements
 ```
 1. If you have the GM and Player maps, host them on an image hosting site and add the urls as arguments
 1. `python convert_donjon_to_homebrewery.py your_filename.json -gm https://imgur.something.png -p https://imgur.something.png`
