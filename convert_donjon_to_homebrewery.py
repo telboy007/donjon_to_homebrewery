@@ -31,7 +31,7 @@ def file_size(current_check, footnote):
         new_size = len(readonly_file.read())
     if (new_size - current_check) > 2450:
         with open(args.output_filename, "a", encoding="utf-8") as append_file:
-            append_file.write("{{footnote {footnote}}}\n")
+            append_file.write("{{footnote "+footnote+"}}\n")
             append_file.write("\\page\n")
             append_file.write("{{pageNumber,auto}}\n")
         # set new current check
@@ -148,7 +148,7 @@ def extract_proficiencies_from_api_response(json):
     """ extract the saving throw and skill check information """
     saving_throws = []
     skill_checks = []
-    
+
     if "proficiencies" in json:
         for proficiency in json['proficiencies']:
             proficiency_name = proficiency['proficiency']['name']
@@ -592,7 +592,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             monster_statblock = request_monster_statblock(monster)
 
             # check for any monsters listed as in monster manual but not found in api
-            if monster_statblock == "not found": 
+            if monster_statblock == "not found":
                 skipped_monsters.append(monster.replace("-", " ").title())
                 continue
 
@@ -686,7 +686,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                         outfile.write(":\n")
                         outfile.write(f"***{ability['name']}.*** {ability['desc']}\n")
 
-            # monster actions                    
+            # monster actions
             if "actions" in monster_statblock:
                 outfile.write("### Actions\n")
                 outfile.write(f"***{monster_statblock['actions'][0]['name']}.*** {monster_statblock['actions'][0]['desc']}\n")
@@ -713,7 +713,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # write out list of skipped monsters deduped and ordered
         skipped_monsters = list(dict.fromkeys(skipped_monsters))
         skipped_monsters.sort()
-        outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")       
+        outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")
         outfile.write("\n")
         outfile.write("{{footnote STAT BLOCKS}}\n")
 
