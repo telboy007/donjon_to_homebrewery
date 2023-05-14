@@ -10,8 +10,11 @@
 
 import argparse
 import json
+<<<<<<< HEAD
 import openai
 import os
+=======
+>>>>>>> a24a6a7eefc12a23adeb8b0ec850c6a094263fa3
 import requests
 from collections import OrderedDict
 from dotenv import load_dotenv
@@ -129,7 +132,11 @@ def extract_book_details(book_details):
 
 
 def request_monster_statblock(monster_name):
+<<<<<<< HEAD
     """ make request to dnd5e api to get json formatted monster statblock """
+=======
+    """ make request to dnd api to get json formatted monster statblock """
+>>>>>>> a24a6a7eefc12a23adeb8b0ec850c6a094263fa3
     url = f"https://www.dnd5eapi.co/api/monsters/{monster_name}"
     x = requests.get(url)
 
@@ -165,6 +172,7 @@ def extract_proficiencies_from_api_response(json):
     return saving_throws, skill_checks
 
 
+<<<<<<< HEAD
 def expand_dungeon_overview_via_ai(blurb, dungeon_details):
     openai.api_key = os.getenv("CHATGPT_TOKEN")
     completion = openai.ChatCompletion.create(
@@ -189,6 +197,8 @@ def suggest_a_bbeg_via_ai(expanded_description, dungeon_detail):
     return completion.choices[0].message["content"]
 
 
+=======
+>>>>>>> a24a6a7eefc12a23adeb8b0ec850c6a094263fa3
 # globals
 xp_list = []
 monster_list = []
@@ -704,7 +714,11 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
+<<<<<<< HEAD
             check = file_size(check, "STAT BLOCKS")
+=======
+            check = file_size(check)
+>>>>>>> a24a6a7eefc12a23adeb8b0ec850c6a094263fa3
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
         # write out list of skipped monsters deduped and ordered
@@ -712,7 +726,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         skipped_monsters.sort()
         outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")       
         outfile.write("\n")
+<<<<<<< HEAD
         outfile.write("{{footnote STAT BLOCKS}}\n")
+=======
+>>>>>>> a24a6a7eefc12a23adeb8b0ec850c6a094263fa3
 
     """ DONJON.BIN.SH SETTINGS PAGE """
 

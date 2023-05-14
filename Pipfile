@@ -8,6 +8,7 @@ requests = "*"
 openai = "*"
 python-dotenv = "*"
 
+
 [dev-packages]
 
 [requires]
