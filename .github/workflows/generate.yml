@@ -41,6 +41,11 @@ jobs:
         pip install openai
         pip install python-dotenv
 
+    - name: Environmental Variables
+      run: |
+        touch .env
+        echo CHATGPT_TOKEN='${{ secrets.CHATGPT_TOKEN }}' >> .env
+
     - name: Generate homebrewery file
       run: |
         curl -L "${{ github.event.inputs.filename }}" -o donjon.json
