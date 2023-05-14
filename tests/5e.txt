@@ -991,6 +991,236 @@ Here you will find useful reference tables for things encountered in the dungeon
 {{footnote SUMMARY}}
 \page
 {{pageNumber,auto}}
+# Stat Blocks (SRD only)
+{{monster,frame
+## Bugbear
+*Medium Humanoid, Chaotic Evil*
+___
+**Armor Class** :: 16 armor
+**Hit Points** :: 27 (5d8+5)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|15 (+2)|14 (+2)|13 (+1)|8 (-1)|11 (+0)|9 (-1)|
+___
+**Skills** :: Stealth +6, Survival +2
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common, Goblin
+**Challenge Rating** :: 1 (200 XP)
+___
+***Brute.*** A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).
+:
+***Surprise Attack.*** If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.
+### Actions
+***Morningstar.*** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 11 (2d8 + 2) piercing damage.
+:
+***Javelin.*** Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+{{monster,frame
+## Goblin
+*Small Humanoid, Neutral Evil*
+___
+**Armor Class** :: 15 armor
+**Hit Points** :: 7 (2d6)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|8 (-1)|14 (+2)|10 (+0)|10 (+0)|8 (-1)|8 (-1)|
+___
+**Skills** :: Stealth +6
+**Senses** :: darkvision 60 ft., passive perception 9
+**Languages** :: Common, Goblin
+**Challenge Rating** :: 0.25 (50 XP)
+___
+***Nimble Escape.*** The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+### Actions
+***Scimitar.*** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage.
+:
+***Shortbow.*** Ranged Weapon Attack: +4 to hit, range 80/320 ft., one target. Hit: 5 (1d6 + 2) piercing damage.
+}}
+{{monster,frame
+## Hobgoblin
+*Medium Humanoid, Lawful Evil*
+___
+**Armor Class** :: 18 armor
+**Hit Points** :: 11 (2d8+2)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|13 (+1)|12 (+1)|12 (+1)|10 (+0)|10 (+0)|9 (-1)|
+___
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common, Goblin
+**Challenge Rating** :: 0.5 (100 XP)
+___
+***Martial Advantage.*** Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't incapacitated.
+### Actions
+***Longsword.*** Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage, or 6 (1d10 + 1) slashing damage if used with two hands.
+:
+***Longbow.*** Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage.
+}}
+{{monster,frame
+## Mimic
+*Medium Monstrosity, Neutral*
+___
+**Armor Class** :: 12 natural
+**Hit Points** :: 58 (9d8+18)
+**Speed** :: 15 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|17 (+3)|12 (+1)|15 (+2)|5 (-3)|13 (+1)|8 (-1)|
+___
+**Skills** :: Stealth +5
+**Damage Immunities** :: acid
+**Condition Immunities** :: prone
+**Senses** :: darkvision 60 ft., passive perception 11
+**Languages** :: 
+**Challenge Rating** :: 2 (450 XP)
+___
+***Shapechanger.*** The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn 't transformed. It reverts to its true form if it dies.
+:
+***Adhesive (Object Form Only).*** The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it (escape DC 13). Ability checks made to escape this grapple have disadvantage.
+:
+***False Appearance (Object Form Only).*** While the mimic remains motionless, it is indistinguishable from an ordinary object.
+:
+***Grappler.*** The mimic has advantage on attack rolls against any creature grappled by it.
+### Actions
+***Pseudopod.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage. If the mimic is in object form, the target is subjected to its Adhesive trait.
+:
+***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+{{monster,frame
+## Ogre zombie
+*Large Undead, Neutral Evil*
+___
+**Armor Class** :: 8 dex
+**Hit Points** :: 85 (9d10+36)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|19 (+4)|6 (-2)|18 (+4)|3 (-4)|6 (-2)|5 (-3)|
+___
+**Saving Throws** :: Wis +0
+**Damage Immunities** :: poison
+**Condition Immunities** :: poisoned
+**Senses** :: darkvision 60 ft., passive perception 8
+**Languages** :: understands Common and Giant but can't speak
+**Challenge Rating** :: 2 (450 XP)
+___
+***Undead Fortitude.*** If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
+### Actions
+***Morningstar.*** Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.
+}}
+{{monster,frame
+## Orc
+*Medium Humanoid, Chaotic Evil*
+___
+**Armor Class** :: 13 armor
+**Hit Points** :: 15 (2d8+6)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|16 (+3)|12 (+1)|16 (+3)|7 (-2)|11 (+0)|10 (+0)|
+___
+**Skills** :: Intimidation +2
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common, Orc
+**Challenge Rating** :: 0.5 (100 XP)
+___
+***Aggressive.*** As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+### Actions
+***Greataxe.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage.
+:
+***Javelin.*** Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage.
+}}
+{{monster,frame
+## Silver dragon wyrmling
+*Medium Dragon, Lawful Good*
+___
+**Armor Class** :: 17 natural
+**Hit Points** :: 45 (6d8+18)
+**Speed** :: 30 ft., Fly 60 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|19 (+4)|10 (+0)|17 (+3)|12 (+1)|11 (+0)|15 (+2)|
+___
+**Saving Throws** :: Dex +2, Con +5, Wis +2, Cha +4
+**Skills** :: Perception +4, Stealth +2
+**Damage Immunities** :: cold
+**Senses** :: blindsight 10 ft., darkvision 60 ft., passive perception 14
+**Languages** :: Draconic
+**Challenge Rating** :: 2 (450 XP)
+___
+### Actions
+***Bite.*** Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) piercing damage.
+:
+***Breath Weapons.*** The dragon uses one of the following breath weapons.
+Cold Breath. The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.
+Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+{{monster,frame
+## Worg
+*Large Monstrosity, Neutral Evil*
+___
+**Armor Class** :: 13 natural
+**Hit Points** :: 26 (4d10+4)
+**Speed** :: 50 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|16 (+3)|13 (+1)|13 (+1)|7 (-2)|11 (+0)|8 (-1)|
+___
+**Skills** :: Perception +4
+**Senses** :: darkvision 60 ft., passive perception 14
+**Languages** :: Goblin, Worg
+**Challenge Rating** :: 0.5 (100 XP)
+___
+***Keen Hearing and Smell.*** The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+### Actions
+***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+}}
+{{monster,frame
+## Zombie
+*Medium Undead, Neutral Evil*
+___
+**Armor Class** :: 8 dex
+**Hit Points** :: 22 (3d8+9)
+**Speed** :: 20 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|13 (+1)|6 (-2)|16 (+3)|3 (-4)|6 (-2)|5 (-3)|
+___
+**Saving Throws** :: Wis +0
+**Damage Immunities** :: poison
+**Condition Immunities** :: poisoned
+**Senses** :: darkvision 60 ft., passive perception 8
+**Languages** :: understands all languages it spoke in life but can't speak
+**Challenge Rating** :: 0.25 (50 XP)
+___
+***Undead Fortitude.*** If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
+### Actions
+***Slam.*** Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage.
+}}
+**Monsters without stat blocks**: Goblin Boss, Half Ogre, Orog
+\page
+{{pageNumber,auto}}
 {{wide
 ## Settings
 Settings used to create this dungeon:
