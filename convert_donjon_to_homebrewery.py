@@ -10,10 +10,10 @@
 
 import argparse
 import json
-import openai
 import os
-import requests
 from collections import OrderedDict
+import openai
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -208,7 +208,7 @@ parser.add_argument('filename') # required
 parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image') # optional
 parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional
 parser.add_argument('-o', '--output_filename', help='Override for text filename', default="homebrewery.txt") # optional
-parser.add_argument('-t', '--testmode', help='Stops AI enhancing dungeon details')
+parser.add_argument('-t', '--testmode', help='Stops AI enhancing dungeon details', default=False, action='store_true') # optional
 
 args = parser.parse_args()
 
@@ -345,7 +345,7 @@ check = set_check()
 
 with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
-    """ DUNGEON DETAILS """
+    # *** DUNGEON DETAILS ***
 
     # locations
     outfile.write("## Locations\n")
@@ -366,7 +366,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters from the {egress['dir']}.\n")
         outfile.write("\n")
 
-    """ LOCATION DETAILS """
+    # *** LOCATION DETAILS ***
 
     # rooms
     if "rooms" in data:
@@ -506,7 +506,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     # end locations section and prepare for summary
     outfile.write("{{footnote LOCATIONS}}\n")
 
-    """ SUMMARY PAGE """
+    # *** SUMMARY PAGE ***
 
     # if 4th or 5th edition then create a summary page
     if SUMMARY_PAGE:
@@ -578,7 +578,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # final footnote
         outfile.write("{{footnote SUMMARY}}\n")
 
-    """ STAT BLOCKS """
+    # *** STAT BLOCKS ***
 
     # if 5th edition try to get as many monster stat blocks as possible
     if data['settings']['infest'] == "dnd_5e":
@@ -670,7 +670,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             outfile.write(f"**Senses** :: {statblock_senses}\n")
 
             # handle emtpy language list
-            if {monster_statblock["languages"]}:
+            if monster_statblock["languages"]:
                 outfile.write(f"**Languages** :: {monster_statblock['languages']}\n")
 
             outfile.write(f"**Challenge Rating** :: {monster_statblock['challenge_rating']} ({monster_statblock['xp']} XP)\n")
@@ -715,7 +715,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("\n")
         outfile.write("{{footnote STAT BLOCKS}}\n")
 
-    """ DONJON.BIN.SH SETTINGS PAGE """
+    # *** DONJON.BIN.SH SETTINGS PAGE ***
 
     # donjon settings
     outfile.write("\\page\n")
