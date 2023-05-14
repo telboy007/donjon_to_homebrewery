@@ -10,7 +10,7 @@
 }}
 \page
 {{pageNumber,auto}}
-## Description
+## Features
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
 #### General Features
@@ -1017,7 +1017,7 @@ ___
 :
 ***Javelin.*** Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range.
 }}
-{{footnote LOCATIONS}}
+{{footnote STAT BLOCKS}}
 \page
 {{pageNumber,auto}}
 {{monster,frame
@@ -1081,7 +1081,6 @@ ___
 **Damage Immunities** :: acid
 **Condition Immunities** :: prone
 **Senses** :: darkvision 60 ft., passive perception 11
-**Languages** :: 
 **Challenge Rating** :: 2 (450 XP)
 ___
 ***Shapechanger.*** The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn 't transformed. It reverts to its true form if it dies.
@@ -1096,7 +1095,7 @@ ___
 :
 ***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.
 }}
-{{footnote LOCATIONS}}
+{{footnote STAT BLOCKS}}
 \page
 {{pageNumber,auto}}
 {{monster,frame
@@ -1171,7 +1170,7 @@ ___
 Cold Breath. The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.
 Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
 }}
-{{footnote LOCATIONS}}
+{{footnote STAT BLOCKS}}
 \page
 {{pageNumber,auto}}
 {{monster,frame
@@ -1219,6 +1218,7 @@ ___
 ***Slam.*** Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) bludgeoning damage.
 }}
 **Monsters without stat blocks**: Goblin Boss, Half Ogre, Orog
+{{footnote STAT BLOCKS}}
 \page
 {{pageNumber,auto}}
 {{wide

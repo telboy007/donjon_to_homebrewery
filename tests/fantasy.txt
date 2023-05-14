@@ -2,13 +2,13 @@
 {{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px
 # The Prison of the Gargoyle Princess
 :::
-##### A randomly generated fantasy donjon dungeon for a party size of 4 and APL1
+##### A randomly generated FANTASY donjon dungeon for a party size of 4 and APL1
 :::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
 \page
 {{pageNumber,auto}}
-## Description
+## Features
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
 #### General Features
@@ -1066,7 +1066,7 @@ Empty.
 ## Settings
 Settings used to create this dungeon:
 :
-fantasy Random Dungeon Generator
+FANTASY Random Dungeon Generator
 |||
 |:--|:--|
 |Dungeon Name|The Prison of the Gargoyle Princess|

@@ -2,13 +2,13 @@
 {{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px
 # The Caverns of Cruel Annihilation
 :::
-##### A randomly generated D&D 4e donjon dungeon for a party size of 4 and APL6
+##### A randomly generated D&D 4E donjon dungeon for a party size of 4 and APL6
 :::
 ##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
 }}
 \page
 {{pageNumber,auto}}
-## Description
+## Features
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
 #### General Features
@@ -2253,7 +2253,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 ## Settings
 Settings used to create this dungeon:
 :
-D&D 4e Random Dungeon Generator
+D&D 4E Random Dungeon Generator
 |||
 |:--|:--|
 |Dungeon Name|The Caverns of Cruel Annihilation|

@@ -10,8 +10,13 @@
 
 import argparse
 import json
-import requests
+import os
 from collections import OrderedDict
+import openai
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def set_check():
@@ -20,13 +25,13 @@ def set_check():
         return len(readonly_file.read())
 
 
-def file_size(current_check):
+def file_size(current_check, footnote):
     """Count the current number of characters in a file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > 2450:
         with open(args.output_filename, "a", encoding="utf-8") as append_file:
-            append_file.write("{{footnote LOCATIONS}}\n")
+            append_file.write("{{footnote "+footnote+"}}\n")
             append_file.write("\\page\n")
             append_file.write("{{pageNumber,auto}}\n")
         # set new current check
@@ -51,7 +56,6 @@ def sum_up_treasure(string):
     return None
 
 
-# add magical items to list
 def add_magical_items_to_list(string, room_loc):
     """ 
         compiles ref table for magic items - 5e only 
@@ -124,7 +128,7 @@ def extract_book_details(book_details):
 
 
 def request_monster_statblock(monster_name):
-    """ make request to dnd api to get json formatted monster statblock """
+    """ make request to dnd5e api to get json formatted monster statblock """
     url = f"https://www.dnd5eapi.co/api/monsters/{monster_name}"
     x = requests.get(url)
 
@@ -144,7 +148,7 @@ def extract_proficiencies_from_api_response(json):
     """ extract the saving throw and skill check information """
     saving_throws = []
     skill_checks = []
-    
+
     if "proficiencies" in json:
         for proficiency in json['proficiencies']:
             proficiency_name = proficiency['proficiency']['name']
@@ -158,6 +162,30 @@ def extract_proficiencies_from_api_response(json):
                 skill_checks.append((skill_check_name, value))
 
     return saving_throws, skill_checks
+
+
+def expand_dungeon_overview_via_ai(blurb, dungeon_details):
+    openai.api_key = os.getenv("CHATGPT_TOKEN")
+    completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": f"Expand on the description of a D&D 5e dungeon adding excitement, drama and suspense.  Only talk about details, sights and sounds of the dungeon's entrance and not inside.  Make no reference to skill checks or ft. (for reference the dungeon details are {dungeon_details}): {blurb}"}
+        ]
+    )
+    print(completion.usage)
+    return completion.choices[0].message["content"]
+
+
+def suggest_a_bbeg_via_ai(expanded_description, dungeon_detail):
+    openai.api_key = os.getenv("CHATGPT_TOKEN")
+    completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "user", "content": f"Based on the following text what D&D 5e monster should be the boss of the dungeons and what would their lair look like based on {dungeon_detail}: {expanded_description}"}
+        ]
+    )
+    print(completion.usage)
+    return completion.choices[0].message["content"]
 
 
 # globals
@@ -180,6 +208,7 @@ parser.add_argument('filename') # required
 parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image') # optional
 parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional
 parser.add_argument('-o', '--output_filename', help='Override for text filename', default="homebrewery.txt") # optional
+parser.add_argument('-t', '--testmode', help='Stops AI enhancing dungeon details', default=False, action='store_true') # optional
 
 args = parser.parse_args()
 
@@ -245,8 +274,16 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
+    # use AI to expand on the dungeon description and provide other details if not running under testmode
+    if not args.testmode:
+        if "history" in data['details']:
+            dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
+            blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
+            outfile.write("## Description\n")
+            outfile.write(f"{blurb}\n")
+
     # general features
-    outfile.write("## Description\n")
+    outfile.write("## Features\n")
     outfile.write("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
     outfile.write("{{descriptive\n")
     outfile.write("#### General Features\n")
@@ -293,6 +330,13 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
+    # use AI to suggest a BBEG and lair detail if not running under testmode
+    if not args.testmode:
+        if "history" in data['details']:
+            bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
+            outfile.write("## Dungeon Boss\n")
+            outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
+
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
     outfile.write("\\page\n")
@@ -303,7 +347,7 @@ check = set_check()
 
 with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
-    """ DUNGEON DETAILS """
+    # *** DUNGEON DETAILS ***
 
     # locations
     outfile.write("## Locations\n")
@@ -324,7 +368,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters from the {egress['dir']}.\n")
         outfile.write("\n")
 
-    """ LOCATION DETAILS """
+    # *** LOCATION DETAILS ***
 
     # rooms
     if "rooms" in data:
@@ -336,7 +380,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check)
+            check = file_size(check, "LOCATIONS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
             if "contents" in rooms:
@@ -354,7 +398,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # hidden treasure
@@ -372,7 +416,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # room description
@@ -387,7 +431,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # monsters and treasure
@@ -415,7 +459,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check)
+                    check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                 else:
@@ -426,7 +470,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                 # check for page marker
                 outfile.close()
-                check = file_size(check)
+                check = file_size(check, "LOCATIONS")
                 outfile = open(args.output_filename, "a", encoding="utf-8")
 
             # exits
@@ -458,13 +502,13 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check)
+            check = file_size(check, "LOCATIONS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
     # end locations section and prepare for summary
     outfile.write("{{footnote LOCATIONS}}\n")
 
-    """ SUMMARY PAGE """
+    # *** SUMMARY PAGE ***
 
     # if 4th or 5th edition then create a summary page
     if SUMMARY_PAGE:
@@ -536,7 +580,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # final footnote
         outfile.write("{{footnote SUMMARY}}\n")
 
-    """ STAT BLOCKS """
+    # *** STAT BLOCKS ***
 
     # if 5th edition try to get as many monster stat blocks as possible
     if data['settings']['infest'] == "dnd_5e":
@@ -548,7 +592,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             monster_statblock = request_monster_statblock(monster)
 
             # check for any monsters listed as in monster manual but not found in api
-            if monster_statblock == "not found": 
+            if monster_statblock == "not found":
                 skipped_monsters.append(monster.replace("-", " ").title())
                 continue
 
@@ -628,7 +672,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             outfile.write(f"**Senses** :: {statblock_senses}\n")
 
             # handle emtpy language list
-            if {monster_statblock["languages"]}:
+            if monster_statblock["languages"]:
                 outfile.write(f"**Languages** :: {monster_statblock['languages']}\n")
 
             outfile.write(f"**Challenge Rating** :: {monster_statblock['challenge_rating']} ({monster_statblock['xp']} XP)\n")
@@ -642,7 +686,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                         outfile.write(":\n")
                         outfile.write(f"***{ability['name']}.*** {ability['desc']}\n")
 
-            # monster actions                    
+            # monster actions
             if "actions" in monster_statblock:
                 outfile.write("### Actions\n")
                 outfile.write(f"***{monster_statblock['actions'][0]['name']}.*** {monster_statblock['actions'][0]['desc']}\n")
@@ -663,16 +707,17 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check)
+            check = file_size(check, "STAT BLOCKS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
         # write out list of skipped monsters deduped and ordered
         skipped_monsters = list(dict.fromkeys(skipped_monsters))
         skipped_monsters.sort()
-        outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")       
+        outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")
         outfile.write("\n")
+        outfile.write("{{footnote STAT BLOCKS}}\n")
 
-    """ DONJON.BIN.SH SETTINGS PAGE """
+    # *** DONJON.BIN.SH SETTINGS PAGE ***
 
     # donjon settings
     outfile.write("\\page\n")

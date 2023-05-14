@@ -36,7 +36,10 @@ jobs:
         python-version: "3.8"
 
     - name: Set up environment
-      run: pip install requests
+      run: |
+        pip install requests
+        pip install openai
+        pip install python-dotenv
 
     - name: Generate homebrewery file
       run: |
