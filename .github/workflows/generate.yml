@@ -36,7 +36,9 @@ jobs:
         python-version: "3.8"
 
     - name: Set up environment
-      run: pipenv install
+      run: |
+        pip install pipenv
+        pipenv install
 
     - name: Generate homebrewery file
       run: |
