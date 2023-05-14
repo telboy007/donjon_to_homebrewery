@@ -19,7 +19,7 @@ def test_4e():
 def test_5e():
     with open("./tests/5e.txt", "r", encoding="utf-8") as fifth:
         check_value = len(fifth.read())
-        assert check_value == 33698, f"Should be 33698 but is {check_value}"
+        assert check_value == 33662, f"Should be 33662 but is {check_value}"
 
 
 if __name__ == "__main__":

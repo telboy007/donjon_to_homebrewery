@@ -52,17 +52,25 @@ def sum_up_treasure(string):
 
 # add magical items to list
 def add_magical_items_to_list(string, room_loc):
-    """ compiles ref table for magic items - 5e only """
+    """ 
+        compiles ref table for magic items - 5e only 
+        format: magic_item[name (quantity if applicable)] = dmg page number/room location id    
+    """
     if data['settings']['infest'] == "dnd_5e":
         raw_magic_items = string.split(',')
         for index, raw_magic_item in enumerate(raw_magic_items):
             if 'dmg' in raw_magic_item:
-                if ' x ' in raw_magic_items[index - 1]:
-                    singular_item = raw_magic_items[index - 1].split(' x ')
-                    # put quantity of item in brackets after name
-                    magic_items[f"{singular_item[1].strip()} ({singular_item[0].strip()})"] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
-                else:
-                    magic_items[raw_magic_items[index - 1].strip()] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
+                item_name = format_magic_item_name(raw_magic_items[index - 1])
+                magic_items[item_name] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
+
+
+def format_magic_item_name(item_name):
+    """ nicely format magic item names """
+    if ' x ' in item_name:
+        singular_item = item_name.split(' x ')
+        item_name = f"{singular_item[1].strip()} ({singular_item[0].strip()})"
+
+    return item_name.replace('(uncommon','**U**').replace('(common','**C**').replace('(rare', '**R**').replace('(very rare', '**VR**').replace('(legendary', '**L**').replace('(artifact', '**A**').strip()
 
 
 def add_monsters_to_monster_list(string):
@@ -462,14 +470,14 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         if data['settings']['infest'] == "dnd_5e":
             outfile.write("{{descriptive\n")
             outfile.write("#### Magic Items (alphabetical)\n")
-            outfile.write("| Item | Book | Loc. |\n")
+            outfile.write("| Item | Book | Room |\n")
             outfile.write("|:--|:--|--:|\n")
             ordered_magic_items = OrderedDict(sorted(magic_items.items()))
 
             for magic_item, details in ordered_magic_items.items():
                 # split out location and source book details
                 sourcebook, location = details.split('/')
-                outfile.write(f"| {magic_item}) | {sourcebook} | {location} |\n")
+                outfile.write(f"| {magic_item} | {sourcebook} | {location} |\n")
 
             outfile.write("}}\n")
 
