@@ -6,18 +6,22 @@
         json file [mandatory]
         gm map (url) [optional]
         player map (url) [optional]
+        output file [optional]
+        testmode [optional]
 """
 
 import argparse
 import json
-import os
 from collections import OrderedDict
-import openai
-import requests
 from dotenv import load_dotenv
+from utilities.ai import expand_dungeon_overview_via_ai, suggest_a_bbeg_via_ai
+from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, add_monsters_to_monster_list
+from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier
 
 load_dotenv()
 
+
+# *** page break utilities ***
 
 def set_check():
     """Set the initial number of characters in the file"""
@@ -37,155 +41,6 @@ def file_size(current_check, footnote):
         # set new current check
         current_check = new_size
     return current_check
-
-
-def sum_up_treasure(string):
-    """5e random dungeons can end up having lots of little currency amounts"""
-    if data['settings']['infest'] == "dnd_5e":
-        currency = {}
-        currency_list = string.split(";")
-        for amount in currency_list:
-            amount = amount.split(" ")
-            # build list of amounts of specific types of coin
-            currency.setdefault(amount[2].strip(), []).append(int(amount[1].strip()))
-        result = ""
-        for coin_type, values in currency.items():
-            # build list of totals and coin type (string)
-            result += (f"{sum(values)} {str(coin_type)}, ")
-        return f"{str(result[:-2]).replace(',;', ',')}\n"
-    return None
-
-
-def add_magical_items_to_list(string, room_loc):
-    """ 
-        compiles ref table for magic items - 5e only 
-        format: magic_item[name (quantity if applicable)] = dmg page number/room location id    
-    """
-    if data['settings']['infest'] == "dnd_5e":
-        raw_magic_items = string.split(',')
-        for index, raw_magic_item in enumerate(raw_magic_items):
-            if 'dmg' in raw_magic_item:
-                item_name = format_magic_item_name(raw_magic_items[index - 1])
-                magic_items[item_name] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
-
-
-def format_magic_item_name(item_name):
-    """ nicely format magic item names """
-    if ' x ' in item_name:
-        singular_item = item_name.split(' x ')
-        item_name = f"{singular_item[1].strip()} ({singular_item[0].strip()})"
-
-    return item_name.replace('(uncommon','**U**').replace('(common','**C**').replace('(rare', '**R**').replace('(very rare', '**VR**').replace('(legendary', '**L**').replace('(artifact', '**A**').strip()
-
-
-def add_monsters_to_monster_list(string):
-    """ compiles ref table for monsters - 4e and 5e only """
-    if data['settings']['infest'] == "dnd_5e":
-        # get monster name and book details and add to list
-        monsters_and_combat = string.split(';')
-        monsters = monsters_and_combat[0].split(' and ')
-        for monster in monsters:
-            if ' x ' in monster:
-                monster = monster.split(' x ')[1]
-                monster_list.append(monster.strip())
-            else:
-                monster_list.append(monster.strip())
-        # get combat type and add to list
-        combat = monsters_and_combat[1].split(',')
-        combat_list.append(combat[0].strip())
-        # get xp amount and add to list
-        xp_amount = combat[1].strip().split(' ')
-        xp_list.append(xp_amount[0].strip())
-    if data['settings']['infest'] == "dnd_4e":
-        # get monster name and book details and add to list
-        monsters = string.split(') and ')
-        for monster in monsters:
-            if ' x ' in monster:
-                monster = monster.split(' x ')[1]
-                monster = monster.strip().split(',')
-                monster_list.append(monster[0])
-            else:
-                monster = monster.strip().split(',')
-                monster_list.append(monster[0])
-
-
-def extract_book_details(book_details):
-    """ split out name and source book(s) (used on monster list) - 5e and 4e only"""
-    if data['settings']['infest'] == "dnd_5e":
-        split = book_details.split('(')
-        name = split[0].strip()
-        book_details = split[1].split(',')
-        book = book_details[1].strip().replace(')','').replace(' ', ' p.')
-        if len(book_details) > 2:
-            book = f"{book} / {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
-        return name, book
-    if data['settings']['infest'] == "dnd_4e":
-        split = book_details.split('(')
-        name = split[0].strip()
-        book = split[1].strip().replace(' ', ' p.')
-        return name, book
-    return None
-
-
-def request_monster_statblock(monster_name):
-    """ make request to dnd5e api to get json formatted monster statblock """
-    url = f"https://www.dnd5eapi.co/api/monsters/{monster_name}"
-    x = requests.get(url)
-
-    if x.status_code == 200:
-        return x.json()
-    return "not found"
-
-
-def get_ability_modifier(int):
-    """ calculate ability modifier """
-    if round((int - 10.1) / 2) < 0:
-        return round((int - 10.1) / 2)
-    return f"+{round((int - 10.1) / 2)}"
-
-
-def extract_proficiencies_from_api_response(json):
-    """ extract the saving throw and skill check information """
-    saving_throws = []
-    skill_checks = []
-
-    if "proficiencies" in json:
-        for proficiency in json['proficiencies']:
-            proficiency_name = proficiency['proficiency']['name']
-            value = proficiency['value']
-
-            if proficiency_name.startswith("Saving Throw"):
-                saving_throw_name = proficiency_name.split(':')[1].strip()
-                saving_throws.append((saving_throw_name, value))
-            elif proficiency_name.startswith("Skill"):
-                skill_check_name = proficiency_name.split(':')[1].strip()
-                skill_checks.append((skill_check_name, value))
-
-    return saving_throws, skill_checks
-
-
-def expand_dungeon_overview_via_ai(blurb, dungeon_details):
-    openai.api_key = os.getenv("CHATGPT_TOKEN")
-    completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=[
-        {"role": "user", "content": f"Expand on the description of a D&D 5e dungeon adding excitement, drama and suspense.  Only talk about details, sights and sounds of the dungeon's entrance and not inside.  Make no reference to skill checks or ft. (for reference the dungeon details are {dungeon_details}): {blurb}"}
-        ]
-    )
-    print(completion.usage)
-    return completion.choices[0].message["content"]
-
-
-def suggest_a_bbeg_via_ai(expanded_description, dungeon_detail):
-    openai.api_key = os.getenv("CHATGPT_TOKEN")
-    completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=[
-        {"role": "user", "content": f"Based on the following text what D&D 5e monster should be the boss of the dungeons and what would their lair look like based on {dungeon_detail}: {expanded_description}"}
-        ]
-    )
-    print(completion.usage)
-    return completion.choices[0].message["content"]
 
 
 # globals
@@ -225,6 +80,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write(f"![map]({args.gm_map}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
 
     outfile.write("{{margin-top:225px}}\n")
+    # start title css formatting
     outfile.write("{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px\n")
     outfile.write(f"# {data['settings']['name']}\n")
 
@@ -253,6 +109,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write(f"##### A randomly generated {INFEST.upper()} donjon dungeon for a party size of {data['settings']['n_pc']} and APL{data['settings']['level']}\n")
     outfile.write(":::\n")
     outfile.write("##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
+    # close title css formatting
     outfile.write("}}\n")
     outfile.write("\\page\n")
     outfile.write("{{pageNumber,auto}}\n")
@@ -277,7 +134,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     # use AI to expand on the dungeon description and provide other details if not running under testmode
     if not args.testmode:
         if "history" in data['details']:
-            dungeon_detail = f"The floors are {data['details']['floor']}, the walls are {data['details']['walls']}, the temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and the temperature is {data['details']['illumination']}."
+            dungeon_detail = f"{data['details']['floor']} floors, {data['details']['walls']} walls, temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and lighting is {data['details']['illumination']}."
             blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
             outfile.write("## Description\n")
             outfile.write(f"{blurb}\n")
@@ -313,7 +170,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
-    # wandering monsters - certain dungeon outfit types don't have one
+    # wandering monsters - certain dungeon types don't have one
     if "wandering_monsters" in data:
         outfile.write("## Random Encounters\n")
 
@@ -325,8 +182,16 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         for key, val in data["wandering_monsters"].items():
             outfile.write(f"| {key} | {val.replace(NEWLINE, ' ')} |\n")
-            # add to the monster list for the summary page
-            add_monsters_to_monster_list(val.replace(NEWLINE, ' '))
+
+            # add monster, combat types and xp to global lists
+            if data['settings']['infest'] == "dnd_5e":
+                monsters, combats, xps = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
+                monster_list.extend(monsters)
+                combat_list.extend(combats)
+                xp_list.extend(xps)
+            if data['settings']['infest'] == "dnd_4e":
+                monsters = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
+                monster_list.extend(monsters)
 
         outfile.write("}}\n")
 
@@ -335,7 +200,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         if "history" in data['details']:
             bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
             outfile.write("## Dungeon Boss\n")
-            outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair.\n")
+            outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n")
 
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
@@ -410,7 +275,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 continue
                             outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
                             # add to magic items list for the summary page
-                            add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'])
+                            magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'], data['settings']['infest'])
+                            magic_items.update(magics)
 
                         outfile.write("}}\n")
 
@@ -421,12 +287,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # room description
                     if "room_features" in rooms["contents"]["detail"]:
-                        outfile.write("{{note\n")
+                        outfile.write("{{descriptive\n")
                         outfile.write(f"{rooms['contents']['detail']['room_features']}.\n")
-                        outfile.write("}}\n")
-                    else:
-                        outfile.write("{{note\n")
-                        outfile.write("Empty.\n")
                         outfile.write("}}\n")
 
                     # check for page marker
@@ -441,32 +303,35 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 continue
                             if thing.startswith("Treasure"):
                                 outfile.write(":\n")
-                                outfile.write("{{descriptive\n")
+                                # custom format class
+                                outfile.write("{{treasure\n")
                                 outfile.write("#### Treasure\n")
                                 if thing.count("(") == 0:
-                                    thing = sum_up_treasure(thing.replace(",",";"))
+                                    thing = sum_up_treasure(thing.replace(",",";"), data['settings']['infest'])
                                     outfile.write(f"{thing}\n")
                                 else:
                                     outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
                                     # add to magic items list for the summary page
-                                    add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'])
+                                    magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'], data['settings']['infest'])
+                                    magic_items.update(magics)
                                 outfile.write("}}\n")
                             else:
                                 outfile.write("\n")
                                 outfile.write(f"This room is occupied by **{thing}**\n")
-                                # add to the monster list for the summary page
-                                add_monsters_to_monster_list(thing)
+                                # add monster, combat types and xp to global lists
+                                if data['settings']['infest'] == "dnd_5e":
+                                    monsters, combats, xps = add_monsters_to_monster_list(thing, data['settings']['infest'])
+                                    monster_list.extend(monsters)
+                                    combat_list.extend(combats)
+                                    xp_list.extend(xps)
+                                if data['settings']['infest'] == "dnd_4e":
+                                    monsters = add_monsters_to_monster_list(thing, data['settings']['infest'])
+                                    monster_list.extend(monsters)
 
                     # check for page marker
                     outfile.close()
                     check = file_size(check, "LOCATIONS")
                     outfile = open(args.output_filename, "a", encoding="utf-8")
-
-                else:
-                    # no details
-                    outfile.write("{{note\n")
-                    outfile.write("Empty.\n")
-                    outfile.write("}}\n")
 
                 # check for page marker
                 outfile.close()
@@ -476,7 +341,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             # exits
             if "doors" in rooms:
                 outfile.write("#### Exits\n")
-                outfile.write("| Direction | Description | Leads to |\n")
+                outfile.write("| Direction | Description | To |\n")
                 outfile.write("|:--|:--|:--|\n")
 
                 for direction, door in rooms["doors"].items():
@@ -493,9 +358,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                             else:
                                 DESC += " ***Trap***: Already disarmed."
                         if "out_id" in d:
-                            outfile.write(f"| {direction} | {d['desc']} {DESC} | {d['out_id']} |")
+                            outfile.write(f"| {direction.capitalize()} | {d['desc']} {DESC} | {d['out_id']} |")
                         else:
-                            outfile.write(f"| {direction} | {d['desc']} {DESC} | n/a |")
+                            outfile.write(f"| {direction.capitalize()} | {d['desc']} {DESC} | n/a |")
                         outfile.write("\n")
 
                 outfile.write(":\n")
@@ -550,14 +415,14 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         for item in monster_list:
             # split out monster and source book details
-            monster_name, sourcebook = extract_book_details(item)
+            monster_name, sourcebook = extract_book_details(item, data['settings']['infest'])
             outfile.write(f"| {monster_name} | {sourcebook} |\n")
 
             # compile list of monsters for stat blocks
             if "mm" in sourcebook:
                 monster_names.append(monster_name.lower().replace(" ", "-"))
             else:
-                skipped_monsters.append(monster_name.replace("{{", "").replace("}}.", ""))
+                skipped_monsters.append(monster_name)
 
         outfile.write("}}\n")
         outfile.write(":\n")
@@ -615,8 +480,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 movement_types = []
                 for key, value in monster_statblock['speed'].items():
                     movement_types.append(f"{key.capitalize()} {value}")
-                strMovement = ', '.join(movement_types)
-                outfile.write(f"**Speed** :: {strMovement.replace('Walk ', '')}\n")
+                STR_MOVEMENT = ', '.join(movement_types)
+                outfile.write(f"**Speed** :: {STR_MOVEMENT.replace('Walk ', '')}\n")
             else:
                 outfile.write(f"**Speed** :: {monster_statblock['speed']['walk']}\n")
 
@@ -637,39 +502,39 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 throws = []
                 for key, value in saving_throws:
                     throws.append(f"{key.capitalize()} +{value}")
-                strThrows = ', '.join(throws)
-                outfile.write(f"**Saving Throws** :: {strThrows}\n")
+                STR_THROWS = ', '.join(throws)
+                outfile.write(f"**Saving Throws** :: {STR_THROWS}\n")
 
             if skill_checks:
                 skills = []
                 for key, value in skill_checks:
                     skills.append(f"{key.capitalize()} +{value}")
-                strSkills = ', '.join(skills)
-                outfile.write(f"**Skills** :: {strSkills}\n")
+                STR_SKILLS = ', '.join(skills)
+                outfile.write(f"**Skills** :: {STR_SKILLS}\n")
 
             #resistances and immunities
             if monster_statblock["damage_vulnerabilities"]:
-                dmg_vul = ', '.join(monster_statblock["damage_vulnerabilities"])
-                outfile.write(f"**Damage Vulnerabilities** :: {dmg_vul}\n")
+                DMG_VUL = ', '.join(monster_statblock["damage_vulnerabilities"])
+                outfile.write(f"**Damage Vulnerabilities** :: {DMG_VUL}\n")
 
             if monster_statblock["damage_resistances"]:
-                dmg_res = ', '.join(monster_statblock["damage_resistances"])
-                outfile.write(f"**Damage Resistances** :: {dmg_res}\n")
+                DMG_RES = ', '.join(monster_statblock["damage_resistances"])
+                outfile.write(f"**Damage Resistances** :: {DMG_RES}\n")
 
             if monster_statblock["damage_immunities"]:
-                dmg_imm = ', '.join(monster_statblock["damage_immunities"])
-                outfile.write(f"**Damage Immunities** :: {dmg_imm}\n")
+                DMG_IMM = ', '.join(monster_statblock["damage_immunities"])
+                outfile.write(f"**Damage Immunities** :: {DMG_IMM}\n")
 
             if monster_statblock["condition_immunities"]:
                 con_imm_list = []
                 for condition_immunity in monster_statblock["condition_immunities"]:
                     con_imm_list.append(condition_immunity["index"])
-                con_imm = ', '.join(con_imm_list)
-                outfile.write(f"**Condition Immunities** :: {con_imm}\n")
+                CON_IMM = ', '.join(con_imm_list)
+                outfile.write(f"**Condition Immunities** :: {CON_IMM}\n")
 
             # extract senses
-            statblock_senses = str(monster_statblock['senses']).replace("{", "").replace("}", "").replace("'", "").replace(":", "").replace("_", " ")
-            outfile.write(f"**Senses** :: {statblock_senses}\n")
+            STATBLOCK_SENSES = str(monster_statblock['senses']).replace("{", "").replace("}", "").replace("'", "").replace(":", "").replace("_", " ")
+            outfile.write(f"**Senses** :: {STATBLOCK_SENSES}\n")
 
             # handle emtpy language list
             if monster_statblock["languages"]:
