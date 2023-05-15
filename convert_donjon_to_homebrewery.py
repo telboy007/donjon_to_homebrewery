@@ -185,13 +185,9 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
             # add monster, combat types and xp to global lists
             if data['settings']['infest'] == "dnd_5e":
-                monsters, combats, xps = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
-                monster_list.extend(monsters)
-                combat_list.extend(combats)
-                xp_list.extend(xps)
+                monster_list, combat_list, xp_list = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
             if data['settings']['infest'] == "dnd_4e":
-                monsters = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
-                monster_list.extend(monsters)
+                monster_list = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
 
         outfile.write("}}\n")
 
@@ -276,7 +272,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                             outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
                             # add to magic items list for the summary page
                             if data['settings']['infest'] == "dnd_5e":
-                                magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'], data['settings']['infest'])
+                                magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'])
                                 magic_items.update(magics)
 
                         outfile.write("}}\n")
@@ -314,7 +310,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                     outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
                                     # add to magic items list for the summary page
                                     if data['settings']['infest'] == "dnd_5e":
-                                        magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'], data['settings']['infest'])
+                                        magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'])
                                         magic_items.update(magics)
                                 outfile.write("}}\n")
                             else:
@@ -322,13 +318,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 outfile.write(f"This room is occupied by **{thing}**\n")
                                 # add monster, combat types and xp to global lists
                                 if data['settings']['infest'] == "dnd_5e":
-                                    monsters, combats, xps = add_monsters_to_monster_list(thing, data['settings']['infest'])
-                                    monster_list.extend(monsters)
-                                    combat_list.extend(combats)
-                                    xp_list.extend(xps)
+                                    monster_list, combat_list, xp_list = add_monsters_to_monster_list(thing, data['settings']['infest'])
                                 if data['settings']['infest'] == "dnd_4e":
-                                    monsters = add_monsters_to_monster_list(thing, data['settings']['infest'])
-                                    monster_list.extend(monsters)
+                                    monster_list = add_monsters_to_monster_list(thing, data['settings']['infest'])
 
                     # check for page marker
                     outfile.close()
@@ -389,7 +381,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # list out xp and combat type details if 5e dungeon
         if data['settings']['infest'] == "dnd_5e":
             outfile.write("{{descriptive\n")
-            outfile.write("#### Combat details\n")
+            outfile.write("#### Combat details (guide only)\n")
 
             # work out some xp totals
             total_xp = sum(int(i) for i in xp_list)

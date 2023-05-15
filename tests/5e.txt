@@ -877,14 +877,14 @@ This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 ## Summary
 Here you will find useful reference tables for things encountered in the dungeon.
 {{descriptive
-#### Combat details
-**Total XP: 170950** which is 42738 xp per party member.
+#### Combat details (guide only)
+**Total XP: 11150** which is 2788 xp per party member.
 | Type | Amount |
 |:--|:--|
 | Easy | 0 |
-| Medium | 48 |
-| Hard | 15 |
-| Deadly | 372 |
+| Medium | 5 |
+| Hard | 1 |
+| Deadly | 23 |
 }}
 :
 {{descriptive

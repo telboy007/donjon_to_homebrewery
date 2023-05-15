@@ -22,19 +22,18 @@ def sum_up_treasure(string, infest):
     return None
 
 
-def add_magical_items_to_list(string, room_loc, infest):
+def add_magical_items_to_list(string, room_loc):
     """ 
         compiles ref table for magic items - 5e only 
         format: magic_item[name (quantity if applicable)] = dmg page number/room location id    
     """
-    if infest == "dnd_5e":
-        raw_magic_items = string.split(',')
-        for index, raw_magic_item in enumerate(raw_magic_items):
-            if 'dmg' in raw_magic_item:
-                item_name = format_magic_item_name(raw_magic_items[index - 1])
-                magic_items[item_name] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
+    raw_magic_items = string.split(',')
+    for index, raw_magic_item in enumerate(raw_magic_items):
+        if 'dmg' in raw_magic_item:
+            item_name = format_magic_item_name(raw_magic_items[index - 1])
+            magic_items[item_name] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
 
-        return magic_items
+    return magic_items
 
 
 def format_magic_item_name(item_name):
