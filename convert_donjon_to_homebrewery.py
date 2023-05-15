@@ -275,8 +275,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 continue
                             outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
                             # add to magic items list for the summary page
-                            magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'], data['settings']['infest'])
-                            magic_items.update(magics)
+                            if data['settings']['infest'] == "dnd_5e":
+                                magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'], data['settings']['infest'])
+                                magic_items.update(magics)
 
                         outfile.write("}}\n")
 
@@ -312,8 +313,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 else:
                                     outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
                                     # add to magic items list for the summary page
-                                    magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'], data['settings']['infest'])
-                                    magic_items.update(magics)
+                                    if data['settings']['infest'] == "dnd_5e":
+                                        magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'], data['settings']['infest'])
+                                        magic_items.update(magics)
                                 outfile.write("}}\n")
                             else:
                                 outfile.write("\n")

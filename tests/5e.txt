@@ -909,6 +909,18 @@ Here you will find useful reference tables for things encountered in the dungeon
 #### Magic Items (alphabetical)
 | Item | Book | Room |
 |:--|:--|--:|
+| Heward's Handy Haversack **R** | dmg p.174 | 36 |
+| Potion of Animal Friendship **U** (2) | dmg p.187 | 51 |
+| Potion of Clairvoyance **R** | dmg p.187 | 36 |
+| Potion of Climbing **C** | dmg p.187 | 36 |
+| Potion of Frost Giant Strength **R** | dmg p.187 | 51 |
+| Potion of Greater Healing **U** (2) | dmg p.187 | 13 |
+| Potion of Healing **C** | dmg p.187 | 36 |
+| Potion of Healing **C** (2) | dmg p.187 | 4 |
+| Potion of Superior Healing **R** | dmg p.187 | 30 |
+| Potion of Water Breathing **U** | dmg p.188 | 13 |
+| Spell Scroll (Fog Cloud) **C** | dmg p.200 | 4 |
+| Spell Scroll (Nondetection) **U** | dmg p.200 | 13 |
 }}
 {{footnote SUMMARY}}
 \page
