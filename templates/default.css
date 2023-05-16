@@ -1,0 +1,21 @@
+.treasure {
+	/* treasure custom style */
+}
+
+.trap {
+	/* trap custom style */
+	background-color: #faf7ea;
+	border-color: #9C2B1B;
+	border-style: dashed;
+	border-width: 3px;
+	margin-bottom: 5px;
+}
+
+.hidden-treasure {
+	/* hidden treasure custom style */
+	background-color: #faf7ea;
+	border-color: gold;
+	border-style: dotted;
+	border-width: 6px;
+	margin-bottom: 5px;
+}
