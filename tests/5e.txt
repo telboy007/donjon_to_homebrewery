@@ -845,7 +845,7 @@ ___
 **Skills** :: Stealth +6
 **Senses** :: darkvision 60 ft., passive perception 9
 **Languages** :: Common, Goblin
-**Challenge Rating** :: 0.25 (50 XP)
+**Challenge Rating** :: 1/4 (50 XP)
 ___
 ***Nimble Escape.*** The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
 ### Actions
@@ -867,7 +867,7 @@ ___
 ___
 **Senses** :: darkvision 60 ft., passive perception 10
 **Languages** :: Common, Goblin
-**Challenge Rating** :: 0.5 (100 XP)
+**Challenge Rating** :: 1/2 (100 XP)
 ___
 ***Martial Advantage.*** Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't incapacitated.
 ### Actions
@@ -946,7 +946,7 @@ ___
 **Skills** :: Intimidation +2
 **Senses** :: darkvision 60 ft., passive perception 10
 **Languages** :: Common, Orc
-**Challenge Rating** :: 0.5 (100 XP)
+**Challenge Rating** :: 1/2 (100 XP)
 ___
 ***Aggressive.*** As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
 ### Actions
@@ -995,7 +995,7 @@ ___
 **Skills** :: Perception +4
 **Senses** :: darkvision 60 ft., passive perception 14
 **Languages** :: Goblin, Worg
-**Challenge Rating** :: 0.5 (100 XP)
+**Challenge Rating** :: 1/2 (100 XP)
 ___
 ***Keen Hearing and Smell.*** The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 ### Actions
@@ -1021,7 +1021,7 @@ ___
 **Condition Immunities** :: poisoned
 **Senses** :: darkvision 60 ft., passive perception 8
 **Languages** :: understands all languages it spoke in life but can't speak
-**Challenge Rating** :: 0.25 (50 XP)
+**Challenge Rating** :: 1/4 (50 XP)
 ___
 ***Undead Fortitude.*** If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
 ### Actions
