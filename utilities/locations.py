@@ -18,7 +18,7 @@ def sum_up_treasure(string, infest):
         for coin_type, values in currency.items():
             # build list of totals and coin type (string)
             result += (f"{sum(values)} {str(coin_type)}, ")
-        return f"{str(result[:-2]).replace(',;', ',')}\n"
+        return f"{str(result[:-2]).replace(',;', ',')}"
     return None
 
 
@@ -45,7 +45,7 @@ def format_magic_item_name(item_name):
     return item_name.replace('(uncommon','**U**').replace('(common','**C**').replace('(rare', '**R**').replace('(very rare', '**VR**').replace('(legendary', '**L**').replace('(artifact', '**A**').strip()
 
 
-def add_monsters_to_monster_list(string, infest):
+def compile_monster_and_combat_details(string, infest):
     """ compiles ref table for monsters - 4e and 5e only """
     if infest == "dnd_5e":
         # get monster name and book details and add to list
@@ -63,9 +63,7 @@ def add_monsters_to_monster_list(string, infest):
         # get xp amount and add to list
         xp_amount = combat[1].strip().split(' ')
         xp_list.append(xp_amount[0].strip())
-
         return monster_list, combat_list, xp_list
-
     if infest == "dnd_4e":
         # get monster name and book details and add to list
         monsters = string.split(') and ')
@@ -77,8 +75,8 @@ def add_monsters_to_monster_list(string, infest):
             else:
                 monster = monster.strip().split(',')
                 monster_list.append(monster[0])
-
         return monster_list
+    return None
 
 
 def extract_book_details(book_details, infest):

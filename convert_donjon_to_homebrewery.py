@@ -14,8 +14,8 @@ import argparse
 import json
 from collections import OrderedDict
 from dotenv import load_dotenv
-from utilities.ai import expand_dungeon_overview_via_ai, suggest_a_bbeg_via_ai
-from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, add_monsters_to_monster_list
+from utilities.ai import expand_dungeon_overview_via_ai, suggest_a_bbeg_via_ai, suggest_adventure_hooks_via_ai
+from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, compile_monster_and_combat_details
 from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier
 
 load_dotenv()
@@ -29,18 +29,23 @@ def set_check():
         return len(readonly_file.read())
 
 
-def file_size(current_check, footnote):
+def file_size(current_check, footnote, flag=False):
     """Count the current number of characters in a file"""
+    # first page of locations needs a larger check value
+    value = 3500 if flag else 3000
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
-    if (new_size - current_check) > 2450:
+    if (new_size - current_check) > value:
+        flag = False
         with open(args.output_filename, "a", encoding="utf-8") as append_file:
-            append_file.write("{{footnote "+footnote+"}}\n")
+            append_file.write("{{")
+            append_file.write(f"footnote {footnote}")
+            append_file.write("}}\n")
             append_file.write("\\page\n")
             append_file.write("{{pageNumber,auto}}\n")
         # set new current check
         current_check = new_size
-    return current_check
+    return current_check, flag
 
 
 # globals
@@ -131,16 +136,18 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
+    outfile.write("## Overview\n")
     # use AI to expand on the dungeon description and provide other details if not running under testmode
     if not args.testmode:
         if "history" in data['details']:
+            blurb = data['details']['history']
             dungeon_detail = f"{data['details']['floor']} floors, {data['details']['walls']} walls, temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and lighting is {data['details']['illumination']}."
-            blurb = expand_dungeon_overview_via_ai(data['details']['history'], dungeon_detail)
-            outfile.write("## Description\n")
-            outfile.write(f"{blurb}\n")
+            flavour_text = expand_dungeon_overview_via_ai(blurb, dungeon_detail)
+            outfile.write("### Description\n")
+            outfile.write(f"{flavour_text}\n")
 
     # general features
-    outfile.write("## Features\n")
+    outfile.write("### Features\n")
     outfile.write("The dungeon has the following features, these may include skill checks to perform certain actions.\n")
     outfile.write("{{descriptive\n")
     outfile.write("#### General Features\n")
@@ -170,9 +177,9 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
-    # wandering monsters - certain dungeon types don't have one
+    # wandering monsters - certain dungeon types don't have any
     if "wandering_monsters" in data:
-        outfile.write("## Random Encounters\n")
+        outfile.write("### Random Encounters\n")
 
         outfile.write("There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n")
         outfile.write("{{classTable,frame\n")
@@ -185,9 +192,9 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
             # add monster, combat types and xp to global lists
             if data['settings']['infest'] == "dnd_5e":
-                monster_list, combat_list, xp_list = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
+                monster_list, combat_list, xp_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), data['settings']['infest'])
             if data['settings']['infest'] == "dnd_4e":
-                monster_list = add_monsters_to_monster_list(val.replace(NEWLINE, ' '), data['settings']['infest'])
+                monster_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), data['settings']['infest'])
 
         outfile.write("}}\n")
 
@@ -195,8 +202,17 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     if not args.testmode:
         if "history" in data['details']:
             bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
-            outfile.write("## Dungeon Boss\n")
-            outfile.write(f"{bbeg_and_lair}  Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n")
+            outfile.write("### Dungeon Boss\n")
+            outfile.write(f"{bbeg_and_lair}\n\n")
+            outfile.write("Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n")
+
+    # use AI to suggest a BBEG and lair detail if not running under testmode
+    if not args.testmode:
+        if "history" in data['details']:
+            adventure_hooks = suggest_adventure_hooks_via_ai(blurb, bbeg_and_lair)
+            outfile.write("### Adventure Hooks\n")
+            outfile.write(f"{adventure_hooks}\n\n")
+            outfile.write("Depending on which adventure hook you choose, don't forget to tweak elements of the dungeon accordingly.\n")
 
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
@@ -211,6 +227,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     # *** DUNGEON DETAILS ***
 
     # locations
+    FIRST_PAGE = True
     outfile.write("## Locations\n")
 
     # certain dungeon generators don't provide entrance information
@@ -227,7 +244,6 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n")
             else:
                 outfile.write(f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters from the {egress['dir']}.\n")
-        outfile.write("\n")
 
     # *** LOCATION DETAILS ***
 
@@ -237,11 +253,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             if rooms is None:
                 continue
             outfile.write(f"### Room {rooms['id']}\n")
-            outfile.write(":\n")
 
             # check for page marker
             outfile.close()
-            check = file_size(check, "LOCATIONS")
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
             if "contents" in rooms:
@@ -249,7 +264,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # traps
                     if "trap" in rooms["contents"]["detail"]:
-                        outfile.write("{{classTable,frame\n")
+                        outfile.write("{{trap\n")
                         outfile.write("#### Trap!\n")
                         for item in rooms["contents"]["detail"]["trap"]:
                             desc = item.replace("\n","")
@@ -259,12 +274,12 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check, "LOCATIONS")
+                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # hidden treasure
                     if "hidden_treasure" in rooms["contents"]["detail"]:
-                        outfile.write("{{classTable,frame\n")
+                        outfile.write("{{hidden-treasure\n")
                         outfile.write("#### Hidden Treasure!\n")
                         for item in rooms["contents"]["detail"]["hidden_treasure"]:
                             if item == "--":
@@ -279,7 +294,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check, "LOCATIONS")
+                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # room description
@@ -290,7 +305,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check, "LOCATIONS")
+                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                     # monsters and treasure
@@ -299,7 +314,6 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                             if thing == "--":
                                 continue
                             if thing.startswith("Treasure"):
-                                outfile.write(":\n")
                                 # custom format class
                                 outfile.write("{{treasure\n")
                                 outfile.write("#### Treasure\n")
@@ -314,22 +328,21 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                         magic_items.update(magics)
                                 outfile.write("}}\n")
                             else:
-                                outfile.write("\n")
                                 outfile.write(f"This room is occupied by **{thing}**\n")
                                 # add monster, combat types and xp to global lists
                                 if data['settings']['infest'] == "dnd_5e":
-                                    monster_list, combat_list, xp_list = add_monsters_to_monster_list(thing, data['settings']['infest'])
+                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, data['settings']['infest'])
                                 if data['settings']['infest'] == "dnd_4e":
-                                    monster_list = add_monsters_to_monster_list(thing, data['settings']['infest'])
+                                    monster_list = compile_monster_and_combat_details(thing, data['settings']['infest'])
 
                     # check for page marker
                     outfile.close()
-                    check = file_size(check, "LOCATIONS")
+                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
                     outfile = open(args.output_filename, "a", encoding="utf-8")
 
                 # check for page marker
                 outfile.close()
-                check = file_size(check, "LOCATIONS")
+                check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
                 outfile = open(args.output_filename, "a", encoding="utf-8")
 
             # exits
@@ -361,7 +374,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check, "LOCATIONS")
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
     # end locations section and prepare for summary
@@ -444,6 +457,12 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     # if 5th edition try to get as many monster stat blocks as possible
     if data['settings']['infest'] == "dnd_5e":
         outfile.write("\\page\n")
+
+        # update check value
+        outfile.close()
+        check = set_check()
+        outfile = open(args.output_filename, "a", encoding="utf-8")
+
         outfile.write("{{pageNumber,auto}}\n")
         outfile.write("# Stat Blocks (SRD only)\n")
 
@@ -566,7 +585,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
             # check for page marker
             outfile.close()
-            check = file_size(check, "STAT BLOCKS")
+            check, flag = file_size(check, "STAT BLOCKS")
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
         # write out list of skipped monsters deduped and ordered

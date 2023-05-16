@@ -8,7 +8,8 @@
 }}
 \page
 {{pageNumber,auto}}
-## Features
+## Overview
+### Features
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
 #### General Features
@@ -39,7 +40,7 @@ Some of the corridors marked on the map have special features detailed below.
 | x | The scent of ozone fills the corridor |
 | z | A group of demonic faces have been carved into the walls |
 }}
-## Random Encounters
+### Random Encounters
 There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
 #### Wandering Monsters
@@ -57,8 +58,7 @@ There are also roaming groups with specific goals, this will help you place them
 {{pageNumber,auto}}
 ## Locations
 ### Room 1
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Spinning Blades (Perception DC 12 to find, Thievery DC 17 to disable, Init +2, Close burst 1, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
@@ -72,13 +72,10 @@ There are also roaming groups with specific goals, this will help you place them
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp) (slides down, +1 to break DC)  | 3 |
 :
 ### Room 2
-:
 {{descriptive
 Stone columns (provides cover), Stone sphere (Strength DC 12 to push, deals 3d8+4 damage).
 }}
-
 This room is occupied by **8 x Dire Stirge (mm 248, 300 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -90,7 +87,6 @@ None
 | South | Secret (Perception DC 15 to find) Locked Stone Door (Thievery DC 10 to unlock, Strength DC 25 to break, 40 hp) ***Secret:*** The door is opened by twisting an iron ring | 3 |
 :
 ### Room 3
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -99,7 +95,6 @@ None
 | West | Archway  | n/a |
 :
 ### Room 4
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -109,17 +104,11 @@ None
 | South | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 5 |
 :
 ### Room 5
-:
-
 This room is occupied by **1 x Young Blue Dragon (mm 77, 1250 xp)**
-:
 {{treasure
 #### Treasure
 None
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -127,17 +116,14 @@ None
 | North | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 4 |
 :
 ### Room 6
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Spinning Blades (Perception DC 17 to find, Thievery DC 12 to disable, Init +2, Close burst 1, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
 {{descriptive
 A balcony hangs from the west wall, and a faded and torn tapestry hangs from the south wall.
 }}
-
 This room is occupied by **4 x Poltergeist (og 150, 250 xp)**
-:
 {{treasure
 #### Treasure
 Small Rock Crystal (173 gp each); Stoneware Jar painted with Garden Imagery (350 gp); hoard total 523 gp
@@ -149,13 +135,13 @@ Small Rock Crystal (173 gp each); Stoneware Jar painted with Garden Imagery (350
 | West | Locked Iron Door (Thievery DC 10 to unlock, Strength DC 30 to break, 60 hp)  | 101 |
 :
 ### Room 7
-:
 {{descriptive
 Fiery brazier (Strength DC 10 to knock over, deals ongoing 5 fire damage), The walls have been engraved with endless spirals.
 }}
-
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **5 x Boneshard Skeleton (mm 235, 200 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -166,13 +152,10 @@ None
 | South | Archway  | n/a |
 :
 ### Room 8
-:
 {{descriptive
 Ice clouds (provides concealment, deals 1d6+4 cold damage), Anchor Stone (move at least 2 squares per turn or become immobilized, save ends).
 }}
-
 This room is occupied by **2 x Geonid (mm2 99, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -184,7 +167,6 @@ None
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 9
-:
 {{descriptive
 Wall of flame (provides concealment, deals 1d6+4 fire damage), Someone has scrawled "Trespassers will be flayed alive" in blood on the south wall.
 }}
@@ -197,11 +179,7 @@ Wall of flame (provides concealment, deals 1d6+4 fire damage), Someone has scraw
 | West | Archway  | n/a |
 | West | Iron Portcullis (Strength DC 20 to open, 60 hp)  | 111 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 10
-:
 {{descriptive
 A chute falls into the room from above, and the north and west walls have been engraved with geometric patterns.
 }}
@@ -212,17 +190,14 @@ A chute falls into the room from above, and the north and west walls have been e
 | North | Archway  | n/a |
 :
 ### Room 11
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Dart Blaster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close blast 2, Attack +11 vs. AC, Damage 3d6+4, 63 xp)
 }}
 {{descriptive
 Clouds of smoke (provides concealment), Part of the ceiling has collapsed into the room.
 }}
-
 This room is occupied by **7 x Shadow Speaker (mm3 39, 250 xp)**
-:
 {{treasure
 #### Treasure
 576 gp; 3 x Small Sardonyx (171 gp each); Bone Medallion set with Golden Yellow Topaz (270 gp); +2 Magic Tome (ap 151, 1800 gp), +2 Orb of Impenetrable Escape (av 94, 1800 gp), 10 x Arcane Ritual Scroll (Leomund's Secret Chest (phb 307, 360 gp)), 10 x Goodnight Tincture (av 28, 150 gp); hoard total 10059 gp
@@ -234,14 +209,14 @@ This room is occupied by **7 x Shadow Speaker (mm3 39, 250 xp)**
 | North | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 100 |
 | South | Archway  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 12
-:
 {{descriptive
 Lightning generator (deals 1d10+4 lightning damage), A crater has been blasted into the floor in the south-east corner of the room.
 }}
-
 This room is occupied by **7 x Half-Orc Death Mage (mm2 140, 250 xp)**
-:
 {{treasure
 #### Treasure
 Brass Bracer etched with Elven Script (340 gp); +2 Magic Armor (phb 230, 1800 gp) Finemail (av 7), Crown of Doors (av 140, 1800 gp); hoard total 3940 gp
@@ -255,7 +230,6 @@ Brass Bracer etched with Elven Script (340 gp); +2 Magic Armor (phb 230, 1800 gp
 | West | Wooden Portcullis (Strength DC 15 to open, 20 hp) (stuck, +2 to open DC)  | n/a |
 :
 ### Room 13
-:
 {{descriptive
 Entropic altar (healing is only half as effective), A wooden ladder rests against the west wall.
 }}
@@ -264,21 +238,15 @@ Entropic altar (healing is only half as effective), A wooden ladder rests agains
 |:--|:--|:--|
 | East | Stuck Stone Door (Strength DC 22 to break, 40 hp)  | 36 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 14
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 6 x Spinning Floortile (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
 {{descriptive
 Arcane engine, Crude ballista (Strength DC 17 to arm, Dex attack vs. AC, deals 3d10+4 damage, single use).
 }}
-
 This room is occupied by **6 x Dragonkin Kobold Defender (dr1 226, 250 xp)**
-:
 {{treasure
 #### Treasure
 108 gp, 11880 sp; 3 x Uncut Chalcedony (172 gp each); +2 Magic Tome (ap 151, 1800 gp); hoard total 3612 gp
@@ -289,7 +257,6 @@ This room is occupied by **6 x Dragonkin Kobold Defender (dr1 226, 250 xp)**
 | South | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | n/a |
 :
 ### Room 15
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -299,7 +266,6 @@ This room is occupied by **6 x Dragonkin Kobold Defender (dr1 226, 250 xp)**
 | West | Archway  | 122 |
 :
 ### Room 16
-:
 {{descriptive
 Clouds of solid fog (provides concealment, difficult terrain), A simple fireplace sits against the south wall.
 }}
@@ -311,8 +277,7 @@ Clouds of solid fog (provides concealment, difficult terrain), A simple fireplac
 | North | Trapped Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 65 |
 :
 ### Room 17
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 30 to find) Locked Good Wooden Chest (Thievery DC 15 to unlock, Strength DC 18 to break, 30 hp)
 * None
@@ -320,9 +285,10 @@ Clouds of solid fog (provides concealment, difficult terrain), A simple fireplac
 {{descriptive
 A magical mirror on the north wall answers questions with lies and falsehoods, and a faded and torn tapestry hangs from the south wall.
 }}
-
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **4 x Adept of Orcus (mm3 95, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -333,21 +299,15 @@ None
 | South | Trapped and Unlocked Stone Door (Strength DC 20 to break, 40 hp)  ***Trap:*** Electrified Lock (Perception DC 17 to find, Thievery DC 12 to disable, Single-shot, Melee 1, Attack +9 vs. Fortitude, Damage 3d8+4 lightning, 63 xp) | n/a |
 | West | Stuck Iron Door (Strength DC 28 to break, 60 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 18
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Bolter Turret (Perception DC 12 to find, Thievery DC 17 to disable, Init +2, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
 {{descriptive
 Pool of acid (difficult terrain, deals 1d10+4 acid damage), Mysterious levers and mechanisms cover the walls.
 }}
-
 This room is occupied by **6 x Chitine Marauder (mm3 32, 250 xp)**
-:
 {{treasure
 #### Treasure
 540 gp; 3 x Carved Obsidian (187 gp each), 2 x Small Jasper (173 gp each), 2 x Uncut Star Rose Quartz (185 gp each); +2 Challenge-Seeking Weapon (av2 17, 1800 gp) Spiked Gauntlet (av 9), +2 Magic Weapon (phb 235, 1800 gp) Sling (phb 219), 2 x Arcane Ritual Scroll (Phantom Steed (phb 310, 360 gp)), 4 x Lesser Elixir of Dragon Breath (mme 95, 75 gp), Trackless Ashes (mme 101, 75 gp), 5 x Vision Sand (av 192, 75 gp); hoard total 6887 gp
@@ -359,17 +319,14 @@ This room is occupied by **6 x Chitine Marauder (mm3 32, 250 xp)**
 | South | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 19
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Telekinetic Blaster (Perception DC 17 to find, Thievery DC 17 to disable, Init +2, Target 1 creature within 10 squares, Attack +9 vs. Fortitude, the target is pushed 2 squares, 250 xp)
 }}
 {{descriptive
 Numerous pillars line the south and east walls, and several headless statues are scattered throughout the room.
 }}
-
 This room is occupied by **2 x Iron Cobra (mm 157, 250 xp)**
-:
 {{treasure
 #### Treasure
 588 gp, 6928 sp; +2 Amulet of Protection (phb 249, 1800 gp), +2 Summoned Armor (av 53, 1800 gp) Leather Armor (phb 214); hoard total 4880 gp 8 sp
@@ -381,8 +338,7 @@ This room is occupied by **2 x Iron Cobra (mm 157, 250 xp)**
 | West | Archway  | n/a |
 :
 ### Room 20
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Arcane Bolter (Perception DC 12 to find, Thievery DC 12 to disable, Init +2, Target 1 creature within 20 squares, Attack +11 vs. AC, Damage 1d10+4 force, 250 xp)
 }}
@@ -401,8 +357,7 @@ A sloped pit lined with iron spikes lies in the south-east corner of the room, a
 \page
 {{pageNumber,auto}}
 ### Room 21
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Trapped and Locked Strong Wooden Chest (Thievery DC 20 to unlock, Strength DC 20 to break, 40 hp)
 * Teleporter Crystal (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Will, the target is teleported 17 squares, 63 xp)
@@ -421,7 +376,6 @@ Scaffolding (Acrobatics or Athletics DC 10 to climb), Barred partition walls (pr
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | 54 |
 :
 ### Room 22
-:
 {{descriptive
 Several iron cages are scattered throughout the room, and a charred club lies in the south-east corner of the room.
 }}
@@ -432,13 +386,10 @@ Several iron cages are scattered throughout the room, and a charred club lies in
 | South | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | n/a |
 :
 ### Room 23
-:
 {{descriptive
 Font of blood (-2 to saving throws vs. ongoing damage), Several pieces of rotten rope are scattered throughout the room.
 }}
-
 This room is occupied by **6 x Wyrmwarped Scaleshaper (dr1 225, 250 xp)**
-:
 {{treasure
 #### Treasure
 596 gp, 224 sp; 3 x Small Star Rose Quartz (171 gp each); Brocade Choker threaded with Silver (290 gp), Portrait (of a female half-elf) in a Wooden Frame inlaid with a Meandros of Silver (310 gp); 5 x Elixir of Invisibility (mme 93, 75 gp), 7 x Trackless Ashes (mme 101, 75 gp); hoard total 2631 gp 4 sp
@@ -454,14 +405,11 @@ This room is occupied by **6 x Wyrmwarped Scaleshaper (dr1 225, 250 xp)**
 \page
 {{pageNumber,auto}}
 ### Room 24
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Frostcyst Burster (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Close burst 2, Attack +9 vs. Fortitude, Damage 3d6+4 cold      and the target is weakened until the end of its next turn, 63 xp)
 }}
-
 This room is occupied by **5 x Chitine Web Crafter (mm3 33, 250 xp)**
-:
 {{treasure
 #### Treasure
 2520 sp; 3 x Small Rock Crystal (175 gp each); Linen Choker threaded with Electrum (290 gp), Steel Dagger engraved with Arcane Runes (440 gp); +2 Distance Weapon (av 68, 1800 gp) Hand Crossbow (phb 219), 8 x Lesser Elixir of Dragon Breath (mme 95, 75 gp); hoard total 3907 gp
@@ -473,13 +421,10 @@ This room is occupied by **5 x Chitine Web Crafter (mm3 33, 250 xp)**
 | South | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 25
-:
 {{descriptive
 An iron chandelier hangs from the ceiling in the east side of the room, and someone has scrawled "Stay left" in orcish runes on the east wall.
 }}
-
 This room is occupied by **6 x Chitine Web Crafter (mm3 33, 250 xp)**
-:
 {{treasure
 #### Treasure
 3960 sp; 3 x Crown Malachite (180 gp each); Bone Rod engraved with Spirals (370 gp), Small Woolen Carpet (430 gp); 5 x Divine Ritual Scroll (Discern Lies (phb 303, 360 gp)); hoard total 3536 gp
@@ -492,7 +437,6 @@ This room is occupied by **6 x Chitine Web Crafter (mm3 33, 250 xp)**
 | West | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 18 |
 :
 ### Room 26
-:
 {{descriptive
 Chaos wind (pushed 1d6 squares in a random direction at end of turn), Several pieces of spoiled meat are scattered throughout the room.
 }}
@@ -502,10 +446,7 @@ Chaos wind (pushed 1d6 squares in a random direction at end of turn), Several pi
 | South | Locked Strong Wooden Door (Thievery DC 10 to unlock, Strength DC 20 to break, 40 hp)  | 115 |
 :
 ### Room 27
-:
-
 This room is occupied by **4 x Chillborn Zombie (mm 275, 250 xp)**
-:
 {{treasure
 #### Treasure
 64 gp, 224 sp; Small Smoky Quartz (178 gp each); Brass Mask engraved with Draconic Scales (320 gp), Silver Pendant engraved with Draconic Runes (280 gp); +2 Magic Holy Symbol (phb 236, 1800 gp), Watchful Ruby Eye (av 178, 1800 gp); hoard total 4464 gp 4 sp
@@ -516,12 +457,8 @@ This room is occupied by **4 x Chillborn Zombie (mm 275, 250 xp)**
 | East | Secret (Perception DC 30 to find) Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp) ***Secret:*** The door is located several feet above the floor and concealed by an illusion | n/a |
 | West | Unlocked Strong Wooden Door (Strength DC 15 to break, 40 hp)  | 108 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 28
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 5 x Spinning Floortile (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
@@ -531,18 +468,18 @@ This room is occupied by **4 x Chillborn Zombie (mm 275, 250 xp)**
 | East | Secret (Perception DC 15 to find) Stuck Good Wooden Door (Strength DC 15 to break, 30 hp) ***Secret:*** The door is located above a small stone dais and concealed within a mosaic of arcane patterns | n/a |
 | South | Secret (Perception DC 20 to find) Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp) ***Secret:*** The door is concealed behind a statue of a fearsome dragon, and opened by reaching into its mouth | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 29
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 7 x Spinning Floortile (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
 {{descriptive
 Psychic resonance (+2 to attacks vs. Will), Several wax blobs are scattered throughout the room.
 }}
-
 This room is occupied by **4 x Chitine Web Crafter (mm3 33, 250 xp)**
-:
 {{treasure
 #### Treasure
 +2 Imposter's Armor (av 46, 1800 gp) Chainmail (phb 214), Belt of Endurance (av 164, 1800 gp); hoard total 3600 gp
@@ -555,7 +492,6 @@ This room is occupied by **4 x Chitine Web Crafter (mm3 33, 250 xp)**
 | West | Secret (Perception DC 15 to find) Locked Stone Door (Thievery DC 10 to unlock, Strength DC 25 to break, 40 hp) (magically reinforced, +5 to break DC) ***Secret:*** The door is located above a small stone dais and opened by standing on a small floor tile | 62 |
 :
 ### Room 30
-:
 {{descriptive
 A rope ascends to a catwalk hanging between the north and south walls, and a pile of torches lies in the south side of the room.
 }}
@@ -566,14 +502,8 @@ A rope ascends to a catwalk hanging between the north and south walls, and a pil
 | North | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | n/a |
 | West | Wooden Portcullis (Strength DC 15 to open, 20 hp) (stuck, +2 to open DC)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 31
-:
-
 This room is occupied by **5 x Iron Cobra (mm 157, 250 xp)**
-:
 {{treasure
 #### Treasure
 2 x Carved Lapis Lazuli (188 gp each), 3 x Carved Obsidian (190 gp each), 2 x Crown Blue Quartz (184 gp each); 2 x Arcane Ritual Scroll (Phantom Steed (phb 310, 360 gp)), 8 x Holy Water (mme 132, 75 gp); hoard total 2634 gp
@@ -585,12 +515,14 @@ This room is occupied by **5 x Iron Cobra (mm 157, 250 xp)**
 | West | Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  | 45 |
 :
 ### Room 32
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 30 to find) Unlocked Strong Wooden Chest (Strength DC 15 to break, 40 hp)
 * 3600 sp; 3 x Small Chrysoprase (176 gp each), 2 x Uncut Onyx (183 gp each); Linen Mantle trimmed with Rabbit Fur (310 gp); +2 Amulet of Protection (phb 249, 1800 gp), +2 Sacrificial Weapon (av 77, 1800 gp) Spiked Gauntlet (av 9), Divine Ritual Scroll (Thief's Lament (dp 158, 360 gp)), 10 x Martial Practice (Precise Forgery (mp2 151, 80 gp)), 7 x Trackless Ashes (mme 101, 75 gp); hoard total 6849 gp
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{descriptive
 Lightning generator (deals 1d10+4 lightning damage), Lightning mist (moving more than 2 squares per round deals 1d6+4 lightning damage).
 }}
@@ -602,7 +534,6 @@ Lightning generator (deals 1d10+4 lightning damage), Lightning mist (moving more
 | West | Locked Stone Door (Thievery DC 30 to unlock, Strength DC 25 to break, 40 hp)  | 71 |
 :
 ### Room 33
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -610,17 +541,14 @@ Lightning generator (deals 1d10+4 lightning damage), Lightning mist (moving more
 | South | Trapped and Locked Stone Door (Thievery DC 10 to unlock, Strength DC 25 to break, 40 hp)  ***Trap:*** Iceshard Blaster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close blast 4, Attack +9 vs. Reflex, Damage 3d6+4 cold, 63 xp) | 91 |
 :
 ### Room 34
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Concealed Pit (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d8+4 falling, 63 xp)
 }}
 {{descriptive
 Lightning generator (deals 1d10+4 lightning damage), A chute falls into the room from above.
 }}
-
 This room is occupied by **8 x Offalian (og 144, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -631,11 +559,7 @@ None
 | East | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 | South | Archway  | 99 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 35
-:
 {{descriptive
 Pool of acid (difficult terrain, deals 1d10+4 acid damage), Someone has scrawled "This is not a secret door" on the south wall.
 }}
@@ -648,17 +572,14 @@ Pool of acid (difficult terrain, deals 1d10+4 acid damage), Someone has scrawled
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 36
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 5 x Dart Blaster (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Close blast 1, Attack +11 vs. AC, Damage 3d6+4, 63 xp)
 }}
 {{descriptive
 A fountain decorated with tormented faces sits in the north side of the room, and the sound of dripping water fills the room.
 }}
-
 This room is occupied by **3 x Chitine Warrior (mm3 31, 200 xp)**
-:
 {{treasure
 #### Treasure
 224 gp, 1592 sp; Leather Mantle trimmed with Fox Fur (360 gp); hoard total 743 gp 2 sp
@@ -670,10 +591,7 @@ This room is occupied by **3 x Chitine Warrior (mm3 31, 200 xp)**
 | West | Stuck Stone Door (Strength DC 22 to break, 40 hp)  | 13 |
 :
 ### Room 37
-:
-
 This room is occupied by **4 x Half-Orc Death Mage (mm2 140, 250 xp) and 3 x Half-Orc Hunter (mm2 140, 200 xp)**
-:
 {{treasure
 #### Treasure
 Set of Crystal Dice (430 gp); +2 Magic Tome (ap 151, 1800 gp); hoard total 2230 gp
@@ -684,9 +602,11 @@ Set of Crystal Dice (430 gp); +2 Magic Tome (ap 151, 1800 gp); hoard total 2230 
 | South | Archway  | n/a |
 | West | Locked Stone Door (Thievery DC 30 to unlock, Strength DC 25 to break, 40 hp)  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 38
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 6 x Electrified Floortile (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Fortitude, Damage 3d8+4 lightning, 63 xp)
 }}
@@ -697,13 +617,9 @@ Set of Crystal Dice (430 gp); +2 Magic Tome (ap 151, 1800 gp); hoard total 2230 
 | South | Trapped and Stuck Stone Door (Strength DC 22 to break, 40 hp) (slides to one side, +1 to break DC)  ***Trap:*** Acidic Burster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close burst 3, Attack +9 vs. Reflex, Damage 3d6+4 acid, 63 xp) | 20 |
 :
 ### Room 39
-:
 {{descriptive
 Dimensional lock (cannot teleport), Pool of water (difficult terrain).
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -712,7 +628,6 @@ Dimensional lock (cannot teleport), Pool of water (difficult terrain).
 | South | Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  | n/a |
 :
 ### Room 40
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -721,13 +636,10 @@ Dimensional lock (cannot teleport), Pool of water (difficult terrain).
 | West | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | n/a |
 :
 ### Room 41
-:
 {{descriptive
 Pool of acid (difficult terrain, deals 1d10+4 acid damage), Several square holes are cut into the walls.
 }}
-
 This room is occupied by **5 x Poltergeist (og 150, 250 xp)**
-:
 {{treasure
 #### Treasure
 360 gp, 5040 sp; Crown Blue Quartz (179 gp each), 2 x Small Chrysoprase (187 gp each); 4 x Augmenting Whetstone (av 190, 75 gp); hoard total 1717 gp
@@ -740,10 +652,7 @@ This room is occupied by **5 x Poltergeist (og 150, 250 xp)**
 | West | Archway  | 104 |
 :
 ### Room 42
-:
-
 This room is occupied by **3 x Wyrmwarped Scaleshaper (dr1 225, 250 xp) and 3 x Wyrmwarped Atrocity (dr1 225, 175 xp)**
-:
 {{treasure
 #### Treasure
 36 gp; 2 x Carved Moss Agate (174 gp each); Leather Coat trimmed with Rabbit Fur (350 gp); +2 Distance Weapon (av 68, 1800 gp) Sling (phb 219), +2 Dynamic Weapon (av 68, 1800 gp) Spiked Gauntlet (av 9), +2 Magic Weapon (phb 235, 1800 gp) Quarterstaff (phb 218), Lesser Elixir of Dragon Breath (mme 95, 75 gp); hoard total 6209 gp
@@ -755,8 +664,7 @@ This room is occupied by **3 x Wyrmwarped Scaleshaper (dr1 225, 250 xp) and 3 x 
 | South | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 72 |
 :
 ### Room 43
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 3 x Spinning Floortile (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
@@ -773,10 +681,7 @@ Partition walls (Strength DC 15 to break), Someone has scrawled a crude drawing 
 | North | Archway  | 20 |
 :
 ### Room 44
-:
-
 This room is occupied by **3 x Half-Orc Death Mage (mm2 140, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -788,13 +693,10 @@ None
 | South | Archway  | 97 |
 :
 ### Room 45
-:
 {{descriptive
 Blood-soaked altar (attacks score a critical hit on a natural 19 or 20), Barred partition walls (provides cover, Strength DC 20 to break).
 }}
-
 This room is occupied by **8 x Dragonkin Kobold Defender (dr1 226, 250 xp)**
-:
 {{treasure
 #### Treasure
 64 gp, 6400 sp; Agate Chalice engraved with Dwarven Runes (400 gp), Marble Brazier engraved with Dwarven Axeheads (280 gp), Pair of Brocade Gloves threaded with Dyed Silk (390 gp), Wooden Orb engraved with a Labyrinth (450 gp); +2 Magic Armor (phb 230, 1800 gp) Rimefire Plate Armor (av 7); hoard total 4024 gp
@@ -808,17 +710,14 @@ This room is occupied by **8 x Dragonkin Kobold Defender (dr1 226, 250 xp)**
 | North | Locked Iron Door (Thievery DC 15 to unlock, Strength DC 30 to break, 60 hp)  | n/a |
 :
 ### Room 46
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 2 x Spinning Floortile (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
 {{descriptive
 Lightning mist (moving more than 2 squares per round deals 1d6+4 lightning damage), Someone has scrawled "Mind the gap" on the east wall.
 }}
-
 This room is occupied by **6 x Ghast (mm3 95, 250 xp)**
-:
 {{treasure
 #### Treasure
 3960 sp; Carved Freshwater Pearl (174 gp each); Necklace of Blue Quartz (420 gp); +2 Sacrificial Weapon (av 77, 1800 gp) Spiked Gauntlet (av 9), +2 Summoned Armor (av 53, 1800 gp) Leather Armor (phb 214), Alchemical Formula (Goodnight Tincture (av 28, 750 gp)), 19 x Augmenting Whetstone (av 190, 75 gp), 10 x Elixir of Invisibility (mme 93, 75 gp), Shoes of Water Walking (mme 64, 1800 gp), Sigil of Companionship (av 123, 1800 gp); hoard total 11115 gp
@@ -830,18 +729,15 @@ This room is occupied by **6 x Ghast (mm3 95, 250 xp)**
 | South | Trapped and Unlocked Good Wooden Door (Strength DC 12 to break, 30 hp)  ***Trap:*** Guillotine Blade (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Target 1 creature, Attack +9 vs. Reflex, Damage 3d8+4, 63 xp) | n/a |
 | West | Locked Stone Door (Thievery DC 10 to unlock, Strength DC 25 to break, 40 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 47
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 3 x Chain Flail (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close burst 4, Attack +11 vs. AC, Damage 3d6+4 and the target is knocked prone, 63 xp)
 }}
-
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **5 x Duergar Shock Trooper (mm2 93, 250 xp)**
-:
 {{treasure
 #### Treasure
 396 gp; Bone Shield Brooch engraved with Draconic Scales (300 gp), Rosewood Idol (of a Goddess of Knowledge) adorned with Gold (420 gp); +2 Challenge-Seeking Weapon (av2 17, 1800 gp) Light War Pick (av 9), +2 Dynamic Weapon (av 68, 1800 gp) Quarterstaff (phb 218), +2 Magic Armor (phb 230, 1800 gp) Leather Armor (phb 214), +2 Magic Totem (phb2 208, 1800 gp), +2 Summoned Armor (av 53, 1800 gp) Hide Armor (phb 214), Martyr's Saddle (av 124, 1800 gp); hoard total 11916 gp
@@ -854,13 +750,10 @@ This room is occupied by **5 x Duergar Shock Trooper (mm2 93, 250 xp)**
 | South | Trapped and Stuck Stone Door (Strength DC 22 to break, 40 hp)  ***Trap:*** Rune of Death (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Close burst 7, Attack +9 vs. Fortitude, Damage 3d6+4 necrotic, 63 xp) | 1 |
 :
 ### Room 48
-:
 {{descriptive
 A chute descends from the room into a natural cavern below, and a pile of rotten leather lies in the west side of the room.
 }}
-
 This room is occupied by **5 x Chillborn Zombie (mm 275, 250 xp)**
-:
 {{treasure
 #### Treasure
 2 x Carved Moss Agate (172 gp each), 2 x Carved Rhodochrosite (187 gp each); +2 Orb of Mental Domination (av 95, 1800 gp), +2 Summoned Armor (av 53, 1800 gp) Leather Armor (phb 214), 8 x Alchemist's Fire (av 24, 75 gp); hoard total 4918 gp
@@ -873,7 +766,6 @@ This room is occupied by **5 x Chillborn Zombie (mm 275, 250 xp)**
 | West | Archway  | 45 |
 :
 ### Room 49
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -881,25 +773,22 @@ This room is occupied by **5 x Chillborn Zombie (mm 275, 250 xp)**
 | South | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | n/a |
 | South | Trapped and Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  ***Trap:*** Thunder Blaster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close blast 7, Attack +9 vs. Fortitude, Damage 3d6+4 thunder       and the target is dazed until the end of its next turn, 63 xp) | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 50
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 3 x Falling Block (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d10+4, 63 xp)
 }}
 {{descriptive
 Shadowmere floor (creatures knocked prone are trapped in a mirror world), Barred partition walls (provides cover, Strength DC 20 to break).
 }}
-
 This room is occupied by **3 x Deathdog (og 158, 500 xp)**
-:
 {{treasure
 #### Treasure
 2 x Crown Blue Quartz (177 gp each), Small Carnelian (178 gp each), 2 x Small Zircon (173 gp each); +2 Magic Wand (phb 242, 1800 gp), +2 Summoned Armor (av 53, 1800 gp) Scale Armor (phb 214), 6 x Vision Sand (av 192, 75 gp); hoard total 4928 gp
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -907,17 +796,14 @@ This room is occupied by **3 x Deathdog (og 158, 500 xp)**
 | South | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | 102 |
 :
 ### Room 51
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 2 x Chain Flail (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Close burst 3, Attack +11 vs. AC, Damage 3d6+4 and the target is knocked prone, 63 xp)
 }}
 {{descriptive
 A chute falls into the room from above, and a faded and torn tapestry hangs from the south wall.
 }}
-
 This room is occupied by **8 x Venomous Abishai (dr1 210, 250 xp)**
-:
 {{treasure
 #### Treasure
 180 gp, 10440 sp; Small Sardonyx (182 gp each); 10 x Divine Ritual Scroll (Discern Lies (phb 303, 360 gp)); hoard total 5006 gp
@@ -929,10 +815,7 @@ This room is occupied by **8 x Venomous Abishai (dr1 210, 250 xp)**
 | South | Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  | 39 |
 :
 ### Room 52
-:
-
 This room is occupied by **5 x Mad Wraith (mm 266, 250 xp)**
-:
 {{treasure
 #### Treasure
 576 gp; 2 x Carved Hematite (186 gp each); Bone Puzzle Box engraved with Arcane Runes (370 gp), Stoneware Salt Cellar adorned with Silver and a Demon in relief (290 gp); hoard total 1608 gp
@@ -944,13 +827,9 @@ This room is occupied by **5 x Mad Wraith (mm 266, 250 xp)**
 | West | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | n/a |
 :
 ### Room 53
-:
 {{descriptive
 Sloped floor (add 1 square to any movement towards the east side of the room), Stone barricades (provides cover, Strength DC 30 to break).
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -958,17 +837,14 @@ Sloped floor (add 1 square to any movement towards the east side of the room), S
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 54
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 5 x Frostcyst Burster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close burst 1, Attack +9 vs. Fortitude, Damage 3d6+4 cold      and the target is weakened until the end of its next turn, 63 xp)
 }}
 {{descriptive
 Someone has scrawled "The cleric will betray you" on the east wall, and the floor is covered with mould.
 }}
-
 This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
-:
 {{treasure
 #### Treasure
 3 x Small Moonstone (181 gp each), 3 x Uncut Iolite (186 gp each); +2 Magic Armor (phb 230, 1800 gp) Scale Armor (phb 214), +2 Orb of Mental Domination (av 95, 1800 gp); hoard total 4701 gp
@@ -981,9 +857,11 @@ This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
 | North | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | n/a |
 | West | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 55
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Arcane Bolter (Perception DC 17 to find, Thievery DC 17 to disable, Init +2, Target 1 creature within 20 squares, Attack +11 vs. AC, Damage 1d10+4 force, 250 xp)
 }}
@@ -993,12 +871,11 @@ This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
 | East | Locked Simple Wooden Door (Thievery DC 15 to unlock, Strength DC 15 to break, 20 hp)  | 119 |
 :
 ### Room 56
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Pendulum Scythes (Perception DC 12 to find, Thievery DC 12 to disable, Init +2, Target all creatures in a row of squares, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 20 to find) Locked Good Wooden Chest (Thievery DC 15 to unlock, Strength DC 18 to break, 30 hp)
 * 2 x Carved Freshwater Pearl (185 gp each), 3 x Uncut Bloodstone (186 gp each); +2 Summoned Armor (av 53, 1800 gp) Leather Armor (phb 214); hoard total 2728 gp
@@ -1009,21 +886,15 @@ This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
 | North | Archway  | n/a |
 | West | Trapped and Locked Iron Door (Thievery DC 10 to unlock, Strength DC 30 to break, 60 hp)  ***Trap:*** Electrified Lock (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Melee 1, Attack +9 vs. Fortitude, Damage 3d8+4 lightning, 63 xp) | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 57
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 5 x Falling Block (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d10+4, 63 xp)
 }}
 {{descriptive
 Ladder to suspended walkway, A rusted chain shirt lies in the north-west corner of the room.
 }}
-
 This room is occupied by **7 x Chillborn Zombie (mm 275, 250 xp)**
-:
 {{treasure
 #### Treasure
 192 gp, 544 sp; Obsidian Rod engraved with Dwarven Runes (460 gp), Silver Salt Cellar engraved with Draconic Runes (360 gp); Bracers of Archery (av 115, 1800 gp), 2 x Vision Sand (av 192, 75 gp); hoard total 3016 gp 4 sp
@@ -1034,17 +905,14 @@ This room is occupied by **7 x Chillborn Zombie (mm 275, 250 xp)**
 | East | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | 106 |
 :
 ### Room 58
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Necrotic Blaster (Perception DC 17 to find, Thievery DC 17 to disable, Init +2, Target 1 creature within 10 squares, Attack +9 vs. Fortitude, Damage 1d10+4 necrotic, 250 xp)
 }}
 {{descriptive
 Numerous pillars line the west wall, and several wax blobs are scattered throughout the room.
 }}
-
 This room is occupied by **3 x Spined Devil (mm 66, 250 xp) and 5 x Legion Devil Grunt (mm 64, 63 xp)**
-:
 {{treasure
 #### Treasure
 288 gp, 7384 sp; Crown Rhodochrosite (178 gp each), 2 x Small Jasper (182 gp each); +2 Magic Staff (phb 241, 1800 gp), 10 x Arcane Ritual Scroll (Fool's Speech (phb2 215, 360 gp)), 5 x Trackless Ashes (mme 101, 75 gp); hoard total 7343 gp 4 sp
@@ -1056,16 +924,15 @@ This room is occupied by **3 x Spined Devil (mm 66, 250 xp) and 5 x Legion Devil
 | South | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | n/a |
 | West | Unlocked Stone Door (Strength DC 20 to break, 40 hp)  | 98 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 59
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 15 to find) Locked Iron Chest (Thievery DC 15 to unlock, Strength DC 30 to break, 60 hp)
 * 10080 sp; 2 x Small Rock Crystal (172 gp each), 2 x Uncut Carnelian (172 gp each); Small Woolen Tapestry (430 gp); +2 Dynamic Weapon (av 68, 1800 gp) Long Spear (phb 218), +2 Summoned Armor (av 53, 1800 gp) Plate Armor (phb 214), 9 x Augmenting Whetstone (av 190, 75 gp), 7 x Goodnight Tincture (av 28, 150 gp), 6 x Trackless Ashes (mme 101, 75 gp); hoard total 7901 gp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 {{descriptive
 Someone has scrawled "I'd rather be at the Jester and Flagon" in dwarvish runes on the east wall, and several barrel staves are scattered throughout the room.
 }}
@@ -1076,10 +943,7 @@ Someone has scrawled "I'd rather be at the Jester and Flagon" in dwarvish runes 
 | South | Archway  | n/a |
 :
 ### Room 60
-:
-
 This room is occupied by **2 x Venomous Abishai (dr1 210, 250 xp)**
-:
 {{treasure
 #### Treasure
 Uncut Iolite (179 gp each); 7 x Augmenting Whetstone (av 190, 75 gp), 10 x Fire Beetle Potion (av 187, 75 gp), 2 x Protean Silk (mme 134, 75 gp); hoard total 1604 gp
@@ -1090,13 +954,10 @@ Uncut Iolite (179 gp each); 7 x Augmenting Whetstone (av 190, 75 gp), 10 x Fire 
 | West | Trapped and Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  ***Trap:*** Arrow Trap (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 3d8+4, 63 xp) | n/a |
 :
 ### Room 61
-:
 {{descriptive
 A stair ascends to a wooden platform in the east side of the room, and a pierced breastplate lies in the north-west corner of the room.
 }}
-
 This room is occupied by **4 x Chitine Marauder (mm3 32, 250 xp)**
-:
 {{treasure
 #### Treasure
 6480 sp; 3 x Uncut Moonstone (186 gp each); Bloodstone Cup engraved with Dwarven Runes (340 gp), Stoneware Bowl painted with Woodland Imagery (280 gp); 6 x Augmenting Whetstone (av 190, 75 gp), Belt of Endurance (av 164, 1800 gp), 2 x Trackless Ashes (mme 101, 75 gp); hoard total 4226 gp
@@ -1107,8 +968,7 @@ This room is occupied by **4 x Chitine Marauder (mm3 32, 250 xp)**
 | North | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 25 |
 :
 ### Room 62
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Petrification Ray (Perception DC 12 to find, Thievery DC 12 to disable, Init +2, Target 1 creature within 10 squares, Attack +9 vs. Fortitude, the target is slowed (save ends), First Failed Save the target is immobilized (save ends), Second Failed Save the target is petrified (no save), 250 xp)
 }}
@@ -1125,7 +985,6 @@ Fire pit (deals 1d10+4 fire damage), A rattling noise can be faintly heard near 
 \page
 {{pageNumber,auto}}
 ### Room 63
-:
 {{descriptive
 Tenebrous veils (deals 1d6 necrotic damage per move action), Raised platform and stairs.
 }}
@@ -1136,13 +995,10 @@ Tenebrous veils (deals 1d6 necrotic damage per move action), Raised platform and
 | West | Trapped and Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  ***Trap:*** Thunder Blaster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close blast 4, Attack +9 vs. Fortitude, Damage 3d6+4 thunder       and the target is dazed until the end of its next turn, 63 xp) | n/a |
 :
 ### Room 64
-:
 {{descriptive
 An unidentifiable odor fills the room, and a pile of rotten apples lies in the west side of the room.
 }}
-
 This room is occupied by **5 x Bugbear Wardancer (mm2 130, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1154,17 +1010,14 @@ None
 | North | Locked Simple Wooden Door (Thievery DC 15 to unlock, Strength DC 15 to break, 20 hp)  | n/a |
 :
 ### Room 65
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Arrow Trap (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 3d8+4, 63 xp)
 }}
 {{descriptive
 Pool of water (difficult terrain), A tile labyrinth covers the floor.
 }}
-
 This room is occupied by **3 x Half-Orc Death Mage (mm2 140, 250 xp) and 3 x Half-Orc Hunter (mm2 140, 200 xp)**
-:
 {{treasure
 #### Treasure
 416 gp, 576 sp; +2 Magic Staff (phb 241, 1800 gp), Burning Gauntlets (av 132, 1800 gp); hoard total 4073 gp 6 sp
@@ -1176,11 +1029,7 @@ This room is occupied by **3 x Half-Orc Death Mage (mm2 140, 250 xp) and 3 x Hal
 | South | Trapped Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 16 |
 | South | Trapped and Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  ***Trap:*** Guillotine Blade (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Target 1 creature, Attack +9 vs. Reflex, Damage 3d8+4, 63 xp) | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 66
-:
 {{descriptive
 Explosive fumes (explosion deals 3d10+4 fire damage), Ice clouds (provides concealment, deals 1d6+4 cold damage).
 }}
@@ -1193,8 +1042,10 @@ Explosive fumes (explosion deals 3d10+4 fire damage), Ice clouds (provides conce
 | West | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp) (slides up, +2 to break DC)  | 8 |
 | West | Stuck Stone Door (Strength DC 22 to break, 40 hp)  | 19 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 67
-:
 {{descriptive
 Someone has scrawled "You cannot kill it with magic" in draconic script on the north wall, and a crushed helm lies in the west side of the room.
 }}
@@ -1205,14 +1056,11 @@ Someone has scrawled "You cannot kill it with magic" in draconic script on the n
 | South | Unlocked Iron Door (Strength DC 25 to break, 60 hp)  | n/a |
 :
 ### Room 68
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Firebomb Turret (Perception DC 17 to find, Thievery DC 17 to disable, Init +2, Area burst 2 within 10 squares, Attack +9 vs. Reflex, Damage 1d6+4 fire and ongoing 5 fire (save ends), 250 xp)
 }}
-
 This room is occupied by **1 x Kruthik Hive Lord (mm 170, 1250 xp) and 6 x Kruthik Adult (mm 170, 175 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1224,10 +1072,7 @@ None
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 69
-:
-
 This room is occupied by **2 x Chillborn Zombie (mm 275, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1240,17 +1085,11 @@ None
 | South | Trapped and Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  ***Trap:*** Thunder Blaster (Perception DC 17 to find, Thievery DC 12 to disable, Single-shot, Close blast 10, Attack +9 vs. Fortitude, Damage 3d6+4 thunder       and the target is dazed until the end of its next turn, 63 xp) | 78 |
 | West | Locked Strong Wooden Door (Thievery DC 30 to unlock, Strength DC 20 to break, 40 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 70
-:
 {{descriptive
 Fiery brazier (Strength DC 10 to knock over, deals ongoing 5 fire damage), Someone has scrawled "Death comes on silent wings" in draconic script on the east wall.
 }}
-
 This room is occupied by **6 x Chitine Marauder (mm3 32, 250 xp)**
-:
 {{treasure
 #### Treasure
 180 gp; Crown Azurite (177 gp each); Earthenware Vase embossed with Elven Script (380 gp); +2 Imposter's Armor (av 46, 1800 gp) Scale Armor (phb 214), +2 Magic Weapon (phb 235, 1800 gp) Glaive (phb 218); hoard total 4337 gp
@@ -1263,10 +1102,7 @@ This room is occupied by **6 x Chitine Marauder (mm3 32, 250 xp)**
 | South | Archway  | n/a |
 :
 ### Room 71
-:
-
 This room is occupied by **2 x Half-Orc Death Mage (mm2 140, 250 xp) and 3 x Half-Orc Hunter (mm2 140, 200 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1280,9 +1116,11 @@ None
 | North | Stuck Iron Door (Strength DC 28 to break, 60 hp)  | n/a |
 | South | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | 77 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 72
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Bolter Turret (Perception DC 12 to find, Thievery DC 12 to disable, Init +2, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
@@ -1297,18 +1135,12 @@ A magical statue in the north side of the room answers questions with insults, a
 | North | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 42 |
 | West | Secret (Perception DC 30 to find) Unlocked Good Wooden Door (Strength DC 12 to break, 30 hp) ***Secret:*** The door is concealed within an upright sarcophagus | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 73
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 8 x Concealed Pit (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d8+4 falling, 63 xp)
 }}
-
 This room is occupied by **6 x Shadow Hound (mm 160, 250 xp)**
-:
 {{treasure
 #### Treasure
 480 gp, 352 sp; +2 Challenge-Seeking Weapon (av2 17, 1800 gp) Greatclub (phb 218), 6 x Smokestick (av 30, 150 gp); hoard total 3215 gp 2 sp
@@ -1319,13 +1151,10 @@ This room is occupied by **6 x Shadow Hound (mm 160, 250 xp)**
 | South | Trapped and Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  ***Trap:*** Teleporter Crystal (Perception DC 17 to find, Thievery DC 12 to disable, Single-shot, Melee 1, Attack +9 vs. Will, the target is teleported 8 squares, 63 xp) | n/a |
 :
 ### Room 74
-:
 {{descriptive
 A well lies in the west side of the room, and the floor is covered in square tiles, alternating white and black.
 }}
-
 This room is occupied by **1 x Kruthik Hive Lord (mm 170, 1250 xp) and 6 x Kruthik Adult (mm 170, 175 xp)**
-:
 {{treasure
 #### Treasure
 632 gp, 288 sp; Set of Crystal Dice (440 gp), Small Woolen Carpet (290 gp), Stoneware Bowl embossed with Arcane Runes (380 gp); +2 Grasping Weapon (av 70, 1800 gp) Trident (av 9), +2 Magic Armor (phb 230, 1800 gp) Hide Armor (phb 214), Alchemist's Frost (av 25, 75 gp), 7 x Augmenting Whetstone (av 190, 75 gp), 10 x Holy Water (mme 132, 75 gp); hoard total 6720 gp 8 sp
@@ -1337,20 +1166,17 @@ This room is occupied by **1 x Kruthik Hive Lord (mm 170, 1250 xp) and 6 x Kruth
 | West | Trapped and Stuck Iron Door (Strength DC 28 to break, 60 hp) (slides up, +2 to break DC)  ***Trap:*** Acidic Burster (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close burst 4, Attack +9 vs. Reflex, Damage 3d6+4 acid, 63 xp) | n/a |
 :
 ### Room 75
-:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{descriptive
 Someone has scrawled "Explosive runes" in draconic script on the north wall, and the north and east walls are covered with bloodstains.
 }}
-
 This room is occupied by **5 x Dread Archer (mm3 75, 250 xp)**
-:
 {{treasure
 #### Treasure
 192 gp, 288 sp; 2 x Crown Hematite (183 gp each), 2 x Crown Lapis Lazuli (184 gp each); Bone Orb inlaid with a Meandros of Silver (290 gp), Brocade Merchant's Cap threaded with Silver (430 gp), Cloth Vest trimmed with Lynx Fur (450 gp); +2 Challenge-Seeking Weapon (av2 17, 1800 gp) Quarterstaff (phb 218), +2 Magic Holy Symbol (phb 236, 1800 gp), +2 Summoned Armor (av 53, 1800 gp) Chainmail (phb 214), Climber's Rope (mme 81, 1800 gp), 10 x Lesser Elixir of Dragon Breath (mme 95, 75 gp); hoard total 10074 gp 8 sp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1358,17 +1184,14 @@ This room is occupied by **5 x Dread Archer (mm3 75, 250 xp)**
 | West | Locked Strong Wooden Door (Thievery DC 20 to unlock, Strength DC 20 to break, 40 hp) (slides up, +2 to break DC)  | 113 |
 :
 ### Room 76
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Hail of Needles (Perception DC 12 to find, Thievery DC 12 to disable, Init +2, Close burst 1, Attack +11 vs. AC, Damage 1d6+4, 250 xp)
 }}
 {{descriptive
 Zone of reversed gravity, Fiery brazier (Strength DC 10 to knock over, deals ongoing 5 fire damage).
 }}
-
 This room is occupied by **3 x Dragonkin Kobold Pact-Bound Adept (dr1 227, 250 xp) and 3 x Dragonkin Kobold Defender (dr1 226, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1380,7 +1203,6 @@ None
 | West | Locked Strong Wooden Door (Thievery DC 10 to unlock, Strength DC 20 to break, 40 hp)  | 39 |
 :
 ### Room 77
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1390,7 +1212,6 @@ None
 | West | Trapped Wooden Portcullis (Strength DC 15 to open, 20 hp) (magically reinforced, +5 to open DC)  | 5 |
 :
 ### Room 78
-:
 {{descriptive
 Sloped floor (add 1 square to any movement towards the east side of the room), Part of the ceiling has collapsed into the room.
 }}
@@ -1404,15 +1225,12 @@ Sloped floor (add 1 square to any movement towards the east side of the room), P
 \page
 {{pageNumber,auto}}
 ### Room 79
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 15 to find) Locked Good Wooden Chest (Thievery DC 30 to unlock, Strength DC 18 to break, 30 hp)
 * 64 gp, 64 sp; Fine Steel Ring engraved with Arcane Runes (310 gp); +2 Grasping Weapon (av 70, 1800 gp) Long Spear (phb 218), 5 x Fire Beetle Potion (av 187, 75 gp), Sigil of Companionship (av 123, 1800 gp); hoard total 4355 gp 4 sp
 }}
-
 This room is occupied by **7 x Hobbler Kobold Savant (dr1 224, 250 xp)**
-:
 {{treasure
 #### Treasure
 544 gp, 480 sp; 3 x Carved Obsidian (181 gp each); Linen Choker trimmed with Squirrel Fur (420 gp); +2 Earth-Wrought Hammer (av2 17, 1800 gp) Mordenkrad (av 9), 3 x Alchemical Formula (Goodnight Tincture (av 28, 750 gp)), Alchemist's Frost (av 25, 75 gp); hoard total 5680 gp
@@ -1423,13 +1241,10 @@ This room is occupied by **7 x Hobbler Kobold Savant (dr1 224, 250 xp)**
 | South | Archway  | n/a |
 :
 ### Room 80
-:
 {{descriptive
 Lit candles are scattered across the floor, and a sulphurous odor fills the room.
 }}
-
 This room is occupied by **3 x Troglodyte Impaler (mm 252, 300 xp)**
-:
 {{treasure
 #### Treasure
 324 gp; 2 x Carved Lapis Lazuli (190 gp each), 2 x Crown Malachite (176 gp each), Crown Turquoise (186 gp each), 3 x Uncut Jasper (172 gp each), 2 x Uncut Moonstone (186 gp each); Rosewood Comb engraved with a Labyrinth (280 gp), Small Woolen Carpet (390 gp), Stoneware Cup painted with Mythical Creatures (460 gp), Wooden Plate engraved with a Labyrinth (430 gp); +2 Magic Armor (phb 230, 1800 gp) Plate Armor (phb 214), 6 x Elixir of Climbing (mme 92, 75 gp), 4 x Holy Water (mme 132, 75 gp); hoard total 6240 gp
@@ -1442,7 +1257,6 @@ This room is occupied by **3 x Troglodyte Impaler (mm 252, 300 xp)**
 | West | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | n/a |
 :
 ### Room 81
-:
 {{descriptive
 Wall of flame (provides concealment, deals 1d6+4 fire damage), Mercurial Altar (creatures may shift their speed as a move action).
 }}
@@ -1454,17 +1268,12 @@ Wall of flame (provides concealment, deals 1d6+4 fire damage), Mercurial Altar (
 | West | Stuck Stone Door (Strength DC 22 to break, 40 hp)  | n/a |
 :
 ### Room 82
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
 | East | Locked Strong Wooden Door (Thievery DC 15 to unlock, Strength DC 20 to break, 40 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 83
-:
 {{descriptive
 Ice clouds (provides concealment, deals 1d6+4 cold damage), Several pieces of rotten bread are scattered throughout the room.
 }}
@@ -1475,7 +1284,6 @@ Ice clouds (provides concealment, deals 1d6+4 cold damage), Several pieces of ro
 | West | Unlocked Stone Door (Strength DC 20 to break, 40 hp)  | 119 |
 :
 ### Room 84
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1483,8 +1291,10 @@ Ice clouds (provides concealment, deals 1d6+4 cold damage), Several pieces of ro
 | South | Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  | n/a |
 | South | Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  | 118 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 85
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1492,7 +1302,6 @@ Ice clouds (provides concealment, deals 1d6+4 cold damage), Several pieces of ro
 | South | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 15 |
 :
 ### Room 86
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1500,10 +1309,7 @@ Ice clouds (provides concealment, deals 1d6+4 cold damage), Several pieces of ro
 | West | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | 94 |
 :
 ### Room 87
-:
-
 This room is occupied by **3 x Bugbear Wardancer (mm2 130, 250 xp)**
-:
 {{treasure
 #### Treasure
 720 gp; Carved Banded Agate (186 gp each), Carved Moss Agate (183 gp each), 2 x Crown Freshwater Pearl (175 gp each); Copper Shield Brooch inlaid with a Meandros of Gold (350 gp); 2 x Alchemical Formula (Blastpatch (av 25, 120 gp)), 3 x Alchemist's Essence (mme 130, 75 gp), Iron Armbands of Power (av 117, 1800 gp); hoard total 4054 gp
@@ -1515,7 +1321,6 @@ This room is occupied by **3 x Bugbear Wardancer (mm2 130, 250 xp)**
 | West | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 33 |
 :
 ### Room 88
-:
 {{descriptive
 Shadowfell gloom (non-magical light sources provide only dim light), A tapestry of ancient mythology hangs from the north wall.
 }}
@@ -1527,20 +1332,14 @@ Shadowfell gloom (non-magical light sources provide only dim light), A tapestry 
 | South | Unlocked Stone Door (Strength DC 20 to break, 40 hp)  | 4 |
 :
 ### Room 89
-:
 {{descriptive
 Dimensional lock (cannot teleport), Ice clouds (provides concealment, deals 1d6+4 cold damage).
 }}
-
 This room is occupied by **5 x Spined Devil (mm 66, 250 xp)**
-:
 {{treasure
 #### Treasure
 396 gp, 1800 sp; 2 x Crown Banded Agate (185 gp each), 2 x Small Moonstone (177 gp each), Uncut Star Rose Quartz (181 gp each); Agateware Cup painted with Floral Imagery (360 gp), Pewter Tankard engraved with Elven Script (400 gp), Wooden Puzzle Box inlaid with a Meandros of Electrum (420 gp); hoard total 2661 gp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1549,8 +1348,7 @@ This room is occupied by **5 x Spined Devil (mm 66, 250 xp)**
 | West | Unlocked Good Wooden Door (Strength DC 12 to break, 30 hp)  | 16 |
 :
 ### Room 90
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 3 x Spinning Floortile (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
@@ -1559,9 +1357,11 @@ This room is occupied by **5 x Spined Devil (mm 66, 250 xp)**
 |:--|:--|:--|
 | South | Locked Good Wooden Door (Thievery DC 10 to unlock, Strength DC 18 to break, 30 hp) (magically reinforced, +5 to break DC)  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 91
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 15 to find) Locked Good Wooden Chest (Thievery DC 20 to unlock, Strength DC 18 to break, 30 hp)
 * 3 x Crown Banded Agate (177 gp each); Fine Steel Shield Brooch engraved with Arcane Runes (340 gp), Portrait (of a male goliath) in a Wooden Frame inlaid with Copper (410 gp); +2 Orb of Mental Domination (av 95, 1800 gp); hoard total 3081 gp
@@ -1573,13 +1373,10 @@ This room is occupied by **5 x Spined Devil (mm 66, 250 xp)**
 | West | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 105 |
 :
 ### Room 92
-:
 {{descriptive
 Shadowfell gloom (non-magical light sources provide only dim light), Columns of fire (deals 1d10+4 fire damage).
 }}
-
 This room is occupied by **5 x Duergar Shock Trooper (mm2 93, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1590,7 +1387,6 @@ None
 | East | Locked Good Wooden Door (Thievery DC 15 to unlock, Strength DC 18 to break, 30 hp)  | n/a |
 :
 ### Room 93
-:
 {{descriptive
 Psychic resonance (+2 to attacks vs. Will), A charred club lies in the north side of the room.
 }}
@@ -1599,12 +1395,8 @@ Psychic resonance (+2 to attacks vs. Will), A charred club lies in the north sid
 |:--|:--|:--|
 | West | Locked Iron Door (Thievery DC 15 to unlock, Strength DC 30 to break, 60 hp) (slides up, +2 to break DC)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 94
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Arrow Trap (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 3d8+4, 63 xp)
 }}
@@ -1618,8 +1410,7 @@ Several square holes are cut into the north and south walls, and the south and e
 | East | Locked Iron Door (Thievery DC 20 to unlock, Strength DC 30 to break, 60 hp)  | n/a |
 :
 ### Room 95
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 6 x Falling Block (Perception DC 17 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d10+4, 63 xp)
 }}
@@ -1630,18 +1421,18 @@ Several square holes are cut into the north and south walls, and the south and e
 | West | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp) (slides up, +2 to break DC)  | n/a |
 :
 ### Room 96
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Pendulum Scythes (Perception DC 17 to find, Thievery DC 12 to disable, Init +2, Target all creatures in a row of squares, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
-
 This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
-:
 {{treasure
 #### Treasure
 540 gp; Small Citrine (187 gp each), 2 x Small Iolite (189 gp each), 3 x Small Smoky Quartz (189 gp each); Pewter Crown set with Blue Quartz and Hematite (290 gp), Pewter Rod inlaid with a Meandros of Electrum (390 gp); 8 x Augmenting Whetstone (av 190, 75 gp); hoard total 2952 gp
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1649,10 +1440,7 @@ This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
 | North | Trapped Iron Portcullis (Strength DC 20 to open, 60 hp)  | n/a |
 :
 ### Room 97
-:
-
 This room is occupied by **3 x Wyrmwarped Scaleshaper (dr1 225, 250 xp) and 4 x Wyrmwarped Atrocity (dr1 225, 175 xp)**
-:
 {{treasure
 #### Treasure
 6840 sp; Bracers of Archery (av 115, 1800 gp), 6 x Fire Beetle Potion (av 187, 75 gp); hoard total 2934 gp
@@ -1664,16 +1452,12 @@ This room is occupied by **3 x Wyrmwarped Scaleshaper (dr1 225, 250 xp) and 4 x 
 | North | Archway  | 44 |
 | South | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 80 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 98
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Rune of Insanity (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close burst 9, Attack +9 vs. Will, Damage 3d6+4 psychic, 63 xp)
 }}
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 20 to find) Locked Good Wooden Chest (Thievery DC 20 to unlock, Strength DC 18 to break, 30 hp)
 * 3 x Crown Azurite (181 gp each), 3 x Crown Moss Agate (187 gp each), Small Rose Quartz (171 gp each), 2 x Uncut Jasper (187 gp each); +2 Distance Weapon (av 68, 1800 gp) Handaxe (phb 218), +2 Mercurial Rod (av 99, 1800 gp); hoard total 5249 gp
@@ -1681,9 +1465,7 @@ This room is occupied by **3 x Wyrmwarped Scaleshaper (dr1 225, 250 xp) and 4 x 
 {{descriptive
 Numerous pillars line the north wall, and the ceiling is covered with cobwebs.
 }}
-
 This room is occupied by **5 x Rust Monster (mm2 178, 250 xp)**
-:
 {{treasure
 #### Treasure
 2 x Carved Turquoise (179 gp each); Leather Vest trimmed with Fox Fur (420 gp); 7 x Alchemical Formula (Smokestick (av 29, 450 gp)); hoard total 3928 gp
@@ -1696,8 +1478,7 @@ This room is occupied by **5 x Rust Monster (mm2 178, 250 xp)**
 | South | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | n/a |
 :
 ### Room 99
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Bolter Turret (Perception DC 12 to find, Thievery DC 12 to disable, Init +2, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
@@ -1713,17 +1494,16 @@ Primordial altar (lightning atacks deal 1d6 extra damage), Lit candles are scatt
 | West | Secret (Perception DC 30 to find) Stuck Stone Door (Strength DC 22 to break, 40 hp) ***Secret:*** A bookcase and section of wall pivots smoothly | 54 |
 :
 ### Room 100
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Falling Block (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d10+4, 63 xp)
-}}
-{{descriptive
-Oil slicks (add 1 square to forced movement), A pile of rotting wood lies in the east side of the room.
 }}
 {{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
+{{descriptive
+Oil slicks (add 1 square to forced movement), A pile of rotting wood lies in the east side of the room.
+}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1731,13 +1511,10 @@ Oil slicks (add 1 square to forced movement), A pile of rotting wood lies in the
 | South | Wooden Portcullis (Strength DC 15 to open, 20 hp)  | 11 |
 :
 ### Room 101
-:
 {{descriptive
 A magical pool in the south-west corner of the room restores youth to whomever drinks from it (but only once), and dancing motes of shadow fill the south side of the room.
 }}
-
 This room is occupied by **5 x Poltergeist (og 150, 250 xp)**
-:
 {{treasure
 #### Treasure
 364 gp, 3952 sp; Earthenware Plate embossed with Draconic Runes (360 gp), Silver Shield Brooch inlaid with Ornate Electrum Scrollwork (330 gp), Stoneware Cup painted with Pastoral Imagery (270 gp); hoard total 1719 gp 2 sp
@@ -1750,8 +1527,7 @@ This room is occupied by **5 x Poltergeist (og 150, 250 xp)**
 | South | Archway  | 24 |
 :
 ### Room 102
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Fireball Turret (Perception DC 17 to find, Thievery DC 17 to disable, Init +2, Area burst 1 within 10 squares, Attack +9 vs. Reflex, Damage 1d6+4 fire, 250 xp)
 }}
@@ -1765,7 +1541,6 @@ Explosive fumes (explosion deals 3d10+4 fire damage), Linked teleporter circles.
 | North | Archway  | n/a |
 :
 ### Room 103
-:
 {{descriptive
 Dimensional lock (cannot teleport), Tar slicks (targets of forced movement must save or be slowed until the end of their next turn).
 }}
@@ -1778,17 +1553,11 @@ Dimensional lock (cannot teleport), Tar slicks (targets of forced movement must 
 | West | Archway  | n/a |
 :
 ### Room 104
-:
-
 This room is occupied by **2 x Abyssal Marauder (mm2 48, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1796,13 +1565,13 @@ None
 | South | Secret (Perception DC 20 to find) Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp) ***Secret:*** The door is concealed behind a statue of an armored warrior, and opened by moving his sword | 23 |
 :
 ### Room 105
-:
 {{descriptive
 Entropic altar (healing is only half as effective), Partition walls (Strength DC 15 to break).
 }}
-
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **2 x Mad Wraith (mm 266, 250 xp)**
-:
 {{treasure
 #### Treasure
 Carved Azurite (188 gp each), Uncut Chalcedony (180 gp each), 3 x Uncut Star Rose Quartz (176 gp each), 3 x Uncut Zircon (173 gp each); hoard total 1415 gp
@@ -1814,7 +1583,6 @@ Carved Azurite (188 gp each), Uncut Chalcedony (180 gp each), 3 x Uncut Star Ros
 | South | Trapped Iron Portcullis (Strength DC 20 to open, 60 hp)  | n/a |
 :
 ### Room 106
-:
 {{descriptive
 Intermittent obstructions (provides cover), Vortex of necrotic energy (deals 1d10+4 necrotic damage).
 }}
@@ -1826,8 +1594,7 @@ Intermittent obstructions (provides cover), Vortex of necrotic energy (deals 1d1
 | West | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | 57 |
 :
 ### Room 107
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 7 x Swinging Block (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Target all creatures in a row of squares, Attack +9 vs. Reflex, Damage 3d8+4, 63 xp)
 }}
@@ -1841,15 +1608,11 @@ Stone barricades (provides cover, Strength DC 30 to break), A large kiln and coa
 | West | Archway  | n/a |
 :
 ### Room 108
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 15 to find) Locked Simple Wooden Chest (Thievery DC 15 to unlock, Strength DC 15 to break, 20 hp)
 * Bone Scepter set with a Rosette of Carnelian (320 gp); +2 Imposter's Armor (av 46, 1800 gp) Drakescale Armor (av 7), +2 Magic Totem (phb2 208, 1800 gp), Arcane Ritual Book (Leomund's Secret Chest (phb 307, 360 gp), Thief's Lament (dp 158, 360 gp)) (total 720 gp), Smokestick (av 30, 150 gp); hoard total 4790 gp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1857,7 +1620,6 @@ Stone barricades (provides cover, Strength DC 30 to break), A large kiln and coa
 | West | Archway  | 35 |
 :
 ### Room 109
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1865,12 +1627,14 @@ Stone barricades (provides cover, Strength DC 30 to break), A large kiln and coa
 | West | Trapped and Unlocked Iron Door (Strength DC 25 to break, 60 hp)  ***Trap:*** Poison Gas Cloud (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Close burst 4, Attack +9 vs. Fortitude, Damage 3d6+4 poison, 63 xp) | 23 |
 :
 ### Room 110
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (Perception DC 20 to find) Locked Iron Chest (Thievery DC 15 to unlock, Strength DC 30 to break, 60 hp)
 * 2520 sp; 2 x Carved Rhodochrosite (177 gp each), Small Rose Quartz (180 gp each); Bone Chalice set with Chrysoberyl (290 gp), Brass Orb inlaid with a Filigree of Copper (410 gp), Malachite Puzzle Box inlaid with Silver (320 gp), Rosewood Bowl inlaid with a Meandros of Silver (360 gp); +2 Magic Staff (phb 241, 1800 gp), +2 Magic Totem (phb2 208, 1800 gp), 5 x Augmenting Whetstone (av 190, 75 gp), 3 x Martial Practice (Long-Distance Runner (mp2 150, 150 gp)); hoard total 6591 gp
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1878,13 +1642,10 @@ Stone barricades (provides cover, Strength DC 30 to break), A large kiln and coa
 | North | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp) (slides up, +2 to break DC)  | n/a |
 :
 ### Room 111
-:
 {{descriptive
 A fountain decorated with screaming faces sits in the west side of the room, and the south and west walls are covered with goblin graffiti.
 }}
-
 This room is occupied by **7 x Shadow Speaker (mm3 39, 250 xp)**
-:
 {{treasure
 #### Treasure
 684 gp; 3 x Small Jasper (180 gp each); 9 x Vision Sand (av 192, 75 gp); hoard total 1899 gp
@@ -1898,7 +1659,6 @@ This room is occupied by **7 x Shadow Speaker (mm3 39, 250 xp)**
 | West | Unlocked Simple Wooden Door (Strength DC 10 to break, 20 hp)  | n/a |
 :
 ### Room 112
-:
 {{descriptive
 Lightning generator (deals 1d10+4 lightning damage), Burning torches in iron sconces line the north and south walls.
 }}
@@ -1907,11 +1667,7 @@ Lightning generator (deals 1d10+4 lightning damage), Burning torches in iron sco
 |:--|:--|:--|
 | West | Secret (Perception DC 20 to find) Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp) ***Secret:*** The door is concealed within a mosaic of ancient mythology | 41 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 113
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1919,7 +1675,6 @@ Lightning generator (deals 1d10+4 lightning damage), Burning torches in iron sco
 | West | Archway  | 46 |
 :
 ### Room 114
-:
 {{descriptive
 A faded and torn tapestry hangs from the west wall, and a ruined chain shirt lies in the north-east corner of the room.
 }}
@@ -1929,8 +1684,7 @@ A faded and torn tapestry hangs from the west wall, and a ruined chain shirt lie
 | North | Secret (Perception DC 15 to find) Stuck Iron Door (Strength DC 28 to break, 60 hp) ***Secret:*** The door is concealed behind a statue of a dread vampire, and opened by filling his chalice with blood | n/a |
 :
 ### Room 115
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 4 x Spinning Floortile (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, the target is knocked prone, 63 xp)
 }}
@@ -1946,13 +1700,13 @@ Intermittent obstructions (provides cover), Someone has scrawled "Cyna died here
 | West | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | 66 |
 :
 ### Room 116
-:
 {{descriptive
 Tenebrous veils (deals 1d6 necrotic damage per move action), Someone has scrawled an alien symbol on the east wall.
 }}
-
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **7 x Dire Stirge (mm 248, 300 xp)**
-:
 {{treasure
 #### Treasure
 Small Bloodstone (182 gp each), 3 x Uncut Chalcedony (172 gp each); Bone Comb engraved with Arcane Runes (370 gp), Obsidian Plate engraved with a Labyrinth (420 gp); hoard total 1488 gp
@@ -1964,13 +1718,10 @@ Small Bloodstone (182 gp each), 3 x Uncut Chalcedony (172 gp each); Bone Comb en
 | West | Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  | n/a |
 :
 ### Room 117
-:
 {{descriptive
 Ice clouds (provides concealment, deals 1d6+4 cold damage), A stone stair ascends towards the south wall.
 }}
-
 This room is occupied by **4 x Iron Cobra (mm 157, 250 xp)**
-:
 {{treasure
 #### Treasure
 None
@@ -1980,17 +1731,11 @@ None
 |:--|:--|:--|
 | South | Stuck Good Wooden Door (Strength DC 15 to break, 30 hp)  | 47 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 118
-:
 {{descriptive
 A simple fireplace sits against the west wall, and a shattered sword lies in the south-west corner of the room.
 }}
-
 This room is occupied by **6 x Mad Wraith (mm 266, 250 xp)**
-:
 {{treasure
 #### Treasure
 932 gp, 64 sp; Carved Obsidian (173 gp each), 2 x Uncut Peridot (181 gp each); Copper Bracelet etched with Draconic Scales (330 gp), Earthenware Chalice painted with Mythical Imagery (370 gp), Pair of Brocade Gloves trimmed with Rabbit Fur (460 gp), Pewter Medallion engraved with Draconic Scales (280 gp); +2 Magic Totem (phb2 208, 1800 gp), 10 x Alchemist's Fire (av 24, 75 gp), 6 x Elixir of Climbing (mme 92, 75 gp); hoard total 5913 gp 4 sp
@@ -2004,17 +1749,14 @@ This room is occupied by **6 x Mad Wraith (mm 266, 250 xp)**
 | West | Secret (Perception DC 30 to find) Trapped and Stuck Iron Door (Strength DC 28 to break, 60 hp)  ***Secret:*** A bookcase and concealed door pivots smoothly ***Trap:*** Arrow Trap (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 3d8+4, 63 xp) | 59 |
 :
 ### Room 119
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * 7 x Ice Bolter (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 3d8+4 cold, 63 xp)
 }}
 {{descriptive
 Primordial altar (thunder atacks deal 1d6 extra damage), Spirals of yellow stones cover the floor.
 }}
-
 This room is occupied by **6 x Spined Devil (mm 66, 250 xp) and 4 x Legion Devil Grunt (mm 64, 63 xp)**
-:
 {{treasure
 #### Treasure
 1804 gp, 96 sp; 3 x Carved Eye Agate (172 gp each); +2 Magic Holy Symbol (phb 236, 1800 gp), +2 Summoned Armor (av 53, 1800 gp) Leather Armor (phb 214), 6 x Lesser Elixir of Dragon Breath (mme 95, 75 gp); hoard total 6379 gp 6 sp
@@ -2025,25 +1767,21 @@ This room is occupied by **6 x Spined Devil (mm 66, 250 xp) and 4 x Legion Devil
 | East | Unlocked Stone Door (Strength DC 20 to break, 40 hp)  | 83 |
 | West | Locked Simple Wooden Door (Thievery DC 15 to unlock, Strength DC 15 to break, 20 hp)  | 55 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 120
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
 | North | Unlocked Good Wooden Door (Strength DC 12 to break, 30 hp)  | 70 |
 | West | Stuck Simple Wooden Door (Strength DC 12 to break, 20 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 121
-:
 {{descriptive
 The floor is covered in square tiles, alternating white and black, and a rusted iron box lies in the north side of the room.
 }}
-
 This room is occupied by **3 x Bugbear Wardancer (mm2 130, 250 xp)**
-:
 {{treasure
 #### Treasure
 2 x Uncut Citrine (187 gp each); Brass Bracelet set with Brown-green Garnet and Red Spinel (330 gp), Cloth Mantle trimmed with Fox Fur (450 gp), Lacquered Wooden Medallion inlaid with Ornate Electrum Scrollwork (440 gp); 4 x Clearsense Powder (av 26, 75 gp), 2 x Elixir of Climbing (mme 92, 75 gp); hoard total 2044 gp
@@ -2056,7 +1794,6 @@ This room is occupied by **3 x Bugbear Wardancer (mm2 130, 250 xp)**
 | South | Unlocked Good Wooden Door (Strength DC 12 to break, 30 hp)  | n/a |
 :
 ### Room 122
-:
 {{descriptive
 Pool of acid (difficult terrain, deals 1d10+4 acid damage), Stone sphere (Strength DC 12 to push, deals 3d8+4 damage).
 }}

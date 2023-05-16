@@ -10,7 +10,8 @@
 }}
 \page
 {{pageNumber,auto}}
-## Features
+## Overview
+### Features
 The dungeon has the following features, these may include skill checks to perform certain actions.
 {{descriptive
 #### General Features
@@ -41,7 +42,7 @@ Some of the corridors marked on the map have special features detailed below.
 | x | A narrow shaft falls into the corridor from above |
 | z | Someone has scrawled "Explosive runes" here |
 }}
-## Random Encounters
+### Random Encounters
 There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
 #### Wandering Monsters
@@ -59,7 +60,6 @@ There are also roaming groups with specific goals, this will help you place them
 {{pageNumber,auto}}
 ## Locations
 ### Room 1
-:
 {{descriptive
 A sloped pit lined with iron spikes lies in the south-west corner of the room, and mysterious levers and mechanisms cover the east and west walls.
 }}
@@ -71,17 +71,13 @@ A sloped pit lined with iron spikes lies in the south-west corner of the room, a
 | West | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 43 |
 :
 ### Room 2
-:
 {{descriptive
 A faded and torn tapestry hangs from the south wall, and an acrid odor fills the west side of the room.
 }}
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 13 ep
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -90,7 +86,6 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | West | Archway  | 1 |
 :
 ### Room 3
-:
 {{descriptive
 A ladder ascends to a wooden platform in the east side of the room, and a tapestry of arcane patterns hangs from the north wall.
 }}
@@ -102,13 +97,10 @@ A ladder ascends to a wooden platform in the east side of the room, and a tapest
 | West | Unlocked Strong Wooden Door (20 hp)  | 38 |
 :
 ### Room 4
-:
 {{descriptive
 A tile labyrinth covers the floor, and a pile of broken glass lies in the north-west corner of the room.
 }}
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 2400 cp, 600 sp, 60 gp, banded agate (10 gp), blue quartz (10 gp), 2 x moss agate (10 gp), turquoise (10 gp), Spell Scroll (Fog Cloud) (common, dmg 200), Potion of Climbing (common, dmg 187), 2 x Potion of Healing (common, dmg 187)
@@ -121,17 +113,13 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | West | Stuck Iron Door (DC 25 to break; 60 hp) (slides down)  | n/a |
 :
 ### Room 5
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Thunderstone Mine: DC 15 to find, DC 15 to disable;    affects all targets within 20 ft., DC 15 save or take 2d10 thunder damage    and become deafened for 1d4 rounds
 }}
 {{descriptive
 A well lies in the north-west corner of the room, and a shattered hammer lies in the west side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -141,7 +129,6 @@ A well lies in the north-west corner of the room, and a shattered hammer lies in
 | South | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | 52 |
 :
 ### Room 6
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -149,23 +136,23 @@ A well lies in the north-west corner of the room, and a shattered hammer lies in
 | North | Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp)  | n/a |
 :
 ### Room 7
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Falling Block: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage
 }}
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 25 to find) Trapped and Unlocked Simple Wooden Chest (10 hp)
 * Poisoned Arrow Trap: DC 15 to find, DC 10 to disable;     +5 to hit against one target, 1d10 piercing/poison damage
 * 2100 cp, 1100 sp, 100 gp, a cloth sash threaded with silver (25 gp), a copper tankard etched with arcane runes (25 gp), a linen choker trimmed with squirrel fur (25 gp), a pewter crown inlaid with a meandros of silver (25 gp), an earthenware plate painted with floral imagery (25 gp)
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{descriptive
 Someone has scrawled "We've run out of swords" on the east wall, and the walls are covered with scorch marks.
 }}
-
 This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238); deadly, 300 xp**
-:
 {{treasure
 #### Treasure
 2200 cp, 900 sp, 70 gp, a brass coffer set with onyx (25 gp), a brocade merchant's cap trimmed with fox fur (25 gp), a lacquered wooden comb set with a single aquamarine (25 gp), an ivory comb engraved with draconic scales (25 gp)
@@ -178,18 +165,13 @@ This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238)
 | West | Archway  | 37 |
 :
 ### Room 8
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
 | East | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
 | South | Secret (DC 20 to find) Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp) ***Secret:*** The door is concealed behind a pile of skulls | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 9
-:
 {{descriptive
 A mural of arcane patterns covers the ceiling, and someone has scrawled "The last wards have fallen" on the north wall.
 }}
@@ -200,7 +182,6 @@ A mural of arcane patterns covers the ceiling, and someone has scrawled "The las
 | West | Archway  | n/a |
 :
 ### Room 10
-:
 {{descriptive
 Part of the ceiling has collapsed into the room, and someone has scrawled "The Rogues of Shagrat killed three trolls here" on the north wall.
 }}
@@ -212,7 +193,6 @@ Part of the ceiling has collapsed into the room, and someone has scrawled "The R
 | South | Unlocked Simple Wooden Door (10 hp)  | 46 |
 :
 ### Room 11
-:
 {{descriptive
 A tile labyrinth covers the floor, and a dagger hilt lies in the west side of the room.
 }}
@@ -223,7 +203,6 @@ A tile labyrinth covers the floor, and a dagger hilt lies in the west side of th
 | West | Secret (DC 15 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed within an upright sarcophagus | 6 |
 :
 ### Room 12
-:
 {{descriptive
 A chute descends from the room into a magical cyst below, and a warped spear lies in the center of the room.
 }}
@@ -234,13 +213,15 @@ A chute descends from the room into a magical cyst below, and a warped spear lie
 | North | Unlocked Simple Wooden Door (10 hp)  | n/a |
 | West | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** Magic Missle Trap: DC 15 to find, DC 10 to disable;     one target, 4d10 force damage | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 13
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Idol of Evil: DC 20 to find, DC 15 to disable;    affects good creatures which touch the idol, DC 15 save or take 2d10 damage
 }}
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 25 to find) Unlocked Simple Wooden Chest (10 hp)
 * 2200 cp, 900 sp, 60 gp, blue quartz (10 gp), hematite (10 gp), 2 x malachite (10 gp), 2 x moss agate (10 gp), tiger eye (10 gp), turquoise (10 gp), Spell Scroll (Nondetection) (uncommon, dmg 200), 2 x Potion of Greater Healing (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188)
@@ -248,16 +229,10 @@ A chute descends from the room into a magical cyst below, and a warped spear lie
 {{descriptive
 A tile mosaic of a legendary battle covers the floor, and a ruined gauntlet lies in the center of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
-
 This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm 166); medium, 250 xp**
-:
 {{treasure
 #### Treasure
 14 gp, 22 cp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -266,17 +241,13 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 | South | Trapped and Unlocked Stone Door (60 hp)  ***Trap:*** Teleporter Crystal: DC 15 to find, DC 20 to disable;     affects each creature which touches the crystal, DC 14 save or be teleported to another location | n/a |
 :
 ### Room 14
-:
 {{descriptive
 Various torture devices are scattered throughout the room, and a stream of quicksilver flows into a shallow pool in the south side of the room.
 }}
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 13 cp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -285,7 +256,6 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | South | Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  | 29 |
 :
 ### Room 15
-:
 {{descriptive
 A well lies in the west side of the room, and someone has scrawled "Don't sleep" on the west wall.
 }}
@@ -296,7 +266,6 @@ A well lies in the west side of the room, and someone has scrawled "Don't sleep"
 | West | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 49 |
 :
 ### Room 16
-:
 {{descriptive
 A wooden platform hangs over a deep pit in the south-west corner of the room, and a group of draconic faces have been carved into the north wall.
 }}
@@ -308,7 +277,6 @@ A wooden platform hangs over a deep pit in the south-west corner of the room, an
 | West | Archway  | 47 |
 :
 ### Room 17
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -317,7 +285,6 @@ A wooden platform hangs over a deep pit in the south-west corner of the room, an
 | South | Trapped and Unlocked Simple Wooden Door (10 hp)  ***Trap:*** Rune of Confusion: DC 10 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | n/a |
 :
 ### Room 18
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -327,14 +294,10 @@ A wooden platform hangs over a deep pit in the south-west corner of the room, an
 \page
 {{pageNumber,auto}}
 ### Room 19
-:
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 11 sp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -344,14 +307,10 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | West | Trapped and Unlocked Simple Wooden Door (10 hp)  ***Trap:*** Guillotine Blade: DC 15 to find, DC 10 to disable;     +4 to hit against one target, 1d10 slashing damage | 29 |
 :
 ### Room 20
-:
-
 This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 6 pp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -359,14 +318,10 @@ This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 | East | Unlocked Good Wooden Door (15 hp)  | 31 |
 :
 ### Room 21
-:
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 16 sp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -374,12 +329,11 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | East | Secret (DC 25 to find) Trapped and Unlocked Stone Door (60 hp)  ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall ***Trap:*** Magic Missle Trap: DC 10 to find, DC 10 to disable;     one target, 1d10 force damage | n/a |
 :
 ### Room 22
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Poison Gas Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 poison damage
 }}
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 15 to find) Unlocked Good Wooden Chest (15 hp)
 * 1700 cp, 700 sp, 110 gp, a cloth cloak threaded with dyed silk (25 gp), a cloth robe threaded with copper (25 gp), a cloth robe threaded with dyed silk (25 gp), a petrified frog engraved with a labyrinth (25 gp), a pewter crown set with onyx and sardonyx (25 gp), an earthenware tureen painted with pastoral imagery (25 gp)
@@ -393,18 +347,13 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | South | Unlocked Strong Wooden Door (20 hp)  | 7 |
 | West | Unlocked Iron Door (60 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 23
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
 | West | Unlocked Simple Wooden Door (10 hp)  | n/a |
 :
 ### Room 24
-:
 {{descriptive
 The room has a high domed ceiling, and patches of mushrooms grow in the center of the room.
 }}
@@ -415,17 +364,16 @@ The room has a high domed ceiling, and patches of mushrooms grow in the center o
 | East | Unlocked Good Wooden Door (15 hp)  | 42 |
 :
 ### Room 25
-:
 {{descriptive
 Someone has scrawled "The Crimson Council killed four goblins here" on the north wall, and a rotting satchel lies in the south-east corner of the room.
 }}
-
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Worg (cr 1/2, mm 341); hard, 200 xp**
-:
 {{treasure
 #### Treasure
 6 gp, 15 sp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -434,7 +382,6 @@ This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Worg (cr 1/2, mm 3
 | West | Unlocked Iron Door (60 hp)  | 50 |
 :
 ### Room 26
-:
 {{descriptive
 Several square holes are cut into the south and west walls, and an iron chandelier hangs from the ceiling in the south-west corner of the room.
 }}
@@ -445,7 +392,6 @@ Several square holes are cut into the south and west walls, and an iron chandeli
 | South | Secret (DC 25 to find) Stuck Strong Wooden Door (DC 15 to break; 20 hp) ***Secret:*** The door is concealed behind an area of fungus | n/a |
 :
 ### Room 27
-:
 {{descriptive
 A balcony hangs from the south wall, and a pile of wax blobs lies in the north-east corner of the room.
 }}
@@ -455,14 +401,10 @@ A balcony hangs from the south wall, and a pile of wax blobs lies in the north-e
 | South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
 :
 ### Room 28
-:
-
 This room is occupied by **Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm 316); deadly, 500 xp**
-:
 {{treasure
 #### Treasure
 27 sp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -472,25 +414,18 @@ This room is occupied by **Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm
 | West | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
 :
 ### Room 29
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 20 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
 * 1500 cp, 1100 sp, 90 gp, bloodstone (50 gp), citrine (50 gp), 2 x onyx (50 gp), sardonyx (50 gp)
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 {{descriptive
 The floor is covered in square tiles, alternating white and black, and someone has scrawled "The Hounds of Umfeld looted this place" on the west wall.
 }}
-
 This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 14 ep
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -499,17 +434,17 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 | North | Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  | 14 |
 :
 ### Room 30
-:
 {{descriptive
 A magical mural on the south wall can be used to scry upon any known individual within the dungeon, and part of the north wall has collapsed into the room.
 }}
-
 This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238); deadly, 300 xp**
-:
 {{treasure
 #### Treasure
 2500 cp, 1000 sp, 50 gp, azurite (10 gp), hematite (10 gp), 3 x lapis lazuli (10 gp), malachite (10 gp), moss agate (10 gp), obsidian (10 gp), turquoise (10 gp), Potion of Superior Healing (rare, dmg 187)
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -518,7 +453,6 @@ This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238)
 | West | Stuck Stone Door (DC 20 to break; 60 hp)  | 5 |
 :
 ### Room 31
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -529,7 +463,6 @@ This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238)
 | West | Unlocked Good Wooden Door (15 hp)  | 20 |
 :
 ### Room 32
-:
 {{descriptive
 A narrow ledge runs along the south and east walls, and a large demonic idol with ruby eyes sits in the center of the room.
 }}
@@ -540,7 +473,6 @@ A narrow ledge runs along the south and east walls, and a large demonic idol wit
 | West | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | n/a |
 :
 ### Room 33
-:
 {{descriptive
 The ceiling is covered with scorch marks, and a pile of rotten leather lies in the north-west corner of the room.
 }}
@@ -550,21 +482,14 @@ The ceiling is covered with scorch marks, and a pile of rotten leather lies in t
 | North | Trapped and Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 15 to disable;     +8 to hit against one target, 2d10 piercing damage | 37 |
 | South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 34
-:
 {{descriptive
 A tapestry of ghoulish carnage hangs from the south wall, and a clicking noise fills the room.
 }}
-
 This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm 166); medium, 250 xp**
-:
 {{treasure
 #### Treasure
 9 gp, 13 sp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -575,7 +500,6 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 | West | Locked Good Wooden Door (DC 25 to open, DC 15 to break; 15 hp)  | n/a |
 :
 ### Room 35
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -583,15 +507,12 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 | West | Unlocked Good Wooden Door (15 hp)  | 51 |
 :
 ### Room 36
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 25 to find) Locked Good Wooden Chest (DC 20 to unlock, DC 20 to break; 15 hp)
 * 2000 cp, 1300 sp, 60 gp, banded agate (10 gp), hematite (10 gp), moss agate (10 gp), Heward's Handy Haversack (rare, dmg 174), Potion of Clairvoyance (rare, dmg 187)
 }}
-
 This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238); deadly, 300 xp**
-:
 {{treasure
 #### Treasure
 2000 cp, 1600 sp, 40 gp, diamond (50 gp), chalcedony (50 gp), onyx (50 gp), 3 x star rose quartz (50 gp), Potion of Climbing (common, dmg 187), Potion of Healing (common, dmg 187)
@@ -604,15 +525,14 @@ This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238)
 | South | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
 | West | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 37
-:
-
 This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 13 gp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -623,18 +543,11 @@ This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 | West | Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  | n/a |
 :
 ### Room 38
-:
-
 This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm 166); medium, 250 xp**
-:
 {{treasure
 #### Treasure
 13 gp, 14 sp
-
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -643,7 +556,6 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 | West | Unlocked Simple Wooden Door (10 hp)  | n/a |
 :
 ### Room 39
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -651,8 +563,7 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 | North | Archway  | n/a |
 :
 ### Room 40
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 20 to find) Locked Simple Wooden Chest (DC 15 to unlock, DC 15 to break; 10 hp)
 * 1700 cp, 1400 sp, 70 gp
@@ -660,13 +571,10 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 {{descriptive
 Someone has scrawled "right, right, straight, right" on the north wall, and a briny odor fills the east side of the room.
 }}
-
 This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 8 gp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -675,7 +583,6 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 | West | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 36 |
 :
 ### Room 41
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -683,17 +590,13 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 | South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 51 |
 :
 ### Room 42
-:
 {{descriptive
 A tile mosaic of legendary monsters covers the floor, and an altar of evil sits in the north-east corner of the room.
 }}
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 2 pp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -704,31 +607,26 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | West | Unlocked Good Wooden Door (15 hp)  | 24 |
 :
 ### Room 43
-:
 {{descriptive
 Spirals of yellow stones cover the floor, and several pieces of blood-soaked clothing are scattered throughout the room.
 }}
-
 This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm 166); medium, 250 xp**
-:
 {{treasure
 #### Treasure
 38 cp
-
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
 | East | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 1 |
 :
 ### Room 44
-:
 {{descriptive
 Someone has scrawled "In the Caverns of Runes, when the moon is crowned, the Tree of Cinders shall be lost" on the south wall, and a corpse lies in front of an open chest in the west side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -737,7 +635,6 @@ Someone has scrawled "In the Caverns of Runes, when the moon is crowned, the Tre
 | South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
 :
 ### Room 45
-:
 {{descriptive
 A mural of a legendary battle covers the ceiling, and someone has scrawled "This is not a secret door" on the south wall.
 }}
@@ -748,17 +645,13 @@ A mural of a legendary battle covers the ceiling, and someone has scrawled "This
 | West | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides down)  | n/a |
 :
 ### Room 46
-:
 {{descriptive
 A well lies in the north-west corner of the room, and spirals of green stones cover the floor.
 }}
-
 This room is occupied by **Bugbear (cr 1, mm 33); medium, 200 xp**
-:
 {{treasure
 #### Treasure
 17 sp
-
 }}
 #### Exits
 | Direction | Description | To |
@@ -768,10 +661,7 @@ This room is occupied by **Bugbear (cr 1, mm 33); medium, 200 xp**
 | South | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 10 to disable | n/a |
 :
 ### Room 47
-:
-
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 2000 cp, 600 sp, 70 gp, a bone coffer set with bloodstone (25 gp), a fine steel salt cellar set with jade (25 gp), a wooden coffer engraved with arcane runes (25 gp)
@@ -783,7 +673,6 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 19 |
 :
 ### Room 48
-:
 {{descriptive
 The floor is covered in perfect hexagonal tiles, and someone has scrawled "Don't sleep" on the north wall.
 }}
@@ -796,7 +685,6 @@ The floor is covered in perfect hexagonal tiles, and someone has scrawled "Don't
 | West | Unlocked Simple Wooden Door (10 hp) (slides to one side)  | n/a |
 :
 ### Room 49
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -804,21 +692,17 @@ The floor is covered in perfect hexagonal tiles, and someone has scrawled "Don't
 | West | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 26 |
 :
 ### Room 50
-:
 {{descriptive
 Someone has scrawled "Enel's Thorns looted this place" on the north wall, and a corpse lies in front of an open chest in the north side of the room.
+}}
+This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp**
+{{treasure
+#### Treasure
+2600 cp, 500 sp, 50 gp
 }}
 {{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
-
-This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp**
-:
-{{treasure
-#### Treasure
-2600 cp, 500 sp, 50 gp
-
-}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -826,8 +710,7 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 | West | Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp) (magically reinforced, disadvantage to break)  | n/a |
 :
 ### Room 51
-:
-{{classTable,frame
+{{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 15 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
 * 1100 cp, 1100 sp, 60 gp, azurite (10 gp), eye agate (10 gp), hematite (10 gp), lapis lazuli (10 gp), moss agate (10 gp), turquoise (10 gp), 2 x Potion of Animal Friendship (uncommon, dmg 187)
@@ -835,9 +718,7 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 {{descriptive
 Someone has scrawled "The walls listen" on the east wall, and a shallow pool of oil lies in the south side of the room.
 }}
-
 This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
-:
 {{treasure
 #### Treasure
 2500 cp, 800 sp, 90 gp, blue quartz (10 gp), eye agate (10 gp), moss agate (10 gp), obsidian (10 gp), rhodochrosite (10 gp), tiger eye (10 gp), Potion of Frost Giant Strength (rare, dmg 187)
@@ -852,7 +733,6 @@ This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 | South | Locked Stone Door (DC 10 to open, DC 25 to break; 60 hp)  | n/a |
 :
 ### Room 52
-:
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -861,8 +741,7 @@ This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 | West | Trapped and Locked Good Wooden Door (DC 10 to open, DC 15 to break; 15 hp)  ***Trap:*** Teleporter Crystal: DC 10 to find, DC 10 to disable;     affects each creature which touches the crystal, DC 13 save or be teleported to another location | n/a |
 :
 ### Room 53
-:
-{{classTable,frame
+{{trap
 #### Trap!
 * Chain Flail: DC 10 to find, DC 10 to disable;    initiative +4, 1 attack per round, +7 to hit against all targets within 5 ft., 2d10 bludgeoning damage
 }}
@@ -951,9 +830,6 @@ ___
 :
 ***Javelin.*** Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range.
 }}
-{{footnote STAT BLOCKS}}
-\page
-{{pageNumber,auto}}
 {{monster,frame
 ## Goblin
 *Small Humanoid, Neutral Evil*
@@ -1104,9 +980,6 @@ ___
 Cold Breath. The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.
 Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
 }}
-{{footnote STAT BLOCKS}}
-\page
-{{pageNumber,auto}}
 {{monster,frame
 ## Worg
 *Large Monstrosity, Neutral Evil*
@@ -1128,6 +1001,9 @@ ___
 ### Actions
 ***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
 }}
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
 {{monster,frame
 ## Zombie
 *Medium Undead, Neutral Evil*
