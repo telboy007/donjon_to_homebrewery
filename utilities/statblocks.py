@@ -37,3 +37,11 @@ def extract_proficiencies_from_api_response(data):
                 skill_checks.append((skill_check_name, value))
 
     return saving_throws, skill_checks
+
+
+def convert_low_cr_to_fraction(cr):
+    if cr < 1:
+        if cr == 0.5 : return "1/2"
+        if cr == 0.25 : return "1/4"
+        if cr == 0.125 : return "1/8"
+    return cr
