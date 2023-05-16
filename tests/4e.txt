@@ -134,13 +134,13 @@ Small Rock Crystal (173 gp each); Stoneware Jar painted with Garden Imagery (350
 | South | Archway  | n/a |
 | West | Locked Iron Door (Thievery DC 10 to unlock, Strength DC 30 to break, 60 hp)  | 101 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 7
 {{descriptive
 Fiery brazier (Strength DC 10 to knock over, deals ongoing 5 fire damage), The walls have been engraved with endless spirals.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **5 x Boneshard Skeleton (mm 235, 200 xp)**
 {{treasure
 #### Treasure

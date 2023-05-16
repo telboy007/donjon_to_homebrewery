@@ -140,15 +140,15 @@ A well lies in the north-west corner of the room, and a shattered hammer lies in
 #### Trap!
 * Falling Block: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{hidden-treasure
 #### Hidden Treasure!
 * Hidden (DC 25 to find) Trapped and Unlocked Simple Wooden Chest (10 hp)
 * Poisoned Arrow Trap: DC 15 to find, DC 10 to disable;     +5 to hit against one target, 1d10 piercing/poison damage
 * 2100 cp, 1100 sp, 100 gp, a cloth sash threaded with silver (25 gp), a copper tankard etched with arcane runes (25 gp), a linen choker trimmed with squirrel fur (25 gp), a pewter crown inlaid with a meandros of silver (25 gp), an earthenware plate painted with floral imagery (25 gp)
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 {{descriptive
 Someone has scrawled "We've run out of swords" on the east wall, and the walls are covered with scorch marks.
 }}
@@ -202,6 +202,9 @@ A tile labyrinth covers the floor, and a dagger hilt lies in the west side of th
 | East | Stuck Simple Wooden Door (DC 10 to break; 10 hp) (slides up)  | n/a |
 | West | Secret (DC 15 to find) Stuck Iron Door (DC 25 to break; 60 hp) ***Secret:*** The door is concealed within an upright sarcophagus | 6 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 12
 {{descriptive
 A chute descends from the room into a magical cyst below, and a warped spear lies in the center of the room.
@@ -213,9 +216,6 @@ A chute descends from the room into a magical cyst below, and a warped spear lie
 | North | Unlocked Simple Wooden Door (10 hp)  | n/a |
 | West | Trapped and Unlocked Good Wooden Door (15 hp)  ***Trap:*** Magic Missle Trap: DC 15 to find, DC 10 to disable;     one target, 4d10 force damage | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 13
 {{trap
 #### Trap!
@@ -284,15 +284,15 @@ A wooden platform hangs over a deep pit in the south-west corner of the room, an
 | South | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
 | South | Trapped and Unlocked Simple Wooden Door (10 hp)  ***Trap:*** Rune of Confusion: DC 10 to find, DC 15 to disable;     affects all targets within 10 ft., DC 14 save or become confused (phb 224) for 1d4 rounds | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 18
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
 | East | Trapped and Stuck Stone Door (DC 20 to break; 60 hp)  ***Trap:*** Falling Block: DC 15 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 19
 This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 {{treasure
@@ -363,13 +363,13 @@ The room has a high domed ceiling, and patches of mushrooms grow in the center o
 | East | Secret (DC 20 to find) Unlocked Stone Door (60 hp) ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | n/a |
 | East | Unlocked Good Wooden Door (15 hp)  | 42 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 25
 {{descriptive
 Someone has scrawled "The Crimson Council killed four goblins here" on the north wall, and a rotting satchel lies in the south-east corner of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **Hobgoblin (cr 1/2, mm 186) and 1 x Worg (cr 1/2, mm 341); hard, 200 xp**
 {{treasure
 #### Treasure

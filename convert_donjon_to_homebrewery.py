@@ -32,7 +32,7 @@ def set_check():
 def file_size(current_check, footnote, flag=False):
     """Count the current number of characters in a file"""
     # first page of locations needs a larger check value
-    value = 3500 if flag else 3000
+    value = 3200 if flag else 3000
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > value:
@@ -198,21 +198,21 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
-    # use AI to suggest a BBEG and lair detail if not running under testmode
+    # use AI to suggest more enhancements if not running under testmode
     if not args.testmode:
         if "history" in data['details']:
+            # dungeon boss and lair details
             bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
             outfile.write("### Dungeon Boss\n")
-            outfile.write(f"{bbeg_and_lair}\n\n")
-            outfile.write("Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n")
-
-    # use AI to suggest a BBEG and lair detail if not running under testmode
-    if not args.testmode:
-        if "history" in data['details']:
+            outfile.write(f"{bbeg_and_lair}\n")
+            # two adventure hooks to help immerse the party in the dungeon
             adventure_hooks = suggest_adventure_hooks_via_ai(blurb, bbeg_and_lair)
             outfile.write("### Adventure Hooks\n")
-            outfile.write(f"{adventure_hooks}\n\n")
-            outfile.write("Depending on which adventure hook you choose, don't forget to tweak elements of the dungeon accordingly.\n")
+            outfile.write(f"{adventure_hooks}\n")
+            # add some hints about tweaking the dungeon based on boss, lair and adventure hooks
+            outfile.write("### Tweaking the dungeon\n")
+            outfile.write("Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n\n")
+            outfile.write("Depending on which adventure hook you choose, don't forget to tweak other elements of the dungeon accordingly, changing some of the monsters or random encounters to better reflect the general theme.\n")
 
     # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
