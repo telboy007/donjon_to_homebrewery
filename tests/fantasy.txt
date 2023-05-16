@@ -170,6 +170,9 @@ This room is occupied by **1 x Ghoul**
 | South | Stuck Good Wooden Door  | 25 |
 | West | Secret Unlocked Simple Wooden Door ***Secret:*** The door is concealed behind a tapestry of a goddess of wealth | 7 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 9
 #### Exits
 | Direction | Description | To |
@@ -177,9 +180,6 @@ This room is occupied by **1 x Ghoul**
 | East | Wooden Portcullis (magically reinforced)  | n/a |
 | West | Secret Trapped and Unlocked Stone Door  ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall ***Trap:*** Burning Hands Trap | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 10
 {{descriptive
 A stone ramp ascends towards the north wall, and a fountain decorated with six gargoyles sits in the south-west corner of the room.
@@ -272,6 +272,9 @@ Skeletons hang from chains and manacles against the east and west walls, and a b
 {{descriptive
 A stair ascends to a wooden platform in the south side of the room, and several pieces of rotten leather are scattered throughout the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -289,9 +292,6 @@ None
 | North | Stuck Good Wooden Door  | n/a |
 | South | Stuck Good Wooden Door  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 19
 {{descriptive
 A wooden platform hangs over a deep pit in the south side of the room, and a tile mosaic of arcane patterns covers the floor.
@@ -386,13 +386,13 @@ The floor is covered in perfect hexagonal tiles, and a spinning wheel and severa
 | North | Secret Stuck Strong Wooden Door ***Secret:*** The door is concealed behind a statue of a troll archer, and opened by pulling an arrow in its quiver | n/a |
 | West | Iron Portcullis  | 53 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 27
 {{descriptive
 A forge and anvil sit in the west side of the room, and a torn backpack lies in the west side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **2 x Dire Rat**
 {{treasure
 #### Treasure
@@ -490,6 +490,9 @@ This room is occupied by **1 x Medium Monstrous Spider**
 #### Treasure
 500 sp; Aquamarine (500 gp); Chain Shirt (100 gp); hoard total 650 gp
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -497,9 +500,6 @@ This room is occupied by **1 x Medium Monstrous Spider**
 | North | Unlocked Strong Wooden Door  | n/a |
 | West | Trapped and Unlocked Strong Wooden Door  ***Trap:*** Javelin Trap | 55 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 36
 {{descriptive
 A mural of ghoulish carnage covers the ceiling, and a simple fireplace sits against the east wall.
@@ -588,6 +588,9 @@ A narrow pit covered by iron bars lies in the west side of the room, and the sce
 |:--|:--|:--|
 | East | Wooden Portcullis (magically reinforced)  | 61 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 44
 #### Exits
 | Direction | Description | To |
@@ -595,9 +598,6 @@ A narrow pit covered by iron bars lies in the west side of the room, and the sce
 | South | Secret Unlocked Simple Wooden Door ***Secret:*** The door is located above a small stone dais and concealed behind an area of mould | 47 |
 | West | Trapped and Unlocked Iron Door  ***Trap:*** Poisoned Arrow Trap | 36 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 45
 This room is occupied by **1 x Troglodyte**
 {{treasure
@@ -697,13 +697,13 @@ A sloped pit lined with iron spikes lies in the south side of the room, and a to
 | South | Wooden Portcullis  | 51 |
 | West | Trapped and Unlocked Iron Door  ***Trap:*** Tripping Chain | 13 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 53
 {{descriptive
 A set of demonic war masks hangs on the east wall, and several pieces of rotten leather are scattered throughout the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -811,6 +811,9 @@ None
 {{descriptive
 A narrow pit covered by iron bars lies in the north side of the room, and a set of demonic war masks hangs on the south wall.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -818,9 +821,6 @@ A narrow pit covered by iron bars lies in the north side of the room, and a set 
 | South | Stuck Good Wooden Door  | n/a |
 | West | Wooden Portcullis (magically reinforced)  | 43 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 62
 {{descriptive
 The south and west walls are covered with bloodstains, and several pieces of trash are scattered throughout the room.
