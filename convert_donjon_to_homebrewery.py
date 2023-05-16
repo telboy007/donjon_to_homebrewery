@@ -16,7 +16,7 @@ from collections import OrderedDict
 from dotenv import load_dotenv
 from utilities.ai import expand_dungeon_overview_via_ai, suggest_a_bbeg_via_ai, suggest_adventure_hooks_via_ai
 from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, compile_monster_and_combat_details
-from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier
+from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
 
 load_dotenv()
 
@@ -553,7 +553,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             if monster_statblock["languages"]:
                 outfile.write(f"**Languages** :: {monster_statblock['languages']}\n")
 
-            outfile.write(f"**Challenge Rating** :: {monster_statblock['challenge_rating']} ({monster_statblock['xp']} XP)\n")
+            CR = convert_low_cr_to_fraction(monster_statblock['challenge_rating'])
+            outfile.write(f"**Challenge Rating** :: {CR} ({monster_statblock['xp']} XP)\n")
             outfile.write("___\n")
 
             # traits and special abilities
