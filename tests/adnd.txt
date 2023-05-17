@@ -19,7 +19,6 @@ The dungeon has the following features, these may include skill checks to perfor
 | Walls | Natural Stone |
 | Temperature | Average |
 | Lighting | Dark (individual creatures may carry lights) |
-| Special | None |
 }}
 Some of the corridors marked on the map have special features detailed below.
 {{descriptive
