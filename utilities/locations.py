@@ -27,6 +27,7 @@ def add_magical_items_to_list(string, room_loc):
         compiles ref table for magic items - 5e only 
         format: magic_item[name (quantity if applicable)] = dmg page number/room location id    
     """
+    magic_items = {}
     raw_magic_items = string.split(',')
     for index, raw_magic_item in enumerate(raw_magic_items):
         if 'dmg' in raw_magic_item:
@@ -51,12 +52,15 @@ def compile_monster_and_combat_details(string, infest):
         # get monster name and book details and add to list
         monsters_and_combat = string.split(';')
         monsters = monsters_and_combat[0].split(' and ')
+        print(f"input {monsters}")
         for monster in monsters:
             if ' x ' in monster:
                 monster = monster.split(' x ')[1]
                 monster_list.append(monster.strip())
+                print(f"if {monster_list}")
             else:
                 monster_list.append(monster.strip())
+                print(f"else {monster_list}")
         # get combat type and add to list
         combat = monsters_and_combat[1].split(',')
         combat_list.append(combat[0].strip())
