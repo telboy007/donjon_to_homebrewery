@@ -28,6 +28,8 @@ jobs:
         pip install requests
         pip install openai
         pip install python-dotenv
+        pip install pytest
+        pip install pytest-cov
 
     - name: Run unit tests
       run: |

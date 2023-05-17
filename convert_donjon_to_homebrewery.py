@@ -197,7 +197,7 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     if overview["ai_enhancements"]:
         # dungeon boss and lair details
         outfile.write("### Dungeon Boss\n")
-        outfile.write(f"{overview['bbeg_and_lair']}\n")     
+        outfile.write(f"{overview['bbeg_and_lair']}\n")
         # two adventure hooks to help immerse the party in the dungeon
         outfile.write("### Adventure Hooks\n")
         outfile.write(f"{overview['adventure_hooks']}\n")
@@ -630,7 +630,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write(f"![map]({args.gm_map_url}){{width:50%;}}\n")
         outfile.write(":\n")
         outfile.write(f"Courtesy of [donjon.bin.sh]({settings['donjon_url']})\n")
-    
+
     # homebrewery logo
     outfile.write("![logo](https://i.imgur.com/cYz20b0.png){position:absolute,bottom:100px,left:43%,width:14%,filter:invert(60%)}\n")
     outfile.write("{{footnote SETTINGS}}\n")
