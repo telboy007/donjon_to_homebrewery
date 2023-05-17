@@ -29,13 +29,10 @@ jobs:
         pip install openai
         pip install python-dotenv
 
-    - name: Generate test files
+    - name: Run unit tests
       run: |
-        python convert_donjon_to_homebrewery.py ./tests/fantasy_test_file.json -o ./tests/fantasy.txt --testmode
-        python convert_donjon_to_homebrewery.py ./tests/adnd_test_file.json -o ./tests/adnd.txt --testmode
-        python convert_donjon_to_homebrewery.py ./tests/4e_test_file.json -o ./tests/4e.txt --testmode
-        python convert_donjon_to_homebrewery.py ./tests/5e_test_file.json -o ./tests/5e.txt --testmode
+        pytest --cov=. --cov-config=.coveragerc ./tests/tests_unit.py
 
-    - name: Run tests
+    - name: Run e2e tests
       run: |
-        python ./tests/tests.py
+        pytest --cov=. --cov-config=.coveragerc ./tests/tests_e2e.py
