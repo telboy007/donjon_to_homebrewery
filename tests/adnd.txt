@@ -2457,18 +2457,19 @@ AD&D Random Dungeon Generator
 :
 |||
 |:--|:--|
-|Random Seed:|954800132|
-|Dungeon Size:|Large|
-|Dungeon Layout:|Rectangle|
+|Random Seed|954800132|
+|Dungeon Size|Large|
+|Dungeon Layout|Rectangle|
 |Peripheral Egress?|Yes|
-|Room Layout:|Dense|
-|Room Size:|Small|
+|Room Layout|Dense|
+|Room Size|Small|
 |Polymorph Rooms?|Many|
-|Doors:|Standard|
-|Corridors:|Labyrinth|
+|Doors|Standard|
+|Corridors|Labyrinth|
 |Remove Deadends?|Some|
 |Stairs?|Yes|
-|Map Style:|Standard|
+|Map Style|Standard|
 |Grid|Square|
 \column
+![logo](https://i.imgur.com/cYz20b0.png){position:absolute,bottom:100px,left:43%,width:14%,filter:invert(60%)}
 {{footnote SETTINGS}}
