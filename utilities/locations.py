@@ -52,15 +52,12 @@ def compile_monster_and_combat_details(string, infest):
         # get monster name and book details and add to list
         monsters_and_combat = string.split(';')
         monsters = monsters_and_combat[0].split(' and ')
-        print(f"input {monsters}")
         for monster in monsters:
             if ' x ' in monster:
                 monster = monster.split(' x ')[1]
                 monster_list.append(monster.strip())
-                print(f"if {monster_list}")
             else:
                 monster_list.append(monster.strip())
-                print(f"else {monster_list}")
         # get combat type and add to list
         combat = monsters_and_combat[1].split(',')
         combat_list.append(combat[0].strip())

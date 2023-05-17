@@ -14,7 +14,12 @@ def create_donjon_overview(data, testmode):
     overview["walls"] = data["walls"]
     overview["temperature"] = data["temperature"].replace(NEWLINE, ' ')
     overview["illumination"] = data["illumination"]
-    overview["special"] = data["special"] if "special" in data else False
+    overview["special"] = data["special"] if "special" in data else None
+    # fix special so it shows in the table
+    if overview["special"] is not None:
+        overview["special"].replace(NEWLINE, ' ')
+    else:
+        overview["special"] = "None"
     overview["blurb"] = data["history"] if "history" in data else False
     overview["dungeon_detail"] = f"{overview['floor']} floors, {overview['walls']} walls, temperature is {overview['temperature']}, and lighting is {overview['illumination']}."
     overview["ai_enhancements"] = False
