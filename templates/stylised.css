@@ -1,0 +1,27 @@
+/* source: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator */
+
+.treasure {
+	/* treasure custom style */
+}
+
+.trap {
+	/* trap custom style */
+	background-color: #faf7ea;
+	border-image-slice: 15 15 15 15;
+	border-image-width: 8px 8px 8px 8px;
+	border-image-outset: 5px 5px 5px 5px;
+	border-image-repeat: round round;
+	border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-3.png");
+	border-style: solid;
+}
+
+.hidden-treasure {
+	/* hidden treasure custom style */
+	background-color: #faf7ea;
+	border-image-slice: 42 42 42 42;
+	border-image-width: 15px 15px 15px 15px;
+	border-image-outset: 6px 6px 6px 6px;
+	border-image-repeat: round round;
+	border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
+	border-style: solid;
+}

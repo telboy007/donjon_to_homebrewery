@@ -4,8 +4,8 @@
     Donjon to homebrewery convertor
     line arguments:
         json file [mandatory]
-        gm map (url) [optional]
-        player map (url) [optional]
+        gm map url [optional]
+        player map url [optional]
         output file [optional]
         testmode [optional]
 """
@@ -14,7 +14,8 @@ import argparse
 import json
 from collections import OrderedDict
 from dotenv import load_dotenv
-from utilities.ai import expand_dungeon_overview_via_ai, suggest_a_bbeg_via_ai, suggest_adventure_hooks_via_ai
+from content.settings import create_donjon_settings
+from content.overview import create_donjon_overview
 from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, compile_monster_and_combat_details
 from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
 
@@ -65,86 +66,83 @@ parser = argparse.ArgumentParser(
                     epilog = 'See README for more details.')
 
 parser.add_argument('filename') # required
-parser.add_argument('-gm', '--gm_map', help='URL for the GM Map image') # optional
-parser.add_argument('-p', '--player_map', help='URL for the Player map image') # optional
+parser.add_argument('-gm', '--gm_map_url', help='URL for the GM Map image') # optional
+parser.add_argument('-p', '--player_map_url', help='URL for the Player map image') # optional
 parser.add_argument('-o', '--output_filename', help='Override for text filename', default="homebrewery.txt") # optional
 parser.add_argument('-t', '--testmode', help='Stops AI enhancing dungeon details', default=False, action='store_true') # optional
 
 args = parser.parse_args()
 
-# grab json filename and convert json to dictionary
+# convert input file from json to dictionary
 filename = args.filename
 with open(filename, encoding="utf-8") as inputfile:
     data = json.load(inputfile)
 
-# Open file to write content to
+# setup content used during creation of markdown
+settings = create_donjon_settings(data["settings"])
+overview = create_donjon_overview(data["details"], args.testmode)
+
+# open output file to write content to
 with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
-    # title page
-    if args.gm_map:
-        outfile.write(f"![map]({args.gm_map}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
+    # *** TITLE PAGE ***
+
+    # title page start
+    if args.gm_map_url:
+        outfile.write(f"![map]({args.gm_map_url}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
 
     outfile.write("{{margin-top:225px}}\n")
     # start title css formatting
     outfile.write("{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px\n")
-    outfile.write(f"# {data['settings']['name']}\n")
+    outfile.write(f"# {settings['dungeon_name']}\n")
 
     # certain dungeon generators don't create a blurb
-    if "history" in data['details']:
+    if overview["blurb"]:
         outfile.write(":\n")
-        outfile.write(f"##### {data['details']['history']}\n")
+        outfile.write(f"##### {overview['blurb']}\n")
         outfile.write(":::\n")
     else:
         outfile.write(":::\n")
 
-    # work out ruleset for title page and if we can generate summary page
-    if data['settings']['infest'] == "dnd_5e":
-        INFEST = "D&D 5e"
-        SUMMARY_PAGE = True
-    elif data['settings']['infest'] == "dnd_4e":
-        INFEST = "D&D 4e"
-        SUMMARY_PAGE = True
-    elif data['settings']['infest'] == "adnd":
-        INFEST = "AD&D"
-        SUMMARY_PAGE = False
-    else:
-        INFEST = "fantasy"
-        SUMMARY_PAGE = False
-
-    outfile.write(f"##### A randomly generated {INFEST.upper()} donjon dungeon for a party size of {data['settings']['n_pc']} and APL{data['settings']['level']}\n")
+    outfile.write(f"##### A randomly generated {settings['ruleset_nice'].upper()} donjon dungeon for a party size of {settings['party_size']} and APL{settings['dungeon_level']}\n")
     outfile.write(":::\n")
-    outfile.write("##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)\n")
+    outfile.write(f"##### Created using [Homebrewery]({settings['homebrewery_url']}), [Donjon]({settings['donjon_url']}) and [donjon_to_homebrewery]({settings['dth_url']})\n")
     # close title css formatting
+
     outfile.write("}}\n")
     outfile.write("\\page\n")
     outfile.write("{{pageNumber,auto}}\n")
+    # title page end
 
-    # map pages
-    if args.gm_map:
+    # *** MAP PAGES ***
+
+    # map page(s) start
+    if args.gm_map_url:
         outfile.write("## GM Map\n")
-        outfile.write(f"![map]({args.gm_map}){{width:680px;}}\n")
-        outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+        outfile.write(f"![map]({args.gm_map_url}){{width:680px;}}\n")
+        outfile.write(f"Courtesy of [donjon.bin.sh]({settings['donjon_url']})\n")
         outfile.write("{{footnote MAPS}}\n")
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
-    if args.player_map:
+    if args.player_map_url:
         outfile.write("## Player Map\n")
-        outfile.write(f"![map]({args.player_map}){{width:680px;}}\n")
-        outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+        outfile.write(f"![map]({args.player_map_url}){{width:680px;}}\n")
+        outfile.write(f"Courtesy of [donjon.bin.sh]({settings['donjon_url']})\n")
         outfile.write("{{footnote MAPS}}\n")
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
+    # map page(s) end
 
+    # *** OVERVIEW ***
+
+    # overview page start
     outfile.write("## Overview\n")
-    # use AI to expand on the dungeon description and provide other details if not running under testmode
-    if not args.testmode:
-        if "history" in data['details']:
-            blurb = data['details']['history']
-            dungeon_detail = f"{data['details']['floor']} floors, {data['details']['walls']} walls, temperature is {data['details']['temperature'].replace(NEWLINE, ' ')}, and lighting is {data['details']['illumination']}."
-            flavour_text = expand_dungeon_overview_via_ai(blurb, dungeon_detail)
-            outfile.write("### Description\n")
-            outfile.write(f"{flavour_text}\n")
+
+    # add AI flavour text for dungeon if description available
+    if overview["ai_enhancements"]:
+        outfile.write("### Description\n")
+        outfile.write(f"{overview['flavour_text']}\n")
 
     # general features
     outfile.write("### Features\n")
@@ -153,15 +151,12 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("#### General Features\n")
     outfile.write("| Type | Detail |\n")
     outfile.write("|:--|:--|\n")
-    outfile.write(f"| Floors | {data['details']['floor']} |\n")
-    outfile.write(f"| Walls | {data['details']['walls']} |\n")
-    outfile.write(f"| Temperature | {data['details']['temperature'].replace(NEWLINE, ' ')} |\n")
-    outfile.write(f"| Lighting | {data['details']['illumination']} |\n")
-    if "special" in data['details']:
-        if data['details']['special'] is not None:
-            outfile.write(f"| Special | {data['details']['special'].replace(NEWLINE, ' ')} |\n")
-        else:
-            outfile.write(f"| Special | {data['details']['special']} |\n")
+    outfile.write(f"| Floors | {overview['floor']} |\n")
+    outfile.write(f"| Walls | {overview['walls']} |\n")
+    outfile.write(f"| Temperature | {overview['temperature']} |\n")
+    outfile.write(f"| Lighting | {overview['illumination']} |\n")
+    if overview["special"]:
+        outfile.write(f"| Special | {overview['special']} |\n")
     outfile.write("}}\n")
 
     # corridor features - caves don't have corridor features
@@ -191,42 +186,39 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
             outfile.write(f"| {key} | {val.replace(NEWLINE, ' ')} |\n")
 
             # add monster, combat types and xp to global lists
-            if data['settings']['infest'] == "dnd_5e":
-                monster_list, combat_list, xp_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), data['settings']['infest'])
-            if data['settings']['infest'] == "dnd_4e":
-                monster_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), data['settings']['infest'])
+            if settings['ruleset'] == "dnd_5e":
+                monster_list, combat_list, xp_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), settings['ruleset'])
+            if settings['ruleset'] == "dnd_4e":
+                monster_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), settings['ruleset'])
 
         outfile.write("}}\n")
 
-    # use AI to suggest more enhancements if not running under testmode
-    if not args.testmode:
-        if "history" in data['details']:
-            # dungeon boss and lair details
-            bbeg_and_lair = suggest_a_bbeg_via_ai(blurb, dungeon_detail)
-            outfile.write("### Dungeon Boss\n")
-            outfile.write(f"{bbeg_and_lair}\n")
-            # two adventure hooks to help immerse the party in the dungeon
-            adventure_hooks = suggest_adventure_hooks_via_ai(blurb, bbeg_and_lair)
-            outfile.write("### Adventure Hooks\n")
-            outfile.write(f"{adventure_hooks}\n")
-            # add some hints about tweaking the dungeon based on boss, lair and adventure hooks
-            outfile.write("### Tweaking the dungeon\n")
-            outfile.write("Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n\n")
-            outfile.write("Depending on which adventure hook you choose, don't forget to tweak other elements of the dungeon accordingly, changing some of the monsters or random encounters to better reflect the general theme.\n")
+    # add AI suggestions for boss, lair and adventure hooks if present
+    if overview["ai_enhancements"]:
+        # dungeon boss and lair details
+        outfile.write("### Dungeon Boss\n")
+        outfile.write(f"{overview['bbeg_and_lair']}\n")
+        # two adventure hooks to help immerse the party in the dungeon
+        outfile.write("### Adventure Hooks\n")
+        outfile.write(f"{overview['adventure_hooks']}\n")
+        # add some hints about tweaking the dungeon based on boss, lair and adventure hooks
+        outfile.write("### Tweaking the dungeon\n")
+        outfile.write("Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n\n")
+        outfile.write("Depending on which adventure hook you choose, don't forget to tweak other elements of the dungeon accordingly, changing some of the monsters or random encounters to better reflect the general theme.\n")
 
-    # end description page
     outfile.write("{{footnote OVERVIEW}}\n")
     outfile.write("\\page\n")
     outfile.write("{{pageNumber,auto}}\n")
+    # overview page end
 
-# set page marker check
+# set initial page marker check value
 check = set_check()
 
 with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
     # *** DUNGEON DETAILS ***
 
-    # locations
+    # locations start
     FIRST_PAGE = True
     outfile.write("## Locations\n")
 
@@ -286,7 +278,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 continue
                             outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
                             # add to magic items list for the summary page
-                            if data['settings']['infest'] == "dnd_5e":
+                            if settings['ruleset'] == "dnd_5e":
                                 magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'])
                                 magic_items.update(magics)
 
@@ -318,22 +310,22 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 outfile.write("{{treasure\n")
                                 outfile.write("#### Treasure\n")
                                 if thing.count("(") == 0:
-                                    thing = sum_up_treasure(thing.replace(",",";"), data['settings']['infest'])
+                                    thing = sum_up_treasure(thing.replace(",",";"), settings['ruleset'])
                                     outfile.write(f"{thing}\n")
                                 else:
                                     outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
                                     # add to magic items list for the summary page
-                                    if data['settings']['infest'] == "dnd_5e":
+                                    if settings['ruleset'] == "dnd_5e":
                                         magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'])
                                         magic_items.update(magics)
                                 outfile.write("}}\n")
                             else:
                                 outfile.write(f"This room is occupied by **{thing}**\n")
                                 # add monster, combat types and xp to global lists
-                                if data['settings']['infest'] == "dnd_5e":
-                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, data['settings']['infest'])
-                                if data['settings']['infest'] == "dnd_4e":
-                                    monster_list = compile_monster_and_combat_details(thing, data['settings']['infest'])
+                                if settings['ruleset'] == "dnd_5e":
+                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'])
+                                if settings['ruleset'] == "dnd_4e":
+                                    monster_list = compile_monster_and_combat_details(thing, settings['ruleset'])
 
                     # check for page marker
                     outfile.close()
@@ -377,13 +369,13 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
-    # end locations section and prepare for summary
     outfile.write("{{footnote LOCATIONS}}\n")
+    # locations end
 
     # *** SUMMARY PAGE ***
 
     # if 4th or 5th edition then create a summary page
-    if SUMMARY_PAGE:
+    if settings["summary_page"]:
         outfile.write("\\page\n")
         outfile.write("{{pageNumber,auto}}\n")
 
@@ -392,13 +384,13 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("Here you will find useful reference tables for things encountered in the dungeon.\n")
 
         # list out xp and combat type details if 5e dungeon
-        if data['settings']['infest'] == "dnd_5e":
+        if settings['ruleset'] == "dnd_5e":
             outfile.write("{{descriptive\n")
             outfile.write("#### Combat details (guide only)\n")
 
             # work out some xp totals
             total_xp = sum(int(i) for i in xp_list)
-            shared_xp = round(sum(int(i) for i in xp_list)/int(data['settings']['n_pc']))
+            shared_xp = round(sum(int(i) for i in xp_list)/int(settings['party_size']))
 
             outfile.write(f"**Total XP: {total_xp}** which is {shared_xp} xp per party member.\n")
             outfile.write("| Type | Amount |\n")
@@ -422,7 +414,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         for item in monster_list:
             # split out monster and source book details
-            monster_name, sourcebook = extract_book_details(item, data['settings']['infest'])
+            monster_name, sourcebook = extract_book_details(item, settings['ruleset'])
             outfile.write(f"| {monster_name} | {sourcebook} |\n")
 
             # compile list of monsters for stat blocks
@@ -435,7 +427,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write(":\n")
 
         # list out magic items for 5th edition
-        if data['settings']['infest'] == "dnd_5e":
+        if settings['ruleset'] == "dnd_5e":
             outfile.write("{{descriptive\n")
             outfile.write("#### Magic Items (alphabetical)\n")
             outfile.write("| Item | Book | Room |\n")
@@ -455,7 +447,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     # *** STAT BLOCKS ***
 
     # if 5th edition try to get as many monster stat blocks as possible
-    if data['settings']['infest'] == "dnd_5e":
+    if settings['ruleset'] == "dnd_5e":
         outfile.write("\\page\n")
 
         # update check value
@@ -606,37 +598,40 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     outfile.write("## Settings\n")
     outfile.write("Settings used to create this dungeon:\n")
     outfile.write(":\n")
-    outfile.write(f"{INFEST.upper()} Random Dungeon Generator\n")
+    outfile.write(f"{settings['ruleset_nice'].upper()} Random Dungeon Generator\n")
     outfile.write("|||\n")
     outfile.write("|:--|:--|\n")
-    outfile.write(f"|Dungeon Name|{data['settings']['name']}|\n")
-    outfile.write(f"|Dungeon Level|{data['settings']['level']}|\n")
-    outfile.write(f"|Party Size|{data['settings']['n_pc']}|\n")
-    outfile.write(f"|Motif|{data['settings']['motif']}|\n")
+    outfile.write(f"|Dungeon Name|{settings['dungeon_name']}|\n")
+    outfile.write(f"|Dungeon Level|{settings['dungeon_level']}|\n")
+    outfile.write(f"|Party Size|{settings['party_size']}|\n")
+    outfile.write(f"|Motif|{settings['motif']}|\n")
     outfile.write("}}\n")
     outfile.write(":\n")
     outfile.write("|||\n")
     outfile.write("|:--|:--|\n")
-    outfile.write(f"|Random Seed:|{data['settings']['seed']}|\n")
-    outfile.write(f"|Dungeon Size:|{data['settings']['dungeon_size']}|\n")
-    outfile.write(f"|Dungeon Layout:|{data['settings']['dungeon_layout']}|\n")
-    outfile.write(f"|Peripheral Egress?|{data['settings']['peripheral_egress']}|\n")
-    outfile.write(f"|Room Layout:|{data['settings']['room_layout']}|\n")
-    outfile.write(f"|Room Size:|{data['settings']['room_size']}|\n")
-    outfile.write(f"|Polymorph Rooms?|{data['settings']['room_polymorph']}|\n")
-    outfile.write(f"|Doors:|{data['settings']['door_set']}|\n")
-    outfile.write(f"|Corridors:|{data['settings']['corridor_layout']}|\n")
-    outfile.write(f"|Remove Deadends?|{data['settings']['remove_deadends']}|\n")
-    outfile.write(f"|Stairs?|{data['settings']['add_stairs']}|\n")
-    outfile.write(f"|Map Style:|{data['settings']['map_style']}|\n")
-    outfile.write(f"|Grid|{data['settings']['grid']}|\n")
+    outfile.write(f"|Random Seed|{settings['random_seed']}|\n")
+    outfile.write(f"|Dungeon Size|{settings['dungeon_size']}|\n")
+    outfile.write(f"|Dungeon Layout|{settings['dungeon_layout']}|\n")
+    outfile.write(f"|Peripheral Egress?|{settings['peripheral_egress']}|\n")
+    outfile.write(f"|Room Layout|{settings['room_layout']}|\n")
+    outfile.write(f"|Room Size|{settings['room_size']}|\n")
+    outfile.write(f"|Polymorph Rooms?|{settings['polymorph_rooms']}|\n")
+    outfile.write(f"|Doors|{settings['doors']}|\n")
+    outfile.write(f"|Corridors|{settings['corridors']}|\n")
+    outfile.write(f"|Remove Deadends?|{settings['remove_deadends']}|\n")
+    outfile.write(f"|Stairs?|{settings['stairs']}|\n")
+    outfile.write(f"|Map Style|{settings['map_style']}|\n")
+    outfile.write(f"|Grid|{settings['grid']}|\n")
 
     outfile.write("\\column\n")
 
-    if args.gm_map:
+    if args.gm_map_url:
         outfile.write(":\n")
-        outfile.write(f"![map]({args.gm_map}){{width:50%;}}\n")
+        outfile.write(f"![map]({args.gm_map_url}){{width:50%;}}\n")
         outfile.write(":\n")
-        outfile.write("Courtesy of <a href=\"https://donjon.bin.sh\">donjon.bin.sh</a>\n")
+        outfile.write(f"Courtesy of [donjon.bin.sh]({settings['donjon_url']})\n")
 
+    # homebrewery logo
+    outfile.write("![logo](https://i.imgur.com/cYz20b0.png){position:absolute,bottom:100px,left:43%,width:14%,filter:invert(60%)}\n")
     outfile.write("{{footnote SETTINGS}}\n")
+    # fin

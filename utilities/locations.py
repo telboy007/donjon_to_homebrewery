@@ -27,6 +27,7 @@ def add_magical_items_to_list(string, room_loc):
         compiles ref table for magic items - 5e only 
         format: magic_item[name (quantity if applicable)] = dmg page number/room location id    
     """
+    magic_items = {}
     raw_magic_items = string.split(',')
     for index, raw_magic_item in enumerate(raw_magic_items):
         if 'dmg' in raw_magic_item:

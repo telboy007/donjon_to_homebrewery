@@ -884,18 +884,19 @@ FANTASY Random Dungeon Generator
 :
 |||
 |:--|:--|
-|Random Seed:|280083457|
-|Dungeon Size:|Medium|
-|Dungeon Layout:|Rectangle|
+|Random Seed|280083457|
+|Dungeon Size|Medium|
+|Dungeon Layout|Rectangle|
 |Peripheral Egress?||
-|Room Layout:|Scattered|
-|Room Size:|Medium|
+|Room Layout|Scattered|
+|Room Size|Medium|
 |Polymorph Rooms?|Yes|
-|Doors:|Standard|
-|Corridors:|Errant|
+|Doors|Standard|
+|Corridors|Errant|
 |Remove Deadends?|Some|
 |Stairs?|Yes|
-|Map Style:|Standard|
+|Map Style|Standard|
 |Grid|Square|
 \column
+![logo](https://i.imgur.com/cYz20b0.png){position:absolute,bottom:100px,left:43%,width:14%,filter:invert(60%)}
 {{footnote SETTINGS}}
