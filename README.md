@@ -5,21 +5,21 @@
 # donjon_to_homebrewery
 Converts [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v3 formatted text to copy and paste.  It will add page markers to break up room locations, but some minor edits may still be required to the final document.
 
+## Features
+* Uses AI to enhance the dungeon flavour text and suggest a boss and lair details
+* Adds any monster stat blocks that exist in the SRD to the document and lists the ones it had to skip (5e only)
+* Collects all the monsters and magical items into easy to use reference tables with sourcebook page number (5e, 4e limited)
+* Provides total XP and a breakdown of combat encounter difficulty types (5e only, 4e limited)
+* Tries to add page breaks to reduce amount of manual editing required
+* Captures all the settings used to generate this dungeon on donjon.bin.sh for prosperity
+* Ability to customise certain parts of room locations so important details aren't missed
+
 This tool has been tested with:
 1. AD&D
 1. D&D 4e
 1. D&D 5e
 
 NOTE: don't forget to grab both maps (gm and player) from donjon as well as the json! :)
-
-## Features
-* Uses AI to enhance the dungeon flavour text and suggest a boss and lair details (5e only)
-* Adds any monster stat blocks that exist in the SRD to the document and lists the ones it had to skip (5e only)
-* Collects all the monsters and magical items into easy to use reference tables with sourcebook page number (5e, 4e limited)
-* Provides total XP and a breakdown of combat encounter difficulty types (5e only)
-* Tries to add page breaks to reduce amount of manual editing required
-* Captures all the settings used to generate this dungeon on donjon.bin.sh for prosperity
-* Ability to customise certain parts of room locations so important details aren't missed
 
 ## Using GitHub Actions
 

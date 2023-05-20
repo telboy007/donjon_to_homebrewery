@@ -14,16 +14,17 @@ import argparse
 import json
 from collections import OrderedDict
 from dotenv import load_dotenv
-from content.settings import create_donjon_settings
-from content.overview import create_donjon_overview
-from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, compile_monster_and_combat_details
-from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
+from dth.content.corridor_features import create_donjon_corridor_features
+from dth.content.settings import create_donjon_settings
+from dth.content.overview import create_donjon_overview
+from dth.content.wandering_monsters import create_donjon_wandering_monsters
+from dth.utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, compile_monster_and_combat_details
+from dth.utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
 
 load_dotenv()
 
 
 # *** page break utilities ***
-
 def set_check():
     """Set the initial number of characters in the file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
@@ -80,7 +81,9 @@ with open(filename, encoding="utf-8") as inputfile:
 
 # setup content used during creation of markdown
 settings = create_donjon_settings(data["settings"])
-overview = create_donjon_overview(data["details"], args.testmode)
+overview = create_donjon_overview(data["details"], settings, args.testmode)
+corridor_features = create_donjon_corridor_features(data)
+wandering_monsters = create_donjon_wandering_monsters(data)
 
 # open output file to write content to
 with open(args.output_filename, "w", encoding="utf-8") as outfile:
@@ -160,20 +163,21 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("}}\n")
 
     # corridor features - caves don't have corridor features
-    if "corridor_features" in data:
+    if corridor_features:
         outfile.write("Some of the corridors marked on the map have special features detailed below.\n")
         outfile.write("{{descriptive\n")
         outfile.write("#### Corridor Features\n")
         outfile.write("| Type | Detail |\n")
         outfile.write("|:--|:--|\n")
-
-        for key, val in data["corridor_features"].items():
-            outfile.write(f"| {val['key']} | {val['detail'].replace(NEWLINE, ' ')} |\n")
+        # write out corridor features by row
+        for feature in corridor_features["feature_list"]:
+            for key, value in feature.items():
+                outfile.write(f"| {key} | {value} |\n")
 
         outfile.write("}}\n")
 
     # wandering monsters - certain dungeon types don't have any
-    if "wandering_monsters" in data:
+    if wandering_monsters["monsters"]:
         outfile.write("### Random Encounters\n")
 
         outfile.write("There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n")
@@ -182,14 +186,10 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("| Roll | Detail |\n")
         outfile.write("|:--|:--|\n")
 
-        for key, val in data["wandering_monsters"].items():
-            outfile.write(f"| {key} | {val.replace(NEWLINE, ' ')} |\n")
-
-            # add monster, combat types and xp to global lists
-            if settings['ruleset'] == "dnd_5e":
-                monster_list, combat_list, xp_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), settings['ruleset'])
-            if settings['ruleset'] == "dnd_4e":
-                monster_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), settings['ruleset'])
+        # write out monster detail by row
+        for monster in wandering_monsters["monster_details"]:
+            for key, value in monster.items():
+                outfile.write(f"| {key} | {value} |\n")
 
         outfile.write("}}\n")
 
@@ -210,6 +210,12 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("\\page\n")
     outfile.write("{{pageNumber,auto}}\n")
     # overview page end
+
+# add wandering monster details to global lists depending on ruleset
+if settings['ruleset'] == "dnd_5e":
+    monster_list, combat_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, combat_list, xp_list)
+if settings['ruleset'] == "dnd_4e":
+    monster_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, [], xp_list)
 
 # set initial page marker check value
 check = set_check()
@@ -323,9 +329,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                 outfile.write(f"This room is occupied by **{thing}**\n")
                                 # add monster, combat types and xp to global lists
                                 if settings['ruleset'] == "dnd_5e":
-                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'])
+                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'], monster_list, combat_list, xp_list)
                                 if settings['ruleset'] == "dnd_4e":
-                                    monster_list = compile_monster_and_combat_details(thing, settings['ruleset'])
+                                    monster_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'], monster_list, [], xp_list)
 
                     # check for page marker
                     outfile.close()
@@ -383,24 +389,28 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("## Summary\n")
         outfile.write("Here you will find useful reference tables for things encountered in the dungeon.\n")
 
-        # list out xp and combat type details if 5e dungeon
+        # 4e and 5e both have XP summaries
+        outfile.write("{{descriptive\n")
+        outfile.write("#### Combat details (guide only)\n")
+
+        # work out some xp totals
+        total_xp = sum(int(i) for i in xp_list)
+        shared_xp = round(sum(int(i) for i in xp_list)/int(settings['party_size']))
+
+        outfile.write(f"**Total XP: {total_xp}** which is {shared_xp} xp per party member.\n")
+
+        # list out combat type details for 5e
         if settings['ruleset'] == "dnd_5e":
-            outfile.write("{{descriptive\n")
-            outfile.write("#### Combat details (guide only)\n")
-
-            # work out some xp totals
-            total_xp = sum(int(i) for i in xp_list)
-            shared_xp = round(sum(int(i) for i in xp_list)/int(settings['party_size']))
-
-            outfile.write(f"**Total XP: {total_xp}** which is {shared_xp} xp per party member.\n")
             outfile.write("| Type | Amount |\n")
             outfile.write("|:--|:--|\n")
             outfile.write(f"| Easy | {combat_list.count('easy')} |\n")
             outfile.write(f"| Medium | {combat_list.count('medium')} |\n")
             outfile.write(f"| Hard | {combat_list.count('hard')} |\n")
             outfile.write(f"| Deadly | {combat_list.count('deadly')} |\n")
-            outfile.write("}}\n")
-            outfile.write(":\n")
+
+        # close the xp and combat descriptive panel
+        outfile.write("}}\n")
+        outfile.write(":\n")
 
         # list out monsters in a handy reference table
         outfile.write("{{descriptive\n")

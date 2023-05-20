@@ -24,7 +24,7 @@ class E2E(TestCase):
         os.system("python convert_donjon_to_homebrewery.py ./tests/4e_test_file.json -o ./tests/4e.txt --testmode")
         with open("./tests/4e.txt", "r", encoding="utf-8") as fourth:
             check_value = len(fourth.read())
-            assert check_value == 88960, f"Should be 88960 but is {check_value}"
+            assert check_value == 89067, f"Should be 89067 but is {check_value}"
 
 
     def test_5e(self):

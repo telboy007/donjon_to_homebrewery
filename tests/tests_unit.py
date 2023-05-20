@@ -1,17 +1,16 @@
 #!/usr/bin/env python
 
-import re
-from types import SimpleNamespace
 from unittest import TestCase, mock
 from unittest.mock import patch
-from utilities import locations, statblocks, ai
+from dth.utilities import locations, statblocks, ai
 
 
 # locations test data
 TREASURE = "Treasure: 13 sp; 15 cp; 16 cp; 15 sp"
 MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187)"
 MANY_MAGICAL_ITEM = "5 x Potion of Healing (common, dmg 187)"
-MULTI_MONSTER_LIST = "Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firenewt Warrior (cr 1/2, vgm 142); medium, 300 xp"
+MULTI_MONSTER_LIST_4E = "3 x Half-Orc Death Mage (mm2 140, 250 xp) and 2 x Half-Orc Hunter (mm2 140, 200 xp)"
+MULTI_MONSTER_LIST_5E = "Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firenewt Warrior (cr 1/2, vgm 142); medium, 300 xp"
 MONSTER_DETAIL_4E = "Dragonkin Kobold Pact-Bound Adept (dr1 227, 250 xp)"
 MONSTER_DETAIL_5E = "Firenewt Warlock of Imix (cr 1, vgm 143)"
 MULTI_MONSTER_DETAIL_5E = "Drow House Captain (cr 9, mtf 184, vgm 154)"
@@ -93,29 +92,49 @@ class Locations(TestCase):
 
 
     # compile_monster_and_combat_details for 4e and 5e
-    def test_compile_monster_return_correct_reposnse_for_4e(self):
-        monster_list = locations.compile_monster_and_combat_details(
-                                                            MULTI_MONSTER_LIST,
-                                                            "dnd_4e"
+    def test_compile_monster_return_correct_response_for_4e(self):
+        monster_list, xp_list = locations.compile_monster_and_combat_details(
+                                                            MULTI_MONSTER_LIST_4E,
+                                                            "dnd_4e",
+                                                            [],
+                                                            [],
+                                                            []
                                                         )
 
         self.assertEqual(monster_list, [
-                                        'Firenewt Warlock of Imix (cr 1',
-                                        'Firenewt Warrior (cr 1/2'
+                                        'Half-Orc Death Mage (mm2 140',
+                                        'Half-Orc Hunter (mm2 140'
                                         ]
                                     )
+        
+        # xp amount
+        self.assertEqual(xp_list, ['250', '200'])
 
 
-    def test_compile_monster_return_correct_reposnse_for_5e(self):
+    def test_compile_monster_return_correct_response_for_fantasy(self):
+        # should never happen
+        response= locations.compile_monster_and_combat_details(
+                                                            MULTI_MONSTER_LIST_4E,
+                                                            "fantasy",
+                                                            [],
+                                                            [],
+                                                            []
+                                                        )
+
+        self.assertEqual(response, None)
+
+
+    def test_compile_monster_return_correct_response_for_5e(self):
         monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
-                                                                        MULTI_MONSTER_LIST,
-                                                                        "dnd_5e"
+                                                                        MULTI_MONSTER_LIST_5E,
+                                                                        "dnd_5e",
+                                                                        [],
+                                                                        [],
+                                                                        []
                                                                     )
 
         # monster list
         self.assertEqual(monster_list, [
-                                        'Firenewt Warlock of Imix (cr 1',
-                                        'Firenewt Warrior (cr 1/2',
                                         'Firenewt Warlock of Imix (cr 1, vgm 143)',
                                         'Firenewt Warrior (cr 1/2, vgm 142)'
                                         ]
@@ -124,13 +143,6 @@ class Locations(TestCase):
         self.assertEqual(combat_list, ['medium'])
         # xp amount
         self.assertEqual(xp_list, ['300'])
-
-
-    def test_compile_monster_return_none_reposnse_for_fantasy(self):
-        # should never happen
-        monster_list = locations.compile_monster_and_combat_details(MULTI_MONSTER_LIST, "fantasy")
-
-        self.assertEqual(monster_list, None)
 
 
     # extract book details for 4e and 5e
@@ -283,7 +295,7 @@ class AI(TestCase):
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_expand_dungeon_overview_via_ai(self, mock_send_prompt):
         mock_send_prompt.return_value = "I am an AI response!"
-        response = ai.expand_dungeon_overview_via_ai("foo", "bar")
+        response = ai.expand_dungeon_overview_via_ai("foobar", "foo", "bar")
 
         self.assertIn(response, "I am an AI response!")
 
@@ -292,14 +304,14 @@ class AI(TestCase):
     def test_expand_dungeon_overview_via_ai_raises_system_error(self, mock_send_prompt):
         mock_send_prompt.side_effect = SystemError("error")
         with self.assertRaises(SystemError):
-            ai.expand_dungeon_overview_via_ai("foo", "bar")
+            ai.expand_dungeon_overview_via_ai("foobar", "foo", "bar")
 
 
     # suggest a bbeg via ai
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_suggest_a_bbeg_via_ai(self, mock_send_prompt):
         mock_send_prompt.return_value = "I am an AI response!"
-        response = ai.suggest_a_bbeg_via_ai("foo", "bar")
+        response = ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar")
 
         self.assertIn(response, "I am an AI response!")
 
@@ -308,14 +320,14 @@ class AI(TestCase):
     def test_suggest_a_bbeg_via_ai_raises_system_error(self, mock_send_prompt):
         mock_send_prompt.side_effect = SystemError("error")
         with self.assertRaises(SystemError):
-            ai.suggest_a_bbeg_via_ai("foo", "bar")
+            ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar")
 
 
     # suggest adventure hooks via ai
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_suggest_adventure_hooks_via_ai(self, mock_send_prompt):
         mock_send_prompt.return_value = "I am an AI response!"
-        response = ai.suggest_adventure_hooks_via_ai("foo", "bar")
+        response = ai.suggest_adventure_hooks_via_ai("foobar", "foo", "bar")
 
         self.assertIn(response, "I am an AI response!")
 
@@ -324,4 +336,4 @@ class AI(TestCase):
     def test_suggest_adventure_hooks_via_ai_raises_system_error(self, mock_send_prompt):
         mock_send_prompt.side_effect = SystemError("error")
         with self.assertRaises(SystemError):
-            ai.suggest_adventure_hooks_via_ai("foo", "bar")
+            ai.suggest_adventure_hooks_via_ai("foobar", "foo", "bar")

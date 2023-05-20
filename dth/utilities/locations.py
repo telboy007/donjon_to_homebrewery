@@ -1,8 +1,4 @@
 """Module providing location / room helper functions"""
-magic_items = {}
-combat_list = []
-monster_list = []
-xp_list = []
 
 
 def sum_up_treasure(string, infest):
@@ -46,37 +42,65 @@ def format_magic_item_name(item_name):
     return item_name.replace('(uncommon','**U**').replace('(common','**C**').replace('(rare', '**R**').replace('(very rare', '**VR**').replace('(legendary', '**L**').replace('(artifact', '**A**').strip()
 
 
-def compile_monster_and_combat_details(string, infest):
-    """ compiles ref table for monsters - 4e and 5e only """
-    if infest == "dnd_5e":
+def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, combat_list, xp_list):
+    """ compiles ref table for monsters based on rule set """
+    if rule_set == "dnd_5e":
+        encounter_details = []
+        # decide if we have a list or a string to deal with
+        if isinstance(data, list):
+            for item in data:
+                for key, value in item.items():
+                    encounter_details.append(value)
+        else:
+            # add string as the single member of list
+            encounter_details = [data]
+
+        for encounter in encounter_details:
+            monsters, combat = encounter.split(';')
+            # can have more than one enemy type in monsters
+            monster_list = monsters.split(' and ')
+            combat_and_xp = combat.split(',')
+
+            # deal with monsters
+            for monster in monster_list:
+                if ' x ' in monster:
+                    monster = monster.split(' x ')[1]
+                final_list_of_monsters.append(monster.strip())
+
+            # deal with combats
+            combat_list.append(combat_and_xp[0].strip())
+
+            # get xp amount and add to list
+            xp_list.append(combat_and_xp[1].strip().split(' ')[0].strip())
+
+        return final_list_of_monsters, combat_list, xp_list
+    if rule_set == "dnd_4e":
+        encounter_details = []
+        # decide if we have a list or a string to deal with
+        if isinstance(data, list):
+            for item in data:
+                for key, value in item.items():
+                    encounter_details.append(value)
+        else:
+            # add string as the single member of list
+            encounter_details = [data]
+
         # get monster name and book details and add to list
-        monsters_and_combat = string.split(';')
-        monsters = monsters_and_combat[0].split(' and ')
-        for monster in monsters:
-            if ' x ' in monster:
-                monster = monster.split(' x ')[1]
-                monster_list.append(monster.strip())
-            else:
-                monster_list.append(monster.strip())
-        # get combat type and add to list
-        combat = monsters_and_combat[1].split(',')
-        combat_list.append(combat[0].strip())
-        # get xp amount and add to list
-        xp_amount = combat[1].strip().split(' ')
-        xp_list.append(xp_amount[0].strip())
-        return monster_list, combat_list, xp_list
-    if infest == "dnd_4e":
-        # get monster name and book details and add to list
-        monsters = string.split(') and ')
-        for monster in monsters:
-            if ' x ' in monster:
-                monster = monster.split(' x ')[1]
-                monster = monster.strip().split(',')
-                monster_list.append(monster[0])
-            else:
-                monster = monster.strip().split(',')
-                monster_list.append(monster[0])
-        return monster_list
+        for encounter in encounter_details:
+            monsters = encounter.split(') and ')
+
+            # deal with monsters
+            for monster in monsters:
+                if ' x ' in monster:
+                    monster = monster.split(' x ')[1]
+                if ', ' in monster:
+                    monster = monster.strip().split(',')
+                final_list_of_monsters.append(monster[0])
+
+                # get xp amount and add to list
+                xp_list.append(monster[1].strip().split(' ')[0].strip())
+
+        return final_list_of_monsters, xp_list
     return None
 
 
