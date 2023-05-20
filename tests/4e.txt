@@ -1426,13 +1426,13 @@ Several square holes are cut into the north and south walls, and the south and e
 * Pendulum Scythes (Perception DC 17 to find, Thievery DC 12 to disable, Init +2, Target all creatures in a row of squares, Attack +11 vs. AC, Damage 1d10+4, 250 xp)
 }}
 This room is occupied by **6 x Duergar Shock Trooper (mm2 93, 250 xp)**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{treasure
 #### Treasure
 540 gp; Small Citrine (187 gp each), 2 x Small Iolite (189 gp each), 3 x Small Smoky Quartz (189 gp each); Pewter Crown set with Blue Quartz and Hematite (290 gp), Pewter Rod inlaid with a Meandros of Electrum (390 gp); 8 x Augmenting Whetstone (av 190, 75 gp); hoard total 2952 gp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1493,14 +1493,14 @@ Primordial altar (lightning atacks deal 1d6 extra damage), Lit candles are scatt
 | South | Trapped and Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp)  ***Trap:*** Arrow Trap (Perception DC 12 to find, Thievery DC 12 to disable, Single-shot, Target 1 creature within 10 squares, Attack +11 vs. AC, Damage 3d8+4, 63 xp) | n/a |
 | West | Secret (Perception DC 30 to find) Stuck Stone Door (Strength DC 22 to break, 40 hp) ***Secret:*** A bookcase and section of wall pivots smoothly | 54 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 100
 {{trap
 #### Trap!
 * 4 x Falling Block (Perception DC 12 to find, Thievery DC 17 to disable, Single-shot, Melee 1, Attack +9 vs. Reflex, Damage 3d10+4, 63 xp)
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 {{descriptive
 Oil slicks (add 1 square to forced movement), A pile of rotting wood lies in the east side of the room.
 }}
@@ -1564,13 +1564,13 @@ None
 | East | Archway  | 41 |
 | South | Secret (Perception DC 20 to find) Stuck Strong Wooden Door (Strength DC 18 to break, 40 hp) ***Secret:*** The door is concealed behind a statue of an armored warrior, and opened by moving his sword | 23 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 105
 {{descriptive
 Entropic altar (healing is only half as effective), Partition walls (Strength DC 15 to break).
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **2 x Mad Wraith (mm 266, 250 xp)**
 {{treasure
 #### Treasure

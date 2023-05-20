@@ -44,17 +44,16 @@ def format_magic_item_name(item_name):
 
 def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, combat_list, xp_list):
     """ compiles ref table for monsters based on rule set """
+    encounter_details = []
+    # decide if we have a list or a string to deal with
+    if isinstance(data, list):
+        for item in data:
+            for key, value in item.items():
+                encounter_details.append(value)
+    else:
+        # add string as the single member of list
+        encounter_details = [data]
     if rule_set == "dnd_5e":
-        encounter_details = []
-        # decide if we have a list or a string to deal with
-        if isinstance(data, list):
-            for item in data:
-                for key, value in item.items():
-                    encounter_details.append(value)
-        else:
-            # add string as the single member of list
-            encounter_details = [data]
-
         for encounter in encounter_details:
             monsters, combat = encounter.split(';')
             # can have more than one enemy type in monsters
@@ -67,25 +66,14 @@ def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, c
                     monster = monster.split(' x ')[1]
                 final_list_of_monsters.append(monster.strip())
 
-            # deal with combats
+            # deal with combats (only one combat type)
             combat_list.append(combat_and_xp[0].strip())
 
-            # get xp amount and add to list
+            # get xp amount and add to list (only one xp value)
             xp_list.append(combat_and_xp[1].strip().split(' ')[0].strip())
 
         return final_list_of_monsters, combat_list, xp_list
     if rule_set == "dnd_4e":
-        encounter_details = []
-        # decide if we have a list or a string to deal with
-        if isinstance(data, list):
-            for item in data:
-                for key, value in item.items():
-                    encounter_details.append(value)
-        else:
-            # add string as the single member of list
-            encounter_details = [data]
-
-        # get monster name and book details and add to list
         for encounter in encounter_details:
             monsters = encounter.split(') and ')
 
@@ -97,7 +85,7 @@ def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, c
                     monster = monster.strip().split(',')
                 final_list_of_monsters.append(monster[0])
 
-                # get xp amount and add to list
+                # get xp amount and add to list (can have more than one xp value)
                 xp_list.append(monster[1].strip().split(' ')[0].strip())
 
         return final_list_of_monsters, combat_list, xp_list

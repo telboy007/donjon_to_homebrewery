@@ -13,7 +13,7 @@ MULTI_MONSTER_LIST_4E = "3 x Half-Orc Death Mage (mm2 140, 250 xp) and 2 x Half-
 MULTI_MONSTER_LIST_5E = "Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firenewt Warrior (cr 1/2, vgm 142); medium, 300 xp"
 MONSTER_DETAIL_4E = "Dragonkin Kobold Pact-Bound Adept (dr1 227, 250 xp)"
 MONSTER_DETAIL_5E = "Firenewt Warlock of Imix (cr 1, vgm 143)"
-MULTI_MONSTER_DETAIL_5E = "Drow House Captain (cr 9, mtf 184, vgm 154)"
+MULTI_MONSTER_SOURCEBOOK_5E = "Drow House Captain (cr 9, mtf 184, vgm 154)"
 
 # statblocks test data
 SAVING_THROW = {"proficiencies": [
@@ -165,7 +165,7 @@ class Locations(TestCase):
 
 
     def test_extract_book_details_correct_response_multi_sourcebooks_for_5e(self):
-        book, name = locations.extract_book_details(MULTI_MONSTER_DETAIL_5E, "dnd_5e")
+        book, name = locations.extract_book_details(MULTI_MONSTER_SOURCEBOOK_5E, "dnd_5e")
 
         self.assertEqual(book, "Drow House Captain")
         self.assertEqual(name, "mtf p.184 / vgm p.154")
