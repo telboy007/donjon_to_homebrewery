@@ -93,7 +93,7 @@ class Locations(TestCase):
 
     # compile_monster_and_combat_details for 4e and 5e
     def test_compile_monster_return_correct_response_for_4e(self):
-        monster_list, xp_list = locations.compile_monster_and_combat_details(
+        monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
                                                             MULTI_MONSTER_LIST_4E,
                                                             "dnd_4e",
                                                             [],
@@ -106,22 +106,25 @@ class Locations(TestCase):
                                         'Half-Orc Hunter (mm2 140'
                                         ]
                                     )
-        
+        # combat type
+        self.assertEqual(combat_list, [])
         # xp amount
         self.assertEqual(xp_list, ['250', '200'])
 
 
     def test_compile_monster_return_correct_response_for_fantasy(self):
         # should never happen
-        response= locations.compile_monster_and_combat_details(
+        monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
                                                             MULTI_MONSTER_LIST_4E,
                                                             "fantasy",
                                                             [],
                                                             [],
                                                             []
                                                         )
-
-        self.assertEqual(response, None)
+        
+        self.assertEqual(monster_list, [])
+        self.assertEqual(combat_list, [])
+        self.assertEqual(xp_list, [])
 
 
     def test_compile_monster_return_correct_response_for_5e(self):

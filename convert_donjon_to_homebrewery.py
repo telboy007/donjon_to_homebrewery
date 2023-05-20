@@ -211,11 +211,11 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("{{pageNumber,auto}}\n")
     # overview page end
 
-# add wandering monster details to global lists depending on ruleset
-if settings['ruleset'] == "dnd_5e":
-    monster_list, combat_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, combat_list, xp_list)
-if settings['ruleset'] == "dnd_4e":
-    monster_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, [], xp_list)
+# # add wandering monster details to global lists depending on ruleset
+# if settings['ruleset'] == "dnd_5e":
+monster_list, combat_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, combat_list, xp_list)
+# if settings['ruleset'] == "dnd_4e":
+#     monster_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, [], xp_list)
 
 # set initial page marker check value
 check = set_check()
@@ -328,10 +328,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                             else:
                                 outfile.write(f"This room is occupied by **{thing}**\n")
                                 # add monster, combat types and xp to global lists
-                                if settings['ruleset'] == "dnd_5e":
-                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'], monster_list, combat_list, xp_list)
-                                if settings['ruleset'] == "dnd_4e":
-                                    monster_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'], monster_list, [], xp_list)
+                                monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'], monster_list, combat_list, xp_list)
 
                     # check for page marker
                     outfile.close()

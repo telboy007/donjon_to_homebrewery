@@ -100,8 +100,8 @@ def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, c
                 # get xp amount and add to list
                 xp_list.append(monster[1].strip().split(' ')[0].strip())
 
-        return final_list_of_monsters, xp_list
-    return None
+        return final_list_of_monsters, combat_list, xp_list
+    return [], [], []
 
 
 def extract_book_details(book_details, infest):
