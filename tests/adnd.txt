@@ -142,13 +142,13 @@ A ruined siege weapon sits in the south-west corner of the room, and someone has
 Spirals of white stones cover the floor, and the ceiling is covered with cobwebs.
 }}
 This room is occupied by **4 x Troglodyte**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{treasure
 #### Treasure
 None
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -232,6 +232,9 @@ This room is occupied by **6 x Troglodyte**
 {{descriptive
 A forge and anvil sit in the west side of the room, and several adventurer corpses are scattered throughout the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -240,9 +243,6 @@ A forge and anvil sit in the west side of the room, and several adventurer corps
 | South | Stuck Iron Door  | 22 |
 | West | Stuck Stone Door  | 14 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 16
 {{descriptive
 A narrow shaft descends from the room into the next dungeon level down, and laughter fills the room.
@@ -329,6 +329,9 @@ A stone stair ascends towards the east wall, and a tile labyrinth covers the flo
 | South | Archway  | 37 |
 | West | Stuck Stone Door  | 14 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 23
 {{descriptive
 A mouldy odor fills the room, and a sundered club lies in the south side of the room.
@@ -344,9 +347,6 @@ A mouldy odor fills the room, and a sundered club lies in the south side of the 
 {{descriptive
 A set of demonic war masks hangs on the south wall, and a rusted sword lies in the north side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **3 x NPC and 6 x Henchmen**
 This room is occupied by **Edac: Male Elf, 4th-level Fighter, N. Edac has a long face, with white hair and hazel eyes. He wears plate mail and wields a spear and shield. Edac is proud and mischievous.**
 This room is occupied by **Waldu: Male Human, 4th-level Cleric, CN. Waldu is common in appearance, with uneven silver hair and amber eyes. He wears splint mail and wields a quarterstaff. Waldu lost his shadow to a nymph.**
@@ -408,6 +408,9 @@ Part of the south wall has collapsed into the room, and a ruined siege weapon si
 A magical shrine of a goddess of thieves in the south side of the room summons an air elemental to serve whomever offers a prayer (but only once), and spirals of red stones cover the floor.
 }}
 This room is occupied by **1 x Gas Spore**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -419,9 +422,6 @@ This room is occupied by **1 x Gas Spore**
 {{descriptive
 A sloped pit lined with iron spikes lies in the south side of the room, and an iron sarcophagus sits in the south-west corner of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -501,6 +501,9 @@ Several iron cages are scattered throughout the room, and a rusted axe lies in t
 | South | Stuck Stone Door  | 46 |
 | West | Unlocked Iron Door  | 35 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 37
 {{descriptive
 Several square holes are cut into the east wall, and a sundered mace lies in the south-west corner of the room.
@@ -516,9 +519,6 @@ None
 | North | Archway  | 22 |
 | South | Secret Stuck Iron Door ***Secret:*** The door is concealed within the mouth of a gargantuan skull carved from stone | 54 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 38
 {{trap
 #### Trap!
@@ -565,6 +565,9 @@ This room is occupied by **Berga: Female Human, 4th-level Fighter, CE. Berga has
 This room is occupied by **Leise: Female Human, 4th-level Cleric, LE. Leise is tall and thin, with thick brown hair and hazel eyes. She wears banded mail and wields a footman's flail. Leise blames trolls for every misfortune.**
 This room is occupied by **Wearde: Male Human, 4th-level Magic-User, NE. Wearde is thin, with straight red hair and large brown eyes. He wears red robes and wields a dagger and darts. Wearde is insane and violent.**
 This room is occupied by **Mira: Male Half-orc, 4th-level Fighter, NE. Mira is heavyset, with brown hair and grey eyes. He wears splint mail and wields a morning star and composite short bow. Mira is fascinated by death.**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{treasure
 #### Treasure
 None
@@ -580,9 +583,6 @@ None
 {{descriptive
 Someone has scrawled "Never trust an elf" in dwarvish runes on the south wall, and the ceiling is covered with cobwebs.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -654,6 +654,9 @@ This room is occupied by **4 x Large Spider**
 | South | Iron Portcullis  | 55 |
 | West | Stuck Stone Door  | 46 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 48
 {{descriptive
 A mural of ghoulish carnage covers the ceiling, and someone has scrawled "I'd rather be at the Greedy King" on the east wall.
@@ -667,9 +670,6 @@ This room is occupied by **9 x Goblin**
 | West | Secret Locked Iron Door (good lock, -10% to open) ***Secret:*** The door is located several feet above the floor and concealed behind an area of mould | 44 |
 | West | Unlocked Stone Door  | 53 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 49
 {{descriptive
 Numerous pillars line the north wall, and someone has scrawled "Explosive runes" on the north wall.
@@ -751,6 +751,9 @@ None
 {{descriptive
 A narrow shaft falls into the room from above, and a ruined siege weapon sits in the south-east corner of the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -771,9 +774,6 @@ The south and east walls have been engraved with glowing glyphs, and a mouldy od
 | South | Secret Stuck Iron Door ***Secret:*** The door is concealed within an upright sarcophagus | 64 |
 | West | Stuck Stone Door  | 50 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 57
 {{descriptive
 Several square holes are cut into the ceiling and floor, and several empty flasks are scattered throughout the room.
@@ -850,6 +850,9 @@ A narrow shaft descends from the room into a plundered tomb below, and a sundere
 {{descriptive
 A mural of a goddess of animals covers the ceiling, and a pile of empty flasks lies in the north side of the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **1 x Gargoyle**
 #### Exits
 | Direction | Description | To |
@@ -869,9 +872,6 @@ A tile mosaic of vile acts covers the floor, and patches of mushrooms grow in th
 | North | Secret Stuck Iron Door ***Secret:*** The door is concealed within an upright sarcophagus | 56 |
 | North | Secret Unlocked Iron Door ***Secret:*** The door is concealed within the mouth of a demonic face carved from stone | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 65
 {{descriptive
 A group of demonic faces have been carved into the north wall, and a putrid odor fills the south-east corner of the room.
@@ -957,6 +957,9 @@ The floor is covered in perfect hexagonal tiles, and someone has scrawled "Stay 
 | South | Trapped and Stuck Stone Door  ***Trap:*** Scythe Trap (5d6 damage) | 85 |
 | West | Stuck Stone Door  | 70 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 72
 {{trap
 #### Trap!
@@ -983,9 +986,6 @@ Part of the north wall has collapsed into the room, and someone has scrawled "Ex
 {{descriptive
 A sloped pit lined with iron spikes lies in the north-east corner of the room, and a group of draconic faces have been carved into the south wall.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1051,6 +1051,9 @@ A stone stair ascends towards the east wall, and the sound of horns can be faint
 | South | Secret Unlocked Iron Door ***Secret:*** The door is concealed behind a tapestry of a legendary battle | 84 |
 | West | Unlocked Stone Door (slides down)  | 78 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 80
 {{descriptive
 A rustling noise can be faintly heard near the west wall, and a pile of broken glass lies in the center of the room.
@@ -1074,9 +1077,6 @@ A stream of oil flows along a channel in the floor, and a sour odor fills the ce
 | North | Unlocked Stone Door  | 68 |
 | West | Stuck Stone Door  | 71 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 82
 {{descriptive
 A stone ramp ascends towards the north wall, and a scratching sound can be faintly heard near the north wall.
@@ -1141,6 +1141,9 @@ A group of draconic faces have been carved into the north wall, and a dulled dag
 | South | Archway  | 94 |
 | West | Trapped and Locked Stone Door (wizard lock) (slides to one side)  ***Trap:*** Poison Dart Trap (1d4 damage plus poison; onset 2d4 rounds, save or 10 damage) | 81 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 87
 {{trap
 #### Trap!
@@ -1171,9 +1174,6 @@ None
 | South | Locked Stone Door (superior lock, -20% to open)  | 96 |
 | West | Iron Portcullis  | 87 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 89
 {{descriptive
 Someone has scrawled a drawing of a castle on the south wall, and a pile of broken arrows lies in the south side of the room.
@@ -1237,6 +1237,9 @@ Part of the west wall has collapsed into the room, and several empty flasks are 
 | East | Archway  | n/a |
 | South | Locked Iron Door (good lock, -10% to open)  | 103 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 94
 {{descriptive
 An acrid odor fills the room, and a dagger hilt lies in the west side of the room.
@@ -1262,9 +1265,6 @@ A mouldy odor fills the south-east corner of the room, and several bent copper c
 {{descriptive
 The room has a high domed ceiling, and someone has scrawled "I'd rather be at the Blade of Lightning" on the south wall.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **5 x Large Spider**
 #### Exits
 | Direction | Description | To |
@@ -1340,6 +1340,9 @@ This room is occupied by **4 x Piercer**
 {{descriptive
 A rope ascends to a catwalk hanging between the north and south walls, and a cube of solid stone stands in the north side of the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1363,9 +1366,6 @@ A simple fireplace sits against the west wall, and a rotting odor fills the room
 {{descriptive
 Clouds of flying insects fill the center of the room, and a pierced breastplate lies in the south-west corner of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1441,13 +1441,13 @@ This room is occupied by **2 x Shrieker**
 {{descriptive
 A ruined siege weapon sits in the center of the room, and a pile of trash lies in the center of the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 This room is occupied by **3 x NPC and 6 x Henchmen**
 This room is occupied by **Wine: Male Human, 4th-level Fighter, LE. Wine has a long face, with cropped silver hair and brown eyes. He wears banded mail and wields a hammer and shield. Wine is possessive, and has a golden ring which he treasures above all else.**
 This room is occupied by **Burheue: Female Human, 4th-level Fighter, CE. Burheue has a long face, with long grey hair and bright green eyes. She wears banded mail and wields a hammer. Burheue is cynical and anxious.**
 This room is occupied by **Nimrie: Female Half-elf, 4th-level Magic-User, CE. Nimrie is fair in appearance, with short golden hair and narrow brown eyes. She wears well-made clothing and wields a quarterstaff and darts. Nimrie is impatient, and actually might not understand how time works.**
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1508,6 +1508,9 @@ A group of draconic faces have been carved into the south wall, and several piec
 | West | Stuck Stone Door  | 114 |
 | West | Locked Stone Door (common lock)  | n/a |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 116
 {{descriptive
 A ruined siege weapon sits in the east side of the room, and someone has scrawled "It's a trap" in draconic script on the north wall.
@@ -1530,9 +1533,6 @@ Someone has scrawled "I'd rather be at the Pilgrim and Chalice" on the east wall
 | East | Locked Iron Door (wizard lock)  | 118 |
 | North | Trapped and Stuck Iron Door  ***Trap:*** Blinding Gas Trap | 105 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 118
 {{descriptive
 Someone has scrawled "No secret door here" in orcish runes on the west wall, and the ceiling is covered with bloodstains.
@@ -1610,6 +1610,9 @@ None
 | North | Unlocked Stone Door  | n/a |
 | South | Locked Stone Door (superior lock, -20% to open)  | 132 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 124
 {{descriptive
 Someone has scrawled "Abandon all hope" in draconic script on the south wall, and a metallic odor fills the north-west corner of the room.
@@ -1633,9 +1636,6 @@ The floor is covered in perfect hexagonal tiles, and someone has scrawled "The E
 | South | Locked Iron Door (superior lock, -20% to open)  | 134 |
 | West | Stuck Stone Door (slides down)  | 115 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 126
 {{descriptive
 A chute descends from the room into the next dungeon level down, and someone has scrawled "Turn rod to reset trap" in goblin runes on the north wall.
@@ -1695,6 +1695,9 @@ A stone sarcophagus sits in the north-west corner of the room, and a pile of can
 | East | Unlocked Stone Door  | 131 |
 | West | Unlocked Iron Door  | 129 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 131
 {{descriptive
 A sloped pit lined with iron spikes lies in the north side of the room, and several pieces of rotting wood are scattered throughout the room.
@@ -1723,9 +1726,6 @@ This room is occupied by **1 x Piercer**
 {{descriptive
 The ceiling is covered with bloodstains, and a bent key lies in the west side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **1 x Shadow**
 {{treasure
 #### Treasure
@@ -1789,6 +1789,9 @@ Several square holes are cut into the west wall, and an iron cauldron and candel
 {{descriptive
 The floor is covered in square tiles, alternating white and black, and someone has scrawled "For the glory of the Wyrm Princess" in goblin runes on the north wall.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -1820,9 +1823,6 @@ The floor is covered in square tiles, alternating white and black, and several e
 | North | Secret Unlocked Stone Door ***Secret:*** The door is opened by standing on a small floor tile | n/a |
 | South | Unlocked Stone Door  | 154 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 141
 {{descriptive
 A circle of tall stones stands in the north-east corner of the room, and the floor is covered with dead insects.
@@ -1882,6 +1882,9 @@ A narrow pit covered by iron bars lies in the south side of the room, and the wa
 | West | Locked Iron Door (superior lock, -20% to open)  | 136 |
 :
 ### Room 146
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{descriptive
 A mural of vile acts covers the ceiling, and someone has scrawled "Praise the Wraith Duke" on the south wall.
 }}
@@ -1916,9 +1919,6 @@ The floor is covered in square tiles, alternating white and black, and a cube of
 | West | Stuck Stone Door  | 147 |
 | West | Archway  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 149
 {{trap
 #### Trap!
@@ -1982,6 +1982,9 @@ Numerous pillars line the south wall, and a mural of a god of storms covers the 
 {{descriptive
 A magical mirror on the east wall answers questions with lies and falsehoods, and several headless statues are scattered throughout the room.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -2023,9 +2026,6 @@ Someone has scrawled a basic map of the dungeon on the north wall, and a rusted 
 | West | Secret Trapped and Unlocked Stone Door  ***Secret:*** The door is opened by speaking a command word ***Trap:*** Scythe Trap (5d6 damage) | 152 |
 | West | Secret Unlocked Stone Door ***Secret:*** A trap door in the floor leads to a short tunnel beneath the wall | 163 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 158
 {{descriptive
 A well lies in the north-west corner of the room, and a crude bookcase and iron gong sit in the south-east corner of the room.
@@ -2087,6 +2087,9 @@ The sound of horns can be heard in the west side of the room, and several pieces
 The scent of ozone fills the south side of the room, and a pile of sundered shields lies in the center of the room.
 }}
 This room is occupied by **5 x Shrieker**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{treasure
 #### Treasure
 None
@@ -2132,9 +2135,6 @@ This room is occupied by **3 x Violet Fungi**
 | North | Archway  | 156 |
 | West | Stuck Iron Door  | 155 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 166
 {{descriptive
 A cube of solid stone stands in the west side of the room, and a clicking noise can be heard in the west side of the room.
@@ -2190,6 +2190,9 @@ None
 {{descriptive
 The room has a high domed ceiling, and someone has scrawled "You cannot kill it with wizardry" on the north wall.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -2228,9 +2231,6 @@ A large kiln and coal bin sit in the south side of the room, and someone has scr
 | South | Iron Portcullis  | 181 |
 | West | Archway  | 165 |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 174
 {{descriptive
 Screaming can be heard in the north-east corner of the room, and a pile of iron blobs lies in the south side of the room.
@@ -2290,6 +2290,9 @@ A narrow shaft falls into the room from above, and the south and east walls are 
 {{descriptive
 A narrow pit covered by iron bars lies in the east side of the room, and someone has scrawled "The Blade of Knowledge is reforged" on the east wall.
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -2325,9 +2328,6 @@ Several alcoves are cut into the north and east walls, and various torture devic
 {{descriptive
 The floor is covered in perfect hexagonal tiles, and the south and east walls are covered with veins of red crystal.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **4 x NPC and 5 x Henchmen**
 This room is occupied by **Gili: Female Dwarf, 4th-level Magic-User, CG. Gili has black hair and brown eyes. She wears travel-stained clothing and wields a dagger and darts. Gili is well-spoken but combative.**
 This room is occupied by **Stomes: Male Human, 4th-level Fighter, NG. Stomes has a long face, with red hair and dark blue eyes. He wears plate mail and wields a fauchard-fork. Stomes is competitive and daring.**
@@ -2349,6 +2349,9 @@ This room is occupied by **Kamil: Male Dwarf, 4th-level Magic-User, LN. Kamil is
 This room is occupied by **Gyles: Male Human, 4th-level Fighter, CN. Gyles has a long face, with thin black hair and brown eyes. He wears plate mail and wields a military fork. Gyles is colorblind.**
 This room is occupied by **Brada: Female Human, 4th-level Thief, CN. Brada is short, with black hair and brown eyes. She wears leather armor and wields a club and sling. Brada is loyal but destructive.**
 This room is occupied by **Withiue: Female Human, 4th-level Druid, N. Withiue has an angular face, with cropped grey hair and grey eyes. She wears leather armor and wields a scimitar. Withiue was raised by cultists of the Jade King.**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -2369,9 +2372,6 @@ A wooden ladder rests against the east wall, and numerous monstrous skulls lie w
 {{descriptive
 The ceiling is covered with cracks, and a pile of rotten rope lies in the east side of the room.
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 This room is occupied by **3 x Large Spider**
 #### Exits
 | Direction | Description | To |

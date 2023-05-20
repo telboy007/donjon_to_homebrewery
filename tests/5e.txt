@@ -438,13 +438,13 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 A magical mural on the south wall can be used to scry upon any known individual within the dungeon, and part of the north wall has collapsed into the room.
 }}
 This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238); deadly, 300 xp**
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 {{treasure
 #### Treasure
 2500 cp, 1000 sp, 50 gp, azurite (10 gp), hematite (10 gp), 3 x lapis lazuli (10 gp), malachite (10 gp), moss agate (10 gp), obsidian (10 gp), turquoise (10 gp), Potion of Superior Healing (rare, dmg 187)
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -517,6 +517,9 @@ This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238)
 #### Treasure
 2000 cp, 1600 sp, 40 gp, diamond (50 gp), chalcedony (50 gp), onyx (50 gp), 3 x star rose quartz (50 gp), Potion of Climbing (common, dmg 187), Potion of Healing (common, dmg 187)
 }}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -525,9 +528,6 @@ This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238)
 | South | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
 | West | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
 :
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 ### Room 37
 This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 {{treasure
@@ -606,6 +606,9 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 | South | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | n/a |
 | West | Unlocked Good Wooden Door (15 hp)  | 24 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 43
 {{descriptive
 Spirals of yellow stones cover the floor, and several pieces of blood-soaked clothing are scattered throughout the room.
@@ -615,9 +618,6 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 #### Treasure
 38 cp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|
@@ -691,6 +691,9 @@ The floor is covered in perfect hexagonal tiles, and someone has scrawled "Don't
 | East | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | 15 |
 | West | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | 26 |
 :
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
 ### Room 50
 {{descriptive
 Someone has scrawled "Enel's Thorns looted this place" on the north wall, and a corpse lies in front of an open chest in the north side of the room.
@@ -700,9 +703,6 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 #### Treasure
 2600 cp, 500 sp, 50 gp
 }}
-{{footnote LOCATIONS}}
-\page
-{{pageNumber,auto}}
 #### Exits
 | Direction | Description | To |
 |:--|:--|:--|

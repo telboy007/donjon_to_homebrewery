@@ -15,7 +15,7 @@ def request_monster_statblock(monster_name):
 def get_ability_modifier(value):
     """ calculate ability modifier """
     if round((value - 10.1) / 2) < 0:
-        return round((value - 10.1) / 2)
+        return f"{round((value - 10.1) / 2)}"
     return f"+{round((value - 10.1) / 2)}"
 
 
@@ -47,4 +47,4 @@ def convert_low_cr_to_fraction(number):
             return "1/4"
         if number == 0.125:
             return "1/8"
-    return number
+    return f"{number}"

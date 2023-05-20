@@ -14,30 +14,33 @@ import argparse
 import json
 from collections import OrderedDict
 from dotenv import load_dotenv
-from content.settings import create_donjon_settings
-from content.overview import create_donjon_overview
-from utilities.locations import sum_up_treasure, extract_book_details, add_magical_items_to_list, compile_monster_and_combat_details
-from utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
+from dth.content.corridor_features import create_donjon_corridor_features
+from dth.content.location import create_single_location
+from dth.content.overview import create_donjon_overview
+from dth.content.settings import create_donjon_settings
+from dth.content.wandering_monsters import create_donjon_wandering_monsters
+from dth.utilities.locations import extract_book_details, compile_monster_and_combat_details
+from dth.utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
+from dth.utilities.summary import calculate_total_and_shared_xp
 
 load_dotenv()
 
 
 # *** page break utilities ***
-
 def set_check():
     """Set the initial number of characters in the file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         return len(readonly_file.read())
 
 
-def file_size(current_check, footnote, flag=False):
+def file_size(current_check, footnote, first_page_flag=False):
     """Count the current number of characters in a file"""
     # first page of locations needs a larger check value
-    value = 3200 if flag else 3000
+    check_value = 3200 if first_page_flag else 3000
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
-    if (new_size - current_check) > value:
-        flag = False
+    if (new_size - current_check) > check_value:
+        first_page_flag = False
         with open(args.output_filename, "a", encoding="utf-8") as append_file:
             append_file.write("{{")
             append_file.write(f"footnote {footnote}")
@@ -46,7 +49,7 @@ def file_size(current_check, footnote, flag=False):
             append_file.write("{{pageNumber,auto}}\n")
         # set new current check
         current_check = new_size
-    return current_check, flag
+    return current_check, first_page_flag
 
 
 # globals
@@ -80,7 +83,9 @@ with open(filename, encoding="utf-8") as inputfile:
 
 # setup content used during creation of markdown
 settings = create_donjon_settings(data["settings"])
-overview = create_donjon_overview(data["details"], args.testmode)
+overview = create_donjon_overview(data["details"], settings, args.testmode)
+corridor_features = create_donjon_corridor_features(data)
+wandering_monsters = create_donjon_wandering_monsters(data)
 
 # open output file to write content to
 with open(args.output_filename, "w", encoding="utf-8") as outfile:
@@ -160,20 +165,21 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("}}\n")
 
     # corridor features - caves don't have corridor features
-    if "corridor_features" in data:
+    if corridor_features:
         outfile.write("Some of the corridors marked on the map have special features detailed below.\n")
         outfile.write("{{descriptive\n")
         outfile.write("#### Corridor Features\n")
         outfile.write("| Type | Detail |\n")
         outfile.write("|:--|:--|\n")
-
-        for key, val in data["corridor_features"].items():
-            outfile.write(f"| {val['key']} | {val['detail'].replace(NEWLINE, ' ')} |\n")
+        # write out corridor features by row
+        for feature in corridor_features["feature_list"]:
+            for key, value in feature.items():
+                outfile.write(f"| {key} | {value} |\n")
 
         outfile.write("}}\n")
 
     # wandering monsters - certain dungeon types don't have any
-    if "wandering_monsters" in data:
+    if wandering_monsters["monsters"]:
         outfile.write("### Random Encounters\n")
 
         outfile.write("There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n")
@@ -182,14 +188,10 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("| Roll | Detail |\n")
         outfile.write("|:--|:--|\n")
 
-        for key, val in data["wandering_monsters"].items():
-            outfile.write(f"| {key} | {val.replace(NEWLINE, ' ')} |\n")
-
-            # add monster, combat types and xp to global lists
-            if settings['ruleset'] == "dnd_5e":
-                monster_list, combat_list, xp_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), settings['ruleset'])
-            if settings['ruleset'] == "dnd_4e":
-                monster_list = compile_monster_and_combat_details(val.replace(NEWLINE, ' '), settings['ruleset'])
+        # write out monster detail by row
+        for monster in wandering_monsters["monster_details"]:
+            for key, value in monster.items():
+                outfile.write(f"| {key} | {value} |\n")
 
         outfile.write("}}\n")
 
@@ -210,6 +212,9 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     outfile.write("\\page\n")
     outfile.write("{{pageNumber,auto}}\n")
     # overview page end
+
+# add wandering monster details to global lists
+monster_list, combat_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, combat_list, xp_list)
 
 # set initial page marker check value
 check = set_check()
@@ -244,123 +249,91 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         for rooms in data["rooms"]:
             if rooms is None:
                 continue
-            outfile.write(f"### Room {rooms['id']}\n")
+            # parse room details into location dict and update lists
+            location, magic_items, monster_list, combat_list, xp_list = create_single_location(
+                                                                                            rooms,
+                                                                                            settings,
+                                                                                            magic_items,
+                                                                                            monster_list,
+                                                                                            combat_list,
+                                                                                            xp_list
+                                                                                        )
+            # check for page marker
+            outfile.close()
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
+            outfile = open(args.output_filename, "a", encoding="utf-8")
+
+            # write out location details
+            outfile.write(f"### Room {location['id']}\n")
+
+            # write out traps
+            if "trap" in location:
+                outfile.write("{{trap\n")
+                outfile.write("#### Trap!\n")
+                for item in location["trap"]:
+                    outfile.write(f"* {item}\n")
+                outfile.write("}}\n")
 
             # check for page marker
             outfile.close()
             check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
             outfile = open(args.output_filename, "a", encoding="utf-8")
 
-            if "contents" in rooms:
-                if "detail" in rooms["contents"]:
+            # write out hidden treasure
+            if "hidden_treasure" in location:
+                outfile.write("{{hidden-treasure\n")
+                outfile.write("#### Hidden Treasure!\n")
+                for item in location["hidden_treasure"]:
+                    outfile.write(f"* {item}\n")
+                outfile.write("}}\n")
 
-                    # traps
-                    if "trap" in rooms["contents"]["detail"]:
-                        outfile.write("{{trap\n")
-                        outfile.write("#### Trap!\n")
-                        for item in rooms["contents"]["detail"]["trap"]:
-                            desc = item.replace("\n","")
-                            outfile.write(f"* {desc}\n")
+            # check for page marker
+            outfile.close()
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
+            outfile = open(args.output_filename, "a", encoding="utf-8")
 
-                        outfile.write("}}\n")
+            # write out room description
+            if "features" in location:
+                outfile.write("{{descriptive\n")
+                outfile.write(f"{location['features']}.\n")
+                outfile.write("}}\n")
 
-                    # check for page marker
-                    outfile.close()
-                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
-                    outfile = open(args.output_filename, "a", encoding="utf-8")
+            # check for page marker
+            outfile.close()
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
+            outfile = open(args.output_filename, "a", encoding="utf-8")
 
-                    # hidden treasure
-                    if "hidden_treasure" in rooms["contents"]["detail"]:
-                        outfile.write("{{hidden-treasure\n")
-                        outfile.write("#### Hidden Treasure!\n")
-                        for item in rooms["contents"]["detail"]["hidden_treasure"]:
-                            if item == "--":
-                                continue
-                            outfile.write(f"* {item.replace(NEWLINE,' ')}\n")
-                            # add to magic items list for the summary page
-                            if settings['ruleset'] == "dnd_5e":
-                                magics = add_magical_items_to_list(item.replace(NEWLINE,' '), rooms['id'])
-                                magic_items.update(magics)
+            # write out monster (adnd produces a list of occupants)
+            if "monster" in location:
+                for occupant in location["monster"]:
+                    outfile.write(f"This room is occupied by **{occupant}**\n")
 
-                        outfile.write("}}\n")
+            # check for page marker
+            outfile.close()
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
+            outfile = open(args.output_filename, "a", encoding="utf-8")
 
-                    # check for page marker
-                    outfile.close()
-                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
-                    outfile = open(args.output_filename, "a", encoding="utf-8")
+            # write out treasure
+            if "treasure" in location:
+                outfile.write("{{treasure\n")
+                outfile.write("#### Treasure\n")
+                outfile.write(f"{location['treasure']}\n")
+                outfile.write("}}\n")
 
-                    # room description
-                    if "room_features" in rooms["contents"]["detail"]:
-                        outfile.write("{{descriptive\n")
-                        outfile.write(f"{rooms['contents']['detail']['room_features']}.\n")
-                        outfile.write("}}\n")
+            # check for page marker
+            outfile.close()
+            check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
+            outfile = open(args.output_filename, "a", encoding="utf-8")
 
-                    # check for page marker
-                    outfile.close()
-                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
-                    outfile = open(args.output_filename, "a", encoding="utf-8")
-
-                    # monsters and treasure
-                    if "monster" in rooms["contents"]["detail"]:
-                        for thing in rooms["contents"]["detail"]["monster"]:
-                            if thing == "--":
-                                continue
-                            if thing.startswith("Treasure"):
-                                # custom format class
-                                outfile.write("{{treasure\n")
-                                outfile.write("#### Treasure\n")
-                                if thing.count("(") == 0:
-                                    thing = sum_up_treasure(thing.replace(",",";"), settings['ruleset'])
-                                    outfile.write(f"{thing}\n")
-                                else:
-                                    outfile.write(f"{thing.replace(NEWLINE, ' ').replace('Treasure: ','')}\n")
-                                    # add to magic items list for the summary page
-                                    if settings['ruleset'] == "dnd_5e":
-                                        magics = add_magical_items_to_list(thing.replace(NEWLINE, ' ').replace('Treasure: ',''), rooms['id'])
-                                        magic_items.update(magics)
-                                outfile.write("}}\n")
-                            else:
-                                outfile.write(f"This room is occupied by **{thing}**\n")
-                                # add monster, combat types and xp to global lists
-                                if settings['ruleset'] == "dnd_5e":
-                                    monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings['ruleset'])
-                                if settings['ruleset'] == "dnd_4e":
-                                    monster_list = compile_monster_and_combat_details(thing, settings['ruleset'])
-
-                    # check for page marker
-                    outfile.close()
-                    check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
-                    outfile = open(args.output_filename, "a", encoding="utf-8")
-
-                # check for page marker
-                outfile.close()
-                check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
-                outfile = open(args.output_filename, "a", encoding="utf-8")
-
-            # exits
-            if "doors" in rooms:
+            # write out exits
+            if "exits" in location:
                 outfile.write("#### Exits\n")
                 outfile.write("| Direction | Description | To |\n")
                 outfile.write("|:--|:--|:--|\n")
 
-                for direction, door in rooms["doors"].items():
-                    for d in door:
-                        DESC = ""
-                        if d["type"] == "secret":
-                            if "trap" in d:
-                                DESC += f" ***Secret:*** {d['secret'].replace(NEWLINE, ' ')} ***Trap:*** {d['trap'].replace(NEWLINE, ' ')}"
-                            else:
-                                DESC += f"***Secret:*** {d['secret'].replace(NEWLINE, ' ')}"
-                        if d["type"] == "trapped":
-                            if "trap" in d:
-                                DESC += f" ***Trap:*** {d['trap'].replace(NEWLINE, ' ')}"
-                            else:
-                                DESC += " ***Trap***: Already disarmed."
-                        if "out_id" in d:
-                            outfile.write(f"| {direction.capitalize()} | {d['desc']} {DESC} | {d['out_id']} |")
-                        else:
-                            outfile.write(f"| {direction.capitalize()} | {d['desc']} {DESC} | n/a |")
-                        outfile.write("\n")
+                for way_out in location["exits"]:
+                    # {"direction", "exit_desc", "extra_detail", "leads_to"}
+                    outfile.write(f"| {way_out['direction']} | {way_out['exit_desc']} {way_out['extra_detail']} | {way_out['leads_to']} |\n")
 
                 outfile.write(":\n")
 
@@ -383,24 +356,26 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("## Summary\n")
         outfile.write("Here you will find useful reference tables for things encountered in the dungeon.\n")
 
-        # list out xp and combat type details if 5e dungeon
+        # 4e and 5e both have XP summaries
+        outfile.write("{{descriptive\n")
+        outfile.write("#### Combat details (guide only)\n")
+
+        # work out xp totals
+        total_xp, shared_xp = calculate_total_and_shared_xp(xp_list, settings['party_size'])
+        outfile.write(f"**Total XP: {total_xp}** which is {shared_xp} xp per party member.\n")
+
+        # list out combat type details for 5e
         if settings['ruleset'] == "dnd_5e":
-            outfile.write("{{descriptive\n")
-            outfile.write("#### Combat details (guide only)\n")
-
-            # work out some xp totals
-            total_xp = sum(int(i) for i in xp_list)
-            shared_xp = round(sum(int(i) for i in xp_list)/int(settings['party_size']))
-
-            outfile.write(f"**Total XP: {total_xp}** which is {shared_xp} xp per party member.\n")
             outfile.write("| Type | Amount |\n")
             outfile.write("|:--|:--|\n")
             outfile.write(f"| Easy | {combat_list.count('easy')} |\n")
             outfile.write(f"| Medium | {combat_list.count('medium')} |\n")
             outfile.write(f"| Hard | {combat_list.count('hard')} |\n")
             outfile.write(f"| Deadly | {combat_list.count('deadly')} |\n")
-            outfile.write("}}\n")
-            outfile.write(":\n")
+
+        # close the xp and combat descriptive panel
+        outfile.write("}}\n")
+        outfile.write(":\n")
 
         # list out monsters in a handy reference table
         outfile.write("{{descriptive\n")
