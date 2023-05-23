@@ -10,7 +10,7 @@ Converts [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v
 * Adds any monster stat blocks that exist in the SRD to the document and lists the ones it had to skip (5e only)
 * Collects all the monsters and magical items into easy to use reference tables with sourcebook page number (5e, 4e limited)
 * Provides total XP and a breakdown of combat encounter difficulty types (5e only, 4e limited)
-* Tries to add page breaks to reduce amount of manual editing required
+* Adds page breaks throughout the document regardless of ruleset to reduce amount of manual editing required
 * Captures all the settings used to generate this dungeon on donjon.bin.sh for prosperity
 * Ability to customise certain parts of room locations so important details aren't missed
 

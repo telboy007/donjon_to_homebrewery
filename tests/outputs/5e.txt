@@ -115,7 +115,7 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 ### Room 5
 {{trap
 #### Trap!
-* Thunderstone Mine: DC 15 to find, DC 15 to disable;    affects all targets within 20 ft., DC 15 save or take 2d10 thunder damage    and become deafened for 1d4 rounds
+* Thunderstone Mine: DC 15 to find, DC 15 to disable;    affects all targets within 20 ft., DC 15 save or take 2d10 thunder damage    and become deafened for 1d4 rounds.
 }}
 {{descriptive
 A well lies in the north-west corner of the room, and a shattered hammer lies in the west side of the room.
@@ -138,16 +138,16 @@ A well lies in the north-west corner of the room, and a shattered hammer lies in
 ### Room 7
 {{trap
 #### Trap!
-* Falling Block: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage
+* Falling Block: DC 15 to find, DC 15 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 damage.
 }}
 {{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 25 to find) Trapped and Unlocked Simple Wooden Chest (10 hp)
-* Poisoned Arrow Trap: DC 15 to find, DC 10 to disable;     +5 to hit against one target, 1d10 piercing/poison damage
-* 2100 cp, 1100 sp, 100 gp, a cloth sash threaded with silver (25 gp), a copper tankard etched with arcane runes (25 gp), a linen choker trimmed with squirrel fur (25 gp), a pewter crown inlaid with a meandros of silver (25 gp), an earthenware plate painted with floral imagery (25 gp)
+* Hidden (DC 25 to find) Trapped and Unlocked Simple Wooden Chest (10 hp).
+* Poisoned Arrow Trap: DC 15 to find, DC 10 to disable;     +5 to hit against one target, 1d10 piercing/poison damage.
+* 2100 cp, 1100 sp, 100 gp, a cloth sash threaded with silver (25 gp), a copper tankard etched with arcane runes (25 gp), a linen choker trimmed with squirrel fur (25 gp), a pewter crown inlaid with a meandros of silver (25 gp), an earthenware plate painted with floral imagery (25 gp).
 }}
 {{descriptive
 Someone has scrawled "We've run out of swords" on the east wall, and the walls are covered with scorch marks.
@@ -219,12 +219,12 @@ A chute descends from the room into a magical cyst below, and a warped spear lie
 ### Room 13
 {{trap
 #### Trap!
-* Idol of Evil: DC 20 to find, DC 15 to disable;    affects good creatures which touch the idol, DC 15 save or take 2d10 damage
+* Idol of Evil: DC 20 to find, DC 15 to disable;    affects good creatures which touch the idol, DC 15 save or take 2d10 damage.
 }}
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 25 to find) Unlocked Simple Wooden Chest (10 hp)
-* 2200 cp, 900 sp, 60 gp, blue quartz (10 gp), hematite (10 gp), 2 x malachite (10 gp), 2 x moss agate (10 gp), tiger eye (10 gp), turquoise (10 gp), Spell Scroll (Nondetection) (uncommon, dmg 200), 2 x Potion of Greater Healing (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188)
+* Hidden (DC 25 to find) Unlocked Simple Wooden Chest (10 hp).
+* 2200 cp, 900 sp, 60 gp, blue quartz (10 gp), hematite (10 gp), 2 x malachite (10 gp), 2 x moss agate (10 gp), tiger eye (10 gp), turquoise (10 gp), Spell Scroll (Nondetection) (uncommon, dmg 200), 2 x Potion of Greater Healing (uncommon, dmg 187), Potion of Water Breathing (uncommon, dmg 188).
 }}
 {{descriptive
 A tile mosaic of a legendary battle covers the floor, and a ruined gauntlet lies in the center of the room.
@@ -331,12 +331,12 @@ This room is occupied by **Mimic (cr 2, mm 220); deadly, 450 xp**
 ### Room 22
 {{trap
 #### Trap!
-* Poison Gas Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 poison damage
+* Poison Gas Trap: DC 10 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 12 save or take 2d10 poison damage.
 }}
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 15 to find) Unlocked Good Wooden Chest (15 hp)
-* 1700 cp, 700 sp, 110 gp, a cloth cloak threaded with dyed silk (25 gp), a cloth robe threaded with copper (25 gp), a cloth robe threaded with dyed silk (25 gp), a petrified frog engraved with a labyrinth (25 gp), a pewter crown set with onyx and sardonyx (25 gp), an earthenware tureen painted with pastoral imagery (25 gp)
+* Hidden (DC 15 to find) Unlocked Good Wooden Chest (15 hp).
+* 1700 cp, 700 sp, 110 gp, a cloth cloak threaded with dyed silk (25 gp), a cloth robe threaded with copper (25 gp), a cloth robe threaded with dyed silk (25 gp), a petrified frog engraved with a labyrinth (25 gp), a pewter crown set with onyx and sardonyx (25 gp), an earthenware tureen painted with pastoral imagery (25 gp).
 }}
 #### Exits
 | Direction | Description | To |
@@ -416,8 +416,8 @@ This room is occupied by **Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm
 ### Room 29
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 20 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
-* 1500 cp, 1100 sp, 90 gp, bloodstone (50 gp), citrine (50 gp), 2 x onyx (50 gp), sardonyx (50 gp)
+* Hidden (DC 20 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp).
+* 1500 cp, 1100 sp, 90 gp, bloodstone (50 gp), citrine (50 gp), 2 x onyx (50 gp), sardonyx (50 gp).
 }}
 {{descriptive
 The floor is covered in square tiles, alternating white and black, and someone has scrawled "The Hounds of Umfeld looted this place" on the west wall.
@@ -509,8 +509,8 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 ### Room 36
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 25 to find) Locked Good Wooden Chest (DC 20 to unlock, DC 20 to break; 15 hp)
-* 2000 cp, 1300 sp, 60 gp, banded agate (10 gp), hematite (10 gp), moss agate (10 gp), Heward's Handy Haversack (rare, dmg 174), Potion of Clairvoyance (rare, dmg 187)
+* Hidden (DC 25 to find) Locked Good Wooden Chest (DC 20 to unlock, DC 20 to break; 15 hp).
+* 2000 cp, 1300 sp, 60 gp, banded agate (10 gp), hematite (10 gp), moss agate (10 gp), Heward's Handy Haversack (rare, dmg 174), Potion of Clairvoyance (rare, dmg 187).
 }}
 This room is occupied by **Orc (cr 1/2, mm 246) and 1 x Half-ogre (cr 1, mm 238); deadly, 300 xp**
 {{treasure
@@ -565,8 +565,8 @@ This room is occupied by **Goblin Boss (cr 1, mm 166) and 1 x Goblin (cr 1/4, mm
 ### Room 40
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 20 to find) Locked Simple Wooden Chest (DC 15 to unlock, DC 15 to break; 10 hp)
-* 1700 cp, 1400 sp, 70 gp
+* Hidden (DC 20 to find) Locked Simple Wooden Chest (DC 15 to unlock, DC 15 to break; 10 hp).
+* 1700 cp, 1400 sp, 70 gp.
 }}
 {{descriptive
 Someone has scrawled "right, right, straight, right" on the north wall, and a briny odor fills the east side of the room.
@@ -712,8 +712,8 @@ This room is occupied by **Silver Dragon Wyrmling (cr 2, mm 118); deadly, 450 xp
 ### Room 51
 {{hidden-treasure
 #### Hidden Treasure!
-* Hidden (DC 15 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp)
-* 1100 cp, 1100 sp, 60 gp, azurite (10 gp), eye agate (10 gp), hematite (10 gp), lapis lazuli (10 gp), moss agate (10 gp), turquoise (10 gp), 2 x Potion of Animal Friendship (uncommon, dmg 187)
+* Hidden (DC 15 to find) Locked Iron Chest (DC 15 to unlock, DC 30 to break; 60 hp).
+* 1100 cp, 1100 sp, 60 gp, azurite (10 gp), eye agate (10 gp), hematite (10 gp), lapis lazuli (10 gp), moss agate (10 gp), turquoise (10 gp), 2 x Potion of Animal Friendship (uncommon, dmg 187).
 }}
 {{descriptive
 Someone has scrawled "The walls listen" on the east wall, and a shallow pool of oil lies in the south side of the room.
@@ -743,7 +743,7 @@ This room is occupied by **Orog (cr 2, mm 247); deadly, 450 xp**
 ### Room 53
 {{trap
 #### Trap!
-* Chain Flail: DC 10 to find, DC 10 to disable;    initiative +4, 1 attack per round, +7 to hit against all targets within 5 ft., 2d10 bludgeoning damage
+* Chain Flail: DC 10 to find, DC 10 to disable;    initiative +4, 1 attack per round, +7 to hit against all targets within 5 ft., 2d10 bludgeoning damage.
 }}
 #### Exits
 | Direction | Description | To |
@@ -809,7 +809,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 ## Bugbear
 *Medium Humanoid, Chaotic Evil*
 ___
-**Armor Class** :: 16 armor
+**Armor Class** :: 16 (hide armor, shield)
 **Hit Points** :: 27 (5d8+5)
 **Speed** :: 30 ft.
 ___
@@ -834,7 +834,7 @@ ___
 ## Goblin
 *Small Humanoid, Neutral Evil*
 ___
-**Armor Class** :: 15 armor
+**Armor Class** :: 15 (leather armor, shield)
 **Hit Points** :: 7 (2d6)
 **Speed** :: 30 ft.
 ___
@@ -857,7 +857,7 @@ ___
 ## Hobgoblin
 *Medium Humanoid, Lawful Evil*
 ___
-**Armor Class** :: 18 armor
+**Armor Class** :: 18 (chain mail, shield)
 **Hit Points** :: 11 (2d8+2)
 **Speed** :: 30 ft.
 ___
@@ -875,11 +875,14 @@ ___
 :
 ***Longbow.*** Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage.
 }}
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
 {{monster,frame
 ## Mimic
 *Medium Monstrosity, Neutral*
 ___
-**Armor Class** :: 12 natural
+**Armor Class** :: 12 (natural)
 **Hit Points** :: 58 (9d8+18)
 **Speed** :: 15 ft.
 ___
@@ -905,14 +908,11 @@ ___
 :
 ***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.
 }}
-{{footnote STAT BLOCKS}}
-\page
-{{pageNumber,auto}}
 {{monster,frame
 ## Ogre zombie
 *Large Undead, Neutral Evil*
 ___
-**Armor Class** :: 8 dex
+**Armor Class** :: 8 
 **Hit Points** :: 85 (9d10+36)
 **Speed** :: 30 ft.
 ___
@@ -935,7 +935,7 @@ ___
 ## Orc
 *Medium Humanoid, Chaotic Evil*
 ___
-**Armor Class** :: 13 armor
+**Armor Class** :: 13 (hide armor)
 **Hit Points** :: 15 (2d8+6)
 **Speed** :: 30 ft.
 ___
@@ -954,11 +954,14 @@ ___
 :
 ***Javelin.*** Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage.
 }}
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
 {{monster,frame
 ## Silver dragon wyrmling
 *Medium Dragon, Lawful Good*
 ___
-**Armor Class** :: 17 natural
+**Armor Class** :: 17 (natural)
 **Hit Points** :: 45 (6d8+18)
 **Speed** :: 30 ft., Fly 60 ft.
 ___
@@ -984,7 +987,7 @@ Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each cre
 ## Worg
 *Large Monstrosity, Neutral Evil*
 ___
-**Armor Class** :: 13 natural
+**Armor Class** :: 13 (natural)
 **Hit Points** :: 26 (4d10+4)
 **Speed** :: 50 ft.
 ___
@@ -1001,14 +1004,11 @@ ___
 ### Actions
 ***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
 }}
-{{footnote STAT BLOCKS}}
-\page
-{{pageNumber,auto}}
 {{monster,frame
 ## Zombie
 *Medium Undead, Neutral Evil*
 ___
-**Armor Class** :: 8 dex
+**Armor Class** :: 8 
 **Hit Points** :: 22 (3d8+9)
 **Speed** :: 20 ft.
 ___

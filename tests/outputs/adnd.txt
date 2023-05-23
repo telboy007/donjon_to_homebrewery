@@ -125,7 +125,7 @@ None
 ### Room 7
 {{trap
 #### Trap!
-* Lightning Trap (4d6 damage)
+* Lightning Trap (4d6 damage).
 }}
 {{descriptive
 A ruined siege weapon sits in the south-west corner of the room, and someone has scrawled "The thief will betray you" on the south wall.
@@ -141,10 +141,10 @@ A ruined siege weapon sits in the south-west corner of the room, and someone has
 {{descriptive
 Spirals of white stones cover the floor, and the ceiling is covered with cobwebs.
 }}
-This room is occupied by **4 x Troglodyte**
 {{footnote LOCATIONS}}
 \page
 {{pageNumber,auto}}
+This room is occupied by **4 x Troglodyte**
 {{treasure
 #### Treasure
 None
@@ -453,7 +453,7 @@ Someone has scrawled "The Staff of Omens shall be lost when blades pierce the sk
 ### Room 33
 {{trap
 #### Trap!
-* Poison Dart Trap (1d4 damage plus poison; onset immediate, save or 40 damage)
+* Poison Dart Trap (1d4 damage plus poison; onset immediate, save or 40 damage).
 }}
 {{descriptive
 A wooden ladder rests against the east wall, and someone has scrawled "The Black Hounds looted this place" on the east wall.
@@ -522,7 +522,7 @@ None
 ### Room 38
 {{trap
 #### Trap!
-* Spiked Pit Trap (40', 5d6 damage)
+* Spiked Pit Trap (40', 5d6 damage).
 }}
 {{descriptive
 A magical idol of a god of thieves in the north side of the room heals all wounds of whomever sacrifices a magical item upon it (but only once), and an iron chandelier hangs from the ceiling in the north-west corner of the room.
@@ -685,7 +685,7 @@ Numerous pillars line the north wall, and someone has scrawled "Explosive runes"
 ### Room 50
 {{trap
 #### Trap!
-* Sleep Gas Trap
+* Sleep Gas Trap.
 }}
 {{descriptive
 The room has a high domed ceiling, and a set of demonic war masks hangs on the north wall.
@@ -963,7 +963,7 @@ The floor is covered in perfect hexagonal tiles, and someone has scrawled "Stay 
 ### Room 72
 {{trap
 #### Trap!
-* Scythe Trap (4d6 damage)
+* Scythe Trap (4d6 damage).
 }}
 {{descriptive
 The scent of smoke fills the east side of the room, and several pieces of rotten bread are scattered throughout the room.
@@ -1147,7 +1147,7 @@ A group of draconic faces have been carved into the north wall, and a dulled dag
 ### Room 87
 {{trap
 #### Trap!
-* Falling Ceiling Trap (save or die)
+* Falling Ceiling Trap (save or die).
 }}
 {{descriptive
 A magical mirror on the east wall answers questions with insults, and someone has scrawled "Explosive runes" on the south wall.
@@ -1216,7 +1216,7 @@ A stone dais sits in the south-west corner of the room, and a cube of solid ston
 ### Room 92
 {{trap
 #### Trap!
-* Falling Block Trap (4d6 damage)
+* Falling Block Trap (4d6 damage).
 }}
 {{descriptive
 Several headless statues are scattered throughout the room, and someone has scrawled "In the Empire of Tomes, when the Elven Blade is lost, the Tower of Storms shall be destroyed" on the west wall.
@@ -1277,8 +1277,8 @@ This room is occupied by **5 x Large Spider**
 ### Room 97
 {{hidden-treasure
 #### Hidden Treasure!
-* Invisible Unlocked Iron Chest
-* 4000 sp
+* Invisible Unlocked Iron Chest.
+* 4000 sp.
 }}
 {{descriptive
 Someone has scrawled a large X on the east wall, and a shattered sword lies in the center of the room.
@@ -1294,7 +1294,7 @@ Someone has scrawled a large X on the east wall, and a shattered sword lies in t
 ### Room 98
 {{trap
 #### Trap!
-* Sleep Gas Trap
+* Sleep Gas Trap.
 }}
 {{descriptive
 A balcony hangs from the west wall, and a tile labyrinth covers the floor.
@@ -1650,9 +1650,9 @@ A chute descends from the room into the next dungeon level down, and someone has
 ### Room 127
 {{hidden-treasure
 #### Hidden Treasure!
-* Trapped and Locked Iron Chest (common lock)
-* Acid Trap (4d6 damage)
-* 4000 cp
+* Trapped and Locked Iron Chest (common lock).
+* Acid Trap (4d6 damage).
+* 4000 cp.
 }}
 {{descriptive
 A set of demonic war masks hangs on the east wall, and someone has scrawled "Beneath the altar" on the south wall.
@@ -1836,7 +1836,7 @@ A circle of tall stones stands in the north-east corner of the room, and the flo
 ### Room 142
 {{trap
 #### Trap!
-* Sleep Gas Trap
+* Sleep Gas Trap.
 }}
 {{descriptive
 Several iron cages are scattered throughout the room, and a pile of barrel staves lies in the south side of the room.
@@ -1922,7 +1922,7 @@ The floor is covered in square tiles, alternating white and black, and a cube of
 ### Room 149
 {{trap
 #### Trap!
-* Net Trap
+* Net Trap.
 }}
 {{descriptive
 Someone has scrawled "Trespassers will be flayed alive" in blood on the west wall, and the sound of horns can be heard in the north side of the room.
@@ -2014,7 +2014,7 @@ A group of draconic faces have been carved into the south wall, and a swarm of c
 ### Room 157
 {{trap
 #### Trap!
-* Sleep Gas Trap
+* Sleep Gas Trap.
 }}
 {{descriptive
 Someone has scrawled a basic map of the dungeon on the north wall, and a rusted chain lies in the north side of the room.
@@ -2060,7 +2060,7 @@ None
 ### Room 160
 {{trap
 #### Trap!
-* Lightning Trap (4d6 damage)
+* Lightning Trap (4d6 damage).
 }}
 {{descriptive
 A rotting carpet and simple cabinet sit in the west side of the room, and a pile of bent copper coins lies in the east side of the room.
@@ -2148,7 +2148,7 @@ A cube of solid stone stands in the west side of the room, and a clicking noise 
 ### Room 167
 {{trap
 #### Trap!
-* Falling Ceiling Trap (save or die)
+* Falling Ceiling Trap (save or die).
 }}
 {{descriptive
 A stone dais sits in the north-west corner of the room, and a faded and torn tapestry hangs from the west wall.
@@ -2399,7 +2399,7 @@ None
 ### Room 187
 {{trap
 #### Trap!
-* Net Trap
+* Net Trap.
 }}
 {{descriptive
 The floor is covered in square tiles, alternating white and black, and lit candles are scattered across the floor.
@@ -2415,7 +2415,7 @@ The floor is covered in square tiles, alternating white and black, and lit candl
 ### Room 188
 {{trap
 #### Trap!
-* Falling Block Trap (4d6 damage)
+* Falling Block Trap (4d6 damage).
 }}
 {{descriptive
 A carved stone statue stands in the center of the room, and the south and east walls are covered with slime.
