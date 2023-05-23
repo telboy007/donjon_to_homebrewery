@@ -54,6 +54,36 @@ BOTH = {"proficiencies": [
 			}
 		}
 	]}
+ARMOUR = [
+		{
+			"type": "armor",
+			"value": 15,
+			"armor": [
+				{
+					"index": "leather-armor",
+					"name": "Leather Armor",
+					"url": "/api/equipment/leather-armor"
+				},
+				{
+					"index": "shield",
+					"name": "Shield",
+					"url": "/api/equipment/shield"
+				}
+			]
+		}
+	]
+NATURAL_ARMOUR = [
+		{
+			"type": "natural",
+			"value": 19
+		}
+	]
+NO_ARMOUR = [
+		{
+			"type": "dex",
+			"value": 12
+		}
+	]
 
 # summary test data
 xp_list = [100, 100, 100, 100, 100]
@@ -284,6 +314,25 @@ class Statblocks(TestCase):
         response = statblocks.convert_low_cr_to_fraction(0.5)
 
         self.assertIn(response, "1/2")
+
+
+    # check correct armour types are returned
+    def test_format_armour_types_for_armour(self):
+        response = statblocks.format_armour_type(ARMOUR)
+
+        self.assertEqual(response, "(leather armor, shield)")
+
+
+    def test_format_armour_types_for_natural_armour(self):
+        response = statblocks.format_armour_type(NATURAL_ARMOUR)
+
+        self.assertEqual(response, "(natural)")
+
+
+    def test_format_armour_types_for_no_armour(self):
+        response = statblocks.format_armour_type(NO_ARMOUR)
+
+        self.assertEqual(response, "")
 
 
 class AI(TestCase):

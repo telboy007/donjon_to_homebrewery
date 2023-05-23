@@ -35,4 +35,4 @@ class E2E(TestCase):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, '5e')}")
         with open(f"{test_output_dir}5e.txt", "r", encoding="utf-8") as fifth:
             check_value = len(fifth.read())
-            assert check_value == 41887, f"Should be 41887 but is {check_value}"
+            assert check_value == 41942, f"Should be 41942 but is {check_value}"

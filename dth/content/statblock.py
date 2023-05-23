@@ -4,7 +4,8 @@ from utilities.statblocks import (
                             request_monster_statblock,
                             get_ability_modifier,
                             extract_proficiencies_from_api_response,
-                            convert_low_cr_to_fraction
+                            convert_low_cr_to_fraction,
+                            format_armour_type
                             )
 
 
@@ -27,11 +28,11 @@ def create_5e_statblock(monster, skipped_monsters):
     monster_statblock["alignment"] = response["alignment"].title()
     monster_statblock["ac"] = response["armor_class"][0]["value"]
 
-    # TODO: change to include shield in brackets after armor type
+    # work out correct armour type(s) to show
     if "type" in response["armor_class"][0]:
-        monster_statblock["armour_type"] = response["armor_class"][0]["type"]
+        monster_statblock["armour_type"] = format_armour_type(response["armor_class"])
     else:
-        monster_statblock["armour_type"] = response["armor_class"][0][0]["armor"][0]["name"]
+        monster_statblock["armor_type"] = ""
         
     monster_statblock['hp'] = response["hit_points"]
     monster_statblock['hp_formula'] = response["hit_points_roll"]

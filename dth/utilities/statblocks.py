@@ -1,5 +1,6 @@
 """Module providing statblock & dnd api helper functions"""
 import requests
+from dth.utilities.summary import dedupe_and_sort_list_via_dict
 
 
 def request_monster_statblock(monster_name):
@@ -48,3 +49,19 @@ def convert_low_cr_to_fraction(number):
         if number == 0.125:
             return "1/8"
     return f"{number}"
+
+
+def format_armour_type(armour):
+    """ format armour and include all types i.e. shield """
+    armour_list = []
+    if armour[0]["type"] == "armor":
+        if len(armour[0]["armor"]) > 1:
+            for type in armour[0]["armor"]:
+                armour_list.append(type["name"].lower())
+            return f"({', '.join(dedupe_and_sort_list_via_dict(armour_list))})"
+        else:
+            return f"({armour[0]['armor'][0]['name'].lower()})"
+    elif armour[0]["type"] == "natural":
+        return "(natural)"
+    else:
+        return ""

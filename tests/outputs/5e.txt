@@ -809,7 +809,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 ## Bugbear
 *Medium Humanoid, Chaotic Evil*
 ___
-**Armor Class** :: 16 armor
+**Armor Class** :: 16 (hide armor, shield)
 **Hit Points** :: 27 (5d8+5)
 **Speed** :: 30 ft.
 ___
@@ -834,7 +834,7 @@ ___
 ## Goblin
 *Small Humanoid, Neutral Evil*
 ___
-**Armor Class** :: 15 armor
+**Armor Class** :: 15 (leather armor, shield)
 **Hit Points** :: 7 (2d6)
 **Speed** :: 30 ft.
 ___
@@ -857,7 +857,7 @@ ___
 ## Hobgoblin
 *Medium Humanoid, Lawful Evil*
 ___
-**Armor Class** :: 18 armor
+**Armor Class** :: 18 (chain mail, shield)
 **Hit Points** :: 11 (2d8+2)
 **Speed** :: 30 ft.
 ___
@@ -882,7 +882,7 @@ ___
 ## Mimic
 *Medium Monstrosity, Neutral*
 ___
-**Armor Class** :: 12 natural
+**Armor Class** :: 12 (natural)
 **Hit Points** :: 58 (9d8+18)
 **Speed** :: 15 ft.
 ___
@@ -912,7 +912,7 @@ ___
 ## Ogre zombie
 *Large Undead, Neutral Evil*
 ___
-**Armor Class** :: 8 dex
+**Armor Class** :: 8 
 **Hit Points** :: 85 (9d10+36)
 **Speed** :: 30 ft.
 ___
@@ -935,7 +935,7 @@ ___
 ## Orc
 *Medium Humanoid, Chaotic Evil*
 ___
-**Armor Class** :: 13 armor
+**Armor Class** :: 13 (hide armor)
 **Hit Points** :: 15 (2d8+6)
 **Speed** :: 30 ft.
 ___
@@ -961,7 +961,7 @@ ___
 ## Silver dragon wyrmling
 *Medium Dragon, Lawful Good*
 ___
-**Armor Class** :: 17 natural
+**Armor Class** :: 17 (natural)
 **Hit Points** :: 45 (6d8+18)
 **Speed** :: 30 ft., Fly 60 ft.
 ___
@@ -987,7 +987,7 @@ Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each cre
 ## Worg
 *Large Monstrosity, Neutral Evil*
 ___
-**Armor Class** :: 13 natural
+**Armor Class** :: 13 (natural)
 **Hit Points** :: 26 (4d10+4)
 **Speed** :: 50 ft.
 ___
@@ -1008,7 +1008,7 @@ ___
 ## Zombie
 *Medium Undead, Neutral Evil*
 ___
-**Armor Class** :: 8 dex
+**Armor Class** :: 8 
 **Hit Points** :: 22 (3d8+9)
 **Speed** :: 20 ft.
 ___
