@@ -2,7 +2,7 @@
 
 from unittest import TestCase, mock
 from unittest.mock import patch
-from dth.utilities import locations, statblocks, ai
+from dth.utilities import locations, statblocks, ai, summary
 
 
 # locations test data
@@ -54,6 +54,10 @@ BOTH = {"proficiencies": [
 			}
 		}
 	]}
+
+# summary test data
+xp_list = [100, 100, 100, 100, 100]
+monster_list = ["Goblin", "Adult Black Dragon", "Goblin", "Beholder", "Roper", "Goblin"]
 
 
 class Locations(TestCase):
@@ -340,3 +344,20 @@ class AI(TestCase):
         mock_send_prompt.side_effect = SystemError("error")
         with self.assertRaises(SystemError):
             ai.suggest_adventure_hooks_via_ai("foobar", "foo", "bar")
+
+
+class Summary(TestCase):
+    """ Test cases for summary helper functions """  
+    # check xp and shared xp totals
+    def test_calculate_total_and_shared_xp(self):
+        total_xp, shared_xp = summary.calculate_total_and_shared_xp(xp_list, party_size=5)
+
+        self.assertEqual(total_xp, 500)
+        self.assertEqual(shared_xp, 100)
+
+
+    # check list deduper and sorter
+    def test_dedupe_and_sort_list_via_dict(self):
+        sorted_list = summary.dedupe_and_sort_list_via_dict(monster_list)
+
+        self.assertEqual(sorted_list, ["Adult Black Dragon", "Beholder", "Goblin", "Roper"])

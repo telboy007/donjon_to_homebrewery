@@ -15,13 +15,13 @@ import json
 from collections import OrderedDict
 from dotenv import load_dotenv
 from dth.content.corridor_features import create_donjon_corridor_features
-from dth.content.location import create_single_location
+from dth.content.location import create_donjon_single_location
 from dth.content.overview import create_donjon_overview
 from dth.content.settings import create_donjon_settings
+from dth.content.statblock import create_5e_statblock
 from dth.content.wandering_monsters import create_donjon_wandering_monsters
 from dth.utilities.locations import extract_book_details, compile_monster_and_combat_details
-from dth.utilities.statblocks import extract_proficiencies_from_api_response, request_monster_statblock, get_ability_modifier, convert_low_cr_to_fraction
-from dth.utilities.summary import calculate_total_and_shared_xp
+from dth.utilities.summary import calculate_total_and_shared_xp, dedupe_and_sort_list_via_dict
 
 load_dotenv()
 
@@ -36,7 +36,8 @@ def set_check():
 def file_size(current_check, footnote, first_page_flag=False):
     """Count the current number of characters in a file"""
     # first page of locations needs a larger check value
-    check_value = 3200 if first_page_flag else 3000
+    extra = 500 if footnote == "OVERVIEW" else 200
+    check_value = 3000 + extra if first_page_flag else 3000
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > check_value:
@@ -81,17 +82,14 @@ filename = args.filename
 with open(filename, encoding="utf-8") as inputfile:
     data = json.load(inputfile)
 
-# setup content used during creation of markdown
+# setup content used during creation of title and overview
 settings = create_donjon_settings(data["settings"])
 overview = create_donjon_overview(data["details"], settings, args.testmode)
 corridor_features = create_donjon_corridor_features(data)
 wandering_monsters = create_donjon_wandering_monsters(data)
 
-# open output file to write content to
+# *** TITLE PAGE ***
 with open(args.output_filename, "w", encoding="utf-8") as outfile:
-
-    # *** TITLE PAGE ***
-
     # title page start
     if args.gm_map_url:
         outfile.write(f"![map]({args.gm_map_url}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n")
@@ -139,9 +137,13 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write("{{pageNumber,auto}}\n")
     # map page(s) end
 
-    # *** OVERVIEW ***
+# set page marker check value
+check = set_check()
 
+# *** OVERVIEW ***
+with open(args.output_filename, "a", encoding="utf-8") as outfile:
     # overview page start
+    FIRST_PAGE = True
     outfile.write("## Overview\n")
 
     # add AI flavour text for dungeon if description available
@@ -195,14 +197,31 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
+    # check for page marker
+    outfile.close()
+    check, FIRST_PAGE = file_size(check, "OVERVIEW", FIRST_PAGE)
+    outfile = open(args.output_filename, "a", encoding="utf-8")
+
     # add AI suggestions for boss, lair and adventure hooks if present
     if overview["ai_enhancements"]:
         # dungeon boss and lair details
         outfile.write("### Dungeon Boss\n")
         outfile.write(f"{overview['bbeg_and_lair']}\n")
+
+        # check for page marker
+        outfile.close()
+        check, FIRST_PAGE = file_size(check, "OVERVIEW", FIRST_PAGE)
+        outfile = open(args.output_filename, "a", encoding="utf-8")
+
         # two adventure hooks to help immerse the party in the dungeon
         outfile.write("### Adventure Hooks\n")
         outfile.write(f"{overview['adventure_hooks']}\n")
+
+        # check for page marker
+        outfile.close()
+        check, FIRST_PAGE = file_size(check, "OVERVIEW", FIRST_PAGE)
+        outfile = open(args.output_filename, "a", encoding="utf-8")
+        
         # add some hints about tweaking the dungeon based on boss, lair and adventure hooks
         outfile.write("### Tweaking the dungeon\n")
         outfile.write("Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n\n")
@@ -216,13 +235,11 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
 # add wandering monster details to global lists
 monster_list, combat_list, xp_list = compile_monster_and_combat_details(wandering_monsters["monster_details"], settings['ruleset'], monster_list, combat_list, xp_list)
 
-# set initial page marker check value
+# set page marker check value
 check = set_check()
 
+# *** DUNGEON DETAILS ***
 with open(args.output_filename, "a", encoding="utf-8") as outfile:
-
-    # *** DUNGEON DETAILS ***
-
     # locations start
     FIRST_PAGE = True
     outfile.write("## Locations\n")
@@ -250,14 +267,14 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             if rooms is None:
                 continue
             # parse room details into location dict and update lists
-            location, magic_items, monster_list, combat_list, xp_list = create_single_location(
-                                                                                            rooms,
-                                                                                            settings,
-                                                                                            magic_items,
-                                                                                            monster_list,
-                                                                                            combat_list,
-                                                                                            xp_list
-                                                                                        )
+            location, magic_items, monster_list, combat_list, xp_list = create_donjon_single_location(
+                                                                                                    rooms,
+                                                                                                    settings,
+                                                                                                    magic_items,
+                                                                                                    monster_list,
+                                                                                                    combat_list,
+                                                                                                    xp_list
+                                                                                                )
             # check for page marker
             outfile.close()
             check, FIRST_PAGE = file_size(check, "LOCATIONS", FIRST_PAGE)
@@ -383,23 +400,38 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("| Monster | Book |\n")
         outfile.write("|:--|:--|\n")
 
-        # but first dedupe and order monster list
-        monster_list = list(dict.fromkeys(monster_list))
-        monster_list.sort()
+        # dedupe and order monster list and work out number of monsters
+        monster_list = dedupe_and_sort_list_via_dict(monster_list)
 
-        for item in monster_list:
+        for index, item in enumerate(monster_list):
             # split out monster and source book details
             monster_name, sourcebook = extract_book_details(item, settings['ruleset'])
             outfile.write(f"| {monster_name} | {sourcebook} |\n")
 
-            # compile list of monsters for stat blocks
+            # add break in table if monster list is super long
+            if index == 38 and len(monster_list) > 38:
+                outfile.write("}}\n")
+                outfile.write(":\n")
+                outfile.write("{{descriptive\n")
+                outfile.write("#### Monster List (alphabetical) cont.\n")
+                outfile.write("| Monster | Book |\n")
+                outfile.write("|:--|:--|\n")          
+
+            # compile list of monsters for stat block api calls
             if "mm" in sourcebook:
                 monster_names.append(monster_name.lower().replace(" ", "-"))
             else:
+                # skipped monsters will be listed out after stat blocks  
                 skipped_monsters.append(monster_name)
 
         outfile.write("}}\n")
         outfile.write(":\n")
+
+        # before adding magic items see if we need to split table
+        if len(monster_list) >= 38:
+            split_value = 53
+        else:
+            split_value = 38 - (len(monster_list) + 6)
 
         # list out magic items for 5th edition
         if settings['ruleset'] == "dnd_5e":
@@ -409,156 +441,150 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             outfile.write("|:--|:--|--:|\n")
             ordered_magic_items = OrderedDict(sorted(magic_items.items()))
 
-            for magic_item, details in ordered_magic_items.items():
+            SPLIT_CHECK = True
+            for index, (magic_item, details) in enumerate(ordered_magic_items.items()):
+                # we need to check whether there are any long names
+                if len(magic_item) >= 40 and index <= split_value and SPLIT_CHECK:
+                    split_value = round(split_value / 2)
+                    SPLIT_CHECK = False
                 # split out location and source book details
                 sourcebook, location = details.split('/')
                 outfile.write(f"| {magic_item} | {sourcebook} | {location} |\n")
 
+                # split table and continue on next column
+                if index == split_value and len(ordered_magic_items) > split_value:
+                    outfile.write("}}\n")
+                    outfile.write(":\n")
+                    outfile.write("{{descriptive\n")
+                    outfile.write("#### Magic Items (alphabetical) cont.\n")
+                    outfile.write("| Item | Book | Room |\n")
+                    outfile.write("|:--|:--|--:|\n")
+                    
             outfile.write("}}\n")
 
         # final footnote
         outfile.write("{{footnote SUMMARY}}\n")
 
-    # *** STAT BLOCKS ***
+# set page marker check value
+check = set_check()
+current_statblocks = 0
+
+# *** STAT BLOCKS ***
+with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
     # if 5th edition try to get as many monster stat blocks as possible
     if settings['ruleset'] == "dnd_5e":
         outfile.write("\\page\n")
 
-        # update check value
-        outfile.close()
-        check = set_check()
-        outfile = open(args.output_filename, "a", encoding="utf-8")
-
         outfile.write("{{pageNumber,auto}}\n")
         outfile.write("# Stat Blocks (SRD only)\n")
 
         for monster in monster_names:
-            monster_statblock = request_monster_statblock(monster)
+            monster_statblock, skipped_monsters = create_5e_statblock(monster, skipped_monsters)
 
-            # check for any monsters listed as in monster manual but not found in api
-            if monster_statblock == "not found":
-                skipped_monsters.append(monster.replace("-", " ").title())
+            # check for monster listed as in monster manual but not found in api
+            if monster_statblock == {}:
                 continue
+
+            """
+                need to split up statblocks when:
+                current_statblocks = 3 and next is size = 2
+                current_statblocks = 3 and last one was size = 2
+                current_statblocks = 4
+            """
+            if current_statblocks == 3 and int(monster_statblock["markdown_size"]) == 2:
+                outfile.write("{{footnote STAT BLOCKS}}\n")
+                outfile.write("\\page\n")
+                outfile.write("{{pageNumber,auto}}\n")
+                current_statblocks = int(monster_statblock["markdown_size"])
+            elif current_statblocks == 3 and previous_statblock == 2:
+                outfile.write("{{footnote STAT BLOCKS}}\n")
+                outfile.write("\\page\n")
+                outfile.write("{{pageNumber,auto}}\n")
+                current_statblocks = int(monster_statblock["markdown_size"])
+            elif current_statblocks == 4:
+                outfile.write("{{footnote STAT BLOCKS}}\n")
+                outfile.write("\\page\n")
+                outfile.write("{{pageNumber,auto}}\n")
+                current_statblocks = int(monster_statblock["markdown_size"])
+            else:
+                current_statblocks += int(monster_statblock["markdown_size"])
 
             # write out statblock if monster found
             outfile.write("{{monster,frame\n")
-            outfile.write(f"## {monster_statblock['name'].capitalize()}\n")
-            outfile.write(f"*{monster_statblock['size'].capitalize()} {monster_statblock['type'].capitalize()}, {monster_statblock['alignment'].title()}*\n")
+            outfile.write(f"## {monster_statblock['name']}\n")
+            outfile.write(f"*{monster_statblock['size']} {monster_statblock['type']}, {monster_statblock['alignment']}*\n")
             outfile.write("___\n")
-            outfile.write(f"**Armor Class** :: {monster_statblock['armor_class'][0]['value']} ")
-
-            # handle monsters with more than one armor type (i.e. they have a shield as well)
-            if "type" in monster_statblock['armor_class'][0]:
-                outfile.write(f"{monster_statblock['armor_class'][0]['type']}\n")
-            else:
-                outfile.write(f"{monster_statblock['armor_class'][0]['armor'][0]['name']})\n")
-            outfile.write(f"**Hit Points** :: {monster_statblock['hit_points']} ({monster_statblock['hit_points_roll']})\n")
-
-            # handle additional movement types
-            if len(monster_statblock['speed']) > 1:
-                movement_types = []
-                for key, value in monster_statblock['speed'].items():
-                    movement_types.append(f"{key.capitalize()} {value}")
-                STR_MOVEMENT = ', '.join(movement_types)
-                outfile.write(f"**Speed** :: {STR_MOVEMENT.replace('Walk ', '')}\n")
-            else:
-                outfile.write(f"**Speed** :: {monster_statblock['speed']['walk']}\n")
-
+            outfile.write(f"**Armor Class** :: {monster_statblock['ac']} ")
+            outfile.write(f"{monster_statblock['armour_type']}\n")
+            outfile.write(f"**Hit Points** :: {monster_statblock['hp']} ({monster_statblock['hp_formula']})\n")
+            outfile.write(f"**Speed** :: {monster_statblock['speed']}\n")
             outfile.write("___\n")
             outfile.write("|STR|DEX|CON|INT|WIS|CHA|\n")
             outfile.write("|:---:|:---:|:---:|:---:|:---:|:---:|\n")
-            outfile.write(f"|{monster_statblock['strength']} ({get_ability_modifier(monster_statblock['strength'])})")
-            outfile.write(f"|{monster_statblock['dexterity']} ({get_ability_modifier(monster_statblock['dexterity'])})")
-            outfile.write(f"|{monster_statblock['constitution']} ({get_ability_modifier(monster_statblock['constitution'])})")
-            outfile.write(f"|{monster_statblock['intelligence']} ({get_ability_modifier(monster_statblock['intelligence'])})")
-            outfile.write(f"|{monster_statblock['wisdom']} ({get_ability_modifier(monster_statblock['wisdom'])})")
-            outfile.write(f"|{monster_statblock['charisma']} ({get_ability_modifier(monster_statblock['charisma'])})|\n")
+            outfile.write(f"|{monster_statblock['str']} ({monster_statblock['str_mod']})")
+            outfile.write(f"|{monster_statblock['dex']} ({monster_statblock['dex_mod']})")
+            outfile.write(f"|{monster_statblock['con']} ({monster_statblock['con_mod']})")
+            outfile.write(f"|{monster_statblock['int']} ({monster_statblock['int_mod']})")
+            outfile.write(f"|{monster_statblock['wis']} ({monster_statblock['wis_mod']})")
+            outfile.write(f"|{monster_statblock['cha']} ({monster_statblock['cha_mod']})|\n")
             outfile.write("___\n")
-
-            # extract saving throws and skill check modifiers
-            saving_throws, skill_checks = extract_proficiencies_from_api_response(monster_statblock)
-            if saving_throws:
-                throws = []
-                for key, value in saving_throws:
-                    throws.append(f"{key.capitalize()} +{value}")
-                STR_THROWS = ', '.join(throws)
-                outfile.write(f"**Saving Throws** :: {STR_THROWS}\n")
-
-            if skill_checks:
-                skills = []
-                for key, value in skill_checks:
-                    skills.append(f"{key.capitalize()} +{value}")
-                STR_SKILLS = ', '.join(skills)
-                outfile.write(f"**Skills** :: {STR_SKILLS}\n")
-
-            #resistances and immunities
-            if monster_statblock["damage_vulnerabilities"]:
-                DMG_VUL = ', '.join(monster_statblock["damage_vulnerabilities"])
-                outfile.write(f"**Damage Vulnerabilities** :: {DMG_VUL}\n")
-
-            if monster_statblock["damage_resistances"]:
-                DMG_RES = ', '.join(monster_statblock["damage_resistances"])
-                outfile.write(f"**Damage Resistances** :: {DMG_RES}\n")
-
-            if monster_statblock["damage_immunities"]:
-                DMG_IMM = ', '.join(monster_statblock["damage_immunities"])
-                outfile.write(f"**Damage Immunities** :: {DMG_IMM}\n")
-
-            if monster_statblock["condition_immunities"]:
-                con_imm_list = []
-                for condition_immunity in monster_statblock["condition_immunities"]:
-                    con_imm_list.append(condition_immunity["index"])
-                CON_IMM = ', '.join(con_imm_list)
-                outfile.write(f"**Condition Immunities** :: {CON_IMM}\n")
-
-            # extract senses
-            STATBLOCK_SENSES = str(monster_statblock['senses']).replace("{", "").replace("}", "").replace("'", "").replace(":", "").replace("_", " ")
-            outfile.write(f"**Senses** :: {STATBLOCK_SENSES}\n")
-
-            # handle emtpy language list
-            if monster_statblock["languages"]:
+            if "saving_throws" in monster_statblock:
+                outfile.write(f"**Saving Throws** :: {monster_statblock['saving_throws']}\n")
+            if "skill_checks" in monster_statblock:
+                outfile.write(f"**Skills** :: {monster_statblock['skill_checks']}\n")
+            if "damage_vulnerabilities" in monster_statblock:
+                outfile.write(f"**Damage Vulnerabilities** :: {monster_statblock['damage_vulnerabilities']}\n")
+            if "damage_resistances" in monster_statblock:
+                outfile.write(f"**Damage Resistances** :: {monster_statblock['damage_resistances']}\n")
+            if "damage_immunities" in monster_statblock:
+                outfile.write(f"**Damage Immunities** :: {monster_statblock['damage_immunities']}\n")
+            if "damage_vulnerabilities" in monster_statblock:
+                outfile.write(f"**Damage Vulnerabilities** :: {monster_statblock['damage_vulnerabilities']}\n")
+            if "condition_immunities" in monster_statblock:
+                outfile.write(f"**Condition Immunities** :: {monster_statblock['condition_immunities']}\n")
+            outfile.write(f"**Senses** :: {monster_statblock['senses']}\n")
+            if "languages" in monster_statblock:
                 outfile.write(f"**Languages** :: {monster_statblock['languages']}\n")
-
-            CR = convert_low_cr_to_fraction(monster_statblock['challenge_rating'])
-            outfile.write(f"**Challenge Rating** :: {CR} ({monster_statblock['xp']} XP)\n")
+            outfile.write(f"**Challenge Rating** :: {monster_statblock['CR']} ({monster_statblock['XP']} XP)\n")
             outfile.write("___\n")
 
             # traits and special abilities
-            if monster_statblock["special_abilities"]:
-                outfile.write(f"***{monster_statblock['special_abilities'][0]['name']}.*** {monster_statblock['special_abilities'][0]['desc']}\n")
-                if len(monster_statblock['special_abilities']) > 1:
-                    for index, ability in enumerate(monster_statblock['special_abilities'][1:]):
+            if "special_abilities" in monster_statblock:
+                for index, (key, value) in enumerate(monster_statblock["special_abilities"].items()):
+                    if index == 0:
+                        outfile.write(f"***{key}.*** {value}\n")
+                    if index > 0:
                         outfile.write(":\n")
-                        outfile.write(f"***{ability['name']}.*** {ability['desc']}\n")
+                        outfile.write(f"***{key}.*** {value}\n")
 
             # monster actions
             if "actions" in monster_statblock:
-                outfile.write("### Actions\n")
-                outfile.write(f"***{monster_statblock['actions'][0]['name']}.*** {monster_statblock['actions'][0]['desc']}\n")
-                if len(monster_statblock['actions']) > 1:
-                    for index, action in enumerate(monster_statblock['actions'][1:]):
+                outfile.write(f"### Actions\n")
+                for index, (key, value) in enumerate(monster_statblock["actions"].items()):
+                    if index == 0:
+                        outfile.write(f"***{key}.*** {value}\n")
+                    if index > 0:
                         outfile.write(":\n")
-                        outfile.write(f"***{action['name']}.*** {action['desc']}\n")
+                        outfile.write(f"***{key}.*** {value}\n")
 
             # monster legendary actions
-            if monster_statblock["legendary_actions"]:
-                outfile.write("### Legendary Actions\n")
-                outfile.write(f"***{monster_statblock['legendary_actions'][0]['name']}.*** {monster_statblock['legendary_actions'][0]['desc']}\n")
-                if len(monster_statblock['actions']) > 1:
-                    for index, leg_action in enumerate(monster_statblock['legendary_actions'][1:]):
+            if "legendary_actions" in monster_statblock:
+                outfile.write(f"### Legendary Actions\n")
+                for index, (key, value) in enumerate(monster_statblock["legendary_actions"].items()):
+                    if index == 0:
+                        outfile.write(f"***{key}.*** {value}\n")
+                    if index > 0:
                         outfile.write(":\n")
-                        outfile.write(f"***{leg_action['name']}.*** {leg_action['desc']}\n")
+                        outfile.write(f"***{key}.*** {value}\n")
+
             outfile.write("}}\n")
 
-            # check for page marker
-            outfile.close()
-            check, flag = file_size(check, "STAT BLOCKS")
-            outfile = open(args.output_filename, "a", encoding="utf-8")
+            # keep track of last statblock size
+            previous_statblock = int(monster_statblock["markdown_size"])
 
         # write out list of skipped monsters deduped and ordered
-        skipped_monsters = list(dict.fromkeys(skipped_monsters))
-        skipped_monsters.sort()
+        skipped_monsters = dedupe_and_sort_list_via_dict(skipped_monsters)
         outfile.write(f"**Monsters without stat blocks**: {', '.join(skipped_monsters)}")
         outfile.write("\n")
         outfile.write("{{footnote STAT BLOCKS}}\n")

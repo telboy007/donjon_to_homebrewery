@@ -5,7 +5,7 @@ from dth.utilities.locations import sum_up_treasure, add_magical_items_to_list, 
 NEWLINE = '\n'
 
 
-def create_single_location(room, settings, magic_items, monster_list, combat_list, xp_list):
+def create_donjon_single_location(room, settings, magic_items, monster_list, combat_list, xp_list):
     """ 
         Create dict of single location
 
@@ -32,7 +32,7 @@ def create_single_location(room, settings, magic_items, monster_list, combat_lis
             if "trap" in room["contents"]["detail"]:
                 location["is_trap"] = True
                 for detail in room["contents"]["detail"]["trap"]:
-                    trap_detail.append(detail.replace(NEWLINE, ""))
+                    trap_detail.append(f"{detail.replace(NEWLINE, '')}.")
                 location["trap"] = trap_detail
 
             # hidden treasure
@@ -40,7 +40,7 @@ def create_single_location(room, settings, magic_items, monster_list, combat_lis
                 for detail in room["contents"]["detail"]["hidden_treasure"]:
                     if detail == "--":
                         continue
-                    hidden_treasure.append(detail.replace(NEWLINE, " "))
+                    hidden_treasure.append(f"{detail.replace(NEWLINE, ' ')}.")
                 location["hidden_treasure"] = hidden_treasure
                 
                 # add to magic items list for the summary page
