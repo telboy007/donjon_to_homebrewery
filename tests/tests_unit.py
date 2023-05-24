@@ -139,6 +139,7 @@ class Locations(TestCase):
 
 
     # compile monster and combat details
+    # TODO: need to add test for ADND list of monsters
     def test_compile_monster_return_correct_response_for_4e(self):
         monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
                                                             MULTI_MONSTER_LIST_4E,
