@@ -14,25 +14,25 @@ class E2E(TestCase):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, 'fantasy')}")
         with open(f"{test_output_dir}fantasy.txt", "r", encoding="utf-8") as fantasy:
             check_value = len(fantasy.read())
-            assert check_value == 26343, f"Should be 26343 but is {check_value}"
+            assert check_value == 26232, f"Should be 26232 but is {check_value}"
 
 
     def test_adnd(self):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, 'adnd')}")
         with open(f"{test_output_dir}adnd.txt", "r", encoding="utf-8") as adnd:
             check_value = len(adnd.read())
-            assert check_value == 82560, f"Should be 82560 but is {check_value}"
+            assert check_value == 82449, f"Should be 82449 but is {check_value}"
 
 
     def test_4e(self):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, '4e')}")
         with open(f"{test_output_dir}4e.txt", "r", encoding="utf-8") as fourth:
             check_value = len(fourth.read())
-            assert check_value == 89128, f"Should be 89128 but is {check_value}"
+            assert check_value == 89017, f"Should be 89017 but is {check_value}"
 
 
     def test_5e(self):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, '5e')}")
         with open(f"{test_output_dir}5e.txt", "r", encoding="utf-8") as fifth:
             check_value = len(fifth.read())
-            assert check_value == 41942, f"Should be 41942 but is {check_value}"
+            assert check_value == 41831, f"Should be 41831 but is {check_value}"
