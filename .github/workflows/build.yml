@@ -28,12 +28,11 @@ jobs:
       run: |
         pip install pipenv
         pipenv install
-        pipenv shell
 
     - name: Run unit tests
       run: |
-        pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
+        pipenv run pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
 
     - name: Run e2e tests
       run: |
-        pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py
+        pipenv run pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py

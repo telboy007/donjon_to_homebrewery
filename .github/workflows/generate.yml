@@ -40,7 +40,6 @@ jobs:
       run: |
         pip install pipenv
         pipenv install
-        pipenv shell
 
     - name: Environmental Variables
       run: |
@@ -50,7 +49,7 @@ jobs:
     - name: Generate homebrewery file
       run: |
         curl -L "${{ github.event.inputs.filename }}" -o donjon.json
-        python convert_donjon_to_homebrewery.py donjon.json -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
+        pipenv run python convert_donjon_to_homebrewery.py donjon.json -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
