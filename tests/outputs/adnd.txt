@@ -2471,5 +2471,4 @@ AD&D Random Dungeon Generator
 |Map Style|Standard|
 |Grid|Square|
 \column
-![logo](https://i.imgur.com/cYz20b0.png){position:absolute,bottom:100px,left:43%,width:14%,filter:invert(60%)}
 {{footnote SETTINGS}}

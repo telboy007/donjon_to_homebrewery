@@ -34,12 +34,12 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.8"
+        cache: 'pipenv'
 
     - name: Set up environment
       run: |
-        pip install requests
-        pip install openai
-        pip install python-dotenv
+        pip install pipenv
+        pipenv install
 
     - name: Environmental Variables
       run: |
@@ -49,7 +49,7 @@ jobs:
     - name: Generate homebrewery file
       run: |
         curl -L "${{ github.event.inputs.filename }}" -o donjon.json
-        python convert_donjon_to_homebrewery.py donjon.json -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
+        pipenv run python convert_donjon_to_homebrewery.py donjon.json -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1

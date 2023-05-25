@@ -409,6 +409,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             outfile.write(f"| {monster_name} | {sourcebook} |\n")
 
             # add break in table if monster list is super long
+            # TODO: this is tuned for 5e only, need to adapt for 4e still
             if index == 38 and len(monster_list) > 38:
                 outfile.write("}}\n")
                 outfile.write(":\n")
@@ -465,7 +466,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # final footnote
         outfile.write("{{footnote SUMMARY}}\n")
 
-# set page marker check value
+# set page marker check and initial statblock value
 check = set_check()
 current_statblocks = 0
 
@@ -632,7 +633,5 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write(":\n")
         outfile.write(f"Courtesy of [donjon.bin.sh]({settings['donjon_url']})\n")
 
-    # homebrewery logo
-    outfile.write("![logo](https://i.imgur.com/cYz20b0.png){position:absolute,bottom:100px,left:43%,width:14%,filter:invert(60%)}\n")
     outfile.write("{{footnote SETTINGS}}\n")
     # fin

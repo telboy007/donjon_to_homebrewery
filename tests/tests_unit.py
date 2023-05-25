@@ -54,7 +54,7 @@ BOTH = {"proficiencies": [
 			}
 		}
 	]}
-ARMOUR = [
+ARMOUR_TWO_PIECES = [
 		{
 			"type": "armor",
 			"value": 15,
@@ -68,6 +68,19 @@ ARMOUR = [
 					"index": "shield",
 					"name": "Shield",
 					"url": "/api/equipment/shield"
+				}
+			]
+		}
+	]
+ARMOUR_ONE_PIECE = [
+		{
+			"type": "armor",
+			"value": 15,
+			"armor": [
+				{
+					"index": "leather-armor",
+					"name": "Leather Armor",
+					"url": "/api/equipment/leather-armor"
 				}
 			]
 		}
@@ -125,7 +138,8 @@ class Locations(TestCase):
         self.assertEqual(magic_items, {'Potion of Healing **C** (5)': 'dmg p.187/5'})
 
 
-    # compile_monster_and_combat_details for 4e and 5e
+    # compile monster and combat details
+    # TODO: need to add test for ADND list of monsters
     def test_compile_monster_return_correct_response_for_4e(self):
         monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
                                                             MULTI_MONSTER_LIST_4E,
@@ -317,10 +331,16 @@ class Statblocks(TestCase):
 
 
     # check correct armour types are returned
-    def test_format_armour_types_for_armour(self):
-        response = statblocks.format_armour_type(ARMOUR)
+    def test_format_armour_types_for_two_pieces_armour(self):
+        response = statblocks.format_armour_type(ARMOUR_TWO_PIECES)
 
         self.assertEqual(response, "(leather armor, shield)")
+
+
+    def test_format_armour_types_for_one_piece_armour(self):
+        response = statblocks.format_armour_type(ARMOUR_ONE_PIECE)
+
+        self.assertEqual(response, "(leather armor)")
 
 
     def test_format_armour_types_for_natural_armour(self):

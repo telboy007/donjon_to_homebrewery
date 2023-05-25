@@ -22,19 +22,17 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.8"
+        cache: 'pipenv'
 
     - name: Set up environment
       run: |
-        pip install requests
-        pip install openai
-        pip install python-dotenv
-        pip install pytest
-        pip install pytest-cov
+        pip install pipenv
+        pipenv install
 
     - name: Run unit tests
       run: |
-        pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
+        pipenv run pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
 
     - name: Run e2e tests
       run: |
-        pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py
+        pipenv run pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py
