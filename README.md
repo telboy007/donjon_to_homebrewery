@@ -23,6 +23,8 @@ NOTE: don't forget to grab both maps (gm and player) from donjon as well as the 
 
 ## Using GitHub Actions
 
+Using the GitHub action enables AI enhancements, enjoy.
+
 NOTE: filename, gm map and player map are all required fields when using the github action.
 
 1. Via the Actions tab click on `Generate Homebrewery Text`
