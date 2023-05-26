@@ -65,3 +65,24 @@ def format_armour_type(armour):
         return "(natural)"
     else:
         return ""
+    
+
+def check_for_full_pages(cumulative, statblock_size, previous):
+    """
+        need to split up statblocks when:
+        current_statblocks = 3 and next is size = 2
+        current_statblocks = 3 and last one was size = 2
+        current_statblocks = 4
+    """
+    if cumulative == 3 and int(statblock_size) == 2:
+        cumulative = int(statblock_size)
+        return cumulative, True
+    elif cumulative == 3 and previous == 2:
+        cumulative = int(statblock_size)
+        return cumulative, True
+    elif cumulative == 4:
+        cumulative = int(statblock_size)
+        return cumulative, True
+    else:
+        cumulative += int(statblock_size)
+    return cumulative, False

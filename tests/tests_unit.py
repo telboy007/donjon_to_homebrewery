@@ -355,6 +355,36 @@ class Statblocks(TestCase):
         self.assertEqual(response, "")
 
 
+    # check full page
+    def test_check_full_page_when_only_space_for_one(self):
+        """ cumulative total, current statblock size, previous statblock size """
+        cumulative_total, new_page_break_required = statblocks.check_for_full_pages(3,2,1)
+
+        self.assertEqual(cumulative_total, 2)
+        self.assertTrue(new_page_break_required)
+
+
+    def test_check_full_page_when_space_for_one_but_last_block_was_two(self):
+        cumulative_total, new_page_break_required = statblocks.check_for_full_pages(3,1,2)
+
+        self.assertEqual(cumulative_total, 1)
+        self.assertTrue(new_page_break_required)
+
+
+    def test_check_full_page_when_full_page(self):
+        cumulative_total, new_page_break_required = statblocks.check_for_full_pages(4,1,1)
+
+        self.assertEqual(cumulative_total, 1)
+        self.assertTrue(new_page_break_required)
+
+
+    def test_check_full_page_when_there_is_space(self):
+        cumulative_total, new_page_break_required = statblocks.check_for_full_pages(1,2,1)
+
+        self.assertEqual(cumulative_total, 3)
+        self.assertFalse(new_page_break_required)
+
+
 class AI(TestCase):
     """ Test cases for AI helper functions """    
     # send prompt to chatgpt

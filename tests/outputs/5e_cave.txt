@@ -1,0 +1,130 @@
+{{margin-top:225px}}
+{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px
+# The Forsaken Sanctum of Gothmog of Udun
+:
+##### The dungeon was created by a cult of elemental air as a shrine. It was eventually conquered by invaders, and has been conquered and altered many times since then.
+:::
+##### A randomly generated D&D 5E donjon dungeon for a party size of 3 and APL6
+:::
+##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
+}}
+\page
+{{pageNumber,auto}}
+## Overview
+### Features
+The dungeon has the following features, these may include skill checks to perform certain actions.
+{{descriptive
+#### General Features
+| Type | Detail |
+|:--|:--|
+| Floors | Smooth Stone |
+| Walls | Natural Stone (DC 10 to climb) |
+| Temperature | Average |
+| Lighting | Average (shadowy in corridors, lamps or torches in most rooms) |
+| Special | None |
+}}
+{{footnote OVERVIEW}}
+\page
+{{pageNumber,auto}}
+## Locations
+### Room 1
+### Room 2
+{{descriptive
+A stack of crates filled with rocks stands against the north wall, and a sundered axe lies in the north-west corner of the room.
+}}
+### Room 3
+{{descriptive
+Someone has scrawled "You cannot kill it with swords" in blood on the east wall, and several pieces of rotten bread are scattered throughout the room.
+}}
+### Room 4
+{{descriptive
+An altar of evil sits in the center of the room, and several pieces of torn paper are scattered throughout the room.
+}}
+### Room 5
+{{trap
+#### Trap!
+* Falling Cage Trap: DC 15 to find, DC 10 to disable;    affects all targets within a 10 ft. square area, DC 10 save or become confined.
+}}
+{{hidden-treasure
+#### Hidden Treasure!
+* Hidden (DC 25 to find) Locked Good Wooden Chest (DC 25 to unlock, DC 20 to break; 15 hp).
+* 800 cp, 8000 sp, 1800 gp, 110 pp, diamond (100 gp), pearl (100 gp), amber (100 gp), chrysoberyl (100 gp), tourmaline (100 gp), Wand of Polymorph (very rare, dmg 211).
+}}
+{{descriptive
+Someone has scrawled "Mind the gap" on the east wall, and an acrid odor fills the south-east corner of the room.
+}}
+### Room 6
+{{descriptive
+A rotting carpet and spinning wheel sit in the east side of the room, and someone has scrawled "The White Order killed a hydra here" on the east wall.
+}}
+### Room 7
+### Room 8
+{{descriptive
+The room has a high domed ceiling, and a briny odor fills the north-west corner of the room.
+}}
+### Room 9
+### Room 10
+{{descriptive
+A toppled statue lies in the south side of the room, and an iron chain hangs from the ceiling in the south side of the room.
+}}
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+## Summary
+Here you will find useful reference tables for things encountered in the dungeon.
+{{descriptive
+#### Combat details (guide only)
+**Total XP: 0** which is 0 xp per party member.
+| Type | Amount |
+|:--|:--|
+| Easy | 0 |
+| Medium | 0 |
+| Hard | 0 |
+| Deadly | 0 |
+}}
+:
+{{descriptive
+#### Monster List (alphabetical)
+| Monster | Book |
+|:--|:--|
+}}
+:
+{{descriptive
+#### Magic Items (alphabetical)
+| Item | Book | Room |
+|:--|:--|--:|
+| Wand of Polymorph **VR** | dmg p.211 | 5 |
+}}
+{{footnote SUMMARY}}
+\page
+{{pageNumber,auto}}
+{{wide
+## Settings
+Settings used to create this dungeon:
+:
+D&D 5E Random Dungeon Generator
+|||
+|:--|:--|
+|Dungeon Name|The Forsaken Sanctum of Gothmog of Udun|
+|Dungeon Level|6|
+|Party Size|3|
+|Motif|Abandoned|
+}}
+:
+|||
+|:--|:--|
+|Random Seed|215532930|
+|Dungeon Size|Medium|
+|Dungeon Layout|Cavernous|
+|Peripheral Egress?||
+|Room Layout|Scattered|
+|Room Size|Medium|
+|Polymorph Rooms?|Yes|
+|Doors|Standard|
+|Corridors|Errant|
+|Remove Deadends?|Some|
+|Stairs?|Yes|
+|Map Style|Steampunk|
+|Grid|Square|
+\column
+{{footnote SETTINGS}}

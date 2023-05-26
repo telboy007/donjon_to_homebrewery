@@ -3,7 +3,7 @@
 import os
 from unittest import TestCase
 
-test_data_dir = "./tests/data/"
+test_data_dir = "./tests/data"
 test_output_dir = "./tests/outputs/"
 command_line = "python convert_donjon_to_homebrewery.py {0}/{2}_test_file.json -o {1}/{2}.txt --testmode"
 
@@ -36,3 +36,17 @@ class E2E(TestCase):
         with open(f"{test_output_dir}5e.txt", "r", encoding="utf-8") as fifth:
             check_value = len(fifth.read())
             assert check_value == 41831, f"Should be 41831 but is {check_value}"
+
+
+    def test_5e_abandoned(self):
+        os.system(f"{command_line.format(test_data_dir, test_output_dir, '5e_abandoned')}")
+        with open(f"{test_output_dir}5e_abandoned.txt", "r", encoding="utf-8") as fifth:
+            check_value = len(fifth.read())
+            assert check_value == 62225, f"Should be 62225 but is {check_value}"
+
+
+    def test_5e_cave(self):
+        os.system(f"{command_line.format(test_data_dir, test_output_dir, '5e_cave')}")
+        with open(f"{test_output_dir}5e_cave.txt", "r", encoding="utf-8") as fifth:
+            check_value = len(fifth.read())
+            assert check_value == 3764, f"Should be 3764 but is {check_value}"
