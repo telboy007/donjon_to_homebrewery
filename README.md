@@ -84,6 +84,8 @@ You can now copy and paste the contents of homebrewery.txt into your [homebrewer
 
 You can change the formatting of traps, hidden treasure and treasure in room locations so that important information is highlighted and not missed.
 
+![traps](https://imgur.com/P1A7At7.png)
+
 In the repo you will find a folder called templates, pick one of the css files and copy the contents into the style tab on homebrewery.
 
 Feel free to create your own, if you don't mind sharing you can add them via a pull request!
