@@ -14,6 +14,7 @@ MULTI_MONSTER_LIST_5E = "Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firene
 MONSTER_DETAIL_4E = "Dragonkin Kobold Pact-Bound Adept (dr1 227, 250 xp)"
 MONSTER_DETAIL_5E = "Firenewt Warlock of Imix (cr 1, vgm 143)"
 MULTI_MONSTER_SOURCEBOOK_5E = "Drow House Captain (cr 9, mtf 184, vgm 154)"
+MONSTER_LIST_OF_DICTS = [{"1": "Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm 316); deadly, 500 xp, gathered around an evil shrine"}]
 
 # statblocks test data
 SAVING_THROW = {"proficiencies": [
@@ -139,7 +140,6 @@ class Locations(TestCase):
 
 
     # compile monster and combat details
-    # TODO: need to add test for ADND list of monsters
     def test_compile_monster_return_correct_response_for_4e(self):
         monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
                                                             MULTI_MONSTER_LIST_4E,
@@ -194,6 +194,27 @@ class Locations(TestCase):
         self.assertEqual(combat_list, ['medium'])
         # xp amount
         self.assertEqual(xp_list, ['300'])
+
+
+    def test_compile_monster_return_correct_response_for_5e_wandering_monsters(self):
+        monster_list, combat_list, xp_list = locations.compile_monster_and_combat_details(
+                                                                        MONSTER_LIST_OF_DICTS,
+                                                                        "dnd_5e",
+                                                                        [],
+                                                                        [],
+                                                                        []
+                                                                    )
+
+        # monster list
+        self.assertEqual(monster_list, [
+                                        'Ogre Zombie (cr 2, mm 316)',
+                                        'Zombie (cr 1/4, mm 316)'
+                                        ]
+                                    )
+        # combat type
+        self.assertEqual(combat_list, ['deadly'])
+        # xp amount
+        self.assertEqual(xp_list, ['500'])
 
 
     # extract book details for 4e and 5e
@@ -417,7 +438,7 @@ class AI(TestCase):
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_suggest_a_bbeg_via_ai(self, mock_send_prompt):
         mock_send_prompt.return_value = "I am an AI response!"
-        response = ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar")
+        response = ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar", "bar", "foo")
 
         self.assertIn(response, "I am an AI response!")
 
@@ -426,7 +447,7 @@ class AI(TestCase):
     def test_suggest_a_bbeg_via_ai_raises_system_error(self, mock_send_prompt):
         mock_send_prompt.side_effect = SystemError("error")
         with self.assertRaises(SystemError):
-            ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar")
+            ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar", "bar", "foo")
 
 
     # suggest adventure hooks via ai

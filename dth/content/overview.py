@@ -21,11 +21,7 @@ def create_donjon_overview(data, settings, testmode):
         overview["special"] = "None"
     overview["blurb"] = data["history"] if "history" in data else False
     overview["dungeon_detail"] = f"{overview['floor']} floors, {overview['walls']} walls, temperature is {overview['temperature']}, and lighting is {overview['illumination']}."
-
-    if "corridor_features" in data:
-        overview["corridor_features"] = True
-
-
+    
     # AI ENHANCEMENTS
     overview["ai_enhancements"] = False
     if not testmode:
@@ -46,7 +42,9 @@ def create_donjon_overview(data, settings, testmode):
         overview["bbeg_and_lair"] = suggest_a_bbeg_via_ai(
                                                     settings["ruleset_nice"],
                                                     overview["blurb"],
-                                                    overview["dungeon_detail"]
+                                                    overview["dungeon_detail"],
+                                                    settings["party_size"],
+                                                    settings["dungeon_level"]
                                                 )
         overview["adventure_hooks"] = suggest_adventure_hooks_via_ai(
                                                             settings["ruleset_nice"],
