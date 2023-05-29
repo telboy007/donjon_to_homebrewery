@@ -33,7 +33,7 @@ def create_5e_statblock(monster, skipped_monsters):
         monster_statblock["armour_type"] = format_armour_type(response["armor_class"])
     else:
         monster_statblock["armor_type"] = ""
-        
+
     monster_statblock['hp'] = response["hit_points"]
     monster_statblock['hp_formula'] = response["hit_points_roll"]
 

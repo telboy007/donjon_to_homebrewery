@@ -10,8 +10,8 @@ def calculate_total_and_shared_xp(xp_list, party_size):
 
 
 def dedupe_and_sort_list_via_dict(input_list):
-        """ dedupes and sorts list using dict """
-        output_list = list(dict.fromkeys(input_list))
-        output_list.sort()
+    """ dedupes and sorts list using dict """
+    output_list = list(dict.fromkeys(input_list))
+    output_list.sort()
 
-        return output_list
+    return output_list

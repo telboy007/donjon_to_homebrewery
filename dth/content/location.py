@@ -42,7 +42,7 @@ def create_donjon_single_location(room, settings, magic_items, monster_list, com
                         continue
                     hidden_treasure.append(f"{detail.replace(NEWLINE, ' ')}.")
                 location["hidden_treasure"] = hidden_treasure
-                
+
                 # add to magic items list for the summary page
                 if settings["ruleset"] == "dnd_5e":
                     magics = add_magical_items_to_list(detail.replace(NEWLINE, " "), location["id"])
@@ -77,7 +77,7 @@ def create_donjon_single_location(room, settings, magic_items, monster_list, com
                         monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings["ruleset"], monster_list, combat_list, xp_list)
                     # add list of one or many
                     location["monster"] = occupants
-                    
+
     # parse exit details
     if "doors" in room:
         for direction, door_detail in room["doors"].items():

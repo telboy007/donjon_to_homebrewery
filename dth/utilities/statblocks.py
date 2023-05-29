@@ -56,16 +56,14 @@ def format_armour_type(armour):
     armour_list = []
     if armour[0]["type"] == "armor":
         if len(armour[0]["armor"]) > 1:
-            for type in armour[0]["armor"]:
-                armour_list.append(type["name"].lower())
+            for ac_type in armour[0]["armor"]:
+                armour_list.append(ac_type["name"].lower())
             return f"({', '.join(dedupe_and_sort_list_via_dict(armour_list))})"
-        else:
-            return f"({armour[0]['armor'][0]['name'].lower()})"
-    elif armour[0]["type"] == "natural":
+        return f"({armour[0]['armor'][0]['name'].lower()})"
+    if armour[0]["type"] == "natural":
         return "(natural)"
-    else:
-        return ""
-    
+    return ""
+
 
 def check_for_full_pages(cumulative, statblock_size, previous):
     """
@@ -77,12 +75,11 @@ def check_for_full_pages(cumulative, statblock_size, previous):
     if cumulative == 3 and int(statblock_size) == 2:
         cumulative = int(statblock_size)
         return cumulative, True
-    elif cumulative == 3 and previous == 2:
+    if cumulative == 3 and previous == 2:
         cumulative = int(statblock_size)
         return cumulative, True
-    elif cumulative == 4:
+    if cumulative == 4:
         cumulative = int(statblock_size)
         return cumulative, True
-    else:
-        cumulative += int(statblock_size)
+    cumulative += int(statblock_size)
     return cumulative, False
