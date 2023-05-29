@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ai prompts
-DUNGEON_FLAVOUR_PROMPT = "Expand the following text for a {0} dungeon adding excitement, drama and suspense in a few parapgraphs.  Only talk about details, sights and sounds of the dungeon's entrance and not inside the dungeon and make no reference to skill checks. For reference the dungeon details are {1}): {2}"
-DUNGEON_BOSS_AND_LAIR_PROMPT = "Based on following text what {0} monster should be the boss of the dungeon and what would it's lair look like based on {1}: {2}?"
-ADVENTURE_HOOKS_PROMPT = "Please suggest two adventure hooks for a {0} dungeon based on {1} and {2}, with contact points and relevant names."
+DUNGEON_FLAVOUR_PROMPT = "Expand text adding drama and suspense using 2 or 3 paragraphs in present tense. Mention details, sights and sounds of the entrance but not inside.  No reference to skill checks. Ruleset is {0}. Dungeon details are {1}: {2}"
+DUNGEON_BOSS_AND_LAIR_PROMPT = "What could be the dungeon boss based on {0} ruleset, party size of {3}, average party level of {4}, description of {1} and features of {2}.  Describe the lair and how the boss might use it to it's advantage."
+ADVENTURE_HOOKS_PROMPT = "Suggest two adventure hooks for a {0} dungeon based on {1} and {2}, with contact points and relevant names."
 
 
 def send_prompt_to_chatgpt(prompt):
@@ -20,6 +20,7 @@ def send_prompt_to_chatgpt(prompt):
         {"role": "user", "content": f"{prompt}"}
         ]
     )
+    print(completion.usage)
     return completion.choices[0].message["content"]
 
 
@@ -34,9 +35,9 @@ def expand_dungeon_overview_via_ai(rule_set, blurb, dungeon_detail):
     return response
 
 
-def suggest_a_bbeg_via_ai(rule_set, blurb, dungeon_detail):
+def suggest_a_bbeg_via_ai(rule_set, blurb, dungeon_detail, party_size, dungeon_level):
     """ Asks ChatGPT to suggest two adventure hooks for the dungeon """
-    prompt_text = DUNGEON_BOSS_AND_LAIR_PROMPT.format(rule_set, blurb, dungeon_detail)
+    prompt_text = DUNGEON_BOSS_AND_LAIR_PROMPT.format(rule_set, blurb, dungeon_detail, party_size, dungeon_level)
     try:
         response = send_prompt_to_chatgpt(prompt_text)
     except Exception as error:

@@ -45,7 +45,7 @@ def format_magic_item_name(item_name):
 def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, combat_list, xp_list):
     """ compiles ref table for monsters based on rule set """
     encounter_details = []
-    # decide if we have a list or a string to deal with
+    # wandering monsters are a list of dicts
     if isinstance(data, list):
         for item in data:
             for key, value in item.items():

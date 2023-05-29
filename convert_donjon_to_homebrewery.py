@@ -179,7 +179,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
-    # wandering monsters - certain dungeon types don't have any
+    # wandering monsters - abandoned dungeon types don't have any
     if wandering_monsters["monsters"]:
         outfile.write("### Random Encounters\n")
 

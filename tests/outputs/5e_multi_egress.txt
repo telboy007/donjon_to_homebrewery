@@ -1,0 +1,772 @@
+{{margin-top:225px}}
+{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px
+# The Forsaken Prison of Annihilation
+:
+##### The dungeon was created by yuan-ti as a mine. It became cursed by the gods, and has lain empty for many years until recently.
+:::
+##### A randomly generated D&D 5E donjon dungeon for a party size of 6 and APL10
+:::
+##### Created using [Homebrewery](https://homebrewery.naturalcrit.com), [Donjon](https://donjon.bin.sh) and [donjon_to_homebrewery](https://github.com/telboy007/donjon_to_homebrewery)
+}}
+\page
+{{pageNumber,auto}}
+## Overview
+### Features
+The dungeon has the following features, these may include skill checks to perform certain actions.
+{{descriptive
+#### General Features
+| Type | Detail |
+|:--|:--|
+| Floors | Smooth Stone |
+| Walls | Masonry (DC 15 to climb) |
+| Temperature | Cool |
+| Lighting | Shadowy (phosphorescent fungus or candles every 20 ft.) |
+| Special | None |
+}}
+Some of the corridors marked on the map have special features detailed below.
+{{descriptive
+#### Corridor Features
+| Type | Detail |
+|:--|:--|
+| a | Someone has scrawled "Upon the Twilight of Lightning, in the Marsh of Crystal, the Scarred Oak shall be restored" here |
+| c | A narrow shaft descends from the corridor into a magical cyst below |
+| e | An iron chandelier hangs from the ceiling here |
+| i | A tapping sound fills the corridor |
+| m | Acid drips from the ceiling |
+| n | A stream of blood cuts across the corridor |
+| r | The scent of urine fills the corridor |
+| s | A 15-foot wide chasm cuts across the corridor |
+| u | An iron chandelier hangs from the ceiling here |
+| v | Earthmaw Trap: DC 10 to find, DC 10 to disable;     +6 to hit against one target, 4d10 piercing damage |
+| w | Ice Spear Trap: DC 20 to find, DC 15 to disable;     +6 to hit against one target, 4d10 cold damage |
+| x | Poison Gas Trap: DC 15 to find, DC 15 to disable;     affects all targets within a 10 ft. square area, DC 13 save or take 4d10 poison damage |
+| z | An unidentifiable odor fills the corridor |
+}}
+### Random Encounters
+There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
+{{classTable,frame
+#### Wandering Monsters
+| Roll | Detail |
+|:--|:--|
+| 1 | Ogre Battering Ram (cr 4, motm 200, mtf 220) and 6 x Ogre (cr 2, mm 237); easy, 3800 xp, wielding bizarre eldritch powers |
+| 2 | Stone Giant (cr 7, mm 156) and 2 x Cave Bear (cr 2, mm 334); easy, 3800 xp, searching for an object stolen from their lair |
+| 3 | Ogre Bolt Launcher (cr 2, motm 200, mtf 220) and 6 x Ogre (cr 2, mm 237); easy, 3150 xp, lost and desperate |
+| 4 | 2 x Troll (cr 5, mm 291); easy, 3600 xp, lost and desperate |
+| 5 | 10 x Bugbear (cr 1, mm 33); easy, 2000 xp, tracking the party |
+| 6 | Hobgoblin Warlord (cr 6, mm 187) and 10 x Hobgoblin (cr 1/2, mm 186); medium, 3300 xp, lost and desperate |
+}}
+{{footnote OVERVIEW}}
+\page
+{{pageNumber,auto}}
+## Locations
+### Getting In
+There are multiple entrances into the dungeon:
+* On the GM map at ***row: 147*** and ***column: 53***, which enters the corridor from the south.
+* On the GM map at ***row: 59*** and ***column: 1***, which enters the corridor from the west.
+* On the GM map at ***row: 147*** and ***column: 33***, which enters the corridor from the south.
+### Room 1
+{{descriptive
+A mural of legendary monsters covers the ceiling, and several bent copper coins are scattered throughout the room.
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Archway  | 4 |
+| North | Unlocked Simple Wooden Door (10 hp)  | 2 |
+| West | Stuck Stone Door (DC 20 to break; 60 hp)  | 3 |
+:
+### Room 2
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 24 |
+| South | Unlocked Simple Wooden Door (10 hp)  | 1 |
+| West | Archway  | n/a |
+:
+### Room 3
+{{descriptive
+A stair ascends to a balcony hanging from the south wall, and someone has scrawled "Mathye was here" on the south wall.
+}}
+This room is occupied by **2 x Fomorian (cr 8, mm 136); medium, 7800 xp**
+{{treasure
+#### Treasure
+240 sp, 240 gp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Stuck Stone Door (DC 20 to break; 60 hp)  | 1 |
+| North | Trapped and Unlocked Iron Door (60 hp)  ***Trap:*** Magic Missle Trap: DC 15 to find, DC 15 to disable;     one target, 2d10 force damage | n/a |
+| South | Archway  | n/a |
+| West | Trapped and Unlocked Strong Wooden Door (20 hp)  ***Trap:*** Falling Block: DC 10 to find, DC 10 to disable;     affects all targets within a 10 ft. square area, DC 14 save or take 4d10 damage | n/a |
+:
+### Room 4
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Archway  | n/a |
+| North | Unlocked Strong Wooden Door (20 hp)  | n/a |
+| South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| West | Archway  | 1 |
+:
+### Room 5
+{{trap
+#### Trap!
+* Greater Acid Spray: DC 10 to find, DC 15 to disable;    affects all targets within a 20 ft. cone, DC 19 save or take 4d10 acid damage    for 1d4 rounds.
+}}
+{{hidden-treasure
+#### Hidden Treasure!
+* Unlocked Iron Chest (60 hp).
+* 800 cp, 6000 sp, 2100 gp, 110 pp, 4 x diamond (50 gp), bloodstone (50 gp), chalcedony (50 gp), 2 x onyx (50 gp), zircon (50 gp), Spell Scroll (Aura of Purity) (rare, dmg 200), Spell Scroll (Modify Memory) (rare, dmg 200), Potion of Gaseous Form (rare, dmg 187), Potion of Superior Healing (rare, dmg 187).
+}}
+This room is occupied by **Orc Eye of Gruumsh (cr 2, mm 247) and 15 x Orc (cr 1/2, mm 246); easy, 1950 xp**
+{{treasure
+#### Treasure
+21 sp, 130 cp, 72 gp, 9 ep
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Secret (DC 20 to find) Unlocked Simple Wooden Door (10 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | n/a |
+| South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| South | Unlocked Good Wooden Door (15 hp)  | n/a |
+| South | Secret (DC 25 to find) Unlocked Simple Wooden Door (10 hp) ***Secret:*** A bookcase and concealed door pivots smoothly | n/a |
+| West | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 6
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
+| West | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (stuck, disadvantage to open)  | n/a |
+:
+### Room 7
+{{descriptive
+An iron chandelier hangs from the ceiling in the center of the room, and a cold spot can be felt in the south side of the room.
+}}
+This room is occupied by **Dao (cr 11, mm 143); easy, 7200 xp**
+{{treasure
+#### Treasure
+1100 gp, 40 pp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Trapped and Locked Good Wooden Door (DC 20 to open, DC 15 to break; 15 hp) (slides down)  ***Trap:*** Fire Spray: DC 10 to find, DC 10 to disable;     affects all targets within a 20 ft. cone, DC 12 save or take 4d10 fire damage | n/a |
+| South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| West | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
+| West | Stuck Good Wooden Door (DC 15 to break; 15 hp)  | n/a |
+:
+### Room 8
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| West | Trapped and Stuck Simple Wooden Door (DC 10 to break; 10 hp)  ***Trap:*** One-way Door: DC 15 to find, DC 15 to disable | n/a |
+:
+### Room 9
+This room is occupied by **Fomorian (cr 8, mm 136) and 3 x Troll (cr 5, mm 291); hard, 9300 xp**
+{{treasure
+#### Treasure
+300 cp, 6000 sp, 1800 gp, 70 pp, a bone coffer engraved with draconic scales (25 gp), a leather vest sewn with silver (25 gp), a marble plate engraved with dwarven runes (25 gp), a petrified squirrel inlaid with ornate copper scrollwork (25 gp), a pewter flower brooch inlaid with a filigree of electrum (25 gp), an agate cup engraved with dwarven axeheads (25 gp), an ivory figurine (of a god of illusions) adorned with chrysoberyl (25 gp), Adamantine Armor (chain shirt) (uncommon, dmg 150), Wand of Magic Missiles (uncommon, dmg 211)
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| South | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| West | Secret (DC 25 to find) Unlocked Good Wooden Door (15 hp) ***Secret:*** The door is located above a small stone dais and concealed behind an area of mould | 22 |
+:
+### Room 10
+{{descriptive
+A wooden ladder rests against the west wall, and someone has scrawled "Trespassers will be flayed alive" in goblin runes on the south wall.
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| North | Unlocked Good Wooden Door (15 hp)  | n/a |
+| South | Unlocked Strong Wooden Door (20 hp)  | n/a |
+:
+### Room 11
+{{descriptive
+Someone has scrawled "Death comes on silent wings" in draconic script on the east wall, and a metallic odor fills the north-west corner of the room.
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Locked Simple Wooden Door (DC 15 to open, DC 15 to break; 10 hp)  | n/a |
+| North | Secret (DC 25 to find) Locked Good Wooden Door (DC 10 to open, DC 15 to break; 15 hp) (magically reinforced, disadvantage to break) ***Secret:*** A bookcase and concealed door pivots smoothly | n/a |
+| West | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 12
+{{descriptive
+A set of demonic war masks hangs on the east wall, and the ceiling is covered with cobwebs.
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Stuck Iron Door (DC 25 to break; 60 hp)  | n/a |
+| North | Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp)  | n/a |
+| South | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| West | Unlocked Strong Wooden Door (20 hp) (slides down)  | n/a |
+:
+### Room 13
+This room is occupied by **Wraith (cr 5, mm 302) and 3 x Specter (cr 1, mm 279); easy, 2400 xp**
+{{treasure
+#### Treasure
+80 gp, 30 cp, 18 sp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp)  | n/a |
+| North | Iron Portcullis (DC 20 to lift, DC 25 to break; 60 hp)  | n/a |
+| North | Archway  | n/a |
+:
+### Room 14
+{{descriptive
+A magical shrine in the south side of the room heals all wounds of whomever sacrifices a magical item upon it (but only once), and someone has scrawled "Abandon all hope" in draconic script on the east wall.
+}}
+This room is occupied by **Ghast (cr 2, mm 148) and 7 x Ghoul (cr 1, mm 148); easy, 1850 xp**
+{{treasure
+#### Treasure
+17 sp, 41 gp, 40 cp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Unlocked Good Wooden Door (15 hp)  | n/a |
+| North | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| South | Unlocked Good Wooden Door (15 hp)  | n/a |
+| West | Archway  | n/a |
+| West | Wooden Portcullis (lift DC 20, DC 15 to break; 30 hp) (stuck, disadvantage to open)  | n/a |
+:
+### Room 15
+{{descriptive
+A rope ascends to a catwalk hanging between the north and south walls, and a set of demonic war masks hangs on the east wall.
+}}
+This room is occupied by **Fomorian (cr 8, mm 136) and 15 x Boggle (cr 1/8, motm 65, vgm 128); hard, 4275 xp**
+{{treasure
+#### Treasure
+170 gp, 12 pp, 9 ep, 119 sp, 52 cp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+| East | Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)  | n/a |
+| South | Unlocked Strong Wooden Door (20 hp)  | n/a |
+| South | Stuck Iron Door (DC 25 to break; 60 hp) (slides down)  | 19 |
+| West | Unlocked Simple Wooden Door (10 hp)  | n/a |
+:
+### Room 16
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Trapped and Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  ***Trap:*** Ice Dart Trap: DC 15 to find, DC 15 to disable;     +4 to hit against one target, 2d10 cold damage | n/a |
+| South | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| West | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| West | Archway  | n/a |
+:
+### Room 17
+This room is occupied by **14 x Mimic (cr 2, mm 220); hard, 6300 xp**
+{{treasure
+#### Treasure
+47 sp, 4 pp, 50 gp, 9 ep, 61 cp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Unlocked Iron Door (60 hp)  | n/a |
+| South | Unlocked Strong Wooden Door (20 hp)  | n/a |
+| West | Locked Strong Wooden Door (DC 10 to open, DC 20 to break; 20 hp)  | n/a |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 18
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Trapped and Stuck Iron Door (DC 25 to break; 60 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 15 to disable;     +8 to hit against one target, 4d10 piercing damage | n/a |
+| East | Unlocked Good Wooden Door (15 hp)  | n/a |
+| South | Locked Simple Wooden Door (DC 20 to open, DC 15 to break; 10 hp)  | n/a |
+| West | Unlocked Good Wooden Door (15 hp)  | n/a |
+:
+### Room 19
+{{descriptive
+Lit candles are scattered across the floor, and someone has scrawled "The curse can never be broken" on the east wall.
+}}
+This room is occupied by **15 x Mimic (cr 2, mm 220); deadly, 6750 xp**
+{{treasure
+#### Treasure
+94 sp, 97 cp, 13 ep, 20 gp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Stuck Iron Door (DC 25 to break; 60 hp) (slides down)  | 15 |
+| South | Trapped and Stuck Strong Wooden Door (DC 15 to break; 20 hp)  ***Trap:*** Acid Spray: DC 10 to find, DC 15 to disable;     affects all targets within a 20 ft. cone, DC 15 save or take 2d10 acid damage     for 1d4 rounds | n/a |
+:
+### Room 20
+This room is occupied by **Orc Eye of Gruumsh (cr 2, mm 247) and 14 x Orc (cr 1/2, mm 246); easy, 1850 xp**
+{{treasure
+#### Treasure
+114 cp, 39 gp, 66 sp, 2 pp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Locked Strong Wooden Door (DC 20 to open, DC 20 to break; 20 hp)  | n/a |
+| North | Trapped and Locked Iron Door (DC 10 to open, DC 30 to break; 60 hp)  ***Trap:*** Guillotine Blade: DC 10 to find, DC 15 to disable;     +8 to hit against one target, 4d10 slashing damage | n/a |
+| South | Trapped and Locked Simple Wooden Door (DC 10 to open, DC 15 to break; 10 hp)  ***Trap:*** Rune of Fear: DC 15 to find, DC 15 to disable;     affects all targets within 10 ft., DC 12 save or become frightened for 1d4 rounds | n/a |
+| South | Locked Stone Door (DC 15 to open, DC 25 to break; 60 hp)  | n/a |
+| West | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| West | Secret (DC 15 to find) Unlocked Simple Wooden Door (10 hp) (slides to one side) ***Secret:*** The door is located above a small stone dais and concealed within a mosaic of arcane patterns | n/a |
+:
+### Room 21
+This room is occupied by **Ogre Bolt Launcher (cr 2, motm 200, mtf 220) and 5 x Ogre (cr 2, mm 237); easy, 2700 xp**
+{{treasure
+#### Treasure
+21 ep, 42 sp, 18 cp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| North | Locked Iron Door (DC 20 to open, DC 30 to break; 60 hp)  | n/a |
+| North | Locked Good Wooden Door (DC 20 to open, DC 15 to break; 15 hp)  | n/a |
+| West | Trapped and Locked Iron Door (DC 25 to open, DC 30 to break; 60 hp)  ***Trap:*** Arrow Trap: DC 10 to find, DC 15 to disable;     +6 to hit against one target, 4d10 piercing damage | n/a |
+:
+### Room 22
+This room is occupied by **11 x Orc (cr 1/2, mm 246) and 1 x Ogre (cr 2, mm 237); easy, 1550 xp**
+{{treasure
+#### Treasure
+14 ep, 47 cp, 14 sp, 6 pp, 61 gp
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Secret (DC 25 to find) Unlocked Good Wooden Door (15 hp) ***Secret:*** The door is located above a small stone dais and concealed behind an area of mould | 9 |
+| East | Locked Stone Door (DC 25 to open, DC 25 to break; 60 hp)  | n/a |
+| South | Unlocked Simple Wooden Door (10 hp)  | n/a |
+| West | Locked Good Wooden Door (DC 15 to open, DC 15 to break; 15 hp)  | n/a |
+| West | Stuck Simple Wooden Door (DC 10 to break; 10 hp)  | n/a |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+### Room 23
+This room is occupied by **Ogre Battering Ram (cr 4, motm 200, mtf 220) and 9 x Ogre (cr 2, mm 237); medium, 5150 xp**
+{{treasure
+#### Treasure
+300 cp, 8000 sp, 3000 gp, 90 pp, 5 x diamond (50 gp), 2 x jasper (50 gp), zircon (50 gp)
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| West | Locked Simple Wooden Door (DC 25 to open, DC 15 to break; 10 hp)  | n/a |
+:
+### Room 24
+{{hidden-treasure
+#### Hidden Treasure!
+* Hidden (DC 15 to find) Locked Good Wooden Chest (DC 15 to unlock, DC 20 to break; 15 hp).
+* 1000 cp, 8000 sp, 2500 gp, 90 pp, a bone coffer engraved with a labyrinth (25 gp), a bone rod engraved with draconic scales (25 gp), a cloth vest threaded with silver (25 gp), a linen merchant's cap trimmed with squirrel fur (25 gp), a set of ivory dice with copper pips (25 gp), a small woolen carpet (25 gp), a wooden coffer set with quartz and star rose quartz (25 gp), an agate bowl set with bloodstone and jasper (25 gp), Spell Scroll (Protection from Evil and Good) (common, dmg 200).
+}}
+{{descriptive
+Part of the ceiling has collapsed into the room, and a tile labyrinth covers the floor.
+}}
+#### Exits
+| Direction | Description | To |
+|:--|:--|:--|
+| East | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+| South | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | 2 |
+| West | Stuck Strong Wooden Door (DC 15 to break; 20 hp)  | n/a |
+:
+{{footnote LOCATIONS}}
+\page
+{{pageNumber,auto}}
+## Summary
+Here you will find useful reference tables for things encountered in the dungeon.
+{{descriptive
+#### Combat details (guide only)
+**Total XP: 78725** which is 13121 xp per party member.
+| Type | Amount |
+|:--|:--|
+| Easy | 12 |
+| Medium | 3 |
+| Hard | 3 |
+| Deadly | 1 |
+}}
+:
+{{descriptive
+#### Monster List (alphabetical)
+| Monster | Book |
+|:--|:--|
+| Boggle | motm p.65 / vgm p.128 |
+| Bugbear | mm p.33 |
+| Cave Bear | mm p.334 |
+| Dao | mm p.143 |
+| Fomorian | mm p.136 |
+| Ghast | mm p.148 |
+| Ghoul | mm p.148 |
+| Hobgoblin | mm p.186 |
+| Hobgoblin Warlord | mm p.187 |
+| Mimic | mm p.220 |
+| Ogre | mm p.237 |
+| Ogre Battering Ram | motm p.200 / mtf p.220 |
+| Ogre Bolt Launcher | motm p.200 / mtf p.220 |
+| Orc | mm p.246 |
+| Orc Eye of Gruumsh | mm p.247 |
+| Specter | mm p.279 |
+| Stone Giant | mm p.156 |
+| Troll | mm p.291 |
+| Wraith | mm p.302 |
+}}
+:
+{{descriptive
+#### Magic Items (alphabetical)
+| Item | Book | Room |
+|:--|:--|--:|
+| Adamantine Armor (chain shirt) **U** | dmg p.150 | 9 |
+| Potion of Gaseous Form **R** | dmg p.187 | 5 |
+| Potion of Superior Healing **R** | dmg p.187 | 5 |
+| Spell Scroll (Aura of Purity) **R** | dmg p.200 | 5 |
+| Spell Scroll (Modify Memory) **R** | dmg p.200 | 5 |
+| Spell Scroll (Protection from Evil and Good) **C** | dmg p.200 | 24 |
+| Wand of Magic Missiles **U** | dmg p.211 | 9 |
+}}
+:
+{{descriptive
+#### Magic Items (alphabetical) cont.
+| Item | Book | Room |
+|:--|:--|--:|
+}}
+{{footnote SUMMARY}}
+\page
+{{pageNumber,auto}}
+# Stat Blocks (SRD only)
+{{monster,frame
+## Bugbear
+*Medium Humanoid, Chaotic Evil*
+___
+**Armor Class** :: 16 (hide armor, shield)
+**Hit Points** :: 27 (5d8+5)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|15 (+2)|14 (+2)|13 (+1)|8 (-1)|11 (+0)|9 (-1)|
+___
+**Skills** :: Stealth +6, Survival +2
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common, Goblin
+**Challenge Rating** :: 1 (200 XP)
+___
+***Brute.*** A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).
+:
+***Surprise Attack.*** If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.
+### Actions
+***Morningstar.*** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 11 (2d8 + 2) piercing damage.
+:
+***Javelin.*** Melee or Ranged Weapon Attack: +4 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 9 (2d6 + 2) piercing damage in melee or 5 (1d6 + 2) piercing damage at range.
+}}
+{{monster,frame
+## Ghast
+*Medium Undead, Chaotic Evil*
+___
+**Armor Class** :: 13 
+**Hit Points** :: 36 (8d8)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|16 (+3)|17 (+3)|10 (+0)|11 (+0)|10 (+0)|8 (-1)|
+___
+**Damage Resistances** :: necrotic
+**Damage Immunities** :: poison
+**Condition Immunities** :: poisoned, charmed, exhaustion
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common
+**Challenge Rating** :: 2 (450 XP)
+___
+***Stench.*** Any creature that starts its turn within 5 ft. of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.
+:
+***Turn Defiance.*** The ghast and any ghouls within 30 ft. of it have advantage on saving throws against effects that turn undead.
+### Actions
+***Bite.*** Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: 12 (2d8 + 3) piercing damage.
+:
+***Claws.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) slashing damage. If the target is a creature other than an undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+}}
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
+{{monster,frame
+## Ghoul
+*Medium Undead, Chaotic Evil*
+___
+**Armor Class** :: 12 
+**Hit Points** :: 22 (5d8)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|13 (+1)|15 (+2)|10 (+0)|7 (-2)|10 (+0)|6 (-2)|
+___
+**Damage Immunities** :: poison
+**Condition Immunities** :: poisoned, charmed, exhaustion
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common
+**Challenge Rating** :: 1 (200 XP)
+___
+### Actions
+***Bite.*** Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: 9 (2d6 + 2) piercing damage.
+:
+***Claws.*** Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage. If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+}}
+{{monster,frame
+## Hobgoblin
+*Medium Humanoid, Lawful Evil*
+___
+**Armor Class** :: 18 (chain mail, shield)
+**Hit Points** :: 11 (2d8+2)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|13 (+1)|12 (+1)|12 (+1)|10 (+0)|10 (+0)|9 (-1)|
+___
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common, Goblin
+**Challenge Rating** :: 1/2 (100 XP)
+___
+***Martial Advantage.*** Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't incapacitated.
+### Actions
+***Longsword.*** Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 5 (1d8 + 1) slashing damage, or 6 (1d10 + 1) slashing damage if used with two hands.
+:
+***Longbow.*** Ranged Weapon Attack: +3 to hit, range 150/600 ft., one target. Hit: 5 (1d8 + 1) piercing damage.
+}}
+{{monster,frame
+## Mimic
+*Medium Monstrosity, Neutral*
+___
+**Armor Class** :: 12 (natural)
+**Hit Points** :: 58 (9d8+18)
+**Speed** :: 15 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|17 (+3)|12 (+1)|15 (+2)|5 (-3)|13 (+1)|8 (-1)|
+___
+**Skills** :: Stealth +5
+**Damage Immunities** :: acid
+**Condition Immunities** :: prone
+**Senses** :: darkvision 60 ft., passive perception 11
+**Challenge Rating** :: 2 (450 XP)
+___
+***Shapechanger.*** The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn 't transformed. It reverts to its true form if it dies.
+:
+***Adhesive (Object Form Only).*** The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it (escape DC 13). Ability checks made to escape this grapple have disadvantage.
+:
+***False Appearance (Object Form Only).*** While the mimic remains motionless, it is indistinguishable from an ordinary object.
+:
+***Grappler.*** The mimic has advantage on attack rolls against any creature grappled by it.
+### Actions
+***Pseudopod.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage. If the mimic is in object form, the target is subjected to its Adhesive trait.
+:
+***Bite.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) acid damage.
+}}
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
+{{monster,frame
+## Ogre
+*Large Giant, Chaotic Evil*
+___
+**Armor Class** :: 11 (hide armor)
+**Hit Points** :: 59 (7d10+21)
+**Speed** :: 40 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|19 (+4)|8 (-1)|16 (+3)|5 (-3)|7 (-2)|7 (-2)|
+___
+**Senses** :: darkvision 60 ft., passive perception 8
+**Languages** :: Common, Giant
+**Challenge Rating** :: 2 (450 XP)
+___
+### Actions
+***Greatclub.*** Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage.
+:
+***Javelin.*** Melee or Ranged Weapon Attack: +6 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 11 (2d6 + 4) piercing damage.
+}}
+{{monster,frame
+## Orc
+*Medium Humanoid, Chaotic Evil*
+___
+**Armor Class** :: 13 (hide armor)
+**Hit Points** :: 15 (2d8+6)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|16 (+3)|12 (+1)|16 (+3)|7 (-2)|11 (+0)|10 (+0)|
+___
+**Skills** :: Intimidation +2
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: Common, Orc
+**Challenge Rating** :: 1/2 (100 XP)
+___
+***Aggressive.*** As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+### Actions
+***Greataxe.*** Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 9 (1d12 + 3) slashing damage.
+:
+***Javelin.*** Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage.
+}}
+{{monster,frame
+## Specter
+*Medium Undead, Chaotic Evil*
+___
+**Armor Class** :: 12 
+**Hit Points** :: 22 (5d8)
+**Speed** :: 0 ft., Fly 50 ft., Hover True
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|1 (-5)|14 (+2)|11 (+0)|10 (+0)|10 (+0)|11 (+0)|
+___
+**Damage Resistances** :: acid, cold, fire, lightning, thunder, bludgeoning, piercing, and slashing from nonmagical weapons
+**Damage Immunities** :: necrotic, poison
+**Condition Immunities** :: charmed, exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious
+**Senses** :: darkvision 60 ft., passive perception 10
+**Languages** :: understands all languages it knew in life but can't speak
+**Challenge Rating** :: 1 (200 XP)
+___
+***Incorporeal Movement.*** The specter can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+:
+***Sunlight Sensitivity.*** While in sunlight, the specter has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+### Actions
+***Life Drain.*** Melee Spell Attack: +4 to hit, reach 5 ft., one creature. Hit: 10 (3d6) necrotic damage. The target must succeed on a DC 10 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the creature finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+}}
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
+{{monster,frame
+## Stone giant
+*Huge Giant, Neutral*
+___
+**Armor Class** :: 17 (natural)
+**Hit Points** :: 126 (11d12+55)
+**Speed** :: 40 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|23 (+6)|15 (+2)|20 (+5)|10 (+0)|12 (+1)|9 (-1)|
+___
+**Saving Throws** :: Dex +5, Con +8, Wis +4
+**Skills** :: Athletics +12, Perception +4
+**Senses** :: darkvision 60 ft., passive perception 14
+**Languages** :: Giant
+**Challenge Rating** :: 7 (2900 XP)
+___
+***Stone Camouflage.*** The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+### Actions
+***Multiattack.*** The giant makes two greatclub attacks.
+:
+***Greatclub.*** Melee Weapon Attack: +9 to hit, reach 15 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage.
+:
+***Rock.*** Ranged Weapon Attack: +9 to hit, range 60/240 ft., one target. Hit: 28 (4d10 + 6) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone.
+}}
+{{monster,frame
+## Troll
+*Large Giant, Chaotic Evil*
+___
+**Armor Class** :: 15 (natural)
+**Hit Points** :: 84 (8d10+40)
+**Speed** :: 30 ft.
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|18 (+4)|13 (+1)|20 (+5)|7 (-2)|9 (-1)|7 (-2)|
+___
+**Skills** :: Perception +2
+**Senses** :: darkvision 60 ft., passive perception 12
+**Languages** :: Giant
+**Challenge Rating** :: 5 (1800 XP)
+___
+***Keen Smell.*** The troll has advantage on Wisdom (Perception) checks that rely on smell.
+:
+***Regeneration.*** The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate.
+### Actions
+***Multiattack.*** The troll makes three attacks: one with its bite and two with its claws.
+:
+***Bite.*** Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage.
+:
+***Claw.*** Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage.
+}}
+{{monster,frame
+## Wraith
+*Medium Undead, Neutral Evil*
+___
+**Armor Class** :: 13 
+**Hit Points** :: 67 (9d8+27)
+**Speed** :: 0 ft., Fly 60 ft., Hover True
+___
+|STR|DEX|CON|INT|WIS|CHA|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|6 (-2)|16 (+3)|16 (+3)|12 (+1)|14 (+2)|15 (+2)|
+___
+**Damage Resistances** :: acid, cold, fire, lightning, thunder, bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+**Damage Immunities** :: necrotic, poison
+**Condition Immunities** :: charmed, exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained
+**Senses** :: darkvision 60 ft., passive perception 12
+**Languages** :: the languages it knew in life
+**Challenge Rating** :: 5 (1800 XP)
+___
+***Incorporeal Movement.*** The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+:
+***Sunlight Sensitivity.*** While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+### Actions
+***Life Drain.*** Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 21 (4d8 + 3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+:
+***Create Specter.*** The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at one time.
+}}
+**Monsters without stat blocks**: Boggle, Cave Bear, Dao, Fomorian, Hobgoblin Warlord, Ogre Battering Ram, Ogre Bolt Launcher, Orc Eye Of Gruumsh
+{{footnote STAT BLOCKS}}
+\page
+{{pageNumber,auto}}
+{{wide
+## Settings
+Settings used to create this dungeon:
+:
+D&D 5E Random Dungeon Generator
+|||
+|:--|:--|
+|Dungeon Name|The Forsaken Prison of Annihilation|
+|Dungeon Level|10|
+|Party Size|6|
+|Motif||
+}}
+:
+|||
+|:--|:--|
+|Random Seed|355474919|
+|Dungeon Size|Colossal|
+|Dungeon Layout|Rectangle|
+|Peripheral Egress?|Many|
+|Room Layout|Sparse|
+|Room Size|Large|
+|Polymorph Rooms?|Many|
+|Doors|Standard|
+|Corridors|Labyrinth|
+|Remove Deadends?|Some|
+|Stairs?|Yes|
+|Map Style|Standard|
+|Grid|Square|
+\column
+{{footnote SETTINGS}}
