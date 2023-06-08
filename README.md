@@ -6,7 +6,7 @@
 Converts [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v3 formatted text to copy and paste.  It will add page markers to break up room locations, but some minor edits may still be required to the final document.
 
 ## Features
-* Uses AI to enhance the dungeon flavour text and suggest a boss and lair details
+* Uses AI to enhance the dungeon flavour text, suggest a boss and lair details, and adds two adventure hooks.
 * Adds any monster stat blocks that exist in the SRD to the document and lists the ones it had to skip (5e only)
 * Collects all the monsters and magical items into easy to use reference tables with sourcebook page number (5e, 4e limited)
 * Provides total XP and a breakdown of combat encounter difficulty types (5e only, 4e limited)
