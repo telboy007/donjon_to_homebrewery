@@ -24,6 +24,9 @@ def create_donjon_overview(data, settings, testmode):
 
     # AI ENHANCEMENTS
     overview["ai_enhancements"] = False
+    overview["flavour_text"] = False
+    overview["bbeg_and_lair"] = False
+    overview["adventure_hooks"] = False
     if not testmode:
         overview["ai_enhancements"] = True
         # only 5e dungeons have a description, use dungeon name for other rulesets

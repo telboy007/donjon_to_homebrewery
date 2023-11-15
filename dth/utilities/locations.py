@@ -93,15 +93,16 @@ def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, c
 
 
 def extract_book_details(book_details, infest):
-    """ split out name and source book(s) (used on monster list) - 5e and 4e only"""
+    """ split out name, cr and source book(s) (used on monster list) - 5e and 4e only"""
     if infest == "dnd_5e":
-        split = book_details.split('(')
+        split = book_details.split('(cr')
         name = split[0].strip()
         book_details = split[1].split(',')
+        cr = f"{book_details[0].strip()}"
         book = book_details[1].strip().replace(')','').replace(' ', ' p.')
         if len(book_details) > 2:
             book = f"{book} / {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
-        return name, book
+        return name, cr, book
     if infest == "dnd_4e":
         split = book_details.split('(')
         name = split[0].strip()

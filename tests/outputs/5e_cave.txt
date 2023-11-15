@@ -85,8 +85,8 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Monster List (alphabetical)
-| Monster | Book |
-|:--|:--|
+| Monster | CR | Book |
+|:--|:--|:--|
 }}
 :
 {{descriptive

@@ -227,16 +227,18 @@ class Locations(TestCase):
 
 
     def test_extract_book_details_correct_response_for_5e(self):
-        book, name = locations.extract_book_details(MONSTER_DETAIL_5E, "dnd_5e")
+        book, cr, name = locations.extract_book_details(MONSTER_DETAIL_5E, "dnd_5e")
 
         self.assertEqual(book, "Firenewt Warlock of Imix")
+        self.assertEqual(cr, "1")
         self.assertEqual(name, "vgm p.143")
 
 
     def test_extract_book_details_correct_response_multi_sourcebooks_for_5e(self):
-        book, name = locations.extract_book_details(MULTI_MONSTER_SOURCEBOOK_5E, "dnd_5e")
+        book, cr, name = locations.extract_book_details(MULTI_MONSTER_SOURCEBOOK_5E, "dnd_5e")
 
         self.assertEqual(book, "Drow House Captain")
+        self.assertEqual(cr, "9")
         self.assertEqual(name, "mtf p.184 / vgm p.154")
 
 

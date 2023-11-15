@@ -5,7 +5,16 @@ from dth.utilities.locations import sum_up_treasure, add_magical_items_to_list, 
 NEWLINE = '\n'
 
 
-def create_donjon_single_location(room, settings, magic_items, monster_list, combat_list, xp_list):
+def create_donjon_single_location(
+        room,
+        settings,
+        magic_items,
+        monster_list,
+        combat_list,
+        xp_list,
+        dungeon_detail,
+        dungeon_boss
+    ):
     """ 
         Create dict of single location
 
