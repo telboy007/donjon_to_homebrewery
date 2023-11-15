@@ -9,6 +9,7 @@ load_dotenv()
 DUNGEON_FLAVOUR_PROMPT = "Expand text adding drama and suspense using 2 or 3 paragraphs in present tense. Mention details, sights and sounds of the entrance but not inside.  No reference to skill checks. Ruleset is {0}. Dungeon details are {1}: {2}"
 DUNGEON_BOSS_AND_LAIR_PROMPT = "What could be the dungeon boss based on {0} ruleset, party size of {3}, average party level of {4}, description of {1} and features of {2}.  Describe the lair and how the boss might use it to it's advantage."
 ADVENTURE_HOOKS_PROMPT = "Suggest two adventure hooks for a {0} dungeon based on {1} and {2}, with contact points and relevant names."
+ENHANCE_LOCATION_TEXT_PROMPT = "Change the room description \"{2}\" to better fit flavour text \"{0}\" and boss suggestion \"{1}\". Only give a terse description of the room and don't repeat details given in the flavour text of boss suggestion."
 
 
 def send_prompt_to_chatgpt(prompt):
@@ -20,7 +21,6 @@ def send_prompt_to_chatgpt(prompt):
         {"role": "user", "content": f"{prompt}"}
         ]
     )
-    print(completion.usage)
     return completion.choices[0].message["content"]
 
 

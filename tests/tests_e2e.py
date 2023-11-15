@@ -35,11 +35,11 @@ class E2E(TestCase):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, '5e_multi_egress')}")
         with open(f"{test_output_dir}5e_multi_egress.txt", "r", encoding="utf-8") as fifth:
             check_value = len(fifth.read())
-            assert check_value == 32569, f"Should be 32569 but is {check_value}"
+            assert check_value == 32661, f"Should be 32661 but is {check_value}"
 
 
     def test_5e_cave_and_abandoned(self):
         os.system(f"{command_line.format(test_data_dir, test_output_dir, '5e_cave')}")
         with open(f"{test_output_dir}5e_cave.txt", "r", encoding="utf-8") as fifth:
             check_value = len(fifth.read())
-            assert check_value == 3764, f"Should be 3764 but is {check_value}"
+            assert check_value == 3773, f"Should be 3773 but is {check_value}"

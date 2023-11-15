@@ -273,7 +273,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                                                                                                 magic_items,
                                                                                                 monster_list,
                                                                                                 combat_list,
-                                                                                                xp_list
+                                                                                                xp_list,
+                                                                                                overview['flavour_text'],
+                                                                                                overview['bbeg_and_lair']
                                                                                                 )
             # check for page marker
             outfile.close()
@@ -397,16 +399,24 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # list out monsters in a handy reference table
         outfile.write("{{descriptive\n")
         outfile.write("#### Monster List (alphabetical)\n")
-        outfile.write("| Monster | Book |\n")
-        outfile.write("|:--|:--|\n")
+        if settings['ruleset'] == "dnd_5e":
+            outfile.write("| Monster | CR | Book |\n")
+            outfile.write("|:--|:--|:--|\n")
+        if settings['ruleset'] == "dnd_4e":
+            outfile.write("| Monster | Book |\n")
+            outfile.write("|:--|:--|\n")
 
         # dedupe and order monster list and work out number of monsters
         monster_list = dedupe_and_sort_list_via_dict(monster_list)
 
         for index, item in enumerate(monster_list):
             # split out monster and source book details
-            monster_name, sourcebook = extract_book_details(item, settings['ruleset'])
-            outfile.write(f"| {monster_name} | {sourcebook} |\n")
+            if settings['ruleset'] == "dnd_5e":
+                monster_name, monster_cr, sourcebook = extract_book_details(item, settings['ruleset'])
+                outfile.write(f"| {monster_name} | {monster_cr} | {sourcebook} |\n")
+            if settings['ruleset'] == "dnd_4e":
+                monster_name, sourcebook = extract_book_details(item, settings['ruleset'])
+                outfile.write(f"| {monster_name} | {sourcebook} |\n")
 
             # add break in table if monster list is super long
             # TODO: this is tuned for 5e only, need to adapt for 4e still
@@ -415,8 +425,12 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 outfile.write(":\n")
                 outfile.write("{{descriptive\n")
                 outfile.write("#### Monster List (alphabetical) cont.\n")
-                outfile.write("| Monster | Book |\n")
-                outfile.write("|:--|:--|\n")
+                if settings['ruleset'] == "dnd_5e":
+                    outfile.write("| Monster | CR | Book |\n")
+                    outfile.write("|:--|:--|:--|\n")
+                if settings['ruleset'] == "dnd_4e":
+                    outfile.write("| Monster | Book |\n")
+                    outfile.write("|:--|:--|\n")
 
             # compile list of monsters for stat block api calls
             if "mm" in sourcebook:

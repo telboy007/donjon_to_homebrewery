@@ -6,9 +6,9 @@ name = "pypi"
 [packages]
 requests = "*"
 openai = "*"
-python-dotenv = "*"
 pytest = "*"
 pytest-cov = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

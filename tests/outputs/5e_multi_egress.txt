@@ -406,27 +406,27 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Monster List (alphabetical)
-| Monster | Book |
-|:--|:--|
-| Boggle | motm p.65 / vgm p.128 |
-| Bugbear | mm p.33 |
-| Cave Bear | mm p.334 |
-| Dao | mm p.143 |
-| Fomorian | mm p.136 |
-| Ghast | mm p.148 |
-| Ghoul | mm p.148 |
-| Hobgoblin | mm p.186 |
-| Hobgoblin Warlord | mm p.187 |
-| Mimic | mm p.220 |
-| Ogre | mm p.237 |
-| Ogre Battering Ram | motm p.200 / mtf p.220 |
-| Ogre Bolt Launcher | motm p.200 / mtf p.220 |
-| Orc | mm p.246 |
-| Orc Eye of Gruumsh | mm p.247 |
-| Specter | mm p.279 |
-| Stone Giant | mm p.156 |
-| Troll | mm p.291 |
-| Wraith | mm p.302 |
+| Monster | CR | Book |
+|:--|:--|:--|
+| Boggle | 1/8 | motm p.65 / vgm p.128 |
+| Bugbear | 1 | mm p.33 |
+| Cave Bear | 2 | mm p.334 |
+| Dao | 11 | mm p.143 |
+| Fomorian | 8 | mm p.136 |
+| Ghast | 2 | mm p.148 |
+| Ghoul | 1 | mm p.148 |
+| Hobgoblin | 1/2 | mm p.186 |
+| Hobgoblin Warlord | 6 | mm p.187 |
+| Mimic | 2 | mm p.220 |
+| Ogre | 2 | mm p.237 |
+| Ogre Battering Ram | 4 | motm p.200 / mtf p.220 |
+| Ogre Bolt Launcher | 2 | motm p.200 / mtf p.220 |
+| Orc | 1/2 | mm p.246 |
+| Orc Eye of Gruumsh | 2 | mm p.247 |
+| Specter | 1 | mm p.279 |
+| Stone Giant | 7 | mm p.156 |
+| Troll | 5 | mm p.291 |
+| Wraith | 5 | mm p.302 |
 }}
 :
 {{descriptive
