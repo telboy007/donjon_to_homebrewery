@@ -29,8 +29,8 @@ NOTE: filename, gm map and player map are all required fields when using the git
 
 1. Via the Actions tab click on `Generate Homebrewery Text`
 1. Click `Run Workflow`
-1. Enter google drive download link for donjon json file (required)**
-1. Provide GM and Player map hosted URLs (required)*
+1. Enter hosted link for donjon json file i.e. google drive (required)**
+1. Provide GM and Player map hosted URLs i.e. imgur (required)*
 1. Click `Run Workflow`
 1. After it completes click on your job (it gets a green tick)
 1. Scroll to the bottom to find the Hombrewery.txt file under `Aftifacts`
