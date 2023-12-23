@@ -413,9 +413,10 @@ class AI(TestCase):
     # send prompt to chatgpt
     @patch("openai.resources.chat.Completions.create")
     def test_send_prompt_to_chatgpt(self, mock_openai):
+        from openai import OpenAI
+        client = OpenAI(api_key="key")
         response = ai.send_prompt_to_chatgpt("foobar")
-
-        # We can even assert that our mocked method was called with the right parameters
+        
         self.assertIn(mock.call(model='gpt-3.5-turbo', messages=[{'role': 'user', 'content': 'foobar'}]), mock_openai.call_args_list)
         mock_openai.assert_called_once()
 
