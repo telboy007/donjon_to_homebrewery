@@ -9,6 +9,8 @@ openai = "*"
 pytest = "*"
 pytest-cov = "*"
 python-dotenv = "*"
+bs4 = "*"
+requests-html = "*"
 
 [dev-packages]
 
