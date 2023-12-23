@@ -411,7 +411,7 @@ class Statblocks(TestCase):
 class AI(TestCase):
     """ Test cases for AI helper functions """    
     # send prompt to chatgpt
-    @patch("ai.openai.ChatCompletion.create")
+    @patch("openai.resources.chat.Completions.create")
     def test_send_prompt_to_chatgpt(self, mock_openai):
         response = ai.send_prompt_to_chatgpt("foobar")
 
