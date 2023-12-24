@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 from unittest import TestCase, mock
 from unittest.mock import patch
 from dth.utilities import locations, statblocks, ai, summary
@@ -409,13 +410,15 @@ class Statblocks(TestCase):
 
 
 class AI(TestCase):
-    """ Test cases for AI helper functions """    
+    """ Test cases for AI helper functions """  
+    # mocked env variables
+    @mock.patch.dict(os.environ, {"OPENAI_API_KEY": "key"})
+
     # send prompt to chatgpt
-    @patch("ai.openai.ChatCompletion.create")
+    @patch("openai.resources.chat.Completions.create")
     def test_send_prompt_to_chatgpt(self, mock_openai):
         response = ai.send_prompt_to_chatgpt("foobar")
-
-        # We can even assert that our mocked method was called with the right parameters
+        
         self.assertIn(mock.call(model='gpt-3.5-turbo', messages=[{'role': 'user', 'content': 'foobar'}]), mock_openai.call_args_list)
         mock_openai.assert_called_once()
 
