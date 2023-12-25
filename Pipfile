@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 requests = "*"
-openai = "*"
 pytest = "*"
 pytest-cov = "*"
 python-dotenv = "*"
@@ -13,4 +12,5 @@ python-dotenv = "*"
 [dev-packages]
 
 [requires]
+openai = "0.28.1"
 python_version = "3.8"
