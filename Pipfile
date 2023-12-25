@@ -8,9 +8,9 @@ requests = "*"
 pytest = "*"
 pytest-cov = "*"
 python-dotenv = "*"
+openai = "==0.28.1"
 
 [dev-packages]
 
 [requires]
-openai = "0.28.1"
 python_version = "3.8"
