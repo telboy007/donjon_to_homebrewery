@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 requests = "*"
-openai = "*"
 pytest = "*"
 pytest-cov = "*"
 python-dotenv = "*"
+openai = "==0.28.1"
 
 [dev-packages]
 
