@@ -1,10 +1,10 @@
 """ Dict to hold details of donjon corridor features """
 
-NEWLINE = '\n'
+NEWLINE = "\n"
 
 
 def create_donjon_corridor_features(data):
-    """ Corridor features """
+    """Corridor features"""
     corridor_features = {}
     feature_list = []
 
@@ -14,7 +14,7 @@ def create_donjon_corridor_features(data):
         corridor_features["features"] = True
         # add and format features to list
         for key, val in data["corridor_features"].items():
-            feature_list.append({val['key']:val['detail'].replace(NEWLINE, ' ')})
+            feature_list.append({val["key"]: val["detail"].replace(NEWLINE, " ")})
         corridor_features["feature_list"] = feature_list
 
     return corridor_features

@@ -13,37 +13,48 @@ def sum_up_treasure(string, infest):
         result = ""
         for coin_type, values in currency.items():
             # build list of totals and coin type (string)
-            result += (f"{sum(values)} {str(coin_type)}, ")
+            result += f"{sum(values)} {str(coin_type)}, "
         return f"{str(result[:-2]).replace(',;', ',')}"
     return None
 
 
 def add_magical_items_to_list(string, room_loc):
-    """ 
-        compiles ref table for magic items - 5e only 
-        format: magic_item[name (quantity if applicable)] = dmg page number/room location id    
     """
-    magic_items = {}
-    raw_magic_items = string.split(',')
+    compiles ref table for magic items - 5e only
+    format: magic_item[name (quantity if applicable)] = dmg page number/room location id
+    """
+    magic_items = []
+    raw_magic_items = string.split(",")
     for index, raw_magic_item in enumerate(raw_magic_items):
-        if 'dmg' in raw_magic_item:
+        if "dmg" in raw_magic_item:
             item_name = format_magic_item_name(raw_magic_items[index - 1])
-            magic_items[item_name] = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
+            details = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
+            magic_items.append([item_name, details])
 
     return magic_items
 
 
 def format_magic_item_name(item_name):
-    """ nicely format magic item names """
-    if ' x ' in item_name:
-        singular_item = item_name.split(' x ')
+    """nicely format magic item names"""
+    if " x " in item_name:
+        singular_item = item_name.split(" x ")
         item_name = f"{singular_item[1].strip()} ({singular_item[0].strip()})"
 
-    return item_name.replace('(uncommon','**U**').replace('(common','**C**').replace('(rare', '**R**').replace('(very rare', '**VR**').replace('(legendary', '**L**').replace('(artifact', '**A**').strip()
+    return (
+        item_name.replace("(uncommon", "**U**")
+        .replace("(common", "**C**")
+        .replace("(rare", "**R**")
+        .replace("(very rare", "**VR**")
+        .replace("(legendary", "**L**")
+        .replace("(artifact", "**A**")
+        .strip()
+    )
 
 
-def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, combat_list, xp_list):
-    """ compiles ref table for monsters based on rule set """
+def compile_monster_and_combat_details(
+    data, rule_set, final_list_of_monsters, combat_list, xp_list
+):
+    """compiles ref table for monsters based on rule set"""
     encounter_details = []
     # wandering monsters are a list of dicts
     if isinstance(data, list):
@@ -55,57 +66,59 @@ def compile_monster_and_combat_details(data, rule_set, final_list_of_monsters, c
         encounter_details = [data]
     if rule_set == "dnd_5e":
         for encounter in encounter_details:
-            monsters, combat = encounter.split(';')
+            monsters, combat = encounter.split(";")
             # can have more than one enemy type in monsters
-            monster_list = monsters.split(' and ')
-            combat_and_xp = combat.split(',')
+            monster_list = monsters.split(" and ")
+            combat_and_xp = combat.split(",")
 
             # deal with monsters
             for monster in monster_list:
-                if ' x ' in monster:
-                    monster = monster.split(' x ')[1]
+                if " x " in monster:
+                    monster = monster.split(" x ")[1]
                 final_list_of_monsters.append(monster.strip())
 
             # deal with combats (only one combat type)
             combat_list.append(combat_and_xp[0].strip())
 
             # get xp amount and add to list (only one xp value)
-            xp_list.append(combat_and_xp[1].strip().split(' ')[0].strip())
+            xp_list.append(combat_and_xp[1].strip().split(" ")[0].strip())
 
         return final_list_of_monsters, combat_list, xp_list
     if rule_set == "dnd_4e":
         for encounter in encounter_details:
-            monsters = encounter.split(') and ')
+            monsters = encounter.split(") and ")
 
             # deal with monsters
             for monster in monsters:
-                if ' x ' in monster:
-                    monster = monster.split(' x ')[1]
-                if ', ' in monster:
-                    monster = monster.strip().split(',')
+                if " x " in monster:
+                    monster = monster.split(" x ")[1]
+                if ", " in monster:
+                    monster = monster.strip().split(",")
                 final_list_of_monsters.append(monster[0])
 
                 # get xp amount and add to list (can have more than one xp value)
-                xp_list.append(monster[1].strip().split(' ')[0].strip())
+                xp_list.append(monster[1].strip().split(" ")[0].strip())
 
         return final_list_of_monsters, combat_list, xp_list
     return [], [], []
 
 
 def extract_book_details(book_details, infest):
-    """ split out name, cr and source book(s) (used on monster list) - 5e and 4e only"""
+    """split out name, cr and source book(s) (used on monster list) - 5e and 4e only"""
     if infest == "dnd_5e":
-        split = book_details.split('(cr')
+        split = book_details.split("(cr")
         name = split[0].strip()
-        book_details = split[1].split(',')
+        book_details = split[1].split(",")
         cr = f"{book_details[0].strip()}"
-        book = book_details[1].strip().replace(')','').replace(' ', ' p.')
+        book = book_details[1].strip().replace(")", "").replace(" ", " p.")
         if len(book_details) > 2:
-            book = f"{book} / {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
+            book = (
+                f"{book}, {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
+            )
         return name, cr, book
     if infest == "dnd_4e":
-        split = book_details.split('(')
+        split = book_details.split("(")
         name = split[0].strip()
-        book = split[1].strip().replace(' ', ' p.')
+        book = split[1].strip().replace(" ", " p.")
         return name, book
     return None

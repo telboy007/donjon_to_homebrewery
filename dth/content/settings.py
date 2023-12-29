@@ -2,7 +2,7 @@
 
 
 def create_donjon_settings(data):
-    """ Settings """
+    """Settings"""
     settings = {}
 
     settings["donjon_url"] = "https://donjon.bin.sh"
@@ -31,10 +31,10 @@ def create_donjon_settings(data):
     if settings["ruleset"] == "dnd_5e":
         settings["ruleset_nice"] = "D&D 5e"
         settings["summary_page"] = True
-    elif settings['ruleset'] == "dnd_4e":
+    elif settings["ruleset"] == "dnd_4e":
         settings["ruleset_nice"] = "D&D 4e"
         settings["summary_page"] = True
-    elif settings['ruleset'] == "adnd":
+    elif settings["ruleset"] == "adnd":
         settings["ruleset_nice"] = "AD&D"
         settings["summary_page"] = False
     else:

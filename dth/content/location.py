@@ -1,31 +1,35 @@
 """ Dict to hold details of donjon locations """
 
-from dth.utilities.locations import sum_up_treasure, add_magical_items_to_list, compile_monster_and_combat_details
+from dth.utilities.locations import (
+    sum_up_treasure,
+    add_magical_items_to_list,
+    compile_monster_and_combat_details,
+)
 
-NEWLINE = '\n'
+NEWLINE = "\n"
 
 
 def create_donjon_single_location(
-        room,
-        settings,
-        magic_items,
-        monster_list,
-        combat_list,
-        xp_list,
-        dungeon_detail,
-        dungeon_boss
-    ):
-    """ 
-        Create dict of single location
+    room,
+    settings,
+    magic_items,
+    monster_list,
+    combat_list,
+    xp_list,
+    dungeon_detail,
+    dungeon_boss,
+):
+    """
+    Create dict of single location
 
-        location["id"] string
-        location["trap_detail"] list
-        location["hidden_treasure"] list
-        location["treasure"] string
-        location["features"] string
-        location["monster"] string / list (adnd)
-        location["exits"] list of dicts
-            {"direction", "exit_desc", "extra_detail", "leads_to"}
+    location["id"] string
+    location["trap_detail"] list
+    location["hidden_treasure"] list
+    location["treasure"] string
+    location["features"] string
+    location["monster"] string / list (adnd)
+    location["exits"] list of dicts
+        {"direction", "exit_desc", "extra_detail", "leads_to"}
     """
     location = {}
     trap_detail = []
@@ -54,8 +58,12 @@ def create_donjon_single_location(
 
                 # add to magic items list for the summary page
                 if settings["ruleset"] == "dnd_5e":
-                    magics = add_magical_items_to_list(detail.replace(NEWLINE, " "), location["id"])
-                    magic_items.update(magics)
+                    magics = add_magical_items_to_list(
+                        detail.replace(NEWLINE, " "), location["id"]
+                    )
+                    for item in magics:
+                        if item is not []:
+                            magic_items.append(item)
 
             # room description
             if "room_features" in room["contents"]["detail"]:
@@ -70,20 +78,42 @@ def create_donjon_single_location(
                     if thing.startswith("Treasure"):
                         if thing.count("(") == 0:
                             # treasure is just coins
-                            location["treasure"] = sum_up_treasure(thing.replace(",", ";"), settings["ruleset"])
+                            location["treasure"] = sum_up_treasure(
+                                thing.replace(",", ";"), settings["ruleset"]
+                            )
                         else:
                             # treasure has art objects & possibly magic items
-                            location["treasure"] = thing.replace(NEWLINE, " ").replace("Treasure: ", "")
+                            location["treasure"] = thing.replace(NEWLINE, " ").replace(
+                                "Treasure: ", ""
+                            )
 
                             # add to magic items list for the summary page
-                            if settings['ruleset'] == "dnd_5e":
-                                magics = add_magical_items_to_list(thing.replace(NEWLINE, " ").replace("Treasure: ", ""), location["id"])
-                                magic_items.update(magics)
+                            if settings["ruleset"] == "dnd_5e":
+                                magics = add_magical_items_to_list(
+                                    thing.replace(NEWLINE, " ").replace(
+                                        "Treasure: ", ""
+                                    ),
+                                    location["id"],
+                                )
+
+                                for item in magics:
+                                    if item is not []:
+                                        magic_items.append(item)
                     else:
                         # adnd can have a lot of NPCs in the same location
                         occupants.append(thing)
                         # add monster, combat types and xp to global lists
-                        monster_list, combat_list, xp_list = compile_monster_and_combat_details(thing, settings["ruleset"], monster_list, combat_list, xp_list)
+                        (
+                            monster_list,
+                            combat_list,
+                            xp_list,
+                        ) = compile_monster_and_combat_details(
+                            thing,
+                            settings["ruleset"],
+                            monster_list,
+                            combat_list,
+                            xp_list,
+                        )
                     # add list of one or many
                     location["monster"] = occupants
 
@@ -97,16 +127,32 @@ def create_donjon_single_location(
                     if "trap" in detail:
                         DESC += f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
                     else:
-                        DESC += f"***Secret:*** {detail['secret'].replace(NEWLINE, ' ')}"
+                        DESC += (
+                            f"***Secret:*** {detail['secret'].replace(NEWLINE, ' ')}"
+                        )
                 if detail["type"] == "trapped":
                     if "trap" in detail:
                         DESC += f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
                     else:
                         DESC += " ***Trap***: Already disarmed."
                 if "out_id" in detail:
-                    exits.append({"direction": direction.capitalize(), "exit_desc": detail["desc"], "extra_detail": DESC, "leads_to": detail["out_id"]})
+                    exits.append(
+                        {
+                            "direction": direction.capitalize(),
+                            "exit_desc": detail["desc"],
+                            "extra_detail": DESC,
+                            "leads_to": detail["out_id"],
+                        }
+                    )
                 else:
-                    exits.append({"direction": direction.capitalize(), "exit_desc": detail["desc"], "extra_detail": DESC, "leads_to": "n/a"})
+                    exits.append(
+                        {
+                            "direction": direction.capitalize(),
+                            "exit_desc": detail["desc"],
+                            "extra_detail": DESC,
+                            "leads_to": "n/a",
+                        }
+                    )
         location["exits"] = exits
 
     return location, magic_items, monster_list, combat_list, xp_list
