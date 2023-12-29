@@ -4,7 +4,7 @@ from dth.utilities.summary import dedupe_and_sort_list_via_dict
 
 
 def request_monster_statblock(monster_name):
-    """ make request to dnd5e api to get json formatted monster statblock """
+    """make request to dnd5e api to get json formatted monster statblock"""
     url = f"https://www.dnd5eapi.co/api/monsters/{monster_name}"
     response = requests.get(url)
 
@@ -14,27 +14,27 @@ def request_monster_statblock(monster_name):
 
 
 def get_ability_modifier(value):
-    """ calculate ability modifier """
+    """calculate ability modifier"""
     if round((value - 10.1) / 2) < 0:
         return f"{round((value - 10.1) / 2)}"
     return f"+{round((value - 10.1) / 2)}"
 
 
 def extract_proficiencies_from_api_response(data):
-    """ extract the saving throw and skill check information """
+    """extract the saving throw and skill check information"""
     saving_throws = []
     skill_checks = []
 
     if "proficiencies" in data:
-        for proficiency in data['proficiencies']:
-            proficiency_name = proficiency['proficiency']['name']
-            value = proficiency['value']
+        for proficiency in data["proficiencies"]:
+            proficiency_name = proficiency["proficiency"]["name"]
+            value = proficiency["value"]
 
             if proficiency_name.startswith("Saving Throw"):
-                saving_throw_name = proficiency_name.split(':')[1].strip()
+                saving_throw_name = proficiency_name.split(":")[1].strip()
                 saving_throws.append((saving_throw_name, value))
             elif proficiency_name.startswith("Skill"):
-                skill_check_name = proficiency_name.split(':')[1].strip()
+                skill_check_name = proficiency_name.split(":")[1].strip()
                 skill_checks.append((skill_check_name, value))
 
     return saving_throws, skill_checks
@@ -52,7 +52,7 @@ def convert_low_cr_to_fraction(number):
 
 
 def format_armour_type(armour):
-    """ format armour and include all types i.e. shield """
+    """format armour and include all types i.e. shield"""
     armour_list = []
     if armour[0]["type"] == "armor":
         if len(armour[0]["armor"]) > 1:
@@ -67,10 +67,10 @@ def format_armour_type(armour):
 
 def check_for_full_pages(cumulative, statblock_size, previous):
     """
-        need to split up statblocks when:
-        current_statblocks = 3 and next is size = 2
-        current_statblocks = 3 and last one was size = 2
-        current_statblocks = 4
+    need to split up statblocks when:
+    current_statblocks = 3 and next is size = 2
+    current_statblocks = 3 and last one was size = 2
+    current_statblocks = 4
     """
     if cumulative == 3 and int(statblock_size) == 2:
         cumulative = int(statblock_size)

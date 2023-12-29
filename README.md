@@ -1,6 +1,7 @@
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![OpenAI 0.28](https://img.shields.io/badge/openai-0.28.1-blue.svg)](https://pypi.org/project/openai/0.28.1/)
 [![Homebrewery v3](https://img.shields.io/badge/homebrewery-v3-blue.svg)](https://homebrewery.naturalcrit.com/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/build.yml/badge.svg)](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/build.yml)
 
 # donjon_to_homebrewery

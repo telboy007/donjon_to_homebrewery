@@ -12,19 +12,16 @@ ADVENTURE_HOOKS_PROMPT = "Suggest two adventure hooks for a {0} dungeon based on
 
 
 def send_prompt_to_chatgpt(prompt):
-    """ Send prompt text to chatgpt and return response """
+    """Send prompt text to chatgpt and return response"""
     openai.api_key = os.getenv("CHATGPT_TOKEN")
     completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=[
-        {"role": "user", "content": f"{prompt}"}
-        ]
+        model="gpt-3.5-turbo", messages=[{"role": "user", "content": f"{prompt}"}]
     )
     return completion.choices[0].message["content"]
 
 
 def expand_dungeon_overview_via_ai(rule_set, blurb, dungeon_detail):
-    """ Asks ChatGPT to suggest a dungeon boss and lair flavour text """
+    """Asks ChatGPT to suggest a dungeon boss and lair flavour text"""
     prompt_text = DUNGEON_FLAVOUR_PROMPT.format(rule_set, blurb, dungeon_detail)
     try:
         response = send_prompt_to_chatgpt(prompt_text)
@@ -35,8 +32,10 @@ def expand_dungeon_overview_via_ai(rule_set, blurb, dungeon_detail):
 
 
 def suggest_a_bbeg_via_ai(rule_set, blurb, dungeon_detail, party_size, dungeon_level):
-    """ Asks ChatGPT to suggest two adventure hooks for the dungeon """
-    prompt_text = DUNGEON_BOSS_AND_LAIR_PROMPT.format(rule_set, blurb, dungeon_detail, party_size, dungeon_level)
+    """Asks ChatGPT to suggest two adventure hooks for the dungeon"""
+    prompt_text = DUNGEON_BOSS_AND_LAIR_PROMPT.format(
+        rule_set, blurb, dungeon_detail, party_size, dungeon_level
+    )
     try:
         response = send_prompt_to_chatgpt(prompt_text)
     except Exception as error:
@@ -46,7 +45,7 @@ def suggest_a_bbeg_via_ai(rule_set, blurb, dungeon_detail, party_size, dungeon_l
 
 
 def suggest_adventure_hooks_via_ai(rule_set, dungeon_detail, dungeon_boss):
-    """ Asks ChatGPT to suggest a dungeon boss and lair details """
+    """Asks ChatGPT to suggest a dungeon boss and lair details"""
     prompt_text = ADVENTURE_HOOKS_PROMPT.format(rule_set, dungeon_detail, dungeon_boss)
     try:
         response = send_prompt_to_chatgpt(prompt_text)

@@ -60,7 +60,7 @@ monster_list = []
 monster_names = []
 skipped_monsters = []
 combat_list = []
-magic_items = {}
+magic_items = []
 NEWLINE = '\n'
 
 
@@ -83,9 +83,10 @@ filename = args.filename
 with open(filename, encoding="utf-8") as inputfile:
     data = json.load(inputfile)
 
-# create content dicts used for title and overview sections
+# create content dicts used for title and overview sections and
+# start compiling magic items if there is a dungeon boss treasure horde
 settings = create_donjon_settings(data["settings"])
-overview = create_donjon_overview(data["details"], settings, args.testmode)
+overview, magic_items = create_donjon_overview(data["details"], settings, args.testmode)
 corridor_features = create_donjon_corridor_features(data)
 wandering_monsters = create_donjon_wandering_monsters(data)
 
@@ -206,6 +207,13 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # dungeon boss and lair details
         outfile.write("### Dungeon Boss\n")
         outfile.write(f"{overview['bbeg_and_lair']}\n")
+
+        if overview["boss_treasure"]:
+            # dungeon boss treasure horde
+            outfile.write("### Treasure Horde\n")
+            outfile.write("In addition to treasure already in the room that you pick to place the dungeon boss, the following horde can also be found:\n")
+            outfile.write(":\n")
+            outfile.write(f"{overview['boss_treasure']}\n")
 
         # check for page marker
         outfile.close()
@@ -377,7 +385,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         # 4e and 5e both have XP summaries
         outfile.write("{{descriptive\n")
-        outfile.write("#### Combat details (guide only)\n")
+        outfile.write("#### Combat details (not dungeon boss)\n")
 
         # work out xp totals
         total_xp, shared_xp = calculate_total_and_shared_xp(xp_list, settings['party_size'])
@@ -400,10 +408,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("{{descriptive\n")
         outfile.write("#### Monster List (alphabetical)\n")
         if settings['ruleset'] == "dnd_5e":
-            outfile.write("| Monster | CR | Book |\n")
+            outfile.write("| Monster | CR | Book(s) |\n")
             outfile.write("|:--|:--|:--|\n")
         if settings['ruleset'] == "dnd_4e":
-            outfile.write("| Monster | Book |\n")
+            outfile.write("| Monster | Book(s) |\n")
             outfile.write("|:--|:--|\n")
 
         # dedupe and order monster list and work out number of monsters
@@ -426,10 +434,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 outfile.write("{{descriptive\n")
                 outfile.write("#### Monster List (alphabetical) cont.\n")
                 if settings['ruleset'] == "dnd_5e":
-                    outfile.write("| Monster | CR | Book |\n")
+                    outfile.write("| Monster | CR | Book(s) |\n")
                     outfile.write("|:--|:--|:--|\n")
                 if settings['ruleset'] == "dnd_4e":
-                    outfile.write("| Monster | Book |\n")
+                    outfile.write("| Monster | Book(s) |\n")
                     outfile.write("|:--|:--|\n")
 
             # compile list of monsters for stat block api calls
@@ -453,19 +461,32 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         if settings['ruleset'] == "dnd_5e":
             outfile.write("{{descriptive\n")
             outfile.write("#### Magic Items (alphabetical)\n")
-            outfile.write("| Item | Book | Room |\n")
+            outfile.write("| Item | Book(s) | Room(s) |\n")
             outfile.write("|:--|:--|--:|\n")
-            ordered_magic_items = OrderedDict(sorted(magic_items.items()))
+
+            # sorting the magic item list of lists
+            unordered_magic_items = {}
+            for magic_item in magic_items:
+                unordered_magic_items.setdefault(magic_item[0], []).append(magic_item[1])
+            
+            ordered_magic_items = OrderedDict(sorted(unordered_magic_items.items()))
 
             SPLIT_CHECK = True
             for index, (magic_item, details) in enumerate(ordered_magic_items.items()):
-                # we need to check whether there are any long names
+                # we need to check whether there are any long magical item names
                 if len(magic_item) >= 40 and index <= SPLIT_VALUE and SPLIT_CHECK:
                     SPLIT_VALUE = round(SPLIT_VALUE / 2)
                     SPLIT_CHECK = False
                 # split out location and source book details
-                sourcebook, location = details.split('/')
-                outfile.write(f"| {magic_item} | {sourcebook} | {location} |\n")
+                sourcebook = []
+                location = []
+                for detail in details:
+                    book, loc = detail.split('/')
+                    sourcebook.append(book)
+                    location.append(loc)
+
+                # dedupes any identical sourcebooks or locations
+                outfile.write(f"| {magic_item} | {', '.join(list(dict.fromkeys(sourcebook)))} | {', '.join(list(dict.fromkeys(location)))} |\n")
 
                 # split table and continue on next column
                 if index == SPLIT_VALUE and len(ordered_magic_items) > SPLIT_VALUE:
@@ -473,7 +494,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                     outfile.write(":\n")
                     outfile.write("{{descriptive\n")
                     outfile.write("#### Magic Items (alphabetical) cont.\n")
-                    outfile.write("| Item | Book | Room |\n")
+                    outfile.write("| Item | Book(s) | Room(s) |\n")
                     outfile.write("|:--|:--|--:|\n")
 
             outfile.write("}}\n")
