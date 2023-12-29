@@ -1,16 +1,16 @@
 """ Dict to hold all settings used to generate a 5e stat block """
 
 from utilities.statblocks import (
-                            request_monster_statblock,
-                            get_ability_modifier,
-                            extract_proficiencies_from_api_response,
-                            convert_low_cr_to_fraction,
-                            format_armour_type
-                            )
+    request_monster_statblock,
+    get_ability_modifier,
+    extract_proficiencies_from_api_response,
+    convert_low_cr_to_fraction,
+    format_armour_type,
+)
 
 
 def create_5e_statblock(monster, skipped_monsters):
-    """ create dict for statblock and add not founds to skipped list """
+    """create dict for statblock and add not founds to skipped list"""
     monster_statblock = {}
     stat_block_size = 0
 
@@ -34,17 +34,17 @@ def create_5e_statblock(monster, skipped_monsters):
     else:
         monster_statblock["armor_type"] = ""
 
-    monster_statblock['hp'] = response["hit_points"]
-    monster_statblock['hp_formula'] = response["hit_points_roll"]
+    monster_statblock["hp"] = response["hit_points"]
+    monster_statblock["hp_formula"] = response["hit_points_roll"]
 
     # handle additional movement types
-    if len(response['speed']) > 1:
+    if len(response["speed"]) > 1:
         movement_types = []
-        for key, value in response['speed'].items():
+        for key, value in response["speed"].items():
             movement_types.append(f"{key.capitalize()} {value}")
-        monster_statblock["speed"] = ', '.join(movement_types).replace('Walk ', '')
+        monster_statblock["speed"] = ", ".join(movement_types).replace("Walk ", "")
     else:
-        monster_statblock["speed"] = response['speed']['walk']
+        monster_statblock["speed"] = response["speed"]["walk"]
 
     # attributes and modifiers
     monster_statblock["str"] = response["strength"]
@@ -66,32 +66,45 @@ def create_5e_statblock(monster, skipped_monsters):
         throws = []
         for key, value in saving_throws:
             throws.append(f"{key.capitalize()} +{value}")
-        monster_statblock["saving_throws"] = ', '.join(throws)
+        monster_statblock["saving_throws"] = ", ".join(throws)
 
     if skill_checks:
         skills = []
         for key, value in skill_checks:
             skills.append(f"{key.capitalize()} +{value}")
-        monster_statblock["skill_checks"] = ', '.join(skills)
+        monster_statblock["skill_checks"] = ", ".join(skills)
 
-    #resistances and immunities
+    # resistances and immunities
     if response["damage_vulnerabilities"]:
-        monster_statblock["damage_vulnerabilities"] = ', '.join(response["damage_vulnerabilities"])
+        monster_statblock["damage_vulnerabilities"] = ", ".join(
+            response["damage_vulnerabilities"]
+        )
 
     if response["damage_resistances"]:
-        monster_statblock["damage_resistances"] = ', '.join(response["damage_resistances"])
+        monster_statblock["damage_resistances"] = ", ".join(
+            response["damage_resistances"]
+        )
 
     if response["damage_immunities"]:
-        monster_statblock["damage_immunities"] = ', '.join(response["damage_immunities"])
+        monster_statblock["damage_immunities"] = ", ".join(
+            response["damage_immunities"]
+        )
 
     if response["condition_immunities"]:
         con_imm_list = []
         for condition_immunity in response["condition_immunities"]:
             con_imm_list.append(condition_immunity["index"])
-        monster_statblock["condition_immunities"] = ', '.join(con_imm_list)
+        monster_statblock["condition_immunities"] = ", ".join(con_imm_list)
 
     # extract senses
-    monster_statblock["senses"] = str(response["senses"]).replace("{", "").replace("}", "").replace("'", "").replace(":", "").replace("_", " ")
+    monster_statblock["senses"] = (
+        str(response["senses"])
+        .replace("{", "")
+        .replace("}", "")
+        .replace("'", "")
+        .replace(":", "")
+        .replace("_", " ")
+    )
 
     # languages
     if response["languages"]:
@@ -108,7 +121,7 @@ def create_5e_statblock(monster, skipped_monsters):
         special_abilities = {}
         for ability in response["special_abilities"]:
             special_abilities[ability["name"]] = ability["desc"]
-            stat_block_size += (len(ability["name"]) + len(ability["desc"]))
+            stat_block_size += len(ability["name"]) + len(ability["desc"])
         monster_statblock["special_abilities"] = special_abilities
 
     # monster actions
@@ -116,7 +129,7 @@ def create_5e_statblock(monster, skipped_monsters):
         actions = {}
         for action in response["actions"]:
             actions[action["name"]] = action["desc"]
-            stat_block_size += (len(action["name"]) + len(action["desc"]))
+            stat_block_size += len(action["name"]) + len(action["desc"])
         monster_statblock["actions"] = actions
 
     # set stat block size

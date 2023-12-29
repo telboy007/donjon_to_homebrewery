@@ -9,6 +9,7 @@ pytest = "*"
 pytest-cov = "*"
 python-dotenv = "*"
 openai = "==0.28.1"
+black = "*"
 
 [dev-packages]
 
