@@ -5,6 +5,7 @@
         },
         "pipfile-spec": 6,
         "requires": {
+            "openai": "0.28.1",
             "python_version": "3.8"
         },
         "sources": [
