@@ -9,11 +9,9 @@ pytest = "*"
 pytest-cov = "*"
 python-dotenv = "*"
 openai = "==0.28.1"
-<<<<<<< HEAD
 black = "*"
 bs4 = "*"
-=======
->>>>>>> c566f82 (Pin version of OpenAI to 0.28.1 (#37))
+requests-html = "*"
 
 [dev-packages]
 
