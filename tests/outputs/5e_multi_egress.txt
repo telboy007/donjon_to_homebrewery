@@ -406,9 +406,9 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Monster List (alphabetical)
-| Monster | CR | Book |
+| Monster | CR | Book(s) |
 |:--|:--|:--|
-| Boggle | 1/8 | motm p.65 / vgm p.128 |
+| Boggle | 1/8 | motm p.65, vgm p.128 |
 | Bugbear | 1 | mm p.33 |
 | Cave Bear | 2 | mm p.334 |
 | Dao | 11 | mm p.143 |
@@ -419,8 +419,8 @@ Here you will find useful reference tables for things encountered in the dungeon
 | Hobgoblin Warlord | 6 | mm p.187 |
 | Mimic | 2 | mm p.220 |
 | Ogre | 2 | mm p.237 |
-| Ogre Battering Ram | 4 | motm p.200 / mtf p.220 |
-| Ogre Bolt Launcher | 2 | motm p.200 / mtf p.220 |
+| Ogre Battering Ram | 4 | motm p.200, mtf p.220 |
+| Ogre Bolt Launcher | 2 | motm p.200, mtf p.220 |
 | Orc | 1/2 | mm p.246 |
 | Orc Eye of Gruumsh | 2 | mm p.247 |
 | Specter | 1 | mm p.279 |
@@ -431,7 +431,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Magic Items (alphabetical)
-| Item | Book | Room |
+| Item | Book(s) | Room(s) |
 |:--|:--|--:|
 | Adamantine Armor (chain shirt) **U** | dmg p.150 | 9 |
 | Potion of Gaseous Form **R** | dmg p.187 | 5 |
@@ -444,7 +444,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Magic Items (alphabetical) cont.
-| Item | Book | Room |
+| Item | Book(s) | Room(s) |
 |:--|:--|--:|
 }}
 {{footnote SUMMARY}}

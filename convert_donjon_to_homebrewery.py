@@ -385,7 +385,10 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         # 4e and 5e both have XP summaries
         outfile.write("{{descriptive\n")
-        outfile.write("#### Combat details (not dungeon boss)\n")
+        if overview["boss_treasure"]:
+            outfile.write("#### Combat details (not dungeon boss)\n")
+        else:
+            outfile.write("#### Combat details (guide only)\n")
 
         # work out xp totals
         total_xp, shared_xp = calculate_total_and_shared_xp(xp_list, settings['party_size'])

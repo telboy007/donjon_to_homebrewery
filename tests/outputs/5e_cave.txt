@@ -85,13 +85,13 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Monster List (alphabetical)
-| Monster | CR | Book |
+| Monster | CR | Book(s) |
 |:--|:--|:--|
 }}
 :
 {{descriptive
 #### Magic Items (alphabetical)
-| Item | Book | Room |
+| Item | Book(s) | Room(s) |
 |:--|:--|--:|
 | Wand of Polymorph **VR** | dmg p.211 | 5 |
 }}

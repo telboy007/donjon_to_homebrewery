@@ -1816,7 +1816,7 @@ Here you will find useful reference tables for things encountered in the dungeon
 :
 {{descriptive
 #### Monster List (alphabetical)
-| Monster | Book |
+| Monster | Book(s) |
 |:--|:--|
 | Abyssal Marauder | mm2 p.48 |
 | Adept of Orcus | mm3 p.95 |
