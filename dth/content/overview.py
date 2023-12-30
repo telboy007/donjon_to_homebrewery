@@ -32,6 +32,7 @@ def create_donjon_overview(data, settings, testmode):
     ] = f"{overview['floor']} floors, {overview['walls']} walls, temperature is {overview['temperature']}, and lighting is {overview['illumination']}."
 
     # AI ENHANCEMENTS
+    magic_items = []
     overview["ai_enhancements"] = False
     overview["flavour_text"] = False
     overview["bbeg_and_lair"] = False
@@ -65,7 +66,6 @@ def create_donjon_overview(data, settings, testmode):
             settings["dungeon_level"]
         )
         # add any horde magical items to global list
-        magic_items = {}
         magic_items = add_magical_items_to_list(overview["boss_treasure"], "Boss")
 
     return overview, magic_items
