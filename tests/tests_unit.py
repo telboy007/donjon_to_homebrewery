@@ -13,6 +13,7 @@ TREASURE_HORDE = (
 )
 MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187)"
 MANY_MAGICAL_ITEM = "5 x Potion of Healing (common, dmg 187)"
+MIXED_MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187), Cloak of Billowing (common, xge 136), Shadowfell Shard (rare, tce 135)"
 MULTI_MONSTER_LIST_4E = "3 x Half-Orc Death Mage (mm2 140, 250 xp) and 2 x Half-Orc Hunter (mm2 140, 200 xp)"
 MULTI_MONSTER_LIST_5E = "Firenewt Warlock of Imix (cr 1, vgm 143) and 1 x Firenewt Warrior (cr 1/2, vgm 142); medium, 300 xp"
 MONSTER_DETAIL_4E = "Dragonkin Kobold Pact-Bound Adept (dr1 227, 250 xp)"
@@ -134,6 +135,12 @@ class Locations(TestCase):
         magic_items = locations.add_magical_items_to_list(MANY_MAGICAL_ITEM, 5)
 
         self.assertEqual(magic_items, [["Potion of Healing **C** (5)", "dmg p.187/5"]])
+
+    def test_magical_items_from_different_sourcebooks_returned(self):
+        magic_items = locations.add_magical_items_to_list(MIXED_MAGICAL_ITEM, 8)
+
+        self.assertEqual(len(magic_items), 3)
+
 
     # compile monster and combat details
     def test_compile_monster_return_correct_response_for_4e(self):
