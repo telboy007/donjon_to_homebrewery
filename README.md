@@ -1,5 +1,4 @@
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
-[![OpenAI 0.28](https://img.shields.io/badge/openai-0.28.1-blue.svg)](https://pypi.org/project/openai/0.28.1/)
 [![Homebrewery v3](https://img.shields.io/badge/homebrewery-v3-blue.svg)](https://homebrewery.naturalcrit.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/build.yml/badge.svg)](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/build.yml)
@@ -49,13 +48,15 @@ NOTE: filename, gm map and player map are all required fields when using the git
 
 ## Using locally
 
-NOTE: You will need to provide your own ChatGPT API token for the AI enhancement to work, if you don't want to then use the `--testmode` CLI flag to disable it.  Add a `.env` file in your local copy of this repo and add your API token like this `CHATGPT_TOKEN="your-token-here"`.
+NOTE: You will need to provide your own ChatGPT API token for the AI enhancement to work, if you don't want to then use the `--testmode` CLI flag to disable it.  Add a `.env` file in your local copy of this repo and add your API token like this `OPENAI_API_KEY="your-token-here"`.
 
 To install:
 1. Clone repo
 1. cd into repo
-1. `pip install pipenv`
-1. `pipenv shell` (NOTE: you may need to install pyenv to install python 3.8)
+1. Create a virtual environment with `python -m venv .`
+1. Activate your vritual environment with `source bin/activate`
+1. `pip install -r requirements.txt`
+1. NOTE: you may need to install pyenv to install python 3.8
 
 To run:
 1. Copy json from donjon into repo folder

@@ -34,17 +34,18 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.8"
-        cache: 'pipenv'
+        cache: 'pip'
 
     - name: Set up environment
       run: |
-        pip install pipenv
-        pipenv install
+        pip install -r requirements.txt
 
     - name: Environmental Variables
       run: |
         touch .env
-        echo CHATGPT_TOKEN='${{ secrets.CHATGPT_TOKEN }}' >> .env
+        echo OPENAI_API_KEY='${{ secrets.OPENAI_API_KEY }}' >> .env
+        echo OPENAI_ORG='${{ secrets.OPENAI_ORG }}' >> .env
+        echo OPENAI_PROJECT_ID='${{ secrets.OPENAI_PROJECT_ID }}' >> .env
 
     - name: Generate homebrewery file
       run: |
