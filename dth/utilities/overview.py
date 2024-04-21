@@ -1,4 +1,5 @@
 """Module providing tools to generate boss loot (5e only)"""
+
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
 

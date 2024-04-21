@@ -1,4 +1,5 @@
 """Module providing chatgpt api helper functions"""
+
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -16,15 +17,18 @@ def send_prompt_to_chatgpt(prompt):
     client = OpenAI(
         api_key=os.getenv("OPENAI_API_KEY"),
         organization=os.getenv("OPENAI_ORG"),
-        project=os.getenv("OPENAI_PROJECT_ID")
+        project=os.getenv("OPENAI_PROJECT_ID"),
     )
 
     completion = client.chat.completions.create(
-        model="gpt-3.5-turbo", 
+        model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are helping enhance a D&D 5e adventure by providing evocative and dramatic suggestions."},
-            {"role": "user", "content": f"{prompt}"}
-        ]
+            {
+                "role": "system",
+                "content": "You are helping enhance a D&D 5e adventure by providing evocative and dramatic suggestions.",
+            },
+            {"role": "user", "content": f"{prompt}"},
+        ],
     )
     return completion.choices[0].message.content
 

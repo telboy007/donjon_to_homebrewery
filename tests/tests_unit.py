@@ -142,7 +142,6 @@ class Locations(TestCase):
 
         self.assertEqual(len(magic_items), 3)
 
-
     # compile monster and combat details
     def test_compile_monster_return_correct_response_for_4e(self):
         (

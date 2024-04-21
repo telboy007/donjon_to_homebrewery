@@ -1,4 +1,5 @@
 """Module providing statblock & dnd api helper functions"""
+
 import requests
 from dth.utilities.summary import dedupe_and_sort_list_via_dict
 
