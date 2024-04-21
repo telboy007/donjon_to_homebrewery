@@ -5,12 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    organization=os.getenv("OPENAI_ORG"),
-    project=os.getenv("OPENAI_PROJECT_ID")
-)
-
 # ai prompts
 DUNGEON_FLAVOUR_PROMPT = "Enhance following maximum 3 paragraphs in present tense. Mention details, sights and sounds of the entrance but not inside the dungeon.  No reference to skill checks. Ruleset is {0}. Dungeon details are {1}: {2}"
 DUNGEON_BOSS_AND_LAIR_PROMPT = "Suggest a monster from the {0} ruleset to be the dungeon boss, party size of {3}, average party level of {4}, description of {1} and features of {2}.  Describe the lair and how the boss will use it to it's advantage."
@@ -19,6 +13,12 @@ ADVENTURE_HOOKS_PROMPT = "Suggest two adventure hooks for a {0} dungeon based on
 
 def send_prompt_to_chatgpt(prompt):
     """Send prompt text to chatgpt and return response"""
+    client = OpenAI(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        organization=os.getenv("OPENAI_ORG"),
+        project=os.getenv("OPENAI_PROJECT_ID")
+    )
+
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo", 
         messages=[
