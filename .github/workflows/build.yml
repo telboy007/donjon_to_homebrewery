@@ -22,17 +22,16 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "3.8"
-        cache: 'pipenv'
+        cache: 'pip'
 
     - name: Set up environment
       run: |
-        pip install pipenv
-        pipenv install
+        pip install -r requirements.txt
 
     - name: Run unit tests
       run: |
-        pipenv run pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
+        pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
 
     - name: Run e2e tests
       run: |
-        pipenv run pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py
+        pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py
