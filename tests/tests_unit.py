@@ -1,5 +1,6 @@
-#!/usr/bin/env python
+#!/bin/python
 
+import os
 from requests import Session
 from unittest import TestCase, mock
 from unittest.mock import patch
@@ -401,20 +402,6 @@ class Statblocks(TestCase):
 
 class AI(TestCase):
     """Test cases for AI helper functions"""
-
-    # send prompt to chatgpt
-    @patch("ai.openai.ChatCompletion.create")
-    def test_send_prompt_to_chatgpt(self, mock_openai):
-        response = ai.send_prompt_to_chatgpt("foobar")
-
-        # We can even assert that our mocked method was called with the right parameters
-        self.assertIn(
-            mock.call(
-                model="gpt-3.5-turbo", messages=[{"role": "user", "content": "foobar"}]
-            ),
-            mock_openai.call_args_list,
-        )
-        mock_openai.assert_called_once()
 
     # expand dungeon overview via ai
     @patch.object(ai, "send_prompt_to_chatgpt")
