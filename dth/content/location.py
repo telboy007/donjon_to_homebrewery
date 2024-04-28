@@ -120,25 +120,25 @@ def create_donjon_single_location(
         for direction, door_detail in room["doors"].items():
             for detail in door_detail:
                 # extra description of exit
-                DESC = ""
+                extra_detail = ""
                 if detail["type"] == "secret":
                     if "trap" in detail:
-                        DESC += f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        extra_detail += f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
                     else:
-                        DESC += (
+                        extra_detail += (
                             f"***Secret:*** {detail['secret'].replace(NEWLINE, ' ')}"
                         )
                 if detail["type"] == "trapped":
                     if "trap" in detail:
-                        DESC += f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        extra_detail += f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
                     else:
-                        DESC += " ***Trap***: Already disarmed."
+                        extra_detail += " ***Trap***: Already disarmed."
                 if "out_id" in detail:
                     exits.append(
                         {
                             "direction": direction.capitalize(),
                             "exit_desc": detail["desc"],
-                            "extra_detail": DESC,
+                            "extra_detail": extra_detail,
                             "leads_to": detail["out_id"],
                         }
                     )
@@ -147,7 +147,7 @@ def create_donjon_single_location(
                         {
                             "direction": direction.capitalize(),
                             "exit_desc": detail["desc"],
-                            "extra_detail": DESC,
+                            "extra_detail": extra_detail,
                             "leads_to": "n/a",
                         }
                     )

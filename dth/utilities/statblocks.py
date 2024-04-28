@@ -44,11 +44,7 @@ def extract_proficiencies_from_api_response(data: dict) -> tuple[list, list]:
 def convert_low_cr_to_fraction(number: int) -> str | str:
     """convert low CRs to fractions"""
     if number < 1:
-        return {
-            0.5: "1/2",
-            0.25: "1/4",
-            0.125: "1/8"
-        }.get(number)
+        return {0.5: "1/2", 0.25: "1/4", 0.125: "1/8"}.get(number)
     return f"{number}"
 
 
