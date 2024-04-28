@@ -117,13 +117,13 @@ def extract_book_details(
         split = book_details.split("(cr")
         name = split[0].strip()
         book_details = split[1].split(",")
-        cr = f"{book_details[0].strip()}"
+        challenge_rating = f"{book_details[0].strip()}"
         book = book_details[1].strip().replace(")", "").replace(" ", " p.")
         if len(book_details) > 2:
             book = (
                 f"{book}, {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
             )
-        return name, cr, book
+        return name, challenge_rating, book
     if infest == "dnd_4e":
         split = book_details.split("(")
         name = split[0].strip()

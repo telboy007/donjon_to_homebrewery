@@ -114,8 +114,7 @@ def create_5e_statblock(
         stat_block_size += len(response["languages"])
 
     # cr and xp
-    CR = convert_low_cr_to_fraction(response["challenge_rating"])
-    monster_statblock["CR"] = CR
+    monster_statblock["CR"] = convert_low_cr_to_fraction(response["challenge_rating"])
     monster_statblock["XP"] = response["xp"]
 
     # traits and special abilities

@@ -41,15 +41,14 @@ def extract_proficiencies_from_api_response(data: dict) -> tuple[list, list]:
     return saving_throws, skill_checks
 
 
-def convert_low_cr_to_fraction(number: int) -> str:
+def convert_low_cr_to_fraction(number: int) -> str | str:
     """convert low CRs to fractions"""
     if number < 1:
-        if number == 0.5:
-            return "1/2"
-        if number == 0.25:
-            return "1/4"
-        if number == 0.125:
-            return "1/8"
+        return {
+            0.5: "1/2",
+            0.25: "1/4",
+            0.125: "1/8"
+        }.get(number)
     return f"{number}"
 
 
@@ -75,15 +74,14 @@ def check_for_full_pages(
     current_statblocks = 3 and next is size = 2
     current_statblocks = 3 and last one was size = 2
     current_statblocks = 4
+    True: start new page
+    False: add to existing page
     """
     if cumulative == 3 and int(statblock_size) == 2:
-        cumulative = int(statblock_size)
-        return cumulative, True
+        return int(statblock_size), True
     if cumulative == 3 and previous == 2:
-        cumulative = int(statblock_size)
-        return cumulative, True
+        return int(statblock_size), True
     if cumulative == 4:
-        cumulative = int(statblock_size)
-        return cumulative, True
+        return int(statblock_size), True
     cumulative += int(statblock_size)
     return cumulative, False
