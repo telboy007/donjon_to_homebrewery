@@ -4,24 +4,24 @@ import requests
 from dth.utilities.summary import dedupe_and_sort_list_via_dict
 
 
-def request_monster_statblock(monster_name):
+def request_monster_statblock(monster_name: str) -> dict[str, object] | str:
     """make request to dnd5e api to get json formatted monster statblock"""
     url = f"https://www.dnd5eapi.co/api/monsters/{monster_name}"
-    response = requests.get(url)
+    response = requests.get(url, timeout=5)
 
     if response.status_code == 200:
         return response.json()
     return "not found"
 
 
-def get_ability_modifier(value):
+def get_ability_modifier(value: int) -> str | str:
     """calculate ability modifier"""
     if round((value - 10.1) / 2) < 0:
         return f"{round((value - 10.1) / 2)}"
     return f"+{round((value - 10.1) / 2)}"
 
 
-def extract_proficiencies_from_api_response(data):
+def extract_proficiencies_from_api_response(data: dict) -> tuple[list, list]:
     """extract the saving throw and skill check information"""
     saving_throws = []
     skill_checks = []
@@ -41,7 +41,8 @@ def extract_proficiencies_from_api_response(data):
     return saving_throws, skill_checks
 
 
-def convert_low_cr_to_fraction(number):
+def convert_low_cr_to_fraction(number: int) -> str:
+    """convert low CRs to fractions"""
     if number < 1:
         if number == 0.5:
             return "1/2"
@@ -52,7 +53,7 @@ def convert_low_cr_to_fraction(number):
     return f"{number}"
 
 
-def format_armour_type(armour):
+def format_armour_type(armour: dict) -> str | str | str | str:
     """format armour and include all types i.e. shield"""
     armour_list = []
     if armour[0]["type"] == "armor":
@@ -66,7 +67,9 @@ def format_armour_type(armour):
     return ""
 
 
-def check_for_full_pages(cumulative, statblock_size, previous):
+def check_for_full_pages(
+    cumulative: int, statblock_size: int, previous: int
+) -> tuple[int, bool] | tuple[int, bool] | tuple[int, bool] | tuple[int, bool]:
     """
     need to split up statblocks when:
     current_statblocks = 3 and next is size = 2

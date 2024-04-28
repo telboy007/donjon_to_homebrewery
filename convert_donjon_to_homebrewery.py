@@ -34,13 +34,15 @@ load_dotenv()
 
 
 # *** page break utilities ***
-def set_check():
+def set_check() -> str:
     """Set the initial number of characters in the file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         return len(readonly_file.read())
 
 
-def file_size(current_check, footnote, first_page_flag=False):
+def file_size(
+    current_check: str, footnote: str, first_page_flag: bool = False
+) -> tuple[str, bool]:
     """Count the current number of characters in a file"""
     # first page of some sections need a larger check value
     extra = 500 if footnote == "OVERVIEW" else 200
@@ -333,8 +335,6 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                     monster_list,
                     combat_list,
                     xp_list,
-                    overview["flavour_text"],
-                    overview["bbeg_and_lair"],
                 )
             )
             # check for page marker

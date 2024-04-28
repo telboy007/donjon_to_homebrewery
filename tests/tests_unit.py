@@ -272,7 +272,7 @@ class Statblocks(TestCase):
 
         # We can even assert that our mocked method was called with the right parameters
         self.assertIn(
-            mock.call("https://www.dnd5eapi.co/api/monsters/foobar"),
+            mock.call("https://www.dnd5eapi.co/api/monsters/foobar", timeout=5),
             mock_get.call_args_list,
         )
 
@@ -283,7 +283,7 @@ class Statblocks(TestCase):
 
         # We can even assert that our mocked method was called with the right parameters
         self.assertIn(
-            mock.call("https://www.dnd5eapi.co/api/monsters/goblin"),
+            mock.call("https://www.dnd5eapi.co/api/monsters/goblin", timeout=5),
             mock_get.call_args_list,
         )
 
@@ -408,6 +408,9 @@ class AI(TestCase):
         mock_send_prompt.return_value = "I am an AI response!"
         response = ai.expand_dungeon_overview_via_ai("foobar", "foo", "bar")
 
+        mock_send_prompt.assert_called_once_with(
+            "Enhance following maximum 3 paragraphs in present tense. Mention details, sights and sounds of the entrance but not inside the dungeon.  No reference to skill checks. Ruleset is foobar. Dungeon details are foo: bar"
+        )
         self.assertIn(response, "I am an AI response!")
 
     @patch.object(ai, "send_prompt_to_chatgpt")
@@ -420,8 +423,11 @@ class AI(TestCase):
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_suggest_a_bbeg_via_ai(self, mock_send_prompt):
         mock_send_prompt.return_value = "I am an AI response!"
-        response = ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar", "bar", "foo")
+        response = ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar", "oof", "rab")
 
+        mock_send_prompt.assert_called_once_with(
+            "Suggest a monster from the foobar ruleset to be the dungeon boss, party size of oof, average party level of rab, description of foo and features of bar.  Describe the lair and how the boss will use it to it's advantage."
+        )
         self.assertIn(response, "I am an AI response!")
 
     @patch.object(ai, "send_prompt_to_chatgpt")
@@ -436,6 +442,9 @@ class AI(TestCase):
         mock_send_prompt.return_value = "I am an AI response!"
         response = ai.suggest_adventure_hooks_via_ai("foobar", "foo", "bar")
 
+        mock_send_prompt.assert_called_once_with(
+            "Suggest two adventure hooks for a foobar dungeon based on foo and bar, with named NPC contact points."
+        )
         self.assertIn(response, "I am an AI response!")
 
     @patch.object(ai, "send_prompt_to_chatgpt")

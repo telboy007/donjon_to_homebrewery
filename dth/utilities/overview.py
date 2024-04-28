@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from requests_html import HTMLSession
 
 
-def generate_boss_treasure_horde(dungeon_level):
+def generate_boss_treasure_horde(dungeon_level: int) -> str | str:
     """Web scrape 5e donjon loot generator"""
 
     url = f"https://donjon.bin.sh/5e/random/#type=treasure;treasure-cr={dungeon_level};treasure-loot_type=treasure_hoard"
@@ -16,7 +16,6 @@ def generate_boss_treasure_horde(dungeon_level):
     soup = BeautifulSoup(response.html.html, "html.parser")
     contents = soup.find_all("div", class_="content")
 
-    if contents != []:
+    if contents:
         return contents[0].text
-    else:
-        return ""
+    return ""

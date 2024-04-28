@@ -1,18 +1,20 @@
 """ Dict to hold details of donjon settings and AI enhancements """
 
-from utilities.ai import (
+from dth.utilities.ai import (
     expand_dungeon_overview_via_ai,
     suggest_a_bbeg_via_ai,
     suggest_adventure_hooks_via_ai,
 )
-from utilities.overview import generate_boss_treasure_horde
-from utilities.locations import add_magical_items_to_list
+from dth.utilities.overview import generate_boss_treasure_horde
+from dth.utilities.locations import add_magical_items_to_list
 
 
 NEWLINE = "\n"
 
 
-def create_donjon_overview(data, settings, testmode):
+def create_donjon_overview(
+    data: dict, settings: dict, testmode: bool
+) -> tuple[dict, list]:
     """Overview and AI enhancements"""
     overview = {}
 

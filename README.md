@@ -1,4 +1,4 @@
-[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![Homebrewery v3](https://img.shields.io/badge/homebrewery-v3-blue.svg)](https://homebrewery.naturalcrit.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/build.yml/badge.svg)](https://github.com/telboy007/donjon_to_homebrewery/actions/workflows/build.yml)
@@ -56,7 +56,7 @@ To install:
 1. Create a virtual environment with `python -m venv .`
 1. Activate your vritual environment with `source bin/activate`
 1. `pip install -r requirements.txt`
-1. NOTE: you may need to install pyenv to install python 3.8
+1. NOTE: you may need to install pyenv to install python 3.10
 
 To run:
 1. Copy json from donjon into repo folder
@@ -95,4 +95,5 @@ Feel free to create your own, if you don't mind sharing you can add them via a p
 
 ## Troubleshooting:
 1. Make sure all the URLs are as stated above; google drive links have been changed into the download version, and any imgur urls have the `.png` added to the end
+1. Make sure the file has viewer rights for anyone with the link on google drive
 1. Raise an issue via Issues tab with as much detail as possible, also please provide the json / json file that is causing problems.

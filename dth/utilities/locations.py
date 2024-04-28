@@ -1,7 +1,7 @@
 """Module providing location / room helper functions"""
 
 
-def sum_up_treasure(string, infest):
+def sum_up_treasure(string: str, infest: str) -> str | None:
     """5e random dungeons can end up having lots of little currency amounts"""
     if infest == "dnd_5e":
         currency = {}
@@ -18,7 +18,7 @@ def sum_up_treasure(string, infest):
     return None
 
 
-def add_magical_items_to_list(string, room_loc):
+def add_magical_items_to_list(string: str, room_loc: int) -> list:
     """
     compiles ref table for magic items - 5e only
     donjon takes magical items from DM Guide, Xanathar and Tasha
@@ -36,7 +36,7 @@ def add_magical_items_to_list(string, room_loc):
     return magic_items
 
 
-def format_magic_item_name(item_name):
+def format_magic_item_name(item_name: str) -> str:
     """nicely format magic item names"""
     if " x " in item_name:
         singular_item = item_name.split(" x ")
@@ -54,14 +54,18 @@ def format_magic_item_name(item_name):
 
 
 def compile_monster_and_combat_details(
-    data, rule_set, final_list_of_monsters, combat_list, xp_list
-):
+    data: dict,
+    rule_set: str,
+    final_list_of_monsters: list,
+    combat_list: list,
+    xp_list: list,
+) -> tuple[list, list, list] | tuple[list, list, list] | tuple[list, list, list]:
     """compiles ref table for monsters based on rule set"""
     encounter_details = []
     # wandering monsters are a list of dicts
     if isinstance(data, list):
         for item in data:
-            for key, value in item.items():
+            for _key, value in item.items():
                 encounter_details.append(value)
     else:
         # add string as the single member of list
@@ -105,7 +109,9 @@ def compile_monster_and_combat_details(
     return [], [], []
 
 
-def extract_book_details(book_details, infest):
+def extract_book_details(
+    book_details: str, infest: str
+) -> tuple[str, int, str] | tuple[str, str] | None:
     """split out name, cr and source book(s) (used on monster list) - 5e and 4e only"""
     if infest == "dnd_5e":
         split = book_details.split("(cr")

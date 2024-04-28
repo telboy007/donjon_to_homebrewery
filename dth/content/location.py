@@ -10,15 +10,13 @@ NEWLINE = "\n"
 
 
 def create_donjon_single_location(
-    room,
-    settings,
-    magic_items,
-    monster_list,
-    combat_list,
-    xp_list,
-    dungeon_detail,
-    dungeon_boss,
-):
+    room: int,
+    settings: dict,
+    magic_items: list,
+    monster_list: list,
+    combat_list: list,
+    xp_list: list,
+) -> tuple[dict, list, list, list, list]:
     """
     Create dict of single location
 
@@ -62,7 +60,7 @@ def create_donjon_single_location(
                         detail.replace(NEWLINE, " "), location["id"]
                     )
                     for item in magics:
-                        if item is not []:
+                        if item != []:
                             magic_items.append(item)
 
             # room description
@@ -97,7 +95,7 @@ def create_donjon_single_location(
                                 )
 
                                 for item in magics:
-                                    if item is not []:
+                                    if item != []:
                                         magic_items.append(item)
                     else:
                         # adnd can have a lot of NPCs in the same location

@@ -1,6 +1,6 @@
 """ Dict to hold all settings used to generate a 5e stat block """
 
-from utilities.statblocks import (
+from dth.utilities.statblocks import (
     request_monster_statblock,
     get_ability_modifier,
     extract_proficiencies_from_api_response,
@@ -9,7 +9,9 @@ from utilities.statblocks import (
 )
 
 
-def create_5e_statblock(monster, skipped_monsters):
+def create_5e_statblock(
+    monster: dict, skipped_monsters: list
+) -> tuple[dict, list] | tuple[dict, list]:
     """create dict for statblock and add not founds to skipped list"""
     monster_statblock = {}
     stat_block_size = 0
