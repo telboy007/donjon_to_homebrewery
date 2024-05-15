@@ -130,7 +130,9 @@ def create_donjon_single_location(
                         )
                 if detail["type"] == "trapped":
                     if "trap" in detail:
-                        extra_detail += f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        extra_detail += (
+                            f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        )
                     else:
                         extra_detail += " ***Trap***: Already disarmed."
                 if "out_id" in detail:
