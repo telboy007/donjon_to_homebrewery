@@ -216,7 +216,6 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
     # dungeon graffiti
     if "graffiti" in overview:
-        print(overview["graffiti"])
         outfile.write("### Messages from the Past\n")
 
         outfile.write(
