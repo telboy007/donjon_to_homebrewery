@@ -19,7 +19,7 @@ class E2E(TestCase):
         )
         with open(f"{test_output_dir}fantasy.txt", "r", encoding="utf-8") as fantasy:
             check_value = len(fantasy.read())
-            assert check_value == 26232, f"Should be 26232 but is {check_value}"
+            assert check_value == 26236, f"Should be 26236 but is {check_value}"
 
     def test_adnd(self):
         subprocess.check_output(
@@ -27,7 +27,7 @@ class E2E(TestCase):
         )
         with open(f"{test_output_dir}adnd.txt", "r", encoding="utf-8") as adnd:
             check_value = len(adnd.read())
-            assert check_value == 82449, f"Should be 82449 but is {check_value}"
+            assert check_value == 82453, f"Should be 82453 but is {check_value}"
 
     def test_4e(self):
         subprocess.check_output(
@@ -35,7 +35,7 @@ class E2E(TestCase):
         )
         with open(f"{test_output_dir}4e.txt", "r", encoding="utf-8") as fourth:
             check_value = len(fourth.read())
-            assert check_value == 89020, f"Should be 89020 but is {check_value}"
+            assert check_value == 89024, f"Should be 89024 but is {check_value}"
 
     def test_5e_multi_egress(self):
         subprocess.check_output(
@@ -46,7 +46,7 @@ class E2E(TestCase):
             f"{test_output_dir}5e_multi_egress.txt", "r", encoding="utf-8"
         ) as fifth:
             check_value = len(fifth.read())
-            assert check_value == 32673, f"Should be 32673 but is {check_value}"
+            assert check_value == 32677, f"Should be 32677 but is {check_value}"
 
     def test_5e_cave_and_abandoned(self):
         subprocess.check_output(

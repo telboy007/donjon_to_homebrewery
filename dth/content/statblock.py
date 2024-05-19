@@ -134,7 +134,7 @@ def create_5e_statblock(
         monster_statblock["actions"] = actions
 
     # set stat block size
-    if stat_block_size >= 698:
+    if stat_block_size >= 700:
         monster_statblock["markdown_size"] = "2"
     else:
         monster_statblock["markdown_size"] = "1"

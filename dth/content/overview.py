@@ -5,7 +5,10 @@ from dth.utilities.ai import (
     suggest_a_bbeg_via_ai,
     suggest_adventure_hooks_via_ai,
 )
-from dth.utilities.overview import generate_boss_treasure_horde
+from dth.utilities.overview import (
+    generate_boss_treasure_horde,
+    generate_dungeon_graffiti,
+)
 from dth.utilities.locations import add_magical_items_to_list
 
 
@@ -33,7 +36,7 @@ def create_donjon_overview(
         f"{overview['floor']} floors, {overview['walls']} walls, temperature is {overview['temperature']}, and lighting is {overview['illumination']}."
     )
 
-    # AI ENHANCEMENTS
+    # AI & DYNAMIC ENHANCEMENTS
     magic_items = []
     overview["ai_enhancements"] = False
     overview["flavour_text"] = False
@@ -63,6 +66,8 @@ def create_donjon_overview(
         overview["adventure_hooks"] = suggest_adventure_hooks_via_ai(
             settings["ruleset_nice"], overview["blurb"], overview["bbeg_and_lair"]
         )
+        # dynamic content - rollable dungeon graffiti table
+        overview["graffiti"] = generate_dungeon_graffiti()
         # generate some boss treasure
         overview["boss_treasure"] = generate_boss_treasure_horde(
             settings["dungeon_level"]

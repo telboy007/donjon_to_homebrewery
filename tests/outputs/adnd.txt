@@ -38,7 +38,7 @@ Some of the corridors marked on the map have special features detailed below.
 There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
 #### Wandering Monsters
-| Roll | Detail |
+| Roll(d6) | Detail |
 |:--|:--|
 | 1 | 2 x Gargoyle, searching for an object stolen from their lair |
 | 2 | 2 x Shrieker, investigating a strange noise |

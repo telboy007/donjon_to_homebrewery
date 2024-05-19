@@ -34,15 +34,15 @@ load_dotenv()
 
 
 # *** page break utilities ***
-def set_check() -> str:
+def set_check() -> int:
     """Set the initial number of characters in the file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         return len(readonly_file.read())
 
 
 def file_size(
-    current_check: str, footnote: str, first_page_flag: bool = False
-) -> tuple[str, bool]:
+    current_check: int, footnote: str, first_page_flag: bool = False
+) -> tuple[int, bool]:
     """Count the current number of characters in a file"""
     # first page of some sections need a larger check value
     extra = 500 if footnote == "OVERVIEW" else 200
@@ -214,6 +214,26 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         outfile.write("}}\n")
 
+    # dungeon graffiti
+    if "graffiti" in overview:
+        print(overview["graffiti"])
+        outfile.write("### Messages from the Past\n")
+
+        outfile.write(
+            "Flavour text, red herrings, or possible hints?  Roll on this table of possible dungeon graffiti if you want to add some detail to rooms without descriptions or to add more detail to existing ones.\n"
+        )
+        outfile.write("{{classTable,frame\n")
+        outfile.write("#### Dungeon Graffiti\n")
+        # add the die size to the roll header
+        outfile.write(f'| Roll(d{len(overview["graffiti"])}) | Detail |\n')
+        outfile.write("|:--|:--|\n")
+
+        for index, graffiti in enumerate(overview["graffiti"]):
+            # index stats at 0 no add one for rollable values
+            outfile.write(f"| {index+1} | {graffiti.text} |\n")
+
+        outfile.write("}}\n")
+
     # wandering monsters - abandoned dungeon types don't have any
     if wandering_monsters["monsters"]:
         outfile.write("### Random Encounters\n")
@@ -223,13 +243,14 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         )
         outfile.write("{{classTable,frame\n")
         outfile.write("#### Wandering Monsters\n")
-        outfile.write("| Roll | Detail |\n")
+        # add the die size to the roll header
+        outfile.write(f'| Roll(d{len(wandering_monsters["monster_details"])}) | Detail |\n')
         outfile.write("|:--|:--|\n")
 
         # write out monster detail by row
         for monster in wandering_monsters["monster_details"]:
             for key, value in monster.items():
-                outfile.write(f"| {key} | {value} |\n")
+                outfile.write(f'| {key} | {value} |\n')
 
         outfile.write("}}\n")
 

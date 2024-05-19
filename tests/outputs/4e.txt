@@ -44,7 +44,7 @@ Some of the corridors marked on the map have special features detailed below.
 There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
 #### Wandering Monsters
-| Roll | Detail |
+| Roll(d6) | Detail |
 |:--|:--|
 | 1 | 3 x Dragonkin Kobold Pact-Bound Adept (dr1 227, 250 xp) and 2 x Dragonkin Kobold Defender (dr1 226, 250 xp), searching for an object stolen from their lair |
 | 2 | 7 x Poltergeist (og 150, 250 xp), wielding bizarre eldritch powers |
