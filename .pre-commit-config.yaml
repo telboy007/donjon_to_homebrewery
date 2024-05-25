@@ -2,12 +2,15 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.2.0
+    rev: v4.6.0
     hooks:
+    -   id: check-ast
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
+    -   id: requirements-txt-fixer
+    -   id: detect-private-key
 
 -   repo: local
     hooks:
@@ -36,19 +39,17 @@ repos:
 -   repo: local
     hooks:
     - id: pytest_e2e
-      name: pytest
+      name: pytest_e2e
       entry: python -m pytest --cov=. --cov-config=./tests/config/.coveragerc_e2e ./tests/tests_e2e.py
       language: system
-      types: [python]
       pass_filenames: false
       always_run: true
 
 -   repo: local
     hooks:
     - id: pytest_unit
-      name: pytest
+      name: pytest_unit
       entry: python -m pytest --cov=. --cov-config=./tests/config/.coveragerc_unit ./tests/tests_unit.py
       language: system
-      types: [python]
       pass_filenames: false
       always_run: true
