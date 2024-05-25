@@ -21,7 +21,7 @@ def get_ability_modifier(value: int) -> str | str:
     return f"+{round((value - 10.1) / 2)}"
 
 
-def extract_proficiencies_from_api_response(data: dict) -> tuple[list, list]:
+def extract_proficiencies_from_api_response(data: dict) -> tuple[str, str]:
     """extract the saving throw and skill check information"""
     saving_throws = []
     skill_checks = []
@@ -33,12 +33,13 @@ def extract_proficiencies_from_api_response(data: dict) -> tuple[list, list]:
 
             if proficiency_name.startswith("Saving Throw"):
                 saving_throw_name = proficiency_name.split(":")[1].strip()
-                saving_throws.append((saving_throw_name, value))
+                saving_throws.append(f"{saving_throw_name.capitalize()} +{value}")
             elif proficiency_name.startswith("Skill"):
                 skill_check_name = proficiency_name.split(":")[1].strip()
-                skill_checks.append((skill_check_name, value))
+                skill_checks.append(f"{skill_check_name.capitalize()} +{value}")
 
-    return saving_throws, skill_checks
+    # finally join list items to create a string
+    return ", ".join(saving_throws), ", ".join(skill_checks)
 
 
 def convert_low_cr_to_fraction(number: int) -> str | str:

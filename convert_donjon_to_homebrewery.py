@@ -243,13 +243,15 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("{{classTable,frame\n")
         outfile.write("#### Wandering Monsters\n")
         # add the die size to the roll header
-        outfile.write(f'| Roll(d{len(wandering_monsters["monster_details"])}) | Detail |\n')
+        outfile.write(
+            f'| Roll(d{len(wandering_monsters["monster_details"])}) | Detail |\n'
+        )
         outfile.write("|:--|:--|\n")
 
         # write out monster detail by row
         for monster in wandering_monsters["monster_details"]:
             for key, value in monster.items():
-                outfile.write(f'| {key} | {value} |\n')
+                outfile.write(f"| {key} | {value} |\n")
 
         outfile.write("}}\n")
 

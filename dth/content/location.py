@@ -56,12 +56,9 @@ def create_donjon_single_location(
 
                 # add to magic items list for the summary page
                 if settings["ruleset"] == "dnd_5e":
-                    magics = add_magical_items_to_list(
-                        detail.replace(NEWLINE, " "), location["id"]
+                    magic_items = add_magical_items_to_list(
+                        magic_items, detail.replace(NEWLINE, " "), location["id"]
                     )
-                    for item in magics:
-                        if item != []:
-                            magic_items.append(item)
 
             # room description
             if "room_features" in room["contents"]["detail"]:
@@ -87,16 +84,13 @@ def create_donjon_single_location(
 
                             # add to magic items list for the summary page
                             if settings["ruleset"] == "dnd_5e":
-                                magics = add_magical_items_to_list(
+                                magic_items = add_magical_items_to_list(
+                                    magic_items,
                                     thing.replace(NEWLINE, " ").replace(
                                         "Treasure: ", ""
                                     ),
                                     location["id"],
                                 )
-
-                                for item in magics:
-                                    if item != []:
-                                        magic_items.append(item)
                     else:
                         # adnd can have a lot of NPCs in the same location
                         occupants.append(thing)

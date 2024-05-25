@@ -12,9 +12,7 @@ TREASURE = "Treasure: 13 sp; 15 cp; 16 cp; 15 sp"
 TREASURE_HORDE = (
     "<html><body><div class='content'>10000 gp, 7000 sp</div></body></html>"
 )
-DUNGEON_GRAFFITI = (
-    '<div class="content">"Foo"</div><div class="content">"Bar"</div><div class="content">"Foobar"</div>'
-)
+DUNGEON_GRAFFITI = '<div class="content">"Foo"</div><div class="content">"Bar"</div><div class="content">"Foobar"</div>'
 MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187)"
 MANY_MAGICAL_ITEM = "5 x Potion of Healing (common, dmg 187)"
 MIXED_MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187), Cloak of Billowing (common, xge 136), Shadowfell Shard (rare, tce 135)"
@@ -72,6 +70,14 @@ BOTH = {
                 "url": "/api/proficiencies/skill-stealth",
             },
         },
+        {
+            "value": 11,
+            "proficiency": {
+                "index": "skill-perception",
+                "name": "Skill: Perception",
+                "url": "/api/proficiencies/skill-perception",
+            },
+        }
     ]
 }
 ARMOUR_TWO_PIECES = [
@@ -125,23 +131,25 @@ class Locations(TestCase):
 
     # add magical item to list
     def test_add_magical_items_to_list_return_empty_list(self) -> None:
-        no_magic_items = locations.add_magical_items_to_list("5 gp", 5)
+        no_magic_items = locations.add_magical_items_to_list(
+            [["Foo **R**", "xge p. 123"]], "5 gp", 5
+        )
 
-        self.assertEqual(no_magic_items, [])
+        self.assertEqual(no_magic_items, [["Foo **R**", "xge p. 123"]])
 
     def test_add_magical_items_to_list_return_list_of_lists(self) -> None:
-        magic_items = locations.add_magical_items_to_list(MAGICAL_ITEM, 10)
+        magic_items = locations.add_magical_items_to_list([], MAGICAL_ITEM, 10)
 
         self.assertEqual(magic_items, [["Potion of Fire Breath **U**", "dmg p.187/10"]])
 
     def test_add_magical_items_to_list_return_list_of_lists_with_quantity(self) -> None:
         # also tests nicely formatted magic item helper function
-        magic_items = locations.add_magical_items_to_list(MANY_MAGICAL_ITEM, 5)
+        magic_items = locations.add_magical_items_to_list([], MANY_MAGICAL_ITEM, 5)
 
         self.assertEqual(magic_items, [["Potion of Healing **C** (5)", "dmg p.187/5"]])
 
     def test_magical_items_from_different_sourcebooks_returned(self) -> None:
-        magic_items = locations.add_magical_items_to_list(MIXED_MAGICAL_ITEM, 8)
+        magic_items = locations.add_magical_items_to_list([], MIXED_MAGICAL_ITEM, 8)
 
         self.assertEqual(len(magic_items), 3)
 
@@ -314,20 +322,20 @@ class Statblocks(TestCase):
     def test_extract_proficiencies_from_api_returns_skill(self) -> None:
         save, skill = statblocks.extract_proficiencies_from_api_response(SKILL_CHECK)
 
-        self.assertEqual(save, [])
-        self.assertEqual(skill, [("Perception", 11)])
+        self.assertEqual(save, '')
+        self.assertEqual(skill, "Perception +11")
 
     def test_extract_proficiencies_from_api_returns_saving_throw(self) -> None:
         save, skill = statblocks.extract_proficiencies_from_api_response(SAVING_THROW)
 
-        self.assertEqual(save, [("DEX", 7)])
-        self.assertEqual(skill, [])
+        self.assertEqual(save, "Dex +7")
+        self.assertEqual(skill, '')
 
     def test_extract_proficiencies_from_api_returns_both(self) -> None:
         save, skill = statblocks.extract_proficiencies_from_api_response(BOTH)
 
-        self.assertEqual(save, [("CON", 10)])
-        self.assertEqual(skill, [("Stealth", 7)])
+        self.assertEqual(save, "Con +10")
+        self.assertEqual(skill, "Stealth +7, Perception +11")
 
     # convert low cr to fraction
     def test_convert_low_cr_to_fraction_returns_integer(self) -> None:

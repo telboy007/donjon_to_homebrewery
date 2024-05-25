@@ -73,6 +73,8 @@ def create_donjon_overview(
             settings["dungeon_level"]
         )
         # add any horde magical items to global list
-        magic_items = add_magical_items_to_list(overview["boss_treasure"], "Boss")
+        magic_items = add_magical_items_to_list(
+            magic_items, overview["boss_treasure"], "Boss"
+        )
 
     return overview, magic_items

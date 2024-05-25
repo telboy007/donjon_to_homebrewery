@@ -18,20 +18,25 @@ def sum_up_treasure(string: str, infest: str) -> str | None:
     return None
 
 
-def add_magical_items_to_list(string: str, room_loc: int) -> list:
+def add_magical_items_to_list(magic_items: list, string: str, room_loc: int) -> list:
     """
     compiles ref table for magic items - 5e only
     donjon takes magical items from DM Guide, Xanathar and Tasha
     format: magic_item[name (quantity if applicable)] = dmg page number/room location id
     """
-    magic_items = []
+    new_magic_items = []
     raw_magic_items = string.split(",")
     sourcebooks = ["dmg", "xge", "tce"]
     for index, raw_magic_item in enumerate(raw_magic_items):
         if any(x in raw_magic_item for x in sourcebooks):
             item_name = format_magic_item_name(raw_magic_items[index - 1])
             details = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
-            magic_items.append([item_name, details])
+            new_magic_items.append([item_name, details])
+
+    # check and add any magic items to main list
+    for item in new_magic_items:
+        if item != []:
+            magic_items.append(item)
 
     return magic_items
 
