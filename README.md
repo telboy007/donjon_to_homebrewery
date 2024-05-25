@@ -9,6 +9,7 @@ Converts [donjon](https://donjon.bin.sh) random dungeons into nice homebrewery v
 ## Features
 * Uses AI to enhance the dungeon flavour text, suggest a boss and lair details, and adds two adventure hooks.
 * Adds any monster stat blocks that exist in the SRD to the document and lists the ones it had to skip (5e only)
+* Creates a dungeon boss treasure horde and adds rollable table for extra flavour text (if AI used)
 * Collects all the monsters and magical items into easy to use reference tables with sourcebook page number (5e, 4e limited)
 * Provides total XP and a breakdown of combat encounter difficulty types (5e only, 4e limited)
 * Adds page breaks throughout the document regardless of ruleset to reduce amount of manual editing required
@@ -48,7 +49,7 @@ NOTE: filename, gm map and player map are all required fields when using the git
 
 ## Using locally
 
-NOTE: You will need to provide your own ChatGPT API token for the AI enhancement to work, if you don't want to then use the `--testmode` CLI flag to disable it.  Add a `.env` file in your local copy of this repo and add your API token like this `OPENAI_API_KEY="your-token-here"`.
+NOTE: You will need to provide your own ChatGPT API token for the AI enhancement to work, if you don't want to then use the `--testmode` CLI flag to disable it.  Add a `.env` file in your local copy of this repo and add your API token like this `OPENAI_API_KEY="your-token-here"`, use the env.sample file as a guide.
 
 To install:
 1. Clone repo

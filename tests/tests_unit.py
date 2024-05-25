@@ -1,11 +1,12 @@
 #!/bin/python
 
-import os
-from requests import Session
+"""Unit tests for utility modules"""
+
+from dataclasses import dataclass
 from unittest import TestCase, mock
 from unittest.mock import patch
+from requests import Session
 from dth.utilities import locations, statblocks, ai, summary, overview
-
 
 # locations test data
 TREASURE = "Treasure: 13 sp; 15 cp; 16 cp; 15 sp"
@@ -77,7 +78,7 @@ BOTH = {
                 "name": "Skill: Perception",
                 "url": "/api/proficiencies/skill-perception",
             },
-        }
+        },
     ]
 }
 ARMOUR_TWO_PIECES = [
@@ -111,8 +112,15 @@ NATURAL_ARMOUR = [{"type": "natural", "value": 19}]
 NO_ARMOUR = [{"type": "dex", "value": 12}]
 
 # summary test data
-xp_list = [100, 100, 100, 100, 100]
-monster_list = ["Goblin", "Adult Black Dragon", "Goblin", "Beholder", "Roper", "Goblin"]
+TEST_XP_LIST = [100, 100, 100, 100, 100]
+TEST_MONSTER_LIST = [
+    "Goblin",
+    "Adult Black Dragon",
+    "Goblin",
+    "Beholder",
+    "Roper",
+    "Goblin",
+]
 
 
 class Locations(TestCase):
@@ -131,11 +139,9 @@ class Locations(TestCase):
 
     # add magical item to list
     def test_add_magical_items_to_list_return_empty_list(self) -> None:
-        no_magic_items = locations.add_magical_items_to_list(
-            [["Foo **R**", "xge p. 123"]], "5 gp", 5
-        )
+        no_magic_items = locations.add_magical_items_to_list([], "5 gp", 5)
 
-        self.assertEqual(no_magic_items, [["Foo **R**", "xge p. 123"]])
+        self.assertEqual(no_magic_items, [])
 
     def test_add_magical_items_to_list_return_list_of_lists(self) -> None:
         magic_items = locations.add_magical_items_to_list([], MAGICAL_ITEM, 10)
@@ -263,7 +269,8 @@ class Statblocks(TestCase):
     """Test cases for statblocks helper functions"""
 
     # Mocking request to dnd api
-    def mocked_requests_get(*args, **kwargs) -> mock:
+    def mocked_requests_get(self, *args) -> mock:
+        @dataclass
         class MockResponse:
             def __init__(self, json_data, status_code):
                 self.json_data = json_data
@@ -274,7 +281,7 @@ class Statblocks(TestCase):
 
         if args[0] == "https://www.dnd5eapi.co/api/monsters/foobar":
             return MockResponse("not found", 404)
-        elif args[0] == "https://www.dnd5eapi.co/api/monsters/goblin":
+        if args[0] == "https://www.dnd5eapi.co/api/monsters/goblin":
             return MockResponse("goblin", 200)
 
         return MockResponse(None, 404)
@@ -313,7 +320,7 @@ class Statblocks(TestCase):
 
         self.assertIn(ability_modifier, "+0")
 
-    def test_get_ability_modifier_returns_zero_value(self) -> None:
+    def test_get_ability_modifier_returns_negative_value(self) -> None:
         ability_modifier = statblocks.get_ability_modifier(8)
 
         self.assertIn(ability_modifier, "-1")
@@ -322,14 +329,14 @@ class Statblocks(TestCase):
     def test_extract_proficiencies_from_api_returns_skill(self) -> None:
         save, skill = statblocks.extract_proficiencies_from_api_response(SKILL_CHECK)
 
-        self.assertEqual(save, '')
+        self.assertEqual(save, "")
         self.assertEqual(skill, "Perception +11")
 
     def test_extract_proficiencies_from_api_returns_saving_throw(self) -> None:
         save, skill = statblocks.extract_proficiencies_from_api_response(SAVING_THROW)
 
         self.assertEqual(save, "Dex +7")
-        self.assertEqual(skill, '')
+        self.assertEqual(skill, "")
 
     def test_extract_proficiencies_from_api_returns_both(self) -> None:
         save, skill = statblocks.extract_proficiencies_from_api_response(BOTH)
@@ -479,7 +486,7 @@ class Summary(TestCase):
     # check xp and shared xp totals
     def test_calculate_total_and_shared_xp(self) -> None:
         total_xp, shared_xp = summary.calculate_total_and_shared_xp(
-            xp_list, party_size=5
+            TEST_XP_LIST, party_size=5
         )
 
         self.assertEqual(total_xp, 500)
@@ -487,7 +494,7 @@ class Summary(TestCase):
 
     # check list deduper and sorter
     def test_dedupe_and_sort_list_via_dict(self) -> None:
-        sorted_list = summary.dedupe_and_sort_list_via_dict(monster_list)
+        sorted_list = summary.dedupe_and_sort_list_via_dict(TEST_MONSTER_LIST)
 
         self.assertEqual(
             sorted_list, ["Adult Black Dragon", "Beholder", "Goblin", "Roper"]
