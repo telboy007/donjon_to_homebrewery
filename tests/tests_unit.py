@@ -2,7 +2,6 @@
 
 """Unit tests for utility modules"""
 
-from dataclasses import dataclass
 from unittest import TestCase, mock
 from unittest.mock import patch
 from requests import Session
@@ -269,8 +268,7 @@ class Statblocks(TestCase):
     """Test cases for statblocks helper functions"""
 
     # Mocking request to dnd api
-    def mocked_requests_get(self, *args) -> mock:
-        @dataclass
+    def mocked_requests_get(*args, **kwargs) -> mock:
         class MockResponse:
             def __init__(self, json_data, status_code):
                 self.json_data = json_data
