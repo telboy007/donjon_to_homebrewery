@@ -75,7 +75,10 @@ NEWLINE = "\n"
 # set up command line parser
 parser = argparse.ArgumentParser(
     prog="Donjon to Homebrewery",
-    description="Converts donjon random dungeon json into v3 homebrewery markdown to copy and paste.",
+    description=(
+        "Converts donjon random dungeon json into v3 homebrewery markdown "
+        "to copy and paste."
+    ),
     epilog="See README for more details.",
 )
 
@@ -117,13 +120,15 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
     # title page start
     if args.gm_map_url:
         outfile.write(
-            f"![map]({args.gm_map_url}){{position:absolute;mix-blend-mode:color-burn;transform:rotate(-30deg);width:500%;top:-1000px;}}\n"
+            f"![map]({args.gm_map_url}){{position:absolute;mix-blend-mode:color-burn;"
+            "transform:rotate(-30deg);width:500%;top:-1000px;}}\n"
         )
     outfile.write("{{margin-top:225px}}\n")
 
     # start title css formatting
     outfile.write(
-        "{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,margin-left:-10px\n"
+        "{{wide,background-color:white,border-width:10px,border-radius:20px,padding:10px,"
+        "margin-left:-10px\n"
     )
     outfile.write(f"# {settings['dungeon_name']}\n")
 
@@ -136,11 +141,13 @@ with open(args.output_filename, "w", encoding="utf-8") as outfile:
         outfile.write(":::\n")
 
     outfile.write(
-        f"##### A randomly generated {settings['ruleset_nice'].upper()} donjon dungeon for a party size of {settings['party_size']} and APL{settings['dungeon_level']}\n"
+        f"##### A randomly generated {settings['ruleset_nice'].upper()} donjon "
+        f"dungeon for a party size of {settings['party_size']} and APL{settings['dungeon_level']}\n"
     )
     outfile.write(":::\n")
     outfile.write(
-        f"##### Created using [Homebrewery]({settings['homebrewery_url']}), [Donjon]({settings['donjon_url']}) and [donjon_to_homebrewery]({settings['dth_url']})\n"
+        f"##### Created using [Homebrewery]({settings['homebrewery_url']}), "
+        f"[Donjon]({settings['donjon_url']}) and [donjon_to_homebrewery]({settings['dth_url']})\n"
     )
     # close title css formatting
 
@@ -184,7 +191,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
     # general features
     outfile.write("### Features\n")
     outfile.write(
-        "The dungeon has the following features, these may include skill checks to perform certain actions.\n"
+        "The dungeon has the following features, these may include skill checks to perform "
+        "certain actions.\n"
     )
     outfile.write("{{descriptive\n")
     outfile.write("#### General Features\n")
@@ -219,7 +227,9 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("### Messages from the Past\n")
 
         outfile.write(
-            "Flavour text, red herrings, or possible hints?  Roll on this table of possible dungeon graffiti if you want to add some detail to rooms without descriptions or to add more detail to existing ones.\n"
+            "Flavour text, red herrings, or possible hints?  Roll on this table of possible "
+            "dungeon graffiti if you want to add some detail to rooms without descriptions or "
+            "to add more detail to existing ones.\n"
         )
         outfile.write("{{classTable,frame\n")
         outfile.write("#### Dungeon Graffiti\n")
@@ -238,7 +248,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         outfile.write("### Random Encounters\n")
 
         outfile.write(
-            "There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.\n"
+            "There are also roaming groups with specific goals, this will help you place "
+            "them in the dungeon or when the party encounter them.\n"
         )
         outfile.write("{{classTable,frame\n")
         outfile.write("#### Wandering Monsters\n")
@@ -270,7 +281,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             # dungeon boss treasure horde
             outfile.write("### Treasure Horde\n")
             outfile.write(
-                "In addition to treasure already in the room that you pick to place the dungeon boss, the following horde can also be found:\n"
+                "In addition to treasure already in the room that you pick to place the "
+                "dungeon boss, the following horde can also be found:\n"
             )
             outfile.write(":\n")
             outfile.write(f"{overview['boss_treasure']}\n")
@@ -292,10 +304,13 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
         # add some hints about tweaking the dungeon based on boss, lair and adventure hooks
         outfile.write("### Tweaking the dungeon\n")
         outfile.write(
-            "Pick a suitable location on the map to place the boss and it's lair, maybe foreshadow the lair by adding small details from it in nearby locations.\n\n"
+            "Pick a suitable location on the map to place the boss and it's lair, maybe "
+            "foreshadow the lair by adding small details from it in nearby locations.\n\n"
         )
         outfile.write(
-            "Depending on which adventure hook you choose, don't forget to tweak other elements of the dungeon accordingly, changing some of the monsters or random encounters to better reflect the general theme.\n"
+            "Depending on which adventure hook you choose, don't forget to tweak other elements "
+            "of the dungeon accordingly, changing some of the monsters or random encounters to "
+            "better reflect the general theme.\n"
         )
 
     outfile.write("{{footnote OVERVIEW}}\n")
@@ -334,11 +349,14 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
             # caves don't have a type the entrance leads into
             if "type" in egress:
                 outfile.write(
-                    f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters the {egress['type']} from the {egress['dir']}.\n"
+                    f"* On the GM map at ***row: {egress['row']}*** and ***column: "
+                    f"{egress['col']}***, which enters the {egress['type']} from the "
+                    f"{egress['dir']}.\n"
                 )
             else:
                 outfile.write(
-                    f"* On the GM map at ***row: {egress['row']}*** and ***column: {egress['col']}***, which enters from the {egress['dir']}.\n"
+                    f"* On the GM map at ***row: {egress['row']}*** and ***column: "
+                    f"{egress['col']}***, which enters from the {egress['dir']}.\n"
                 )
 
     # *** LOCATION DETAILS ***
@@ -435,7 +453,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 for way_out in location["exits"]:
                     # {"direction", "exit_desc", "extra_detail", "leads_to"}
                     outfile.write(
-                        f"| {way_out['direction']} | {way_out['exit_desc']} {way_out['extra_detail']} | {way_out['leads_to']} |\n"
+                        f"| {way_out['direction']} | {way_out['exit_desc']} "
+                        f"{way_out['extra_detail']} | {way_out['leads_to']} |\n"
                     )
 
                 outfile.write(":\n")
@@ -578,7 +597,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
                 # dedupes any identical sourcebooks or locations
                 outfile.write(
-                    f"| {magic_item} | {', '.join(list(dict.fromkeys(sourcebook)))} | {', '.join(list(dict.fromkeys(location)))} |\n"
+                    f"| {magic_item} | {', '.join(list(dict.fromkeys(sourcebook)))} | "
+                    f"{', '.join(list(dict.fromkeys(location)))} |\n"
                 )
 
                 # split table and continue on next column
@@ -637,13 +657,15 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 outfile.write("{{monster,frame\n")
                 outfile.write(f"## {monster_statblock['name']}\n")
                 outfile.write(
-                    f"*{monster_statblock['size']} {monster_statblock['type']}, {monster_statblock['alignment']}*\n"
+                    f"*{monster_statblock['size']} {monster_statblock['type']}, "
+                    f"{monster_statblock['alignment']}*\n"
                 )
                 outfile.write("___\n")
                 outfile.write(f"**Armor Class** :: {monster_statblock['ac']} ")
                 outfile.write(f"{monster_statblock['armour_type']}\n")
                 outfile.write(
-                    f"**Hit Points** :: {monster_statblock['hp']} ({monster_statblock['hp_formula']})\n"
+                    f"**Hit Points** :: {monster_statblock['hp']} "
+                    f"({monster_statblock['hp_formula']})\n"
                 )
                 outfile.write(f"**Speed** :: {monster_statblock['speed']}\n")
                 outfile.write("___\n")
@@ -678,7 +700,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                     )
                 if "damage_vulnerabilities" in monster_statblock:
                     outfile.write(
-                        f"**Damage Vulnerabilities** :: {monster_statblock['damage_vulnerabilities']}\n"
+                        "**Damage Vulnerabilities** :: "
+                        f"{monster_statblock['damage_vulnerabilities']}\n"
                     )
                 if "damage_resistances" in monster_statblock:
                     outfile.write(
@@ -690,7 +713,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                     )
                 if "damage_vulnerabilities" in monster_statblock:
                     outfile.write(
-                        f"**Damage Vulnerabilities** :: {monster_statblock['damage_vulnerabilities']}\n"
+                        "**Damage Vulnerabilities** :: "
+                        f"{monster_statblock['damage_vulnerabilities']}\n"
                     )
                 if "condition_immunities" in monster_statblock:
                     outfile.write(
@@ -702,14 +726,16 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                         f"**Languages** :: {monster_statblock['languages']}\n"
                     )
                 outfile.write(
-                    f"**Challenge Rating** :: {monster_statblock['CR']} ({monster_statblock['XP']} XP)\n"
+                    f"**Challenge Rating** :: {monster_statblock['CR']} "
+                    f"({monster_statblock['XP']} XP)\n"
                 )
                 outfile.write("___\n")
 
                 # traits and special abilities
                 if "special_abilities" in monster_statblock:
                     outfile.write(
-                        f"***{next(iter(monster_statblock['special_abilities'].keys()))}.*** {next(iter(monster_statblock['special_abilities'].values()))}\n"
+                        f"***{next(iter(monster_statblock['special_abilities'].keys()))}.*** "
+                        f"{next(iter(monster_statblock['special_abilities'].values()))}\n"
                     )
                     for index, (key, value) in enumerate(
                         list(monster_statblock["special_abilities"].items())[1:],
@@ -722,7 +748,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 if "actions" in monster_statblock:
                     outfile.write("### Actions\n")
                     outfile.write(
-                        f"***{next(iter(monster_statblock['actions'].keys()))}.*** {next(iter(monster_statblock['actions'].values()))}\n"
+                        f"***{next(iter(monster_statblock['actions'].keys()))}.*** "
+                        f"{next(iter(monster_statblock['actions'].values()))}\n"
                     )
                     for index, (key, value) in enumerate(
                         list(monster_statblock["actions"].items())[1:], start=1
@@ -734,7 +761,8 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
                 if "legendary_actions" in monster_statblock:
                     outfile.write("### Legendary Actions\n")
                     outfile.write(
-                        f"***{next(iter(monster_statblock['legendary_actions'].keys()))}.*** {next(iter(monster_statblock['legendary_actions'].values()))}\n"
+                        f"***{next(iter(monster_statblock['legendary_actions'].keys()))}.*** "
+                        f"{next(iter(monster_statblock['legendary_actions'].values()))}\n"
                     )
                     for index, (key, value) in enumerate(
                         list(monster_statblock["legendary_actions"].items())[1:],

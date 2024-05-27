@@ -26,6 +26,14 @@ MONSTER_LIST_OF_DICTS = [
         "1": "Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm 316); deadly, 500 xp, gathered around an evil shrine"
     }
 ]
+MONSTER_MULTI_LIST_OF_DICTS = [
+    {
+        "1": "Ogre Zombie (cr 2, mm 316) and 1 x Zombie (cr 1/4, mm 316); deadly, 500 xp, gathered around an evil shrine"
+    },
+    {
+        "2": "Firenewt Warrior (cr 1/2, vgm 142) and 1 x Zombie (cr 1/4, mm 316); easy, 100 xp, poking something with a stick"
+    },
+]
 
 # statblocks test data
 SAVING_THROW = {
@@ -263,12 +271,27 @@ class Locations(TestCase):
 
         self.assertEqual(response, None)
 
+    def test_get_encounter_details_for_wandering_monsters(self) -> None:
+        # check list output
+        encounter_details = locations.get_encounter_details(MONSTER_MULTI_LIST_OF_DICTS)
+
+        self.assertEqual(len(encounter_details), 2)
+        self.assertIn("Ogre Zombie (cr 2, mm 316)", encounter_details[0])
+        self.assertIn("Firenewt Warrior (cr 1/2, vgm 142)", encounter_details[1])
+
+    def test_get_encounter_details_for_location_text(self) -> None:
+        # check list output
+        encounter_details = locations.get_encounter_details(MONSTER_DETAIL_5E)
+
+        self.assertEqual(len(encounter_details), 1)
+        self.assertIn("Firenewt Warlock of Imix (cr 1, vgm 143)", encounter_details[0])
+
 
 class Statblocks(TestCase):
     """Test cases for statblocks helper functions"""
 
     # Mocking request to dnd api
-    def mocked_requests_get(*args, **kwargs) -> mock:
+    def mocked_requests_get(*args, **_kwargs) -> mock:
         class MockResponse:
             def __init__(self, json_data, status_code):
                 self.json_data = json_data
@@ -288,7 +311,7 @@ class Statblocks(TestCase):
     @patch("requests.get", side_effect=mocked_requests_get)
     def test_request_monster_statblock_returns_404(self, mock_get) -> None:
         response = statblocks.request_monster_statblock("foobar")
-        self.assertIn(response, "not found")
+        self.assertEqual(response, "not found")
 
         # We can even assert that our mocked method was called with the right parameters
         self.assertIn(
@@ -299,7 +322,7 @@ class Statblocks(TestCase):
     @patch("requests.get", side_effect=mocked_requests_get)
     def test_request_monster_statblock_returns_monster(self, mock_get) -> None:
         response = statblocks.request_monster_statblock("goblin")
-        self.assertIn(response, "goblin")
+        self.assertEqual(response, "goblin")
 
         # We can even assert that our mocked method was called with the right parameters
         self.assertIn(
@@ -311,17 +334,17 @@ class Statblocks(TestCase):
     def test_get_ability_modifier_returns_large_positive_value(self) -> None:
         ability_modifier = statblocks.get_ability_modifier(20)
 
-        self.assertIn(ability_modifier, "+5")
+        self.assertEqual(ability_modifier, "+5")
 
     def test_get_ability_modifier_returns_zero_value(self) -> None:
         ability_modifier = statblocks.get_ability_modifier(10)
 
-        self.assertIn(ability_modifier, "+0")
+        self.assertEqual(ability_modifier, "+0")
 
     def test_get_ability_modifier_returns_negative_value(self) -> None:
         ability_modifier = statblocks.get_ability_modifier(8)
 
-        self.assertIn(ability_modifier, "-1")
+        self.assertEqual(ability_modifier, "-1")
 
     # extract proficiencies from api response
     def test_extract_proficiencies_from_api_returns_skill(self) -> None:
@@ -346,22 +369,22 @@ class Statblocks(TestCase):
     def test_convert_low_cr_to_fraction_returns_integer(self) -> None:
         response = statblocks.convert_low_cr_to_fraction(10)
 
-        self.assertIn(response, "10")
+        self.assertEqual(response, "10")
 
     def test_convert_low_cr_to_fraction_returns_eigth(self) -> None:
         response = statblocks.convert_low_cr_to_fraction(0.125)
 
-        self.assertIn(response, "1/8")
+        self.assertEqual(response, "1/8")
 
     def test_convert_low_cr_to_fraction_returns_quarter(self) -> None:
         response = statblocks.convert_low_cr_to_fraction(0.25)
 
-        self.assertIn(response, "1/4")
+        self.assertEqual(response, "1/4")
 
     def test_convert_low_cr_to_fraction_returns_half(self) -> None:
         response = statblocks.convert_low_cr_to_fraction(0.5)
 
-        self.assertIn(response, "1/2")
+        self.assertEqual(response, "1/2")
 
     # check correct armour types are returned
     def test_format_armour_types_for_two_pieces_armour(self) -> None:
@@ -429,9 +452,11 @@ class AI(TestCase):
         response = ai.expand_dungeon_overview_via_ai("foobar", "foo", "bar")
 
         mock_send_prompt.assert_called_once_with(
-            "Enhance the dungeon description using maximum 3 paragraphs in present tense. Mention details, sights and sounds of the entrance but not inside the dungeon.  No reference to skill checks. Ruleset is foobar. Dungeon description is foo: bar"
+            "Enhance the dungeon description using maximum 3 paragraphs in present tense. "
+            "Mention details, sights and sounds of the entrance but not inside the dungeon. "
+            "No reference to skill checks. Ruleset is foobar. Dungeon description is foo: bar"
         )
-        self.assertIn(response, "I am an AI response!")
+        self.assertEqual(response, "I am an AI response!")
 
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_expand_dungeon_overview_via_ai_raises_system_error(
@@ -448,9 +473,12 @@ class AI(TestCase):
         response = ai.suggest_a_bbeg_via_ai("foobar", "foo", "bar", "oof", "rab")
 
         mock_send_prompt.assert_called_once_with(
-            "Suggest a monster from the foobar ruleset to be the dungeon boss based on the dungeon's description of foo and features of bar.  It should be a challenge for a party size of oof, and average party level of rab.  Describe the lair and up to three lair actions the dungeon boss will use."
+            "Suggest a monster from the foobar ruleset to be the dungeon boss based on "
+            "the dungeon's description of foo and features of bar.  It should be a challenge "
+            "for a party size of oof, and average party level of rab.  Describe the lair and "
+            "up to three lair actions the dungeon boss will use."
         )
-        self.assertIn(response, "I am an AI response!")
+        self.assertEqual(response, "I am an AI response!")
 
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_suggest_a_bbeg_via_ai_raises_system_error(self, mock_send_prompt) -> None:
@@ -465,9 +493,11 @@ class AI(TestCase):
         response = ai.suggest_adventure_hooks_via_ai("foobar", "foo", "bar")
 
         mock_send_prompt.assert_called_once_with(
-            "Suggest two adventure hooks for a foobar dungeon based on it's description of foo and features of bar, including named NPC contact points and their flavour text."
+            "Suggest two adventure hooks for a foobar dungeon based on it's "
+            "description of foo and features of bar, including named NPC contact "
+            "points and their flavour text."
         )
-        self.assertIn(response, "I am an AI response!")
+        self.assertEqual(response, "I am an AI response!")
 
     @patch.object(ai, "send_prompt_to_chatgpt")
     def test_suggest_adventure_hooks_via_ai_raises_system_error(
@@ -510,7 +540,7 @@ class Overview(TestCase):
         mock_response.html.html = TREASURE_HORDE
 
         response = overview.generate_boss_treasure_horde(10)
-        self.assertIn(response, "10000 gp, 7000 sp")
+        self.assertEqual(response, "10000 gp, 7000 sp")
         mock_get.assert_called_once()
 
     # generate treasure horde failure
@@ -521,7 +551,7 @@ class Overview(TestCase):
         mock_response.html.html = "<html><body></body></html>"
 
         response = overview.generate_boss_treasure_horde(10)
-        self.assertIn(response, "")
+        self.assertEqual(response, "")
         mock_get.assert_called_once()
 
     # generate dungeon graffiti
@@ -532,7 +562,7 @@ class Overview(TestCase):
         mock_response.html.html = DUNGEON_GRAFFITI
 
         response = overview.generate_dungeon_graffiti()
-        self.assertIn(response[2].text, '"Foobar"')
+        self.assertEqual(response[2].text, '"Foobar"')
         mock_get.assert_called_once()
 
     # generate dungeon graffiti failure
@@ -543,5 +573,5 @@ class Overview(TestCase):
         mock_response.html.html = "<html><body></body></html>"
 
         response = overview.generate_dungeon_graffiti()
-        self.assertIn(response, "")
+        self.assertEqual(response, "")
         mock_get.assert_called_once()

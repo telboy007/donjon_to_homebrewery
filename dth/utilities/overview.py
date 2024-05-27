@@ -7,7 +7,11 @@ from requests_html import HTMLSession
 def generate_boss_treasure_horde(dungeon_level: int) -> str | str:
     """Web scrape 5e donjon loot generator"""
 
-    url = f"https://donjon.bin.sh/5e/random/#type=treasure;treasure-cr={dungeon_level};treasure-loot_type=treasure_hoard"
+    url = (
+        "https://donjon.bin.sh/5e/random/#type=treasure;treasure-cr="
+        f"={dungeon_level}"
+        ";treasure-loot_type=treasure_hoard"
+    )
     session = HTMLSession()
     response = session.get(url)
     response.html.render()

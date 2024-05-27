@@ -117,7 +117,10 @@ def create_donjon_single_location(
                 extra_detail = ""
                 if detail["type"] == "secret":
                     if "trap" in detail:
-                        extra_detail += f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        extra_detail += (
+                            f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} "
+                            f"***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        )
                     else:
                         extra_detail += (
                             f"***Secret:*** {detail['secret'].replace(NEWLINE, ' ')}"

@@ -33,7 +33,8 @@ def create_donjon_overview(
         overview["special"] = "None"
     overview["blurb"] = data["history"] if "history" in data else False
     overview["dungeon_detail"] = (
-        f"{overview['floor']} floors, {overview['walls']} walls, temperature is {overview['temperature']}, and lighting is {overview['illumination']}."
+        f"{overview['floor']} floors, {overview['walls']} walls, temperature is "
+        f"{overview['temperature']}, and lighting is {overview['illumination']}."
     )
 
     # AI & DYNAMIC ENHANCEMENTS

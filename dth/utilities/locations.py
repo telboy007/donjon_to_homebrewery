@@ -66,15 +66,7 @@ def compile_monster_and_combat_details(
     xp_list: list,
 ) -> tuple[list, list, list] | tuple[list, list, list] | tuple[list, list, list]:
     """compiles ref table for monsters based on rule set"""
-    encounter_details = []
-    # wandering monsters are a list of dicts
-    if isinstance(data, list):
-        for item in data:
-            for _key, value in item.items():
-                encounter_details.append(value)
-    else:
-        # add string as the single member of list
-        encounter_details = [data]
+    encounter_details = get_encounter_details(data)
     if rule_set == "dnd_5e":
         for encounter in encounter_details:
             monsters, combat = encounter.split(";")
@@ -117,21 +109,36 @@ def compile_monster_and_combat_details(
 def extract_book_details(
     book_details: str, infest: str
 ) -> tuple[str, int, str] | tuple[str, str] | None:
-    """split out name, cr and source book(s) (used on monster list) - 5e and 4e only"""
+    """split out name, cr (5e) and source book(s) to be used for monster list - 5e and 4e only"""
     if infest == "dnd_5e":
+        # example input: Ogre Bolt Launcher (cr 2, motm 200, mtf 220)
         split = book_details.split("(cr")
-        name = split[0].strip()
         book_details = split[1].split(",")
-        challenge_rating = f"{book_details[0].strip()}"
         book = book_details[1].strip().replace(")", "").replace(" ", " p.")
         if len(book_details) > 2:
             book = (
                 f"{book}, {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
             )
-        return name, challenge_rating, book
+        # return name, CR, book
+        return split[0].strip(), f"{book_details[0].strip()}", book
     if infest == "dnd_4e":
+        # example input: Abyssal Marauder (mm2 48
         split = book_details.split("(")
-        name = split[0].strip()
-        book = split[1].strip().replace(" ", " p.")
-        return name, book
+        # return name, book (inc. xp)
+        return split[0].strip(), split[1].strip().replace(" ", " p.")
     return None
+
+
+def get_encounter_details(data: list | str) -> list:
+    """creates encounter detail from either room text or wandering monster table"""
+    encounter_details = []
+    # wandering monsters are a list of dicts
+    if isinstance(data, list):
+        for item in data:
+            for _key, value in item.items():
+                encounter_details.append(value)
+    else:
+        # add string as the single member of list
+        encounter_details = [data]
+
+    return encounter_details

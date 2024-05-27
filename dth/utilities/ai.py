@@ -7,9 +7,21 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ai prompts
-DUNGEON_FLAVOUR_PROMPT = "Enhance the dungeon description using maximum 3 paragraphs in present tense. Mention details, sights and sounds of the entrance but not inside the dungeon.  No reference to skill checks. Ruleset is {0}. Dungeon description is {1}: {2}"
-DUNGEON_BOSS_AND_LAIR_PROMPT = "Suggest a monster from the {0} ruleset to be the dungeon boss based on the dungeon's description of {1} and features of {2}.  It should be a challenge for a party size of {3}, and average party level of {4}.  Describe the lair and up to three lair actions the dungeon boss will use."
-ADVENTURE_HOOKS_PROMPT = "Suggest two adventure hooks for a {0} dungeon based on it's description of {1} and features of {2}, including named NPC contact points and their flavour text."
+DUNGEON_FLAVOUR_PROMPT = (
+    "Enhance the dungeon description using maximum 3 paragraphs in present tense. "
+    "Mention details, sights and sounds of the entrance but not inside the dungeon. "
+    "No reference to skill checks. Ruleset is {0}. Dungeon description is {1}: {2}"
+)
+DUNGEON_BOSS_AND_LAIR_PROMPT = (
+    "Suggest a monster from the {0} ruleset to be the dungeon boss based on the "
+    "dungeon's description of {1} and features of {2}.  It should be a challenge "
+    "for a party size of {3}, and average party level of {4}.  Describe the lair and "
+    "up to three lair actions the dungeon boss will use."
+)
+ADVENTURE_HOOKS_PROMPT = (
+    "Suggest two adventure hooks for a {0} dungeon based on it's description of {1} "
+    "and features of {2}, including named NPC contact points and their flavour text."
+)
 
 
 def send_prompt_to_chatgpt(prompt: str) -> str:
@@ -25,7 +37,10 @@ def send_prompt_to_chatgpt(prompt: str) -> str:
         messages=[
             {
                 "role": "system",
-                "content": "You are helping enhance a D&D 5e dungeon crawl adventure by providing evocative and dramatic suggestions.",
+                "content": (
+                    "You are helping enhance a D&D 5e dungeon crawl adventure "
+                    "by providing evocative and dramatic suggestions."
+                ),
             },
             {"role": "user", "content": f"{prompt}"},
         ],
