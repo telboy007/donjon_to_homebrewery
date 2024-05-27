@@ -1,6 +1,6 @@
 """ Dict to hold all settings used to generate a 5e stat block """
 
-from utilities.statblocks import (
+from dth.utilities.statblocks import (
     request_monster_statblock,
     get_ability_modifier,
     extract_proficiencies_from_api_response,
@@ -9,7 +9,9 @@ from utilities.statblocks import (
 )
 
 
-def create_5e_statblock(monster, skipped_monsters):
+def create_5e_statblock(
+    monster: dict, skipped_monsters: list
+) -> tuple[dict, list] | tuple[dict, list]:
     """create dict for statblock and add not founds to skipped list"""
     monster_statblock = {}
     stat_block_size = 0
@@ -17,7 +19,7 @@ def create_5e_statblock(monster, skipped_monsters):
     # api call to dnd5eapi
     response = request_monster_statblock(monster)
 
-    # check for any monsters listed as in monster manual but not found in api
+    # if not found add to skip list and return empty dict
     if response == "not found":
         skipped_monsters.append(monster.replace("-", " ").title())
         return {}, skipped_monsters
@@ -63,16 +65,9 @@ def create_5e_statblock(monster, skipped_monsters):
     # extract saving throws and skill check modifiers
     saving_throws, skill_checks = extract_proficiencies_from_api_response(response)
     if saving_throws:
-        throws = []
-        for key, value in saving_throws:
-            throws.append(f"{key.capitalize()} +{value}")
-        monster_statblock["saving_throws"] = ", ".join(throws)
-
+        monster_statblock["saving_throws"] = saving_throws
     if skill_checks:
-        skills = []
-        for key, value in skill_checks:
-            skills.append(f"{key.capitalize()} +{value}")
-        monster_statblock["skill_checks"] = ", ".join(skills)
+        monster_statblock["skill_checks"] = skill_checks
 
     # resistances and immunities
     if response["damage_vulnerabilities"]:
@@ -112,8 +107,7 @@ def create_5e_statblock(monster, skipped_monsters):
         stat_block_size += len(response["languages"])
 
     # cr and xp
-    CR = convert_low_cr_to_fraction(response["challenge_rating"])
-    monster_statblock["CR"] = CR
+    monster_statblock["CR"] = convert_low_cr_to_fraction(response["challenge_rating"])
     monster_statblock["XP"] = response["xp"]
 
     # traits and special abilities

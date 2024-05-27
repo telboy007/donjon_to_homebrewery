@@ -1,7 +1,7 @@
 """ Dict to hold all settings used to generate the donjon dungeon """
 
 
-def create_donjon_settings(data):
+def create_donjon_settings(data: dict) -> dict:
     """Settings"""
     settings = {}
 

@@ -3,7 +3,7 @@
 NEWLINE = "\n"
 
 
-def create_donjon_corridor_features(data):
+def create_donjon_corridor_features(data: dict) -> dict:
     """Corridor features"""
     corridor_features = {}
     feature_list = []
@@ -13,7 +13,7 @@ def create_donjon_corridor_features(data):
     if "corridor_features" in data:
         corridor_features["features"] = True
         # add and format features to list
-        for key, val in data["corridor_features"].items():
+        for _key, val in data["corridor_features"].items():
             feature_list.append({val["key"]: val["detail"].replace(NEWLINE, " ")})
         corridor_features["feature_list"] = feature_list
 

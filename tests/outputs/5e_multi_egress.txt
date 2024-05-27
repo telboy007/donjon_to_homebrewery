@@ -46,7 +46,7 @@ Some of the corridors marked on the map have special features detailed below.
 There are also roaming groups with specific goals, this will help you place them in the dungeon or when the party encounter them.
 {{classTable,frame
 #### Wandering Monsters
-| Roll | Detail |
+| Roll(d6) | Detail |
 |:--|:--|
 | 1 | Ogre Battering Ram (cr 4, motm 200, mtf 220) and 6 x Ogre (cr 2, mm 237); easy, 3800 xp, wielding bizarre eldritch powers |
 | 2 | Stone Giant (cr 7, mm 156) and 2 x Cave Bear (cr 2, mm 334); easy, 3800 xp, searching for an object stolen from their lair |

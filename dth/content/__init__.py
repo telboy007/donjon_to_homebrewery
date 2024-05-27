@@ -1,4 +1,5 @@
-# For relative imports to work
+""" For relative imports to work """
+
 import os
 import sys
 

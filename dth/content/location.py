@@ -10,15 +10,13 @@ NEWLINE = "\n"
 
 
 def create_donjon_single_location(
-    room,
-    settings,
-    magic_items,
-    monster_list,
-    combat_list,
-    xp_list,
-    dungeon_detail,
-    dungeon_boss,
-):
+    room: int,
+    settings: dict,
+    magic_items: list,
+    monster_list: list,
+    combat_list: list,
+    xp_list: list,
+) -> tuple[dict, list, list, list, list]:
     """
     Create dict of single location
 
@@ -58,12 +56,9 @@ def create_donjon_single_location(
 
                 # add to magic items list for the summary page
                 if settings["ruleset"] == "dnd_5e":
-                    magics = add_magical_items_to_list(
-                        detail.replace(NEWLINE, " "), location["id"]
+                    magic_items = add_magical_items_to_list(
+                        magic_items, detail.replace(NEWLINE, " "), location["id"]
                     )
-                    for item in magics:
-                        if item is not []:
-                            magic_items.append(item)
 
             # room description
             if "room_features" in room["contents"]["detail"]:
@@ -89,16 +84,13 @@ def create_donjon_single_location(
 
                             # add to magic items list for the summary page
                             if settings["ruleset"] == "dnd_5e":
-                                magics = add_magical_items_to_list(
+                                magic_items = add_magical_items_to_list(
+                                    magic_items,
                                     thing.replace(NEWLINE, " ").replace(
                                         "Treasure: ", ""
                                     ),
                                     location["id"],
                                 )
-
-                                for item in magics:
-                                    if item is not []:
-                                        magic_items.append(item)
                     else:
                         # adnd can have a lot of NPCs in the same location
                         occupants.append(thing)
@@ -122,25 +114,30 @@ def create_donjon_single_location(
         for direction, door_detail in room["doors"].items():
             for detail in door_detail:
                 # extra description of exit
-                DESC = ""
+                extra_detail = ""
                 if detail["type"] == "secret":
                     if "trap" in detail:
-                        DESC += f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        extra_detail += (
+                            f" ***Secret:*** {detail['secret'].replace(NEWLINE, ' ')} "
+                            f"***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        )
                     else:
-                        DESC += (
+                        extra_detail += (
                             f"***Secret:*** {detail['secret'].replace(NEWLINE, ' ')}"
                         )
                 if detail["type"] == "trapped":
                     if "trap" in detail:
-                        DESC += f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        extra_detail += (
+                            f" ***Trap:*** {detail['trap'].replace(NEWLINE, ' ')}"
+                        )
                     else:
-                        DESC += " ***Trap***: Already disarmed."
+                        extra_detail += " ***Trap***: Already disarmed."
                 if "out_id" in detail:
                     exits.append(
                         {
                             "direction": direction.capitalize(),
                             "exit_desc": detail["desc"],
-                            "extra_detail": DESC,
+                            "extra_detail": extra_detail,
                             "leads_to": detail["out_id"],
                         }
                     )
@@ -149,7 +146,7 @@ def create_donjon_single_location(
                         {
                             "direction": direction.capitalize(),
                             "exit_desc": detail["desc"],
-                            "extra_detail": DESC,
+                            "extra_detail": extra_detail,
                             "leads_to": "n/a",
                         }
                     )

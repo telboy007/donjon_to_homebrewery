@@ -1,5 +1,5 @@
 /* suppress detail at bottom of cover (front and back) */
-.page#p1:after { display:none; } 
+.page#p1:after { display:none; }
 
 .treasure {
 	/* treasure custom style */

@@ -1,7 +1,7 @@
 /* source: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator */
 
 /* suppress detail at bottom of cover (front and back) */
-.page#p1:after { display:none; } 
+.page#p1:after { display:none; }
 
 .treasure {
 	/* treasure custom style */

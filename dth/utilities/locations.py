@@ -1,7 +1,7 @@
 """Module providing location / room helper functions"""
 
 
-def sum_up_treasure(string, infest):
+def sum_up_treasure(string: str, infest: str) -> str | None:
     """5e random dungeons can end up having lots of little currency amounts"""
     if infest == "dnd_5e":
         currency = {}
@@ -18,25 +18,30 @@ def sum_up_treasure(string, infest):
     return None
 
 
-def add_magical_items_to_list(string, room_loc):
+def add_magical_items_to_list(magic_items: list, string: str, room_loc: int) -> list:
     """
     compiles ref table for magic items - 5e only
     donjon takes magical items from DM Guide, Xanathar and Tasha
     format: magic_item[name (quantity if applicable)] = dmg page number/room location id
     """
-    magic_items = []
+    new_magic_items = []
     raw_magic_items = string.split(",")
     sourcebooks = ["dmg", "xge", "tce"]
     for index, raw_magic_item in enumerate(raw_magic_items):
         if any(x in raw_magic_item for x in sourcebooks):
             item_name = format_magic_item_name(raw_magic_items[index - 1])
             details = f"{raw_magic_item.strip().replace(')', '').replace(' ', ' p.')}/{room_loc}"
-            magic_items.append([item_name, details])
+            new_magic_items.append([item_name, details])
+
+    # check and add any magic items to main list
+    for item in new_magic_items:
+        if item != []:
+            magic_items.append(item)
 
     return magic_items
 
 
-def format_magic_item_name(item_name):
+def format_magic_item_name(item_name: str) -> str:
     """nicely format magic item names"""
     if " x " in item_name:
         singular_item = item_name.split(" x ")
@@ -54,18 +59,14 @@ def format_magic_item_name(item_name):
 
 
 def compile_monster_and_combat_details(
-    data, rule_set, final_list_of_monsters, combat_list, xp_list
-):
+    data: dict,
+    rule_set: str,
+    final_list_of_monsters: list,
+    combat_list: list,
+    xp_list: list,
+) -> tuple[list, list, list] | tuple[list, list, list] | tuple[list, list, list]:
     """compiles ref table for monsters based on rule set"""
-    encounter_details = []
-    # wandering monsters are a list of dicts
-    if isinstance(data, list):
-        for item in data:
-            for key, value in item.items():
-                encounter_details.append(value)
-    else:
-        # add string as the single member of list
-        encounter_details = [data]
+    encounter_details = get_encounter_details(data)
     if rule_set == "dnd_5e":
         for encounter in encounter_details:
             monsters, combat = encounter.split(";")
@@ -105,22 +106,39 @@ def compile_monster_and_combat_details(
     return [], [], []
 
 
-def extract_book_details(book_details, infest):
-    """split out name, cr and source book(s) (used on monster list) - 5e and 4e only"""
+def extract_book_details(
+    book_details: str, infest: str
+) -> tuple[str, int, str] | tuple[str, str] | None:
+    """split out name, cr (5e) and source book(s) to be used for monster list - 5e and 4e only"""
     if infest == "dnd_5e":
+        # example input: Ogre Bolt Launcher (cr 2, motm 200, mtf 220)
         split = book_details.split("(cr")
-        name = split[0].strip()
         book_details = split[1].split(",")
-        cr = f"{book_details[0].strip()}"
         book = book_details[1].strip().replace(")", "").replace(" ", " p.")
         if len(book_details) > 2:
             book = (
                 f"{book}, {book_details[2].strip().replace(')','').replace(' ', ' p.')}"
             )
-        return name, cr, book
+        # return name, CR, book
+        return split[0].strip(), f"{book_details[0].strip()}", book
     if infest == "dnd_4e":
+        # example input: Abyssal Marauder (mm2 48
         split = book_details.split("(")
-        name = split[0].strip()
-        book = split[1].strip().replace(" ", " p.")
-        return name, book
+        # return name, book (inc. xp)
+        return split[0].strip(), split[1].strip().replace(" ", " p.")
     return None
+
+
+def get_encounter_details(data: list | str) -> list:
+    """creates encounter detail from either room text or wandering monster table"""
+    encounter_details = []
+    # wandering monsters are a list of dicts
+    if isinstance(data, list):
+        for item in data:
+            for _key, value in item.items():
+                encounter_details.append(value)
+    else:
+        # add string as the single member of list
+        encounter_details = [data]
+
+    return encounter_details

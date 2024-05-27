@@ -3,7 +3,7 @@
 NEWLINE = "\n"
 
 
-def create_donjon_wandering_monsters(data):
+def create_donjon_wandering_monsters(data: dict) -> dict:
     """Wandering monsters"""
     wandering_monsters = {}
     monster_details = []
