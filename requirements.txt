@@ -5,7 +5,7 @@ astroid==3.2.2
 beautifulsoup4==4.12.3
 black==24.4.0
 bs4==0.0.2
-certifi==2024.2.2
+certifi==2024.7.4
 cfgv==3.4.0
 charset-normalizer==3.3.2
 click==8.1.7
