@@ -60,4 +60,4 @@ urllib3==1.26.19
 virtualenv==20.26.2
 w3lib==2.1.2
 websockets==10.4
-zipp==3.18.1
+zipp==3.19.1
