@@ -1,4 +1,4 @@
-""" Dict to hold details of donjon locations """
+"""Dict to hold details of donjon locations"""
 
 from dth.utilities.locations import (
     sum_up_treasure,

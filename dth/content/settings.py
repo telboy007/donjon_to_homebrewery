@@ -1,4 +1,4 @@
-""" Dict to hold all settings used to generate the donjon dungeon """
+"""Dict to hold all settings used to generate the donjon dungeon"""
 
 
 def create_donjon_settings(data: dict) -> dict:

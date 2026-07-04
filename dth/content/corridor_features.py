@@ -1,4 +1,4 @@
-""" Dict to hold details of donjon corridor features """
+"""Dict to hold details of donjon corridor features"""
 
 NEWLINE = "\n"
 
