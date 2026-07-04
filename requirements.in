@@ -1,7 +1,9 @@
+black==24.4.0
 coverage
 dotenv
 openai
 pre_commit
+pylint==3.2.2
 pytest
 pytest-cov
 requests
