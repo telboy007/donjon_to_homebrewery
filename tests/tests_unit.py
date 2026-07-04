@@ -4,16 +4,13 @@
 
 from unittest import TestCase, mock
 from unittest.mock import patch
-from requests import Session
+import requests
 from dth.utilities import locations, statblocks, ai, summary, overview
 
 # locations test data
 TREASURE = "Treasure: 13 sp; 15 cp; 16 cp; 15 sp"
-TREASURE_HORDE = (
-    "<html><body><div class='content'>10000 gp, 7000 sp</div></body></html>"
-)
-DUNGEON_GRAFFITI = '<div class="content">"Foo"</div><div class="content">"Bar"</div><div class="content">"Foobar"</div>'
 MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187)"
+
 MANY_MAGICAL_ITEM = "5 x Potion of Healing (common, dmg 187)"
 MIXED_MAGICAL_ITEM = "Potion of Fire Breath (uncommon, dmg 187), Cloak of Billowing (common, xge 136), Shadowfell Shard (rare, tce 135)"
 MULTI_MONSTER_LIST_4E = "3 x Half-Orc Death Mage (mm2 140, 250 xp) and 2 x Half-Orc Hunter (mm2 140, 200 xp)"
@@ -533,45 +530,59 @@ class Overview(TestCase):
     """Test cases for overview helper functions"""
 
     # generate treasure horde
-    @patch.object(Session, "get")
+    @patch("requests.get")
     def test_generate_boss_treasure_horde_okay(self, mock_get) -> None:
         mock_response = mock.Mock()
+        mock_response.json.return_value = ["10000 gp, 7000 sp"]
         mock_get.return_value = mock_response
-        mock_response.html.html = TREASURE_HORDE
 
         response = overview.generate_boss_treasure_horde(10)
         self.assertEqual(response, "10000 gp, 7000 sp")
         mock_get.assert_called_once()
 
-    # generate treasure horde failure
-    @patch.object(Session, "get")
+    # generate treasure horde failure - empty result set
+    @patch("requests.get")
     def test_generate_boss_treasure_horde_fail(self, mock_get) -> None:
         mock_response = mock.Mock()
+        mock_response.json.return_value = []
         mock_get.return_value = mock_response
-        mock_response.html.html = "<html><body></body></html>"
 
         response = overview.generate_boss_treasure_horde(10)
         self.assertEqual(response, "")
         mock_get.assert_called_once()
 
-    # generate dungeon graffiti
-    @patch.object(Session, "get")
-    def test_generate_dungeon_graffiti_okay(self, mock_get) -> None:
-        mock_response = mock.Mock()
-        mock_get.return_value = mock_response
-        mock_response.html.html = DUNGEON_GRAFFITI
-
-        response = overview.generate_dungeon_graffiti()
-        self.assertEqual(response[2].text, '"Foobar"')
+    # generate treasure horde failure - request exception
+    @patch("requests.get", side_effect=requests.RequestException("boom"))
+    def test_generate_boss_treasure_horde_request_error(self, mock_get) -> None:
+        response = overview.generate_boss_treasure_horde(10)
+        self.assertEqual(response, "")
         mock_get.assert_called_once()
 
-    # generate dungeon graffiti failure
-    @patch.object(Session, "get")
-    def test_generate_dungeon_graffiti_fail(self, mock_get) -> None:
+    # generate dungeon graffiti
+    @patch("requests.get")
+    def test_generate_dungeon_graffiti_okay(self, mock_get) -> None:
         mock_response = mock.Mock()
+        mock_response.json.return_value = ['"Foo"', '"Bar"', '"Foobar"']
         mock_get.return_value = mock_response
-        mock_response.html.html = "<html><body></body></html>"
 
         response = overview.generate_dungeon_graffiti()
-        self.assertEqual(response, "")
+        self.assertEqual(response[2], '"Foobar"')
+        mock_get.assert_called_once()
+
+    # generate dungeon graffiti failure - empty result set
+    @patch("requests.get")
+    def test_generate_dungeon_graffiti_fail(self, mock_get) -> None:
+        mock_response = mock.Mock()
+        mock_response.json.return_value = []
+        mock_get.return_value = mock_response
+
+        response = overview.generate_dungeon_graffiti()
+        self.assertEqual(response, [])
+        mock_get.assert_called_once()
+
+    # generate dungeon graffiti failure - request exception
+    @patch("requests.get", side_effect=requests.RequestException("boom"))
+    def test_generate_dungeon_graffiti_request_error(self, mock_get) -> None:
+        response = overview.generate_dungeon_graffiti()
+        self.assertEqual(response, [])
         mock_get.assert_called_once()
