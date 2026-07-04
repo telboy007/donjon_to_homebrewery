@@ -239,7 +239,7 @@ with open(args.output_filename, "a", encoding="utf-8") as outfile:
 
         for index, graffiti in enumerate(overview["graffiti"]):
             # index stats at 0 no add one for rollable values
-            outfile.write(f"| {index+1} | {graffiti.text} |\n")
+            outfile.write(f"| {index+1} | {graffiti} |\n")
 
         outfile.write("}}\n")
 
