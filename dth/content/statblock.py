@@ -1,4 +1,4 @@
-""" Dict to hold all settings used to generate a 5e stat block """
+"""Dict to hold all settings used to generate a 5e stat block"""
 
 from dth.utilities.statblocks import (
     request_monster_statblock,

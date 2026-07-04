@@ -1,13 +1,13 @@
 #!/bin/python
 
 """
-    Donjon to homebrewery convertor
-    line arguments:
-        json file [mandatory]
-        gm map url [optional]
-        player map url [optional]
-        output file [optional]
-        testmode [optional]
+Donjon to homebrewery convertor
+line arguments:
+    json file [mandatory]
+    gm map url [optional]
+    player map url [optional]
+    output file [optional]
+    testmode [optional]
 """
 
 import argparse
@@ -34,6 +34,25 @@ load_dotenv()
 
 
 # *** page break utilities ***
+#
+# Homebrewery has no API to measure the actual rendered height of a page, so
+# page breaks are triggered by a heuristic character-count threshold instead.
+# These thresholds were tuned by eye against Homebrewery's default page
+# template (a US-letter-ish page with the standard margins/font) - a page of
+# fairly plain prose holds roughly 3000 characters before content starts
+# running over onto the next page. The extra allowances below exist because
+# the *first* page of some sections has less room left for body text: the
+# OVERVIEW section's first page also carries the title/intro art, and other
+# sections' first pages carry a header, hence the smaller top-up.
+#
+# If Homebrewery's template changes (font, margins, etc.) or you find pages
+# are consistently running short/long, adjust PAGE_CHAR_LIMIT here rather
+# than hunting through every call site.
+PAGE_CHAR_LIMIT = 3000
+FIRST_PAGE_EXTRA_OVERVIEW = 500
+FIRST_PAGE_EXTRA_DEFAULT = 200
+
+
 def set_check() -> int:
     """Set the initial number of characters in the file"""
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
@@ -45,11 +64,16 @@ def file_size(
 ) -> tuple[int, bool]:
     """Count the current number of characters in a file"""
     # first page of some sections need a larger check value
-    extra = 500 if footnote == "OVERVIEW" else 200
-    check_value = 3000 + extra if first_page_flag else 3000
+    extra = (
+        FIRST_PAGE_EXTRA_OVERVIEW
+        if footnote == "OVERVIEW"
+        else FIRST_PAGE_EXTRA_DEFAULT
+    )
+    check_value = PAGE_CHAR_LIMIT + extra if first_page_flag else PAGE_CHAR_LIMIT
     with open(args.output_filename, "r", encoding="utf-8") as readonly_file:
         new_size = len(readonly_file.read())
     if (new_size - current_check) > check_value:
+
         first_page_flag = False
         with open(args.output_filename, "a", encoding="utf-8") as append_file:
             append_file.write("{{")

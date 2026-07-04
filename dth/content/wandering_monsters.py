@@ -1,4 +1,4 @@
-""" Dict to hold details of donjon wandering monsters """
+"""Dict to hold details of donjon wandering monsters"""
 
 NEWLINE = "\n"
 

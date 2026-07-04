@@ -1,4 +1,4 @@
-""" Dict to hold details of donjon settings and AI enhancements """
+"""Dict to hold details of donjon settings and AI enhancements"""
 
 from dth.utilities.ai import (
     expand_dungeon_overview_via_ai,
@@ -10,7 +10,6 @@ from dth.utilities.overview import (
     generate_dungeon_graffiti,
 )
 from dth.utilities.locations import add_magical_items_to_list
-
 
 NEWLINE = "\n"
 

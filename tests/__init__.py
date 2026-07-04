@@ -1,5 +1,1 @@
-# For relative imports to work
-import os
-import sys
-
-sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+"""tests: unit and end-to-end tests for donjon_to_homebrewery"""

@@ -29,8 +29,9 @@ RPC_TIMEOUT = 10
 # donjon.bin.sh doesn't publish an API, so being transparent about what is
 # making the request (and why) is the polite/low-risk approach.
 USER_AGENT = (
-    "donjon-to-homebrewery/1.0 " "(+https://github.com/telboy007/donjon_to_homebrewery)"
+    "donjon-to-homebrewery/1.0 (+https://github.com/telboy007/donjon_to_homebrewery)"
 )
+
 REQUEST_HEADERS = {"User-Agent": USER_AGENT}
 
 

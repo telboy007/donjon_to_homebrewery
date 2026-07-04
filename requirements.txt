@@ -10,9 +10,9 @@ anyio==4.14.1
     # via
     #   httpx
     #   openai
-astroid==3.2.4
+astroid==4.0.4
     # via pylint
-black==24.4.0
+black==26.5.1
     # via -r requirements.in
 certifi==2026.6.17
     # via
@@ -60,7 +60,7 @@ idna==3.18
     #   requests
 iniconfig==2.3.0
     # via pytest
-isort==5.13.2
+isort==8.0.1
     # via pylint
 jiter==0.16.0
     # via openai
@@ -96,7 +96,7 @@ pydantic-core==2.46.4
     # via pydantic
 pygments==2.20.0
     # via pytest
-pylint==3.2.2
+pylint==4.0.6
     # via -r requirements.in
 pytest==9.1.1
     # via
@@ -108,6 +108,8 @@ python-discovery==1.4.3
     # via virtualenv
 python-dotenv==1.2.2
     # via dotenv
+pytokens==0.4.1
+    # via black
 pyyaml==6.0.3
     # via pre-commit
 requests==2.34.2
