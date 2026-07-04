@@ -10,6 +10,10 @@ anyio==4.14.1
     # via
     #   httpx
     #   openai
+astroid==3.2.4
+    # via pylint
+black==24.4.0
+    # via -r requirements.in
 certifi==2026.6.17
     # via
     #   httpcore
@@ -19,10 +23,14 @@ cfgv==3.5.0
     # via pre-commit
 charset-normalizer==3.4.7
     # via requests
+click==8.4.2
+    # via black
 coverage[toml]==7.15.0
     # via
     #   -r requirements.in
     #   pytest-cov
+dill==0.4.1
+    # via pylint
 distlib==0.4.3
     # via virtualenv
 distro==1.9.0
@@ -52,16 +60,28 @@ idna==3.18
     #   requests
 iniconfig==2.3.0
     # via pytest
+isort==5.13.2
+    # via pylint
 jiter==0.16.0
     # via openai
+mccabe==0.7.0
+    # via pylint
+mypy-extensions==1.1.0
+    # via black
 nodeenv==1.10.0
     # via pre-commit
 openai==2.44.0
     # via -r requirements.in
 packaging==26.2
-    # via pytest
+    # via
+    #   black
+    #   pytest
+pathspec==1.1.1
+    # via black
 platformdirs==4.10.0
     # via
+    #   black
+    #   pylint
     #   python-discovery
     #   virtualenv
 pluggy==1.6.0
@@ -76,6 +96,8 @@ pydantic-core==2.46.4
     # via pydantic
 pygments==2.20.0
     # via pytest
+pylint==3.2.2
+    # via -r requirements.in
 pytest==9.1.1
     # via
     #   -r requirements.in
@@ -94,13 +116,19 @@ sniffio==1.3.1
     # via openai
 tomli==2.4.1
     # via
+    #   black
     #   coverage
+    #   pylint
     #   pytest
+tomlkit==0.15.0
+    # via pylint
 tqdm==4.68.3
     # via openai
 typing-extensions==4.16.0
     # via
     #   anyio
+    #   astroid
+    #   black
     #   exceptiongroup
     #   openai
     #   pydantic
