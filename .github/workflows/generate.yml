@@ -28,10 +28,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: Set up Python 3.10
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: "3.10"
         cache: 'pip'
@@ -53,7 +53,7 @@ jobs:
         python convert_donjon_to_homebrewery.py donjon.json -gm ${{ github.event.inputs.gm_map }} -p ${{ github.event.inputs.player_map }}
 
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: homebrewery.txt
         path: ./homebrewery.txt
