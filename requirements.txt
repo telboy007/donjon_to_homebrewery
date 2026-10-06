@@ -139,7 +139,7 @@ typing-extensions==4.16.0
     #   virtualenv
 typing-inspection==0.4.2
     # via pydantic
-urllib3==2.7.0
+urllib3==2.8.0
     # via requests
 virtualenv==21.5.1
     # via
