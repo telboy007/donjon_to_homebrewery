@@ -72,17 +72,17 @@ nodeenv==1.10.0
     # via pre-commit
 openai==2.44.0
     # via -r requirements.in
-packaging==26.2
+packaging==26.3
     # via
     #   black
     #   pytest
+    #   virtualenv
 pathspec==1.1.1
     # via black
 platformdirs==4.10.0
     # via
     #   black
     #   pylint
-    #   python-discovery
     #   virtualenv
 pluggy==1.6.0
     # via
@@ -104,7 +104,7 @@ pytest==9.1.1
     #   pytest-cov
 pytest-cov==7.1.0
     # via -r requirements.in
-python-discovery==1.4.3
+python-discovery==1.6.4
     # via virtualenv
 python-dotenv==1.2.2
     # via dotenv
@@ -141,7 +141,7 @@ typing-inspection==0.4.2
     # via pydantic
 urllib3==2.7.0
     # via requests
-virtualenv==21.5.1
+virtualenv==21.14.13
     # via
     #   -r requirements.in
     #   pre-commit
