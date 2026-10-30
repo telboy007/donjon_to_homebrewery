@@ -96,7 +96,7 @@ pydantic-core==2.46.4
     # via pydantic
 pygments==2.20.0
     # via pytest
-pylint==4.0.6
+pylint==4.0.9
     # via -r requirements.in
 pytest==9.1.1
     # via
